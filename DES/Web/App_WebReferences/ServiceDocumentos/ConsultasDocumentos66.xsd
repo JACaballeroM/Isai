@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.Negocio.Gestion.ConsultasDocumentos.Enum" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.Negocio.Gestion.ConsultasDocumentos.Enum" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="TipoDocumento">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AvaluoCatastral" />
+      <xs:enumeration value="AvaluoComercial" />
+      <xs:enumeration value="F4" />
+      <xs:enumeration value="FotoInmueble" />
+      <xs:enumeration value="FotoManzana" />
+      <xs:enumeration value="LicenciaObras" />
+      <xs:enumeration value="MemoriaDescriptiva" />
+      <xs:enumeration value="Oficio" />
+      <xs:enumeration value="NoAcceso" />
+      <xs:enumeration value="Complementario" />
+      <xs:enumeration value="FotoNoAcceso" />
+      <xs:enumeration value="Otros" />
+      <xs:enumeration value="PlanoArquitectonico" />
+      <xs:enumeration value="PlanosCampo" />
+      <xs:enumeration value="SATI" />
+      <xs:enumeration value="CartaPoder" />
+      <xs:enumeration value="DocumentoAdministrativo" />
+      <xs:enumeration value="DocumentoPrivado" />
+      <xs:enumeration value="EscrituraPublica" />
+      <xs:enumeration value="PoderNotarial" />
+      <xs:enumeration value="ResolucionJudicial" />
+      <xs:enumeration value="Nulo" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TipoDocumento" nillable="true" type="tns:TipoDocumento" />
+</xs:schema>

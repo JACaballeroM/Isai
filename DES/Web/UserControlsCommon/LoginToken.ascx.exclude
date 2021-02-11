@@ -1,0 +1,6 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="LoginToken.ascx.cs" Inherits="include_Login" %>
+<iframe id="frameToken" allowTransparency="true"
+        src="<%=this.ResolveUrl("~/Status.aspx") %>"
+        style="width:<%= this.Width%>;height:<%= this.Height%>;"
+        frameborder="0" visible="<%=Visible %>"
+        scrolling="no"></iframe> 

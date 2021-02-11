@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio.Enum" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio.Enum" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="TipoFiltroLike">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Empieza" />
+      <xs:enumeration value="Contiene" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TipoFiltroLike" nillable="true" type="tns:TipoFiltroLike" />
+</xs:schema>

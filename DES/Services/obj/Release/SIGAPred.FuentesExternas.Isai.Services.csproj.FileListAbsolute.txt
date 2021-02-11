@@ -1,0 +1,118 @@
+D:\NET\Codigo\Isai\DES\Services\bin\Release\SIGAPred.FuentesExternas.Isai.Services.dll.config
+D:\NET\Codigo\Isai\DES\Services\bin\Release\SIGAPred.FuentesExternas.Isai.Services.XML
+D:\NET\Codigo\Isai\DES\Services\bin\Release\SIGAPred.FuentesExternas.Isai.Services.dll
+D:\NET\Codigo\Isai\DES\Services\bin\Release\SIGAPred.FuentesExternas.Isai.Services.pdb
+D:\NET\Codigo\Isai\DES\Services\bin\Release\BouncyCastle.Crypto.dll
+D:\NET\Codigo\Isai\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\NET\Codigo\Isai\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll
+D:\NET\Codigo\Isai\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+D:\NET\Codigo\Isai\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll
+D:\NET\Codigo\Isai\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll
+D:\NET\Codigo\Isai\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+D:\NET\Codigo\Isai\DES\Services\bin\Release\Microsoft.Practices.ObjectBuilder2.dll
+D:\NET\Codigo\Isai\DES\Services\bin\Release\MyExtentions.dll
+D:\NET\Codigo\Isai\DES\Services\bin\Release\Oracle.DataAccess.dll
+D:\NET\Codigo\Isai\DES\Services\bin\Release\SecurityCore.dll
+D:\NET\Codigo\Isai\DES\Services\bin\Release\SIGAPred.Common.DataAccess.dll
+D:\NET\Codigo\Isai\DES\Services\bin\Release\SIGAPred.Common.dll
+D:\NET\Codigo\Isai\DES\Services\bin\Release\SIGAPred.Documental.Services.dll
+D:\NET\Codigo\Isai\DES\Services\bin\Release\SIGAPred.Excepciones.ClaseExcepcion.dll
+D:\NET\Codigo\Isai\DES\Services\bin\Release\SIGAPred.RegistroContribuyentes.Services.dll
+D:\NET\Codigo\Isai\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\NET\Codigo\Isai\DES\Services\obj\Release\SIGAPred.FuentesExternas.Isai.Services.csprojAssemblyReference.cache
+D:\NET\Codigo\Isai\DES\Services\obj\Release\SIGAPred.FuentesExternas.Isai.Services.Properties.Resources.resources
+D:\NET\Codigo\Isai\DES\Services\obj\Release\SIGAPred.FuentesExternas.Isai.Services.csproj.GenerateResource.cache
+D:\NET\Codigo\Isai\DES\Services\obj\Release\SIGAPred.FuentesExternas.Isai.Services.csproj.CoreCompileInputs.cache
+D:\NET\Codigo\Isai\DES\Services\obj\Release\SIGAPred.FuentesExternas.Isai.Services.csproj.CopyComplete
+D:\NET\Codigo\Isai\DES\Services\obj\Release\SIGAPred.FuentesExternas.Isai.Services.dll
+D:\NET\Codigo\Isai\DES\Services\obj\Release\SIGAPred.FuentesExternas.Isai.Services.pdb
+C:\Users\EdgarAntunezMartinez\Documents\Isai - copia\DES\Services\bin\Release\SIGAPred.FuentesExternas.Isai.Services.dll.config
+C:\Users\EdgarAntunezMartinez\Documents\Isai - copia\DES\Services\bin\Release\SIGAPred.FuentesExternas.Isai.Services.XML
+C:\Users\EdgarAntunezMartinez\Documents\Isai - copia\DES\Services\bin\Release\SIGAPred.FuentesExternas.Isai.Services.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai - copia\DES\Services\bin\Release\SIGAPred.FuentesExternas.Isai.Services.pdb
+C:\Users\EdgarAntunezMartinez\Documents\Isai - copia\DES\Services\bin\Release\BouncyCastle.Crypto.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai - copia\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai - copia\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai - copia\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai - copia\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai - copia\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai - copia\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai - copia\DES\Services\bin\Release\Microsoft.Practices.ObjectBuilder2.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai - copia\DES\Services\bin\Release\MyExtentions.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai - copia\DES\Services\bin\Release\Oracle.DataAccess.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai - copia\DES\Services\bin\Release\SecurityCore.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai - copia\DES\Services\bin\Release\SIGAPred.Common.DataAccess.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai - copia\DES\Services\bin\Release\SIGAPred.Common.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai - copia\DES\Services\bin\Release\SIGAPred.Documental.Services.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai - copia\DES\Services\bin\Release\SIGAPred.Excepciones.ClaseExcepcion.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai - copia\DES\Services\bin\Release\SIGAPred.RegistroContribuyentes.Services.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai - copia\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai - copia\DES\Services\bin\Release\SIGAPred.Seguridad.Utilidades.ClaimTypes.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai - copia\DES\Services\bin\Release\SIGAPred.Common.Compresion.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai - copia\DES\Services\obj\Release\SIGAPred.FuentesExternas.Isai.Services.csprojAssemblyReference.cache
+C:\Users\EdgarAntunezMartinez\Documents\Isai - copia\DES\Services\obj\Release\SIGAPred.FuentesExternas.Isai.Services.Properties.Resources.resources
+C:\Users\EdgarAntunezMartinez\Documents\Isai - copia\DES\Services\obj\Release\SIGAPred.FuentesExternas.Isai.Services.csproj.GenerateResource.cache
+C:\Users\EdgarAntunezMartinez\Documents\Isai - copia\DES\Services\obj\Release\SIGAPred.FuentesExternas.Isai.Services.csproj.CoreCompileInputs.cache
+C:\Users\EdgarAntunezMartinez\Documents\Isai - copia\DES\Services\obj\Release\SIGAPred.FuentesExternas.Isai.Services.csproj.CopyComplete
+C:\Users\EdgarAntunezMartinez\Documents\Isai - copia\DES\Services\obj\Release\SIGAPred.FuentesExternas.Isai.Services.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai - copia\DES\Services\obj\Release\SIGAPred.FuentesExternas.Isai.Services.pdb
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_LogErrorDS - copia (2)\DES\Services\bin\Release\SIGAPred.FuentesExternas.Isai.Services.dll.config
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_LogErrorDS - copia (2)\DES\Services\bin\Release\SIGAPred.FuentesExternas.Isai.Services.XML
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_LogErrorDS - copia (2)\DES\Services\bin\Release\SIGAPred.FuentesExternas.Isai.Services.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_LogErrorDS - copia (2)\DES\Services\bin\Release\SIGAPred.FuentesExternas.Isai.Services.pdb
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_LogErrorDS - copia (2)\DES\Services\bin\Release\BouncyCastle.Crypto.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_LogErrorDS - copia (2)\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_LogErrorDS - copia (2)\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_LogErrorDS - copia (2)\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_LogErrorDS - copia (2)\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_LogErrorDS - copia (2)\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_LogErrorDS - copia (2)\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_LogErrorDS - copia (2)\DES\Services\bin\Release\Microsoft.Practices.ObjectBuilder2.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_LogErrorDS - copia (2)\DES\Services\bin\Release\MyExtentions.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_LogErrorDS - copia (2)\DES\Services\bin\Release\Oracle.DataAccess.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_LogErrorDS - copia (2)\DES\Services\bin\Release\SecurityCore.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_LogErrorDS - copia (2)\DES\Services\bin\Release\SIGAPred.Common.DataAccess.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_LogErrorDS - copia (2)\DES\Services\bin\Release\SIGAPred.Common.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_LogErrorDS - copia (2)\DES\Services\bin\Release\SIGAPred.Documental.Services.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_LogErrorDS - copia (2)\DES\Services\bin\Release\SIGAPred.Excepciones.ClaseExcepcion.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_LogErrorDS - copia (2)\DES\Services\bin\Release\SIGAPred.RegistroContribuyentes.Services.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_LogErrorDS - copia (2)\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_LogErrorDS - copia (2)\DES\Services\bin\Release\SIGAPred.Seguridad.Utilidades.ClaimTypes.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_LogErrorDS - copia (2)\DES\Services\bin\Release\SIGAPred.Common.Compresion.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_LogErrorDS - copia (2)\DES\Services\obj\Release\SIGAPred.FuentesExternas.Isai.Services.csprojAssemblyReference.cache
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_LogErrorDS - copia (2)\DES\Services\obj\Release\SIGAPred.FuentesExternas.Isai.Services.Properties.Resources.resources
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_LogErrorDS - copia (2)\DES\Services\obj\Release\SIGAPred.FuentesExternas.Isai.Services.csproj.GenerateResource.cache
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_LogErrorDS - copia (2)\DES\Services\obj\Release\SIGAPred.FuentesExternas.Isai.Services.csproj.CoreCompileInputs.cache
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_LogErrorDS - copia (2)\DES\Services\obj\Release\SIGAPred.FuentesExternas.Isai.Services.csproj.CopyComplete
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_LogErrorDS - copia (2)\DES\Services\obj\Release\SIGAPred.FuentesExternas.Isai.Services.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_LogErrorDS - copia (2)\DES\Services\obj\Release\SIGAPred.FuentesExternas.Isai.Services.pdb
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\DES\Services\bin\Release\SIGAPred.FuentesExternas.Isai.Services.dll.config
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\DES\Services\bin\Release\SIGAPred.FuentesExternas.Isai.Services.XML
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\DES\Services\bin\Release\SIGAPred.FuentesExternas.Isai.Services.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\DES\Services\bin\Release\SIGAPred.FuentesExternas.Isai.Services.pdb
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\DES\Services\bin\Release\BouncyCastle.Crypto.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\DES\Services\bin\Release\Microsoft.Practices.ObjectBuilder2.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\DES\Services\bin\Release\MyExtentions.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\DES\Services\bin\Release\Oracle.DataAccess.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\DES\Services\bin\Release\SecurityCore.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\DES\Services\bin\Release\SIGAPred.Common.DataAccess.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\DES\Services\bin\Release\SIGAPred.Common.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\DES\Services\bin\Release\SIGAPred.Documental.Services.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\DES\Services\bin\Release\SIGAPred.Excepciones.ClaseExcepcion.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\DES\Services\bin\Release\SIGAPred.RegistroContribuyentes.Services.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\DES\Services\bin\Release\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\DES\Services\bin\Release\SIGAPred.Seguridad.Utilidades.ClaimTypes.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\DES\Services\bin\Release\SIGAPred.Common.Compresion.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\DES\Services\obj\Release\SIGAPred.FuentesExternas.Isai.Services.csprojAssemblyReference.cache
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\DES\Services\obj\Release\SIGAPred.FuentesExternas.Isai.Services.Properties.Resources.resources
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\DES\Services\obj\Release\SIGAPred.FuentesExternas.Isai.Services.csproj.GenerateResource.cache
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\DES\Services\obj\Release\SIGAPred.FuentesExternas.Isai.Services.csproj.CoreCompileInputs.cache
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\DES\Services\obj\Release\SIGAPred.FuentesExternas.Isai.Services.csproj.CopyComplete
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\DES\Services\obj\Release\SIGAPred.FuentesExternas.Isai.Services.dll
+C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\DES\Services\obj\Release\SIGAPred.FuentesExternas.Isai.Services.pdb

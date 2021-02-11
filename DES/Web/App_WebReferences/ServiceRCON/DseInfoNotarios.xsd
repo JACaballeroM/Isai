@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DseInfoNotarios.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DseInfoNotarios.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DseInfoNotarios.xsd" id="DseInfoNotarios" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="DseInfoNotarios">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Notario">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="IDPERSONA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="APELLIDOPATERNO" type="xs:string" />
+              <xs:element minOccurs="0" name="APELLIDOMATERNO" type="xs:string" />
+              <xs:element minOccurs="0" name="NOMBRE" type="xs:string" />
+              <xs:element minOccurs="0" name="RFC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CURP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="18" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CLAVEIFE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="18" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NUMNOTARIO" type="xs:decimal" />
+              <xs:element name="CODESTADO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODTIPOPERSONA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CODSITUACIONPERSONA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="IDDOCIDENTIF" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VALDOCIDENTIF">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DESCDOCIDENTIF">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" msdata:Expression="IIF(ISNULL(VALDOCIDENTIF, '') = '', '', DESCDOCIDENTIF + ': ' + VALDOCIDENTIF)" minOccurs="0" name="OtroDocumentoSalida" type="xs:string" />
+              <xs:element msdata:DateTimeMode="Unspecified" minOccurs="0" name="FECHANACIMIENTO" type="xs:dateTime" />
+              <xs:element msdata:DateTimeMode="Unspecified" minOccurs="0" name="FECHADEFUNCION" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="EMAIL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CELULAR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Representantes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDREPRESENTACION" type="xs:decimal" />
+              <xs:element name="IDPERSONAREPRESENTADO" type="xs:decimal" />
+              <xs:element name="IDPERSONAREPRESENTANTE" type="xs:decimal" />
+              <xs:element name="IDDOCUMENTOREPRESENTACION" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOMBRE" type="xs:string" />
+              <xs:element minOccurs="0" name="APELLIDOPATERNO" type="xs:string" />
+              <xs:element minOccurs="0" name="APELLIDOMATERNO" type="xs:string" />
+              <xs:element minOccurs="0" name="TEXTOREPRESENTACION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:DateTimeMode="Unspecified" minOccurs="0" name="FECHACADUCIDAD" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="CODTIPOPERSONA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ACTIVPRINCIP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="RFC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CURP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="18" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CLAVEIFE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="18" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TIPO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" msdata:Expression="IIF (CODTIPOPERSONA='M', APELLIDOPATERNO, IIF (ISNULL(APELLIDOPATERNO,'')='','',APELLIDOPATERNO + ', ') + IIF (ISNULL(APELLIDOMATERNO,'')='','', APELLIDOMATERNO + ', ') + IIF (ISNULL(NOMBRE,'')='', '', NOMBRE))" minOccurs="0" name="NombreCompletoRepresentante" type="xs:string" />
+              <xs:element minOccurs="0" name="IDDOCIDENTIF" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VALDOCIDENTIF">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DESCDOCIDENTIF">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" msdata:Expression="IIF(ISNULL(VALDOCIDENTIF, '') = '', '', DESCDOCIDENTIF + ': ' + VALDOCIDENTIF)" minOccurs="0" name="OtroDocumentoSalida" type="xs:string" />
+              <xs:element msdata:DateTimeMode="Unspecified" minOccurs="0" name="FECHANACIMIENTO" type="xs:dateTime" />
+              <xs:element msdata:DateTimeMode="Unspecified" minOccurs="0" name="FECHADEFUNCION" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="CELULAR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="EMAIL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:DateTimeMode="Unspecified" minOccurs="0" name="FECHAINICIOACTIV" type="xs:dateTime" />
+              <xs:element msdata:DateTimeMode="Unspecified" minOccurs="0" name="FECHACAMBIOSITUACION" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="IDTIPOMORAL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPOSMORAL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="IDMOTIVOSMORAL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="MOTIVOSMORAL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Direcciones">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDPERSONA" type="xs:decimal" />
+              <xs:element name="IDDIRECCION" type="xs:decimal" />
+              <xs:element name="CODTIPOSVIA" type="xs:decimal" />
+              <xs:element name="NUMEROEXTERIOR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="IDVIA" type="xs:decimal" />
+              <xs:element name="VIA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ABREVIATURAVIA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ANDADOR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="EDIFICIO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SECCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ENTRADA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DESCRIPCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ABREVLOCALIDAD">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="NUMEROINTERIOR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODTIPOSASENTAMIENTO" type="xs:decimal" />
+              <xs:element name="ABREVIATURA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COLONIA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CODIGOPOSTAL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CIUDAD">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DELEGACION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODESTADO" type="xs:decimal" />
+              <xs:element name="ESTADO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" msdata:Expression="IIF (ISNULL(ABREVIATURAVIA,'')='','',ABREVIATURAVIA) + IIF(ISNULL(VIA,'')='', '', VIA) + IIF(ISNULL(NUMEROEXTERIOR,'')='','',', ' + NUMEROEXTERIOR) + IIF (ISNULL(ANDADOR,'')='','',', AND.' + ANDADOR) + IIF(ISNULL(EDIFICIO,'')='', '', ', EDIF.' + EDIFICIO) + IIF (ISNULL(SECCION,'')='','', ', SEC.' + SECCION) + IIF(ISNULL(ENTRADA,'')='', '', ', ENT. ' + ENTRADA) +  IIF(ISNULL(ABREVLOCALIDAD,'')='','', ', ' + ABREVLOCALIDAD + ' ' ) + IIF(ISNULL(NUMEROINTERIOR,'')='', '', ', ' + NUMEROINTERIOR) + IIF(ISNULL(ABREVIATURA,'')='','',', ' + ABREVIATURA) + IIF(ISNULL(COLONIA,'')='','', ' ' + COLONIA) + IIF(ISNULL(CODIGOPOSTAL,'')='','',', C.P.' + CODIGOPOSTAL) + IIF(ISNULL(CIUDAD,'')='','', ', ' + CIUDAD) + IIF(ISNULL(DELEGACION,'')='','', ', ' + DELEGACION) + IIF(ISNULL(ESTADO,'')='','',' (' + ESTADO + ')')" minOccurs="0" name="DireccionCompleta" type="xs:string" />
+              <xs:element minOccurs="0" name="CODTIPOSDIRECCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TIPODIRECCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:Notario" />
+      <xs:field xpath="mstns:IDPERSONA" />
+    </xs:unique>
+    <xs:keyref name="FK_Notario_Direcciones2" refer="mstns:Constraint1">
+      <xs:selector xpath=".//mstns:Direcciones" />
+      <xs:field xpath="mstns:IDPERSONA" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

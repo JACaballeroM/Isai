@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Server.Common.Faults" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Server.Common.Faults" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ConsultaCatastralException">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CatastralFaultBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConsultaCatastralException" nillable="true" type="tns:ConsultaCatastralException" />
+  <xs:complexType name="CatastralFaultBase">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:FaultBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CatastralFaultBase" nillable="true" type="tns:CatastralFaultBase" />
+  <xs:complexType name="FaultBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FaultBase" nillable="true" type="tns:FaultBase" />
+  <xs:complexType name="ConsultaCatastralInfoException">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CatastralFaultBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConsultaCatastralInfoException" nillable="true" type="tns:ConsultaCatastralInfoException" />
+</xs:schema>

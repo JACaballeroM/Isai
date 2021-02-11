@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DseManzanas.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DseManzanas.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DseManzanas.xsd" id="DseManzanas" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="DseManzanas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Manzana">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDMANZANA" type="xs:decimal" />
+              <xs:element msdata:Caption="Región" name="REGION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:Caption="Manzana" name="MANZANA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:Caption="Clave AT" name="CLAVEAT">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:Caption="AT" name="NOMBREAT">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:Caption="Delegación" name="DELEGACION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COLONIA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ABREVIATURA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:Caption="Superficie" name="SUPERFICIE" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" msdata:Expression="COLONIA  + IIF(ISNULL(ABREVIATURA,'') = '', '' , ' ('+TRIM(ABREVIATURA)+')')" msdata:Caption="Colonia" minOccurs="0" name="ColoniaDesc" type="xs:string" />
+              <xs:element minOccurs="0" name="CODIGOPOSTAL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDCOLONIA" type="xs:decimal" />
+              <xs:element name="IDDELEGACION" type="xs:decimal" />
+              <xs:element name="XMIN" type="xs:decimal" />
+              <xs:element name="XMAX" type="xs:decimal" />
+              <xs:element name="YMIN" type="xs:decimal" />
+              <xs:element name="YMAX" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" msdata:Expression="REGION + MANZANA" minOccurs="0" name="Clave" type="xs:string" />
+              <xs:element name="REPGRAFICA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CallesManzana">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDMANZANA" type="xs:decimal" />
+              <xs:element name="NOMBRE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPOVIA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ABREVIATURA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:Manzana" />
+      <xs:field xpath="mstns:IDMANZANA" />
+    </xs:unique>
+    <xs:keyref name="FK_Manzana_CallesManzana" refer="mstns:Constraint1">
+      <xs:selector xpath=".//mstns:CallesManzana" />
+      <xs:field xpath="mstns:IDMANZANA" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

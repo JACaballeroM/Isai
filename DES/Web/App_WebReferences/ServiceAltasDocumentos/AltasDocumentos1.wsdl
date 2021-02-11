@@ -1,0 +1,995 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AltasDocumentos" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="AltasDocumentos_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/Documental/AltasDocumentos.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/Documental/AltasDocumentos.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" />
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/Documental/AltasDocumentos.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/Documental/AltasDocumentos.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.Negocio.Base" />
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/Documental/AltasDocumentos.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.Negocio.Gestion.AltasDocumentos.Enum" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAltasDocumentos_InsertResolucionJudicial_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertResolucionJudicial" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertResolucionJudicial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertResolucionJudicialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertResolucionJudicial_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q1:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdateResolucionJudicial_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResolucionJudicial" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdateResolucionJudicial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateResolucionJudicialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdateResolucionJudicial_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q2:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertSATI_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertSATI" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertSATI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertSATIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertSATI_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q3:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdateDocumentoGenerico_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocumentoGenerico" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdateDocumentoGenerico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocumentoGenericoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdateDocumentoGenerico_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q4:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_EstablecerDocumentoDefinitivo_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstablecerDocumentoDefinitivo" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_EstablecerDocumentoDefinitivo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstablecerDocumentoDefinitivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_EstablecerDocumentoDefinitivo_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q5:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertAvaluoCatastral_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAvaluoCatastral" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertAvaluoCatastral_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAvaluoCatastralResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertAvaluoCatastral_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q6:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertAvaluoComercial_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAvaluoComercial" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertAvaluoComercial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertAvaluoComercialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertAvaluoComercial_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q7:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertCartaPoder_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCartaPoder" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertCartaPoder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCartaPoderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertCartaPoder_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q8:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdateCartaPoder_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCartaPoder" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdateCartaPoder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCartaPoderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdateCartaPoder_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q9:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertDocumentoAdministrativo_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDocumentoAdministrativo" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertDocumentoAdministrativo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDocumentoAdministrativoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertDocumentoAdministrativo_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q10:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdateDocumentoAdministrativo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocumentoAdministrativo" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdateDocumentoAdministrativo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocumentoAdministrativoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdateDocumentoAdministrativo_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q11:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertLicenciaObras_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertLicenciaObras" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertLicenciaObras_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertLicenciaObrasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertLicenciaObras_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q12:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdateTerminacionLicencia_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTerminacionLicencia" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdateTerminacionLicencia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTerminacionLicenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdateTerminacionLicencia_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q13:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdateLicenciaObras_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLicenciaObras" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdateLicenciaObras_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLicenciaObrasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdateLicenciaObras_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q14:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertDocumentoPrivado_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDocumentoPrivado" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertDocumentoPrivado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDocumentoPrivadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertDocumentoPrivado_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q15:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdateDocumentoPrivado_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocumentoPrivado" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdateDocumentoPrivado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocumentoPrivadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdateDocumentoPrivado_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q16:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertEscrituraPublica_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertEscrituraPublica" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertEscrituraPublica_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertEscrituraPublicaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertEscrituraPublica_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q17:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdateEscrituraPublica_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEscrituraPublica" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdateEscrituraPublica_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEscrituraPublicaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdateEscrituraPublica_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q18:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertF4_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertF4" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertF4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertF4Response" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertF4_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q19:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertFotoInmueble_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertFotoInmueble" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertFotoInmueble_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertFotoInmuebleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertFotoInmueble_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q20:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdateFotoInmueble_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFotoInmueble" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdateFotoInmueble_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFotoInmuebleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdateFotoInmueble_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q21:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertFotoManzana_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertFotoManzana" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertFotoManzana_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertFotoManzanaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertFotoManzana_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q22:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdateFotoManzana_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFotoManzana" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdateFotoManzana_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFotoManzanaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdateFotoManzana_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q23:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertMemoriaDescriptiva_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMemoriaDescriptiva" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertMemoriaDescriptiva_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertMemoriaDescriptivaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertMemoriaDescriptiva_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q24:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertOficio_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertOficio" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertOficio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertOficioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertOficio_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q25:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertDocumentoOficio_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDocumentoOficio" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertDocumentoOficio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertDocumentoOficioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertDocumentoOficio_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q26:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdateDocumentoOficio_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocumentoOficio" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdateDocumentoOficio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocumentoOficioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdateDocumentoOficio_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q27:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertNoAcceso_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertNoAcceso" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertNoAcceso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertNoAccesoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertNoAcceso_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q28:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertComplementario_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertComplementario" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertComplementario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertComplementarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertComplementario_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q29:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertFotoNoAcceso_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertFotoNoAcceso" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertFotoNoAcceso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertFotoNoAccesoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertFotoNoAcceso_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q30:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertOtros_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertOtros" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertOtros_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertOtrosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertOtros_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q31:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertPlanoArquitectonico_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPlanoArquitectonico" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertPlanoArquitectonico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPlanoArquitectonicoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertPlanoArquitectonico_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q32:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertPlanosCampo_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPlanosCampo" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertPlanosCampo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPlanosCampoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertPlanosCampo_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q33:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertPoderNotarial_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPoderNotarial" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertPoderNotarial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPoderNotarialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertPoderNotarial_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q34:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdatePoderNotarial_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePoderNotarial" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdatePoderNotarial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePoderNotarialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_UpdatePoderNotarial_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q35:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertProrrogaLicencia_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertProrrogaLicencia" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertProrrogaLicencia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertProrrogaLicenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertProrrogaLicencia_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q36:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertRegistroPropiedad_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRegistroPropiedad" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertRegistroPropiedad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertRegistroPropiedadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAltasDocumentos_InsertRegistroPropiedad_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q37:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:portType name="IAltasDocumentos">
+    <wsdl:operation name="InsertResolucionJudicial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertResolucionJudicial" message="tns:IAltasDocumentos_InsertResolucionJudicial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertResolucionJudicialResponse" message="tns:IAltasDocumentos_InsertResolucionJudicial_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertResolucionJudicialAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_InsertResolucionJudicial_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResolucionJudicial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdateResolucionJudicial" message="tns:IAltasDocumentos_UpdateResolucionJudicial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdateResolucionJudicialResponse" message="tns:IAltasDocumentos_UpdateResolucionJudicial_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdateResolucionJudicialAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_UpdateResolucionJudicial_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertSATI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertSATI" message="tns:IAltasDocumentos_InsertSATI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertSATIResponse" message="tns:IAltasDocumentos_InsertSATI_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertSATIAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_InsertSATI_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentoGenerico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdateDocumentoGenerico" message="tns:IAltasDocumentos_UpdateDocumentoGenerico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdateDocumentoGenericoResponse" message="tns:IAltasDocumentos_UpdateDocumentoGenerico_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdateDocumentoGenericoAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_UpdateDocumentoGenerico_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EstablecerDocumentoDefinitivo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/EstablecerDocumentoDefinitivo" message="tns:IAltasDocumentos_EstablecerDocumentoDefinitivo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/EstablecerDocumentoDefinitivoResponse" message="tns:IAltasDocumentos_EstablecerDocumentoDefinitivo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/EstablecerDocumentoDefinitivoAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_EstablecerDocumentoDefinitivo_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAvaluoCatastral">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertAvaluoCatastral" message="tns:IAltasDocumentos_InsertAvaluoCatastral_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertAvaluoCatastralResponse" message="tns:IAltasDocumentos_InsertAvaluoCatastral_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertAvaluoCatastralAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_InsertAvaluoCatastral_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAvaluoComercial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertAvaluoComercial" message="tns:IAltasDocumentos_InsertAvaluoComercial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertAvaluoComercialResponse" message="tns:IAltasDocumentos_InsertAvaluoComercial_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertAvaluoComercialAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_InsertAvaluoComercial_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCartaPoder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertCartaPoder" message="tns:IAltasDocumentos_InsertCartaPoder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertCartaPoderResponse" message="tns:IAltasDocumentos_InsertCartaPoder_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertCartaPoderAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_InsertCartaPoder_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCartaPoder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdateCartaPoder" message="tns:IAltasDocumentos_UpdateCartaPoder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdateCartaPoderResponse" message="tns:IAltasDocumentos_UpdateCartaPoder_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdateCartaPoderAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_UpdateCartaPoder_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDocumentoAdministrativo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertDocumentoAdministrativo" message="tns:IAltasDocumentos_InsertDocumentoAdministrativo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertDocumentoAdministrativoResponse" message="tns:IAltasDocumentos_InsertDocumentoAdministrativo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertDocumentoAdministrativoAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_InsertDocumentoAdministrativo_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentoAdministrativo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdateDocumentoAdministrativo" message="tns:IAltasDocumentos_UpdateDocumentoAdministrativo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdateDocumentoAdministrativoResponse" message="tns:IAltasDocumentos_UpdateDocumentoAdministrativo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdateDocumentoAdministrativoAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_UpdateDocumentoAdministrativo_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertLicenciaObras">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertLicenciaObras" message="tns:IAltasDocumentos_InsertLicenciaObras_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertLicenciaObrasResponse" message="tns:IAltasDocumentos_InsertLicenciaObras_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertLicenciaObrasAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_InsertLicenciaObras_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTerminacionLicencia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdateTerminacionLicencia" message="tns:IAltasDocumentos_UpdateTerminacionLicencia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdateTerminacionLicenciaResponse" message="tns:IAltasDocumentos_UpdateTerminacionLicencia_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdateTerminacionLicenciaAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_UpdateTerminacionLicencia_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLicenciaObras">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdateLicenciaObras" message="tns:IAltasDocumentos_UpdateLicenciaObras_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdateLicenciaObrasResponse" message="tns:IAltasDocumentos_UpdateLicenciaObras_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdateLicenciaObrasAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_UpdateLicenciaObras_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDocumentoPrivado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertDocumentoPrivado" message="tns:IAltasDocumentos_InsertDocumentoPrivado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertDocumentoPrivadoResponse" message="tns:IAltasDocumentos_InsertDocumentoPrivado_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertDocumentoPrivadoAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_InsertDocumentoPrivado_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentoPrivado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdateDocumentoPrivado" message="tns:IAltasDocumentos_UpdateDocumentoPrivado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdateDocumentoPrivadoResponse" message="tns:IAltasDocumentos_UpdateDocumentoPrivado_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdateDocumentoPrivadoAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_UpdateDocumentoPrivado_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertEscrituraPublica">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertEscrituraPublica" message="tns:IAltasDocumentos_InsertEscrituraPublica_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertEscrituraPublicaResponse" message="tns:IAltasDocumentos_InsertEscrituraPublica_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertEscrituraPublicaAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_InsertEscrituraPublica_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEscrituraPublica">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdateEscrituraPublica" message="tns:IAltasDocumentos_UpdateEscrituraPublica_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdateEscrituraPublicaResponse" message="tns:IAltasDocumentos_UpdateEscrituraPublica_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdateEscrituraPublicaAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_UpdateEscrituraPublica_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertF4">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertF4" message="tns:IAltasDocumentos_InsertF4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertF4Response" message="tns:IAltasDocumentos_InsertF4_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertF4AccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_InsertF4_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertFotoInmueble">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertFotoInmueble" message="tns:IAltasDocumentos_InsertFotoInmueble_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertFotoInmuebleResponse" message="tns:IAltasDocumentos_InsertFotoInmueble_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertFotoInmuebleAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_InsertFotoInmueble_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFotoInmueble">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdateFotoInmueble" message="tns:IAltasDocumentos_UpdateFotoInmueble_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdateFotoInmuebleResponse" message="tns:IAltasDocumentos_UpdateFotoInmueble_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdateFotoInmuebleAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_UpdateFotoInmueble_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertFotoManzana">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertFotoManzana" message="tns:IAltasDocumentos_InsertFotoManzana_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertFotoManzanaResponse" message="tns:IAltasDocumentos_InsertFotoManzana_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertFotoManzanaAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_InsertFotoManzana_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFotoManzana">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdateFotoManzana" message="tns:IAltasDocumentos_UpdateFotoManzana_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdateFotoManzanaResponse" message="tns:IAltasDocumentos_UpdateFotoManzana_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdateFotoManzanaAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_UpdateFotoManzana_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertMemoriaDescriptiva">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertMemoriaDescriptiva" message="tns:IAltasDocumentos_InsertMemoriaDescriptiva_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertMemoriaDescriptivaResponse" message="tns:IAltasDocumentos_InsertMemoriaDescriptiva_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertMemoriaDescriptivaAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_InsertMemoriaDescriptiva_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertOficio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertOficio" message="tns:IAltasDocumentos_InsertOficio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertOficioResponse" message="tns:IAltasDocumentos_InsertOficio_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertOficioAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_InsertOficio_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDocumentoOficio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertDocumentoOficio" message="tns:IAltasDocumentos_InsertDocumentoOficio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertDocumentoOficioResponse" message="tns:IAltasDocumentos_InsertDocumentoOficio_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertDocumentoOficioAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_InsertDocumentoOficio_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentoOficio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdateDocumentoOficio" message="tns:IAltasDocumentos_UpdateDocumentoOficio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdateDocumentoOficioResponse" message="tns:IAltasDocumentos_UpdateDocumentoOficio_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdateDocumentoOficioAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_UpdateDocumentoOficio_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertNoAcceso">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertNoAcceso" message="tns:IAltasDocumentos_InsertNoAcceso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertNoAccesoResponse" message="tns:IAltasDocumentos_InsertNoAcceso_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertNoAccesoAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_InsertNoAcceso_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertComplementario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertComplementario" message="tns:IAltasDocumentos_InsertComplementario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertComplementarioResponse" message="tns:IAltasDocumentos_InsertComplementario_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertComplementarioAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_InsertComplementario_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertFotoNoAcceso">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertFotoNoAcceso" message="tns:IAltasDocumentos_InsertFotoNoAcceso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertFotoNoAccesoResponse" message="tns:IAltasDocumentos_InsertFotoNoAcceso_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertFotoNoAccesoAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_InsertFotoNoAcceso_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertOtros">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertOtros" message="tns:IAltasDocumentos_InsertOtros_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertOtrosResponse" message="tns:IAltasDocumentos_InsertOtros_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertOtrosAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_InsertOtros_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPlanoArquitectonico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertPlanoArquitectonico" message="tns:IAltasDocumentos_InsertPlanoArquitectonico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertPlanoArquitectonicoResponse" message="tns:IAltasDocumentos_InsertPlanoArquitectonico_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertPlanoArquitectonicoAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_InsertPlanoArquitectonico_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPlanosCampo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertPlanosCampo" message="tns:IAltasDocumentos_InsertPlanosCampo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertPlanosCampoResponse" message="tns:IAltasDocumentos_InsertPlanosCampo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertPlanosCampoAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_InsertPlanosCampo_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPoderNotarial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertPoderNotarial" message="tns:IAltasDocumentos_InsertPoderNotarial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertPoderNotarialResponse" message="tns:IAltasDocumentos_InsertPoderNotarial_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertPoderNotarialAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_InsertPoderNotarial_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePoderNotarial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdatePoderNotarial" message="tns:IAltasDocumentos_UpdatePoderNotarial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdatePoderNotarialResponse" message="tns:IAltasDocumentos_UpdatePoderNotarial_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/UpdatePoderNotarialAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_UpdatePoderNotarial_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertProrrogaLicencia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertProrrogaLicencia" message="tns:IAltasDocumentos_InsertProrrogaLicencia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertProrrogaLicenciaResponse" message="tns:IAltasDocumentos_InsertProrrogaLicencia_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertProrrogaLicenciaAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_InsertProrrogaLicencia_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertRegistroPropiedad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertRegistroPropiedad" message="tns:IAltasDocumentos_InsertRegistroPropiedad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertRegistroPropiedadResponse" message="tns:IAltasDocumentos_InsertRegistroPropiedad_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAltasDocumentos/InsertRegistroPropiedadAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IAltasDocumentos_InsertRegistroPropiedad_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AltasDocumentos" type="tns:IAltasDocumentos">
+    <wsp:PolicyReference URI="#AltasDocumentos_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertResolucionJudicial">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/InsertResolucionJudicial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResolucionJudicial">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/UpdateResolucionJudicial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertSATI">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/InsertSATI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentoGenerico">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/UpdateDocumentoGenerico" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="EstablecerDocumentoDefinitivo">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/EstablecerDocumentoDefinitivo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAvaluoCatastral">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/InsertAvaluoCatastral" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAvaluoComercial">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/InsertAvaluoComercial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCartaPoder">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/InsertCartaPoder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCartaPoder">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/UpdateCartaPoder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDocumentoAdministrativo">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/InsertDocumentoAdministrativo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentoAdministrativo">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/UpdateDocumentoAdministrativo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertLicenciaObras">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/InsertLicenciaObras" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTerminacionLicencia">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/UpdateTerminacionLicencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLicenciaObras">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/UpdateLicenciaObras" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDocumentoPrivado">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/InsertDocumentoPrivado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentoPrivado">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/UpdateDocumentoPrivado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertEscrituraPublica">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/InsertEscrituraPublica" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEscrituraPublica">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/UpdateEscrituraPublica" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertF4">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/InsertF4" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertFotoInmueble">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/InsertFotoInmueble" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFotoInmueble">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/UpdateFotoInmueble" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertFotoManzana">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/InsertFotoManzana" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFotoManzana">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/UpdateFotoManzana" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertMemoriaDescriptiva">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/InsertMemoriaDescriptiva" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertOficio">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/InsertOficio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDocumentoOficio">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/InsertDocumentoOficio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentoOficio">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/UpdateDocumentoOficio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertNoAcceso">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/InsertNoAcceso" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertComplementario">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/InsertComplementario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertFotoNoAcceso">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/InsertFotoNoAcceso" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertOtros">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/InsertOtros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPlanoArquitectonico">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/InsertPlanoArquitectonico" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPlanosCampo">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/InsertPlanosCampo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPoderNotarial">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/InsertPoderNotarial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePoderNotarial">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/UpdatePoderNotarial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertProrrogaLicencia">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/InsertProrrogaLicencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertRegistroPropiedad">
+      <soap12:operation soapAction="http://tempuri.org/IAltasDocumentos/InsertRegistroPropiedad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AltasDocumentos">
+    <wsdl:port name="AltasDocumentos" binding="tns:AltasDocumentos">
+      <soap12:address location="http://psur-prbs-sbs01.promocapre.int/PRE/Documental/AltasDocumentos.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://psur-prbs-sbs01.promocapre.int/PRE/Documental/AltasDocumentos.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

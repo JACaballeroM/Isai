@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6057bf1a-b4f8-42f9-8b77-2adeef2eb66a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.0.8.2/PRO/Documental/AltasDocumentos.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AltasDocumentos1.xsd" MetadataType="Schema" ID="43563abf-3540-4b60-b001-608e182d152e" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Documental/AltasDocumentos.svc?xsd=xsd2" />
+    <MetadataFile FileName="AltasDocumentos12.wsdl" MetadataType="Wsdl" ID="b425ec18-966c-4930-a096-0b685a21c57d" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Documental/AltasDocumentos.svc?wsdl" />
+    <MetadataFile FileName="AltasDocumentos12.disco" MetadataType="Disco" ID="5acad745-d934-4014-a9f0-8836b666ae0f" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Documental/AltasDocumentos.svc?disco" />
+    <MetadataFile FileName="AltasDocumentos12.xsd" MetadataType="Schema" ID="ed492f60-1071-4385-8ed3-aee40194687e" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Documental/AltasDocumentos.svc?xsd=xsd3" />
+    <MetadataFile FileName="AltasDocumentos13.xsd" MetadataType="Schema" ID="a3878181-7067-47a9-968e-13205d274473" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Documental/AltasDocumentos.svc?xsd=xsd0" />
+    <MetadataFile FileName="AltasDocumentos14.xsd" MetadataType="Schema" ID="620f123c-f5ae-45f2-8f26-51d5198ca716" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Documental/AltasDocumentos.svc?xsd=xsd4" />
+    <MetadataFile FileName="AltasDocumentos15.xsd" MetadataType="Schema" ID="af373ecb-37f9-4302-a686-d973191baa72" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Documental/AltasDocumentos.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

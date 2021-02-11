@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DseInmuebleDireccion.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DseInmuebleDireccion.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DseInmuebleDireccion.xsd" id="DseInmuebleDireccion" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="DseInmuebleDireccion">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DireccionInmueble">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDPERSONA" type="xs:decimal" />
+              <xs:element name="IDDIRECCION" type="xs:decimal" />
+              <xs:element name="CODTIPOSVIA" type="xs:decimal" />
+              <xs:element name="NUMEROEXTERIOR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="IDVIA" type="xs:decimal" />
+              <xs:element name="VIA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ABREVIATURAVIA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ANDADOR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="EDIFICIO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SECCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ENTRADA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="NUMEROINTERIOR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODTIPOSASENTAMIENTO" type="xs:decimal" />
+              <xs:element name="ABREVIATURA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COLONIA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CODIGOPOSTAL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CIUDAD">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DELEGACION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODESTADO" type="xs:decimal" />
+              <xs:element name="ESTADO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" msdata:Expression="IIF (ISNULL(ABREVIATURAVIA,'')='','',ABREVIATURAVIA) + IIF(ISNULL(VIA,'')='', '', VIA) + IIF(ISNULL(NUMEROEXTERIOR,'')='','',', ' + NUMEROEXTERIOR) + IIF (ISNULL(ANDADOR,'')='','',', And. ' + ANDADOR) + IIF(ISNULL(EDIFICIO,'')='', '', ', Edif. ' + EDIFICIO) + IIF (ISNULL(SECCION,'')='','', ', Sec. ' + SECCION) + IIF(ISNULL(ENTRADA,'')='', '', ', Ent. ' + ENTRADA) + IIF(ISNULL(NUMEROINTERIOR,'')='', '', ', ' + NUMEROINTERIOR) + IIF(ISNULL(ABREVIATURA,'')='','',', ' + ABREVIATURA) + IIF(ISNULL(COLONIA,'')='','', ' ' + COLONIA) + IIF(ISNULL(CODIGOPOSTAL,'')='','',', C.P. ' + CODIGOPOSTAL) + IIF(ISNULL(CIUDAD,'')='','', ', ' + CIUDAD) + IIF(ISNULL(DELEGACION,'')='','', ', ' + DELEGACION) + IIF(ISNULL(ESTADO,'')='','',' (' + ESTADO + ')')" minOccurs="0" name="DireccionCompleta" type="xs:string" />
+              <xs:element minOccurs="0" name="DESCRIPCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ABREVLOCALIDAD">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CODTIPOSDIRECCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TIPODIRECCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DomicilioFiscalPredio">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="IDDOMICILIOFISCALPREDIAL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="IDPERSONADOMICILIO" type="xs:decimal" />
+              <xs:element name="IDPERSONA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="IDINMUEBLE" type="xs:decimal" />
+              <xs:element name="IDPERSONAINMUEBLE" type="xs:decimal" />
+              <xs:element minOccurs="0" name="INMUEBLE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="14" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DIRECCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="355" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DOMICILIOFISCAL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="438" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="IDDIRECCION" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESCRIPCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ESSUJETOPASIVO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ACTIVO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PersonaDomicilio">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDPERSONADOMICILIO" type="xs:decimal" />
+              <xs:element name="IDPERSONA" type="xs:decimal" />
+              <xs:element name="IDDIRECCION" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:DireccionInmueble" />
+      <xs:field xpath="mstns:IDDIRECCION" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" name="PersonaDomicilio_Constraint1">
+      <xs:selector xpath=".//mstns:PersonaDomicilio" />
+      <xs:field xpath="mstns:IDPERSONADOMICILIO" />
+    </xs:unique>
+    <xs:keyref name="FK_DireccionInmueble_PersonaDomicilio" refer="mstns:Constraint1">
+      <xs:selector xpath=".//mstns:PersonaDomicilio" />
+      <xs:field xpath="mstns:IDDIRECCION" />
+    </xs:keyref>
+    <xs:keyref name="FK_PersonaDomicilio_DomicilioFiscalPredio" refer="mstns:PersonaDomicilio_Constraint1">
+      <xs:selector xpath=".//mstns:DomicilioFiscalPredio" />
+      <xs:field xpath="mstns:IDPERSONADOMICILIO" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

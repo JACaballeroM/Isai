@@ -1,0 +1,1740 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="RegistroContribuyentesService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IRegistroContribuyentes_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" />
+      <xsd:import schemaLocation="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd2" namespace="http://tempuri.org/DseHistorico.xsd" />
+      <xsd:import schemaLocation="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd3" />
+      <xsd:import schemaLocation="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd5" namespace="http://tempuri.org/DseCiudades.xsd" />
+      <xsd:import schemaLocation="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd6" namespace="http://tempuri.org/DseInfoContribuyente.xsd" />
+      <xsd:import schemaLocation="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd7" namespace="http://tempuri.org/DseDatosRepresentacion.xsd" />
+      <xsd:import schemaLocation="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio.Enum" />
+      <xsd:import schemaLocation="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd9" namespace="http://tempuri.org/DseInfoDirecciones.xsd" />
+      <xsd:import schemaLocation="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd10" namespace="http://tempuri.org/DseInfoNotarios.xsd" />
+      <xsd:import schemaLocation="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd11" namespace="http://tempuri.org/DseInmuebleDireccion.xsd" />
+      <xsd:import schemaLocation="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" />
+      <xsd:import schemaLocation="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd13" namespace="http://tempuri.org/DseContribuyentes.xsd" />
+      <xsd:import schemaLocation="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd14" namespace="http://tempuri.org/DsePersonasSimilares.xsd" />
+      <xsd:import schemaLocation="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd15" namespace="http://tempuri.org/DseDireccionesInmueble.xsd" />
+      <xsd:import schemaLocation="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd16" namespace="http://tempuri.org/DseNotarios.xsd" />
+      <xsd:import schemaLocation="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd17" namespace="http://tempuri.org/DseAsentamientos.xsd" />
+      <xsd:import schemaLocation="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd18" namespace="http://tempuri.org/DseMunicipios.xsd" />
+      <xsd:import schemaLocation="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd19" namespace="http://tempuri.org/DseEstados.xsd" />
+      <xsd:import schemaLocation="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd20" namespace="http://tempuri.org/DseCatalogos.xsd" />
+      <xsd:import schemaLocation="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd21" namespace="http://tempuri.org/DseColoniaAsentamiento.xsd" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IRegistroContribuyentes_GetHistoricosRepresentacionDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistoricosRepresentacionDetalle" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetHistoricosRepresentacionDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistoricosRepresentacionDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetHistoricosRepresentacionDetalle_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q1:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetCiudadesByNombre_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCiudadesByNombre" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetCiudadesByNombre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCiudadesByNombreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetCiudadesByNombre_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q2:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_ExisteContribuyente_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExisteContribuyente" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_ExisteContribuyente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExisteContribuyenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_ExisteContribuyente_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q3:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetContribuyenteByDireccion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContribuyenteByDireccion" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetContribuyenteByDireccion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContribuyenteByDireccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetContribuyenteByDireccion_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q4:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetFolioConstCambioContribuyente_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFolioConstCambioContribuyente" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetFolioConstCambioContribuyente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFolioConstCambioContribuyenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetFolioConstCambioContribuyente_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q5:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetFolioConstCambioContribuyente_V2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFolioConstCambioContribuyente_V2" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetFolioConstCambioContribuyente_V2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFolioConstCambioContribuyente_V2Response" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetFolioConstCambioContribuyente_V2_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q6:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_InsertarContribuyente_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarContribuyente" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_InsertarContribuyente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarContribuyenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_InsertarContribuyente_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q7:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_InsertarRepresentacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarRepresentacion" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_InsertarRepresentacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarRepresentacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_InsertarRepresentacion_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q8:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_InsertarDireccion_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarDireccion" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_InsertarDireccion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarDireccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_InsertarDireccion_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q9:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_InsertarNotario_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarNotario" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_InsertarNotario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarNotarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_InsertarNotario_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q10:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_InsertarInmuebleDomicilioFiscal_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarInmuebleDomicilioFiscal" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_InsertarInmuebleDomicilioFiscal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarInmuebleDomicilioFiscalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_InsertarInmuebleDomicilioFiscal_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q11:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_ActualizarRepresentacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarRepresentacion" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_ActualizarRepresentacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarRepresentacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_ActualizarRepresentacion_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q12:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_ActualizarContribuyente_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarContribuyente" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_ActualizarContribuyente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarContribuyenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_ActualizarContribuyente_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q13:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_ActualizarContribuyente_V2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarContribuyente_V2" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_ActualizarContribuyente_V2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarContribuyente_V2Response" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_ActualizarContribuyente_V2_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q14:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_ActualizarDireccion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarDireccion" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_ActualizarDireccion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarDireccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_ActualizarDireccion_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q15:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_ActualizarNotario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarNotario" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_ActualizarNotario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarNotarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_ActualizarNotario_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q16:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_ActualizarInmuebleDomicilioFiscal_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarInmuebleDomicilioFiscal" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_ActualizarInmuebleDomicilioFiscal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarInmuebleDomicilioFiscalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_ActualizarInmuebleDomicilioFiscal_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q17:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_ActualizarContribuyenteSimple_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarContribuyenteSimple" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_ActualizarContribuyenteSimple_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarContribuyenteSimpleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_ActualizarContribuyenteSimple_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q18:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_ActualizarCambiaTipoPersona_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarCambiaTipoPersona" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_ActualizarCambiaTipoPersona_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarCambiaTipoPersonaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_ActualizarCambiaTipoPersona_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q19:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_ActualizarCambiaTipoPersona_V2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarCambiaTipoPersona_V2" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_ActualizarCambiaTipoPersona_V2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarCambiaTipoPersona_V2Response" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_ActualizarCambiaTipoPersona_V2_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q20:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_cambio_tipo_FisicoMoral_InputMessage">
+    <wsdl:part name="parameters" element="tns:cambio_tipo_FisicoMoral" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_cambio_tipo_FisicoMoral_OutputMessage">
+    <wsdl:part name="parameters" element="tns:cambio_tipo_FisicoMoralResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_cambio_tipo_FisicoMoral_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q21:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_BorrarRepresentacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:BorrarRepresentacion" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_BorrarRepresentacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BorrarRepresentacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_BorrarRepresentacion_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q22:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_BorrarRepresentacionNotario_InputMessage">
+    <wsdl:part name="parameters" element="tns:BorrarRepresentacionNotario" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_BorrarRepresentacionNotario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BorrarRepresentacionNotarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_BorrarRepresentacionNotario_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q23:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_BorrarRepresentante_InputMessage">
+    <wsdl:part name="parameters" element="tns:BorrarRepresentante" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_BorrarRepresentante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BorrarRepresentanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_BorrarRepresentante_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q24:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_BorrarDireccion_InputMessage">
+    <wsdl:part name="parameters" element="tns:BorrarDireccion" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_BorrarDireccion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BorrarDireccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_BorrarDireccion_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q25:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_BorrarDireccionContribuyente_InputMessage">
+    <wsdl:part name="parameters" element="tns:BorrarDireccionContribuyente" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_BorrarDireccionContribuyente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BorrarDireccionContribuyenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_BorrarDireccionContribuyente_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q26:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetHistoricosDireccion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistoricosDireccion" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetHistoricosDireccion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistoricosDireccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetHistoricosDireccion_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q27:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetHistoricosDireccionDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistoricosDireccionDetalle" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetHistoricosDireccionDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistoricosDireccionDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetHistoricosDireccionDetalle_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q28:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetHistoricosDireccionFiscal_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistoricosDireccionFiscal" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetHistoricosDireccionFiscal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistoricosDireccionFiscalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetHistoricosDireccionFiscal_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q29:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetHistoricosDireccionFiscalDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistoricosDireccionFiscalDetalle" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetHistoricosDireccionFiscalDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistoricosDireccionFiscalDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetHistoricosDireccionFiscalDetalle_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q30:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetHistoricosPersona_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistoricosPersona" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetHistoricosPersona_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistoricosPersonaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetHistoricosPersona_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q31:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetHistoricosPersonaDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistoricosPersonaDetalle" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetHistoricosPersonaDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistoricosPersonaDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetHistoricosPersonaDetalle_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q32:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetHistoricosRepresentacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistoricosRepresentacion" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetHistoricosRepresentacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistoricosRepresentacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetHistoricosRepresentacion_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q33:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetContribuyentesByDatosPersonales_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContribuyentesByDatosPersonales" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetContribuyentesByDatosPersonales_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContribuyentesByDatosPersonalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetContribuyentesByDatosPersonales_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q34:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetPersonaMoralByDatosPersonales_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonaMoralByDatosPersonales" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetPersonaMoralByDatosPersonales_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonaMoralByDatosPersonalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetPersonaMoralByDatosPersonales_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q35:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetContribuyentesByDatosIdentificativos_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContribuyentesByDatosIdentificativos" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetContribuyentesByDatosIdentificativos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContribuyentesByDatosIdentificativosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetContribuyentesByDatosIdentificativos_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q36:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetContribuyentesMoralByDatosIdentificativos_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContribuyentesMoralByDatosIdentificativos" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetContribuyentesMoralByDatosIdentificativos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContribuyentesMoralByDatosIdentificativosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetContribuyentesMoralByDatosIdentificativos_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q37:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetPersonaMoralByDatosIdentificativos_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonaMoralByDatosIdentificativos" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetPersonaMoralByDatosIdentificativos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonaMoralByDatosIdentificativosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetPersonaMoralByDatosIdentificativos_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q38:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetContribuyentesInmuebleByDatosPersonales_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContribuyentesInmuebleByDatosPersonales" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetContribuyentesInmuebleByDatosPersonales_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContribuyentesInmuebleByDatosPersonalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetContribuyentesInmuebleByDatosPersonales_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q39="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q39:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetContribuyentesInmuebleByDatosPersonalesSIGASIIP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContribuyentesInmuebleByDatosPersonalesSIGASIIP" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetContribuyentesInmuebleByDatosPersonalesSIGASIIP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContribuyentesInmuebleByDatosPersonalesSIGASIIPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetContribuyentesInmuebleByDatosPersonalesSIGASIIP_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q40="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q40:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetContribuyentesSimilares_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContribuyentesSimilares" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetContribuyentesSimilares_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContribuyentesSimilaresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetContribuyentesSimilares_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q41="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q41:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetContribuyentesInmuebleByDatosIdentificativos_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContribuyentesInmuebleByDatosIdentificativos" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetContribuyentesInmuebleByDatosIdentificativos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContribuyentesInmuebleByDatosIdentificativosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetContribuyentesInmuebleByDatosIdentificativos_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q42:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetContribuyentesInmuebleByDatosIdentificativosSIGASIIP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContribuyentesInmuebleByDatosIdentificativosSIGASIIP" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetContribuyentesInmuebleByDatosIdentificativosSIGASIIP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContribuyentesInmuebleByDatosIdentificativosSIGASIIPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetContribuyentesInmuebleByDatosIdentificativosSIGASIIP_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q43="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q43:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetInfoContribuyente_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInfoContribuyente" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetInfoContribuyente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInfoContribuyenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetInfoContribuyente_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q44="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q44:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetDireccionesInmueble_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDireccionesInmueble" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetDireccionesInmueble_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDireccionesInmuebleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetDireccionesInmueble_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q45="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q45:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetDireccionesContribuyente_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDireccionesContribuyente" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetDireccionesContribuyente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDireccionesContribuyenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetDireccionesContribuyente_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q46="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q46:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetRepresentacionContribuyente_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRepresentacionContribuyente" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetRepresentacionContribuyente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRepresentacionContribuyenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetRepresentacionContribuyente_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q47="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q47:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetRepresentacionNotario_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRepresentacionNotario" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetRepresentacionNotario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRepresentacionNotarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetRepresentacionNotario_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q48="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q48:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetNotariosByDatosPersonales_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotariosByDatosPersonales" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetNotariosByDatosPersonales_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotariosByDatosPersonalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetNotariosByDatosPersonales_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q49="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q49:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetNotariosByDatosIdentificativos_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotariosByDatosIdentificativos" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetNotariosByDatosIdentificativos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotariosByDatosIdentificativosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetNotariosByDatosIdentificativos_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q50="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q50:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetInfoNotario_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInfoNotario" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetInfoNotario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInfoNotarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetInfoNotario_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q51="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q51:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetDatosRepresentacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDatosRepresentacion" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetDatosRepresentacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDatosRepresentacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetDatosRepresentacion_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q52="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q52:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetDireccionById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDireccionById" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetDireccionById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDireccionByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetDireccionById_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q53="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q53:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetAsentamiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAsentamiento" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetAsentamiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAsentamientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetAsentamiento_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q54="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q54:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetAsentamientoByEstado_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAsentamientoByEstado" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetAsentamientoByEstado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAsentamientoByEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetAsentamientoByEstado_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q55="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q55:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetAsentamientoByNombre_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAsentamientoByNombre" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetAsentamientoByNombre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAsentamientoByNombreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetAsentamientoByNombre_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q56="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q56:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetCiudad_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCiudad" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetCiudad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCiudadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetCiudad_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q57="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q57:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetCiudadByEstado_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCiudadByEstado" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetCiudadByEstado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCiudadByEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetCiudadByEstado_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q58="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q58:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetMunicipios_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMunicipios" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetMunicipios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMunicipiosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetMunicipios_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q59="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q59:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetMunicipiosByEstado_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMunicipiosByEstado" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetMunicipiosByEstado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMunicipiosByEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetMunicipiosByEstado_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q60="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q60:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetMunicipiosByNombre_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMunicipiosByNombre" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetMunicipiosByNombre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMunicipiosByNombreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetMunicipiosByNombre_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q61="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q61:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetEstados_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstados" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetEstados_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetEstados_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q62="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q62:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetCatalogos_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCatalogos" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetCatalogos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCatalogosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetCatalogos_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q63="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q63:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetColAsentByDelegacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetColAsentByDelegacion" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetColAsentByDelegacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetColAsentByDelegacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetColAsentByDelegacion_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q64="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q64:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetDomiciliosFiscales_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDomiciliosFiscales" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetDomiciliosFiscales_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDomiciliosFiscalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRegistroContribuyentes_GetDomiciliosFiscales_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q65="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q65:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:portType name="IRegistroContribuyentes">
+    <wsdl:operation name="GetHistoricosRepresentacionDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetHistoricosRepresentacionDetalle" message="tns:IRegistroContribuyentes_GetHistoricosRepresentacionDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetHistoricosRepresentacionDetalleResponse" message="tns:IRegistroContribuyentes_GetHistoricosRepresentacionDetalle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetHistoricosRepresentacionDetalleRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetHistoricosRepresentacionDetalle_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCiudadesByNombre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetCiudadesByNombre" message="tns:IRegistroContribuyentes_GetCiudadesByNombre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetCiudadesByNombreResponse" message="tns:IRegistroContribuyentes_GetCiudadesByNombre_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetCiudadesByNombreRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetCiudadesByNombre_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExisteContribuyente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/ExisteContribuyente" message="tns:IRegistroContribuyentes_ExisteContribuyente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/ExisteContribuyenteResponse" message="tns:IRegistroContribuyentes_ExisteContribuyente_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/ExisteContribuyenteRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_ExisteContribuyente_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContribuyenteByDireccion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetContribuyenteByDireccion" message="tns:IRegistroContribuyentes_GetContribuyenteByDireccion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetContribuyenteByDireccionResponse" message="tns:IRegistroContribuyentes_GetContribuyenteByDireccion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetContribuyenteByDireccionRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetContribuyenteByDireccion_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFolioConstCambioContribuyente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetFolioConstCambioContribuyente" message="tns:IRegistroContribuyentes_GetFolioConstCambioContribuyente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetFolioConstCambioContribuyenteResponse" message="tns:IRegistroContribuyentes_GetFolioConstCambioContribuyente_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetFolioConstCambioContribuyenteRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetFolioConstCambioContribuyente_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFolioConstCambioContribuyente_V2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetFolioConstCambioContribuyente_V2" message="tns:IRegistroContribuyentes_GetFolioConstCambioContribuyente_V2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetFolioConstCambioContribuyente_V2Response" message="tns:IRegistroContribuyentes_GetFolioConstCambioContribuyente_V2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetFolioConstCambioContribuyente_V2RegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetFolioConstCambioContribuyente_V2_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarContribuyente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/InsertarContribuyente" message="tns:IRegistroContribuyentes_InsertarContribuyente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/InsertarContribuyenteResponse" message="tns:IRegistroContribuyentes_InsertarContribuyente_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/InsertarContribuyenteRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_InsertarContribuyente_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarRepresentacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/InsertarRepresentacion" message="tns:IRegistroContribuyentes_InsertarRepresentacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/InsertarRepresentacionResponse" message="tns:IRegistroContribuyentes_InsertarRepresentacion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/InsertarRepresentacionRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_InsertarRepresentacion_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarDireccion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/InsertarDireccion" message="tns:IRegistroContribuyentes_InsertarDireccion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/InsertarDireccionResponse" message="tns:IRegistroContribuyentes_InsertarDireccion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/InsertarDireccionRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_InsertarDireccion_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarNotario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/InsertarNotario" message="tns:IRegistroContribuyentes_InsertarNotario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/InsertarNotarioResponse" message="tns:IRegistroContribuyentes_InsertarNotario_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/InsertarNotarioRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_InsertarNotario_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarInmuebleDomicilioFiscal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/InsertarInmuebleDomicilioFiscal" message="tns:IRegistroContribuyentes_InsertarInmuebleDomicilioFiscal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/InsertarInmuebleDomicilioFiscalResponse" message="tns:IRegistroContribuyentes_InsertarInmuebleDomicilioFiscal_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/InsertarInmuebleDomicilioFiscalRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_InsertarInmuebleDomicilioFiscal_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarRepresentacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/ActualizarRepresentacion" message="tns:IRegistroContribuyentes_ActualizarRepresentacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/ActualizarRepresentacionResponse" message="tns:IRegistroContribuyentes_ActualizarRepresentacion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/ActualizarRepresentacionRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_ActualizarRepresentacion_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarContribuyente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/ActualizarContribuyente" message="tns:IRegistroContribuyentes_ActualizarContribuyente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/ActualizarContribuyenteResponse" message="tns:IRegistroContribuyentes_ActualizarContribuyente_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/ActualizarContribuyenteRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_ActualizarContribuyente_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarContribuyente_V2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/ActualizarContribuyente_V2" message="tns:IRegistroContribuyentes_ActualizarContribuyente_V2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/ActualizarContribuyente_V2Response" message="tns:IRegistroContribuyentes_ActualizarContribuyente_V2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/ActualizarContribuyente_V2RegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_ActualizarContribuyente_V2_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarDireccion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/ActualizarDireccion" message="tns:IRegistroContribuyentes_ActualizarDireccion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/ActualizarDireccionResponse" message="tns:IRegistroContribuyentes_ActualizarDireccion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/ActualizarDireccionRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_ActualizarDireccion_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarNotario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/ActualizarNotario" message="tns:IRegistroContribuyentes_ActualizarNotario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/ActualizarNotarioResponse" message="tns:IRegistroContribuyentes_ActualizarNotario_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/ActualizarNotarioRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_ActualizarNotario_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarInmuebleDomicilioFiscal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/ActualizarInmuebleDomicilioFiscal" message="tns:IRegistroContribuyentes_ActualizarInmuebleDomicilioFiscal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/ActualizarInmuebleDomicilioFiscalResponse" message="tns:IRegistroContribuyentes_ActualizarInmuebleDomicilioFiscal_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/ActualizarInmuebleDomicilioFiscalRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_ActualizarInmuebleDomicilioFiscal_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarContribuyenteSimple">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/ActualizarContribuyenteSimple" message="tns:IRegistroContribuyentes_ActualizarContribuyenteSimple_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/ActualizarContribuyenteSimpleResponse" message="tns:IRegistroContribuyentes_ActualizarContribuyenteSimple_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/ActualizarContribuyenteSimpleRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_ActualizarContribuyenteSimple_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCambiaTipoPersona">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/ActualizarCambiaTipoPersona" message="tns:IRegistroContribuyentes_ActualizarCambiaTipoPersona_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/ActualizarCambiaTipoPersonaResponse" message="tns:IRegistroContribuyentes_ActualizarCambiaTipoPersona_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/ActualizarCambiaTipoPersonaRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_ActualizarCambiaTipoPersona_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCambiaTipoPersona_V2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/ActualizarCambiaTipoPersona_V2" message="tns:IRegistroContribuyentes_ActualizarCambiaTipoPersona_V2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/ActualizarCambiaTipoPersona_V2Response" message="tns:IRegistroContribuyentes_ActualizarCambiaTipoPersona_V2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/ActualizarCambiaTipoPersona_V2RegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_ActualizarCambiaTipoPersona_V2_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="cambio_tipo_FisicoMoral">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/cambio_tipo_FisicoMoral" message="tns:IRegistroContribuyentes_cambio_tipo_FisicoMoral_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/cambio_tipo_FisicoMoralResponse" message="tns:IRegistroContribuyentes_cambio_tipo_FisicoMoral_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/cambio_tipo_FisicoMoralRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_cambio_tipo_FisicoMoral_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BorrarRepresentacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/BorrarRepresentacion" message="tns:IRegistroContribuyentes_BorrarRepresentacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/BorrarRepresentacionResponse" message="tns:IRegistroContribuyentes_BorrarRepresentacion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/BorrarRepresentacionRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_BorrarRepresentacion_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BorrarRepresentacionNotario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/BorrarRepresentacionNotario" message="tns:IRegistroContribuyentes_BorrarRepresentacionNotario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/BorrarRepresentacionNotarioResponse" message="tns:IRegistroContribuyentes_BorrarRepresentacionNotario_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/BorrarRepresentacionNotarioRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_BorrarRepresentacionNotario_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BorrarRepresentante">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/BorrarRepresentante" message="tns:IRegistroContribuyentes_BorrarRepresentante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/BorrarRepresentanteResponse" message="tns:IRegistroContribuyentes_BorrarRepresentante_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/BorrarRepresentanteRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_BorrarRepresentante_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BorrarDireccion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/BorrarDireccion" message="tns:IRegistroContribuyentes_BorrarDireccion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/BorrarDireccionResponse" message="tns:IRegistroContribuyentes_BorrarDireccion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/BorrarDireccionRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_BorrarDireccion_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BorrarDireccionContribuyente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/BorrarDireccionContribuyente" message="tns:IRegistroContribuyentes_BorrarDireccionContribuyente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/BorrarDireccionContribuyenteResponse" message="tns:IRegistroContribuyentes_BorrarDireccionContribuyente_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/BorrarDireccionContribuyenteRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_BorrarDireccionContribuyente_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoricosDireccion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetHistoricosDireccion" message="tns:IRegistroContribuyentes_GetHistoricosDireccion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetHistoricosDireccionResponse" message="tns:IRegistroContribuyentes_GetHistoricosDireccion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetHistoricosDireccionRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetHistoricosDireccion_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoricosDireccionDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetHistoricosDireccionDetalle" message="tns:IRegistroContribuyentes_GetHistoricosDireccionDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetHistoricosDireccionDetalleResponse" message="tns:IRegistroContribuyentes_GetHistoricosDireccionDetalle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetHistoricosDireccionDetalleRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetHistoricosDireccionDetalle_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoricosDireccionFiscal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetHistoricosDireccionFiscal" message="tns:IRegistroContribuyentes_GetHistoricosDireccionFiscal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetHistoricosDireccionFiscalResponse" message="tns:IRegistroContribuyentes_GetHistoricosDireccionFiscal_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetHistoricosDireccionFiscalRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetHistoricosDireccionFiscal_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoricosDireccionFiscalDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetHistoricosDireccionFiscalDetalle" message="tns:IRegistroContribuyentes_GetHistoricosDireccionFiscalDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetHistoricosDireccionFiscalDetalleResponse" message="tns:IRegistroContribuyentes_GetHistoricosDireccionFiscalDetalle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetHistoricosDireccionFiscalDetalleRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetHistoricosDireccionFiscalDetalle_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoricosPersona">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetHistoricosPersona" message="tns:IRegistroContribuyentes_GetHistoricosPersona_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetHistoricosPersonaResponse" message="tns:IRegistroContribuyentes_GetHistoricosPersona_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetHistoricosPersonaRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetHistoricosPersona_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoricosPersonaDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetHistoricosPersonaDetalle" message="tns:IRegistroContribuyentes_GetHistoricosPersonaDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetHistoricosPersonaDetalleResponse" message="tns:IRegistroContribuyentes_GetHistoricosPersonaDetalle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetHistoricosPersonaDetalleRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetHistoricosPersonaDetalle_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoricosRepresentacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetHistoricosRepresentacion" message="tns:IRegistroContribuyentes_GetHistoricosRepresentacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetHistoricosRepresentacionResponse" message="tns:IRegistroContribuyentes_GetHistoricosRepresentacion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetHistoricosRepresentacionRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetHistoricosRepresentacion_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContribuyentesByDatosPersonales">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetContribuyentesByDatosPersonales" message="tns:IRegistroContribuyentes_GetContribuyentesByDatosPersonales_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetContribuyentesByDatosPersonalesResponse" message="tns:IRegistroContribuyentes_GetContribuyentesByDatosPersonales_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetContribuyentesByDatosPersonalesRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetContribuyentesByDatosPersonales_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonaMoralByDatosPersonales">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetPersonaMoralByDatosPersonales" message="tns:IRegistroContribuyentes_GetPersonaMoralByDatosPersonales_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetPersonaMoralByDatosPersonalesResponse" message="tns:IRegistroContribuyentes_GetPersonaMoralByDatosPersonales_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetPersonaMoralByDatosPersonalesRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetPersonaMoralByDatosPersonales_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContribuyentesByDatosIdentificativos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetContribuyentesByDatosIdentificativos" message="tns:IRegistroContribuyentes_GetContribuyentesByDatosIdentificativos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetContribuyentesByDatosIdentificativosResponse" message="tns:IRegistroContribuyentes_GetContribuyentesByDatosIdentificativos_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetContribuyentesByDatosIdentificativosRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetContribuyentesByDatosIdentificativos_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContribuyentesMoralByDatosIdentificativos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetContribuyentesMoralByDatosIdentificativos" message="tns:IRegistroContribuyentes_GetContribuyentesMoralByDatosIdentificativos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetContribuyentesMoralByDatosIdentificativosResponse" message="tns:IRegistroContribuyentes_GetContribuyentesMoralByDatosIdentificativos_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetContribuyentesMoralByDatosIdentificativosRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetContribuyentesMoralByDatosIdentificativos_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonaMoralByDatosIdentificativos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetPersonaMoralByDatosIdentificativos" message="tns:IRegistroContribuyentes_GetPersonaMoralByDatosIdentificativos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetPersonaMoralByDatosIdentificativosResponse" message="tns:IRegistroContribuyentes_GetPersonaMoralByDatosIdentificativos_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetPersonaMoralByDatosIdentificativosRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetPersonaMoralByDatosIdentificativos_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContribuyentesInmuebleByDatosPersonales">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetContribuyentesInmuebleByDatosPersonales" message="tns:IRegistroContribuyentes_GetContribuyentesInmuebleByDatosPersonales_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetContribuyentesInmuebleByDatosPersonalesResponse" message="tns:IRegistroContribuyentes_GetContribuyentesInmuebleByDatosPersonales_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetContribuyentesInmuebleByDatosPersonalesRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetContribuyentesInmuebleByDatosPersonales_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContribuyentesInmuebleByDatosPersonalesSIGASIIP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetContribuyentesInmuebleByDatosPersonalesSIGASIIP" message="tns:IRegistroContribuyentes_GetContribuyentesInmuebleByDatosPersonalesSIGASIIP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetContribuyentesInmuebleByDatosPersonalesSIGASIIPResponse" message="tns:IRegistroContribuyentes_GetContribuyentesInmuebleByDatosPersonalesSIGASIIP_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetContribuyentesInmuebleByDatosPersonalesSIGASIIPRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetContribuyentesInmuebleByDatosPersonalesSIGASIIP_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContribuyentesSimilares">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetContribuyentesSimilares" message="tns:IRegistroContribuyentes_GetContribuyentesSimilares_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetContribuyentesSimilaresResponse" message="tns:IRegistroContribuyentes_GetContribuyentesSimilares_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetContribuyentesSimilaresRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetContribuyentesSimilares_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContribuyentesInmuebleByDatosIdentificativos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetContribuyentesInmuebleByDatosIdentificativos" message="tns:IRegistroContribuyentes_GetContribuyentesInmuebleByDatosIdentificativos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetContribuyentesInmuebleByDatosIdentificativosResponse" message="tns:IRegistroContribuyentes_GetContribuyentesInmuebleByDatosIdentificativos_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetContribuyentesInmuebleByDatosIdentificativosRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetContribuyentesInmuebleByDatosIdentificativos_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContribuyentesInmuebleByDatosIdentificativosSIGASIIP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetContribuyentesInmuebleByDatosIdentificativosSIGASIIP" message="tns:IRegistroContribuyentes_GetContribuyentesInmuebleByDatosIdentificativosSIGASIIP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetContribuyentesInmuebleByDatosIdentificativosSIGASIIPResponse" message="tns:IRegistroContribuyentes_GetContribuyentesInmuebleByDatosIdentificativosSIGASIIP_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetContribuyentesInmuebleByDatosIdentificativosSIGASIIPRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetContribuyentesInmuebleByDatosIdentificativosSIGASIIP_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoContribuyente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetInfoContribuyente" message="tns:IRegistroContribuyentes_GetInfoContribuyente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetInfoContribuyenteResponse" message="tns:IRegistroContribuyentes_GetInfoContribuyente_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetInfoContribuyenteRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetInfoContribuyente_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDireccionesInmueble">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetDireccionesInmueble" message="tns:IRegistroContribuyentes_GetDireccionesInmueble_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetDireccionesInmuebleResponse" message="tns:IRegistroContribuyentes_GetDireccionesInmueble_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetDireccionesInmuebleRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetDireccionesInmueble_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDireccionesContribuyente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetDireccionesContribuyente" message="tns:IRegistroContribuyentes_GetDireccionesContribuyente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetDireccionesContribuyenteResponse" message="tns:IRegistroContribuyentes_GetDireccionesContribuyente_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetDireccionesContribuyenteRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetDireccionesContribuyente_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRepresentacionContribuyente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetRepresentacionContribuyente" message="tns:IRegistroContribuyentes_GetRepresentacionContribuyente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetRepresentacionContribuyenteResponse" message="tns:IRegistroContribuyentes_GetRepresentacionContribuyente_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetRepresentacionContribuyenteRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetRepresentacionContribuyente_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRepresentacionNotario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetRepresentacionNotario" message="tns:IRegistroContribuyentes_GetRepresentacionNotario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetRepresentacionNotarioResponse" message="tns:IRegistroContribuyentes_GetRepresentacionNotario_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetRepresentacionNotarioRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetRepresentacionNotario_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNotariosByDatosPersonales">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetNotariosByDatosPersonales" message="tns:IRegistroContribuyentes_GetNotariosByDatosPersonales_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetNotariosByDatosPersonalesResponse" message="tns:IRegistroContribuyentes_GetNotariosByDatosPersonales_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetNotariosByDatosPersonalesRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetNotariosByDatosPersonales_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNotariosByDatosIdentificativos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetNotariosByDatosIdentificativos" message="tns:IRegistroContribuyentes_GetNotariosByDatosIdentificativos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetNotariosByDatosIdentificativosResponse" message="tns:IRegistroContribuyentes_GetNotariosByDatosIdentificativos_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetNotariosByDatosIdentificativosRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetNotariosByDatosIdentificativos_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoNotario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetInfoNotario" message="tns:IRegistroContribuyentes_GetInfoNotario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetInfoNotarioResponse" message="tns:IRegistroContribuyentes_GetInfoNotario_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetInfoNotarioRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetInfoNotario_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosRepresentacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetDatosRepresentacion" message="tns:IRegistroContribuyentes_GetDatosRepresentacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetDatosRepresentacionResponse" message="tns:IRegistroContribuyentes_GetDatosRepresentacion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetDatosRepresentacionRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetDatosRepresentacion_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDireccionById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetDireccionById" message="tns:IRegistroContribuyentes_GetDireccionById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetDireccionByIdResponse" message="tns:IRegistroContribuyentes_GetDireccionById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetDireccionByIdRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetDireccionById_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAsentamiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetAsentamiento" message="tns:IRegistroContribuyentes_GetAsentamiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetAsentamientoResponse" message="tns:IRegistroContribuyentes_GetAsentamiento_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetAsentamientoRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetAsentamiento_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAsentamientoByEstado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetAsentamientoByEstado" message="tns:IRegistroContribuyentes_GetAsentamientoByEstado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetAsentamientoByEstadoResponse" message="tns:IRegistroContribuyentes_GetAsentamientoByEstado_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetAsentamientoByEstadoRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetAsentamientoByEstado_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAsentamientoByNombre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetAsentamientoByNombre" message="tns:IRegistroContribuyentes_GetAsentamientoByNombre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetAsentamientoByNombreResponse" message="tns:IRegistroContribuyentes_GetAsentamientoByNombre_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetAsentamientoByNombreRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetAsentamientoByNombre_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCiudad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetCiudad" message="tns:IRegistroContribuyentes_GetCiudad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetCiudadResponse" message="tns:IRegistroContribuyentes_GetCiudad_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetCiudadRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetCiudad_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCiudadByEstado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetCiudadByEstado" message="tns:IRegistroContribuyentes_GetCiudadByEstado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetCiudadByEstadoResponse" message="tns:IRegistroContribuyentes_GetCiudadByEstado_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetCiudadByEstadoRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetCiudadByEstado_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMunicipios">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetMunicipios" message="tns:IRegistroContribuyentes_GetMunicipios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetMunicipiosResponse" message="tns:IRegistroContribuyentes_GetMunicipios_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetMunicipiosRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetMunicipios_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMunicipiosByEstado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetMunicipiosByEstado" message="tns:IRegistroContribuyentes_GetMunicipiosByEstado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetMunicipiosByEstadoResponse" message="tns:IRegistroContribuyentes_GetMunicipiosByEstado_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetMunicipiosByEstadoRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetMunicipiosByEstado_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMunicipiosByNombre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetMunicipiosByNombre" message="tns:IRegistroContribuyentes_GetMunicipiosByNombre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetMunicipiosByNombreResponse" message="tns:IRegistroContribuyentes_GetMunicipiosByNombre_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetMunicipiosByNombreRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetMunicipiosByNombre_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEstados">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetEstados" message="tns:IRegistroContribuyentes_GetEstados_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetEstadosResponse" message="tns:IRegistroContribuyentes_GetEstados_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetEstadosRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetEstados_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalogos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetCatalogos" message="tns:IRegistroContribuyentes_GetCatalogos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetCatalogosResponse" message="tns:IRegistroContribuyentes_GetCatalogos_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetCatalogosRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetCatalogos_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetColAsentByDelegacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetColAsentByDelegacion" message="tns:IRegistroContribuyentes_GetColAsentByDelegacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetColAsentByDelegacionResponse" message="tns:IRegistroContribuyentes_GetColAsentByDelegacion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetColAsentByDelegacionRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetColAsentByDelegacion_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDomiciliosFiscales">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetDomiciliosFiscales" message="tns:IRegistroContribuyentes_GetDomiciliosFiscales_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetDomiciliosFiscalesResponse" message="tns:IRegistroContribuyentes_GetDomiciliosFiscales_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IRegistroContribuyentes/GetDomiciliosFiscalesRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IRegistroContribuyentes_GetDomiciliosFiscales_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IRegistroContribuyentes" type="tns:IRegistroContribuyentes">
+    <wsp:PolicyReference URI="#WSHttpBinding_IRegistroContribuyentes_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetHistoricosRepresentacionDetalle">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetHistoricosRepresentacionDetalle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCiudadesByNombre">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetCiudadesByNombre" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ExisteContribuyente">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/ExisteContribuyente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetContribuyenteByDireccion">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetContribuyenteByDireccion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFolioConstCambioContribuyente">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetFolioConstCambioContribuyente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFolioConstCambioContribuyente_V2">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetFolioConstCambioContribuyente_V2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarContribuyente">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/InsertarContribuyente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarRepresentacion">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/InsertarRepresentacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarDireccion">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/InsertarDireccion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarNotario">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/InsertarNotario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarInmuebleDomicilioFiscal">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/InsertarInmuebleDomicilioFiscal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarRepresentacion">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/ActualizarRepresentacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarContribuyente">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/ActualizarContribuyente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarContribuyente_V2">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/ActualizarContribuyente_V2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarDireccion">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/ActualizarDireccion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarNotario">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/ActualizarNotario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarInmuebleDomicilioFiscal">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/ActualizarInmuebleDomicilioFiscal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarContribuyenteSimple">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/ActualizarContribuyenteSimple" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCambiaTipoPersona">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/ActualizarCambiaTipoPersona" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCambiaTipoPersona_V2">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/ActualizarCambiaTipoPersona_V2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="cambio_tipo_FisicoMoral">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/cambio_tipo_FisicoMoral" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="BorrarRepresentacion">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/BorrarRepresentacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="BorrarRepresentacionNotario">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/BorrarRepresentacionNotario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="BorrarRepresentante">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/BorrarRepresentante" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="BorrarDireccion">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/BorrarDireccion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="BorrarDireccionContribuyente">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/BorrarDireccionContribuyente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoricosDireccion">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetHistoricosDireccion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoricosDireccionDetalle">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetHistoricosDireccionDetalle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoricosDireccionFiscal">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetHistoricosDireccionFiscal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoricosDireccionFiscalDetalle">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetHistoricosDireccionFiscalDetalle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoricosPersona">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetHistoricosPersona" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoricosPersonaDetalle">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetHistoricosPersonaDetalle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoricosRepresentacion">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetHistoricosRepresentacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetContribuyentesByDatosPersonales">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetContribuyentesByDatosPersonales" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonaMoralByDatosPersonales">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetPersonaMoralByDatosPersonales" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetContribuyentesByDatosIdentificativos">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetContribuyentesByDatosIdentificativos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetContribuyentesMoralByDatosIdentificativos">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetContribuyentesMoralByDatosIdentificativos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonaMoralByDatosIdentificativos">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetPersonaMoralByDatosIdentificativos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetContribuyentesInmuebleByDatosPersonales">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetContribuyentesInmuebleByDatosPersonales" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetContribuyentesInmuebleByDatosPersonalesSIGASIIP">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetContribuyentesInmuebleByDatosPersonalesSIGASIIP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetContribuyentesSimilares">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetContribuyentesSimilares" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetContribuyentesInmuebleByDatosIdentificativos">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetContribuyentesInmuebleByDatosIdentificativos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetContribuyentesInmuebleByDatosIdentificativosSIGASIIP">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetContribuyentesInmuebleByDatosIdentificativosSIGASIIP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoContribuyente">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetInfoContribuyente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDireccionesInmueble">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetDireccionesInmueble" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDireccionesContribuyente">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetDireccionesContribuyente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRepresentacionContribuyente">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetRepresentacionContribuyente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRepresentacionNotario">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetRepresentacionNotario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNotariosByDatosPersonales">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetNotariosByDatosPersonales" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNotariosByDatosIdentificativos">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetNotariosByDatosIdentificativos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoNotario">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetInfoNotario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatosRepresentacion">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetDatosRepresentacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDireccionById">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetDireccionById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAsentamiento">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetAsentamiento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAsentamientoByEstado">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetAsentamientoByEstado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAsentamientoByNombre">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetAsentamientoByNombre" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCiudad">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetCiudad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCiudadByEstado">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetCiudadByEstado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMunicipios">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetMunicipios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMunicipiosByEstado">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetMunicipiosByEstado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMunicipiosByNombre">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetMunicipiosByNombre" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEstados">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetEstados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCatalogos">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetCatalogos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetColAsentByDelegacion">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetColAsentByDelegacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDomiciliosFiscales">
+      <soap12:operation soapAction="http://tempuri.org/IRegistroContribuyentes/GetDomiciliosFiscales" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RegistroContribuyentesService">
+    <wsdl:port name="WSHttpBinding_IRegistroContribuyentes" binding="tns:WSHttpBinding_IRegistroContribuyentes">
+      <soap12:address location="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

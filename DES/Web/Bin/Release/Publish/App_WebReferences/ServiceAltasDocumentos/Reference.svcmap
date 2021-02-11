@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6057bf1a-b4f8-42f9-8b77-2adeef2eb66a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.0.8.2/PRO/Documental/AltasDocumentos.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AltasDocumentos.wsdl" MetadataType="Wsdl" ID="bc505dcc-4dae-4775-b554-92a42ceb83ad" SourceId="1" SourceUrl="http://psur-des-serv.promocapre.int/PRE/Documental/AltasDocumentos.svc?wsdl" />
+    <MetadataFile FileName="AltasDocumentos.disco" MetadataType="Disco" ID="920c457a-0100-4576-824f-755cbe2fe006" SourceId="1" SourceUrl="http://psur-des-serv.promocapre.int/PRE/Documental/AltasDocumentos.svc?disco" />
+    <MetadataFile FileName="AltasDocumentos.xsd" MetadataType="Schema" ID="9746365f-06e4-40e7-b3c7-1ff731fce7d1" SourceId="1" SourceUrl="http://psur-des-serv.promocapre.int/PRE/Documental/AltasDocumentos.svc?xsd=xsd4" />
+    <MetadataFile FileName="AltasDocumentos2.xsd" MetadataType="Schema" ID="8c45b0b0-5154-41d6-859c-683323fcf747" SourceId="1" SourceUrl="http://psur-des-serv.promocapre.int/PRE/Documental/AltasDocumentos.svc?xsd=xsd1" />
+    <MetadataFile FileName="AltasDocumentos3.xsd" MetadataType="Schema" ID="85f36140-087a-4f30-a1e5-4eb1db0c6a10" SourceId="1" SourceUrl="http://psur-des-serv.promocapre.int/PRE/Documental/AltasDocumentos.svc?xsd=xsd2" />
+    <MetadataFile FileName="AltasDocumentos4.xsd" MetadataType="Schema" ID="6b2348a2-1170-4e74-a422-e64f97484dc1" SourceId="1" SourceUrl="http://psur-des-serv.promocapre.int/PRE/Documental/AltasDocumentos.svc?xsd=xsd0" />
+    <MetadataFile FileName="AltasDocumentos6.xsd" MetadataType="Schema" ID="e9dd49f0-1f1e-48fe-b646-946ddd206405" SourceId="1" SourceUrl="http://psur-des-serv.promocapre.int/PRE/Documental/AltasDocumentos.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

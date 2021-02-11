@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ConsultasDocumentos" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="ConsultasDocumentos_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://ni-prod-bpm2/PRO/Documental/ConsultasDocumentos.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://ni-prod-bpm2/PRO/Documental/ConsultasDocumentos.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" />
+      <xsd:import schemaLocation="http://ni-prod-bpm2/PRO/Documental/ConsultasDocumentos.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://ni-prod-bpm2/PRO/Documental/ConsultasDocumentos.svc?xsd=xsd2" namespace="http://tempuri.org/dseDocumentosDigitales.xsd" />
+      <xsd:import schemaLocation="http://ni-prod-bpm2/PRO/Documental/ConsultasDocumentos.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Gestion.DocumentosDigitales" />
+      <xsd:import schemaLocation="http://ni-prod-bpm2/PRO/Documental/ConsultasDocumentos.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.Negocio.Base" />
+      <xsd:import schemaLocation="http://ni-prod-bpm2/PRO/Documental/ConsultasDocumentos.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.Negocio.Gestion.ConsultasDocumentos.Enum" />
+      <xsd:import schemaLocation="http://ni-prod-bpm2/PRO/Documental/ConsultasDocumentos.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.Negocio.Gestion.ConsultasDocumentos" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IConsultasDocumentos_GetAvaluo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvaluo" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetAvaluo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvaluoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetAvaluo_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q1:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetAvaluoById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvaluoById" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetAvaluoById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvaluoByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetAvaluoById_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q2:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetCartaPoderById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCartaPoderById" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetCartaPoderById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCartaPoderByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetCartaPoderById_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q3:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetDocumentoAdministrativo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentoAdministrativo" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetDocumentoAdministrativo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentoAdministrativoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetDocumentoAdministrativo_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q4:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetDocumentoAdministrativoById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentoAdministrativoById" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetDocumentoAdministrativoById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentoAdministrativoByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetDocumentoAdministrativoById_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q5:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetDocumentoPrivadoById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentoPrivadoById" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetDocumentoPrivadoById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentoPrivadoByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetDocumentoPrivadoById_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q6:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetLicenciaObras_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenciaObras" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetLicenciaObras_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenciaObrasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetLicenciaObras_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q7:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetLicenciaObrasById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenciaObrasById" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetLicenciaObrasById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenciaObrasByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetLicenciaObrasById_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q8:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetEscrituraPublica_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEscrituraPublica" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetEscrituraPublica_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEscrituraPublicaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetEscrituraPublica_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q9:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetEscrituraPublicaById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEscrituraPublicaById" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetEscrituraPublicaById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEscrituraPublicaByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetEscrituraPublicaById_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q10:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetF4ById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetF4ById" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetF4ById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetF4ByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetF4ById_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q11:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetFotoInmuebleById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFotoInmuebleById" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetFotoInmuebleById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFotoInmuebleByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetFotoInmuebleById_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q12:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetFotoManzanaById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFotoManzanaById" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetFotoManzanaById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFotoManzanaByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetFotoManzanaById_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q13:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetMemoriaDescriptivaById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemoriaDescriptivaById" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetMemoriaDescriptivaById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemoriaDescriptivaByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetMemoriaDescriptivaById_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q14:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetOficio_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOficio" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetOficio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOficioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetOficio_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q15:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetOficioById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOficioById" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetOficioById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOficioByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetOficioById_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q16:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetOtrosById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOtrosById" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetOtrosById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOtrosByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetOtrosById_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q17:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetPlanoArquitectonicoById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlanoArquitectonicoById" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetPlanoArquitectonicoById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlanoArquitectonicoByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetPlanoArquitectonicoById_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q18:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetPlanosCamposById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlanosCamposById" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetPlanosCamposById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlanosCamposByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetPlanosCamposById_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q19:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetPoderNotarial_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPoderNotarial" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetPoderNotarial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPoderNotarialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetPoderNotarial_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q20:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetPoderNotarialById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPoderNotarialById" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetPoderNotarialById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPoderNotarialByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetPoderNotarialById_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q21:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetProrrogasLicencia_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProrrogasLicencia" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetProrrogasLicencia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProrrogasLicenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetProrrogasLicencia_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q22:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetInscripcionesRPPC_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInscripcionesRPPC" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetInscripcionesRPPC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInscripcionesRPPCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetInscripcionesRPPC_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q23:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetResolucionJudicial_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResolucionJudicial" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetResolucionJudicial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResolucionJudicialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetResolucionJudicial_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q24:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetResolucionJudicialById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResolucionJudicialById" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetResolucionJudicialById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResolucionJudicialByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetResolucionJudicialById_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q25:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetSATIById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSATIById" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetSATIById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSATIByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetSATIById_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q26:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetTipoDocumentoDigital_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTipoDocumentoDigital" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetTipoDocumentoDigital_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTipoDocumentoDigitalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetTipoDocumentoDigital_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q27:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetEstadoDocumento_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstadoDocumento" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetEstadoDocumento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstadoDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConsultasDocumentos_GetEstadoDocumento_AccesoDatosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Exceptions" name="detail" element="q28:AccesoDatosException" />
+  </wsdl:message>
+  <wsdl:portType name="IConsultasDocumentos">
+    <wsdl:operation name="GetAvaluo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetAvaluo" message="tns:IConsultasDocumentos_GetAvaluo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetAvaluoResponse" message="tns:IConsultasDocumentos_GetAvaluo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetAvaluoAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IConsultasDocumentos_GetAvaluo_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAvaluoById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetAvaluoById" message="tns:IConsultasDocumentos_GetAvaluoById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetAvaluoByIdResponse" message="tns:IConsultasDocumentos_GetAvaluoById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetAvaluoByIdAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IConsultasDocumentos_GetAvaluoById_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCartaPoderById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetCartaPoderById" message="tns:IConsultasDocumentos_GetCartaPoderById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetCartaPoderByIdResponse" message="tns:IConsultasDocumentos_GetCartaPoderById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetCartaPoderByIdAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IConsultasDocumentos_GetCartaPoderById_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentoAdministrativo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetDocumentoAdministrativo" message="tns:IConsultasDocumentos_GetDocumentoAdministrativo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetDocumentoAdministrativoResponse" message="tns:IConsultasDocumentos_GetDocumentoAdministrativo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetDocumentoAdministrativoAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IConsultasDocumentos_GetDocumentoAdministrativo_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentoAdministrativoById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetDocumentoAdministrativoById" message="tns:IConsultasDocumentos_GetDocumentoAdministrativoById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetDocumentoAdministrativoByIdResponse" message="tns:IConsultasDocumentos_GetDocumentoAdministrativoById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetDocumentoAdministrativoByIdAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IConsultasDocumentos_GetDocumentoAdministrativoById_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentoPrivadoById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetDocumentoPrivadoById" message="tns:IConsultasDocumentos_GetDocumentoPrivadoById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetDocumentoPrivadoByIdResponse" message="tns:IConsultasDocumentos_GetDocumentoPrivadoById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetDocumentoPrivadoByIdAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IConsultasDocumentos_GetDocumentoPrivadoById_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenciaObras">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetLicenciaObras" message="tns:IConsultasDocumentos_GetLicenciaObras_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetLicenciaObrasResponse" message="tns:IConsultasDocumentos_GetLicenciaObras_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetLicenciaObrasAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IConsultasDocumentos_GetLicenciaObras_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenciaObrasById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetLicenciaObrasById" message="tns:IConsultasDocumentos_GetLicenciaObrasById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetLicenciaObrasByIdResponse" message="tns:IConsultasDocumentos_GetLicenciaObrasById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetLicenciaObrasByIdAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IConsultasDocumentos_GetLicenciaObrasById_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEscrituraPublica">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetEscrituraPublica" message="tns:IConsultasDocumentos_GetEscrituraPublica_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetEscrituraPublicaResponse" message="tns:IConsultasDocumentos_GetEscrituraPublica_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetEscrituraPublicaAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IConsultasDocumentos_GetEscrituraPublica_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEscrituraPublicaById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetEscrituraPublicaById" message="tns:IConsultasDocumentos_GetEscrituraPublicaById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetEscrituraPublicaByIdResponse" message="tns:IConsultasDocumentos_GetEscrituraPublicaById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetEscrituraPublicaByIdAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IConsultasDocumentos_GetEscrituraPublicaById_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetF4ById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetF4ById" message="tns:IConsultasDocumentos_GetF4ById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetF4ByIdResponse" message="tns:IConsultasDocumentos_GetF4ById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetF4ByIdAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IConsultasDocumentos_GetF4ById_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFotoInmuebleById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetFotoInmuebleById" message="tns:IConsultasDocumentos_GetFotoInmuebleById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetFotoInmuebleByIdResponse" message="tns:IConsultasDocumentos_GetFotoInmuebleById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetFotoInmuebleByIdAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IConsultasDocumentos_GetFotoInmuebleById_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFotoManzanaById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetFotoManzanaById" message="tns:IConsultasDocumentos_GetFotoManzanaById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetFotoManzanaByIdResponse" message="tns:IConsultasDocumentos_GetFotoManzanaById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetFotoManzanaByIdAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IConsultasDocumentos_GetFotoManzanaById_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemoriaDescriptivaById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetMemoriaDescriptivaById" message="tns:IConsultasDocumentos_GetMemoriaDescriptivaById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetMemoriaDescriptivaByIdResponse" message="tns:IConsultasDocumentos_GetMemoriaDescriptivaById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetMemoriaDescriptivaByIdAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IConsultasDocumentos_GetMemoriaDescriptivaById_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOficio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetOficio" message="tns:IConsultasDocumentos_GetOficio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetOficioResponse" message="tns:IConsultasDocumentos_GetOficio_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetOficioAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IConsultasDocumentos_GetOficio_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOficioById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetOficioById" message="tns:IConsultasDocumentos_GetOficioById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetOficioByIdResponse" message="tns:IConsultasDocumentos_GetOficioById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetOficioByIdAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IConsultasDocumentos_GetOficioById_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOtrosById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetOtrosById" message="tns:IConsultasDocumentos_GetOtrosById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetOtrosByIdResponse" message="tns:IConsultasDocumentos_GetOtrosById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetOtrosByIdAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IConsultasDocumentos_GetOtrosById_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlanoArquitectonicoById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetPlanoArquitectonicoById" message="tns:IConsultasDocumentos_GetPlanoArquitectonicoById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetPlanoArquitectonicoByIdResponse" message="tns:IConsultasDocumentos_GetPlanoArquitectonicoById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetPlanoArquitectonicoByIdAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IConsultasDocumentos_GetPlanoArquitectonicoById_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlanosCamposById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetPlanosCamposById" message="tns:IConsultasDocumentos_GetPlanosCamposById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetPlanosCamposByIdResponse" message="tns:IConsultasDocumentos_GetPlanosCamposById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetPlanosCamposByIdAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IConsultasDocumentos_GetPlanosCamposById_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPoderNotarial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetPoderNotarial" message="tns:IConsultasDocumentos_GetPoderNotarial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetPoderNotarialResponse" message="tns:IConsultasDocumentos_GetPoderNotarial_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetPoderNotarialAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IConsultasDocumentos_GetPoderNotarial_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPoderNotarialById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetPoderNotarialById" message="tns:IConsultasDocumentos_GetPoderNotarialById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetPoderNotarialByIdResponse" message="tns:IConsultasDocumentos_GetPoderNotarialById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetPoderNotarialByIdAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IConsultasDocumentos_GetPoderNotarialById_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProrrogasLicencia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetProrrogasLicencia" message="tns:IConsultasDocumentos_GetProrrogasLicencia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetProrrogasLicenciaResponse" message="tns:IConsultasDocumentos_GetProrrogasLicencia_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetProrrogasLicenciaAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IConsultasDocumentos_GetProrrogasLicencia_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInscripcionesRPPC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetInscripcionesRPPC" message="tns:IConsultasDocumentos_GetInscripcionesRPPC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetInscripcionesRPPCResponse" message="tns:IConsultasDocumentos_GetInscripcionesRPPC_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetInscripcionesRPPCAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IConsultasDocumentos_GetInscripcionesRPPC_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResolucionJudicial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetResolucionJudicial" message="tns:IConsultasDocumentos_GetResolucionJudicial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetResolucionJudicialResponse" message="tns:IConsultasDocumentos_GetResolucionJudicial_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetResolucionJudicialAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IConsultasDocumentos_GetResolucionJudicial_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResolucionJudicialById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetResolucionJudicialById" message="tns:IConsultasDocumentos_GetResolucionJudicialById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetResolucionJudicialByIdResponse" message="tns:IConsultasDocumentos_GetResolucionJudicialById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetResolucionJudicialByIdAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IConsultasDocumentos_GetResolucionJudicialById_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSATIById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetSATIById" message="tns:IConsultasDocumentos_GetSATIById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetSATIByIdResponse" message="tns:IConsultasDocumentos_GetSATIById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetSATIByIdAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IConsultasDocumentos_GetSATIById_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTipoDocumentoDigital">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetTipoDocumentoDigital" message="tns:IConsultasDocumentos_GetTipoDocumentoDigital_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetTipoDocumentoDigitalResponse" message="tns:IConsultasDocumentos_GetTipoDocumentoDigital_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetTipoDocumentoDigitalAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IConsultasDocumentos_GetTipoDocumentoDigital_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEstadoDocumento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetEstadoDocumento" message="tns:IConsultasDocumentos_GetEstadoDocumento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetEstadoDocumentoResponse" message="tns:IConsultasDocumentos_GetEstadoDocumento_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IConsultasDocumentos/GetEstadoDocumentoAccesoDatosExceptionFault" name="AccesoDatosExceptionFault" message="tns:IConsultasDocumentos_GetEstadoDocumento_AccesoDatosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ConsultasDocumentos" type="tns:IConsultasDocumentos">
+    <wsp:PolicyReference URI="#ConsultasDocumentos_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAvaluo">
+      <soap12:operation soapAction="http://tempuri.org/IConsultasDocumentos/GetAvaluo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAvaluoById">
+      <soap12:operation soapAction="http://tempuri.org/IConsultasDocumentos/GetAvaluoById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCartaPoderById">
+      <soap12:operation soapAction="http://tempuri.org/IConsultasDocumentos/GetCartaPoderById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentoAdministrativo">
+      <soap12:operation soapAction="http://tempuri.org/IConsultasDocumentos/GetDocumentoAdministrativo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentoAdministrativoById">
+      <soap12:operation soapAction="http://tempuri.org/IConsultasDocumentos/GetDocumentoAdministrativoById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentoPrivadoById">
+      <soap12:operation soapAction="http://tempuri.org/IConsultasDocumentos/GetDocumentoPrivadoById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenciaObras">
+      <soap12:operation soapAction="http://tempuri.org/IConsultasDocumentos/GetLicenciaObras" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenciaObrasById">
+      <soap12:operation soapAction="http://tempuri.org/IConsultasDocumentos/GetLicenciaObrasById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEscrituraPublica">
+      <soap12:operation soapAction="http://tempuri.org/IConsultasDocumentos/GetEscrituraPublica" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEscrituraPublicaById">
+      <soap12:operation soapAction="http://tempuri.org/IConsultasDocumentos/GetEscrituraPublicaById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetF4ById">
+      <soap12:operation soapAction="http://tempuri.org/IConsultasDocumentos/GetF4ById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFotoInmuebleById">
+      <soap12:operation soapAction="http://tempuri.org/IConsultasDocumentos/GetFotoInmuebleById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFotoManzanaById">
+      <soap12:operation soapAction="http://tempuri.org/IConsultasDocumentos/GetFotoManzanaById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemoriaDescriptivaById">
+      <soap12:operation soapAction="http://tempuri.org/IConsultasDocumentos/GetMemoriaDescriptivaById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOficio">
+      <soap12:operation soapAction="http://tempuri.org/IConsultasDocumentos/GetOficio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOficioById">
+      <soap12:operation soapAction="http://tempuri.org/IConsultasDocumentos/GetOficioById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOtrosById">
+      <soap12:operation soapAction="http://tempuri.org/IConsultasDocumentos/GetOtrosById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlanoArquitectonicoById">
+      <soap12:operation soapAction="http://tempuri.org/IConsultasDocumentos/GetPlanoArquitectonicoById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlanosCamposById">
+      <soap12:operation soapAction="http://tempuri.org/IConsultasDocumentos/GetPlanosCamposById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPoderNotarial">
+      <soap12:operation soapAction="http://tempuri.org/IConsultasDocumentos/GetPoderNotarial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPoderNotarialById">
+      <soap12:operation soapAction="http://tempuri.org/IConsultasDocumentos/GetPoderNotarialById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProrrogasLicencia">
+      <soap12:operation soapAction="http://tempuri.org/IConsultasDocumentos/GetProrrogasLicencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetInscripcionesRPPC">
+      <soap12:operation soapAction="http://tempuri.org/IConsultasDocumentos/GetInscripcionesRPPC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetResolucionJudicial">
+      <soap12:operation soapAction="http://tempuri.org/IConsultasDocumentos/GetResolucionJudicial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetResolucionJudicialById">
+      <soap12:operation soapAction="http://tempuri.org/IConsultasDocumentos/GetResolucionJudicialById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSATIById">
+      <soap12:operation soapAction="http://tempuri.org/IConsultasDocumentos/GetSATIById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTipoDocumentoDigital">
+      <soap12:operation soapAction="http://tempuri.org/IConsultasDocumentos/GetTipoDocumentoDigital" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetEstadoDocumento">
+      <soap12:operation soapAction="http://tempuri.org/IConsultasDocumentos/GetEstadoDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AccesoDatosExceptionFault">
+        <soap12:fault use="literal" name="AccesoDatosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ConsultasDocumentos">
+    <wsdl:port name="ConsultasDocumentos" binding="tns:ConsultasDocumentos">
+      <soap12:address location="http://ni-prod-bpm2/PRO/Documental/ConsultasDocumentos.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://ni-prod-bpm2/PRO/Documental/ConsultasDocumentos.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

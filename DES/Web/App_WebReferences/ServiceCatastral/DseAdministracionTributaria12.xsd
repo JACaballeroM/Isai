@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/DseAdministracionTributaria.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/DseAdministracionTributaria.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DseAdministracionTributaria.xsd" id="DseAdministracionTributaria" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="DseAdministracionTributaria">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AdministracionTributaria">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDADMINISTRACIONTRIBUTARIA" type="xs:decimal" />
+              <xs:element msdata:Caption="Clave" name="CLAVE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:Caption="Nombre" name="NOMBREAT">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:Caption="Superficie" name="SUPERFICIE" type="xs:decimal" />
+              <xs:element name="MAPID" type="xs:decimal" />
+              <xs:element minOccurs="0" name="IDOFICINATESORERIA" type="xs:decimal" />
+              <xs:element msdata:Caption="Dirección" minOccurs="0" name="DIRECCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:Caption="Teléfono" minOccurs="0" name="TELEFONO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:Caption="C.P." minOccurs="0" name="CODIGOPOSTAL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="IDCOLONIA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="IDDELEGACION" type="xs:decimal" />
+              <xs:element msdata:Caption="Delegación" minOccurs="0" name="NOMBREDEL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="NOMBRECOL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ABREVIATURA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" msdata:Expression="NOMBRECOL + IIF(ISNULL(ABREVIATURA,'') = '', '', ' (' + TRIM(ABREVIATURA) + ')')" msdata:Caption="Colonia" minOccurs="0" name="ColoniaDesc" type="xs:string" />
+              <xs:element name="XMIN" type="xs:decimal" />
+              <xs:element name="XMAX" type="xs:decimal" />
+              <xs:element name="YMIN" type="xs:decimal" />
+              <xs:element name="YMAX" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,66 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/MasterPageFE/MasterDetalleFE.master" AutoEventWireup="true" CodeFile="CambioClave.aspx.cs" Inherits="CambioClave" Title="ISAI - Cambio de clave" %>
+
+<%@ Register src="UserControls/MenuLocal.ascx" tagname="MenuLocal" tagprefix="uc1" %>
+<%@ Register src="UserControls/Navegacion.ascx" tagname="Navegacion" tagprefix="uc2" %>
+
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderDImagen" Runat="Server">
+    <asp:Image ID="imgCaracter" runat="server" 
+        ImageUrl="~/Images/caracter_detalle.jpg" />
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderDRuta" Runat="Server">
+    <uc2:Navegacion ID="Navegacion1" runat="server" />
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolderDContenido" Runat="Server">
+    <div class="DivPaddingBotton TextoCenterTop" id="divDocumentoComunes" runat="server">
+        <fieldset class="formulario">
+        <legend class="formulario">Cambio de mi contraseña</legend>
+       <%-- <asp:Label ID="lblDocumentoDatosComunes" runat="server" Text="Cambio de mi contraseña"
+       SkinID="Titulo2"></asp:Label>--%>
+        <asp:Panel ID="pnlDocumentoDatosComunes" runat="server" >
+            <table style="width: 100%">
+                <tr>
+                    <td style="width: 20%">
+                        <asp:Label ID="lblFechaEmision" runat="server" Text="Contraseña anterior" 
+                           SkinID="Titulo2"></asp:Label>
+                    </td>
+                    <td style="width: 30%">
+                        <asp:TextBox ID="txtFechaEmision" runat="server" TextMode="Password" CssClass="TextBoxNormal"></asp:TextBox>
+                    </td>
+                    <td style="width: 20%">
+                        &nbsp;</td>
+                    <td style="width: 30%">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Label ID="lblExcrituraFechaAutorizacionPreventiva" runat="server" SkinID="Titulo2"
+                        Text="Contraseña nueva"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtExcrituraFechaAutorizacionPreventiva" TextMode="Password" runat="server" CssClass="TextBoxNormal"></asp:TextBox>
+                        <cc1:PasswordStrength ID="txtExcrituraFechaAutorizacionPreventiva_PasswordStrength" 
+                            runat="server" Enabled="True" 
+                            TargetControlID="txtExcrituraFechaAutorizacionPreventiva" PrefixText="Seguridad: " StrengthIndicatorType="BarIndicator">
+                        </cc1:PasswordStrength>
+                    </td>
+                    <td>
+                        <asp:Label ID="lblFechaEntrada" runat="server" SkinID="Titulo2"
+                            Text="Repetir contraseña nueva"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtFechaEntrada" runat="server" TextMode="Password" CssClass="TextBoxNormal"></asp:TextBox>
+                    </td>
+                </tr>
+            </table>
+        </asp:Panel>
+        </fieldset>
+    </div>
+            <asp:ImageButton ID="btnGuardar" runat="server" ImageUrl="~/Images/checkmark.gif"
+                ImageAlign="Right" />
+        </asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolderDMenuLocal" Runat="Server">
+    <uc1:MenuLocal ID="MenuLocal1" runat="server" />
+</asp:Content>
+

@@ -1,0 +1,128 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="Direccion.ascx.cs" Inherits="ISAI_UserControls_Direccion" %>
+<div class="DivPaddingBotton">
+    <asp:Label ID="lblPersonaTitulo" runat="server" Text="Dirección de notificación"
+        SkinID="Titulo2"></asp:Label>
+    <asp:Panel ID="pnlPersona" runat="server" SkinID="Detalle">
+        <table style="width: 100%">
+            <tr>
+                <td style="width: 18%">
+                    <asp:Label ID="lblEstado" runat="server" Text="Estado" SkinID="Titulo2"></asp:Label>
+                </td>
+                <td style="width: 28%">
+                    <asp:Label ID="lblEstadoDato" runat="server" Text="México DF" Visible="false"></asp:Label>
+                    <asp:DropDownList Style="width: 100%" ID="ddlEstadoDato" runat="server">
+                        <asp:ListItem>México DF</asp:ListItem>
+                        <asp:ListItem>Tijuana</asp:ListItem>
+                        <asp:ListItem>Baja California</asp:ListItem>
+                    </asp:DropDownList>
+                </td>
+                <td colspan="6">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Label ID="lblDelegacion" runat="server" SkinID="Titulo2" Text="Delegación/Municipio"></asp:Label>
+                </td>
+                <td>
+                    <asp:Label ID="lblDelegacionDato" runat="server" Text="Delegación 1" Visible="false"></asp:Label>
+                    <asp:DropDownList Style="width: 100%" ID="ddlDelegacionDato" runat="server">
+                        <asp:ListItem>Delegación 1</asp:ListItem>
+                        <asp:ListItem>Delegación 2</asp:ListItem>
+                        <asp:ListItem>Delegación 3</asp:ListItem>
+                    </asp:DropDownList>
+                </td>
+                <td colspan="6">
+                    <asp:Label ID="lblDelegacionDatoExtra" runat="server" Text="Delegacion dato extra"
+                        Visible="false"></asp:Label>
+                    <asp:TextBox Style="width: 98%" ID="txtDelegacionDatoExtra" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Label ID="lblColonia" runat="server" SkinID="Titulo2" Text="Colonia/Asentamiento"></asp:Label>
+                </td>
+                <td>
+                    <asp:Label ID="lblColoniaDato" runat="server" Text="Colonia 1" Visible="false"></asp:Label>
+                    <asp:DropDownList Style="width: 100%" ID="ddlColoniaDato" runat="server">
+                        <asp:ListItem>Colonia 1</asp:ListItem>
+                        <asp:ListItem>Colonia 2</asp:ListItem>
+                        <asp:ListItem>Colonia 3</asp:ListItem>
+                    </asp:DropDownList>
+                </td>
+                <td colspan="6">
+                    <asp:Label ID="lblColoniaDatoExtra" runat="server" Text="Colonia dato extra" Visible="false"></asp:Label>
+                    <asp:TextBox Style="width: 98%" ID="txtColoniaDatoExtra" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Label ID="lblCiudad" runat="server" SkinID="Titulo2" Text="Ciudad"></asp:Label>
+                </td>
+                <td>
+                    <asp:Label ID="lblCiudadDato" runat="server" Text="Ciudad" Visible="false"></asp:Label>
+                    <asp:TextBox Style="width: 98%" ID="txtCiudadDato" runat="server"></asp:TextBox>
+                </td>
+                <td colspan="3">
+                    <asp:Label ID="lblCodigo" runat="server" SkinID="Titulo2" Text="Código Postal"></asp:Label>
+                </td>
+                <td colspan="3">
+                    <asp:TextBox ID="txtCodigoDato" runat="server" Style="width: 97%"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Label ID="lblVialidad" runat="server" SkinID="Titulo2" Text="Vialidad"></asp:Label>
+                    <asp:ImageButton ID="btnBuscarVialidad" runat="server" ImageUrl="~/Images/search.gif"
+                        CssClass="botonImagen" />
+                </td>
+                <td>
+                    <asp:Label ID="lblVialidadDato" runat="server" Text="Vialidad" Visible="false"></asp:Label>
+                    <asp:TextBox Style="width: 98%" ID="txtVialidadDato" runat="server"></asp:TextBox>
+                </td>
+                <td style="width: 8%">
+                    <asp:Label ID="lblNumero" runat="server" SkinID="Titulo2" Text="Nº ext"></asp:Label>
+                </td>
+                <td style="width: 8%">
+                    <asp:TextBox ID="txtNumeroDato" runat="server" Style="width: 90%"></asp:TextBox>
+                </td>
+                <td style="width: 8%">
+                    <asp:Label ID="lblAndador" runat="server" SkinID="Titulo2" Text="And."></asp:Label>
+                </td>
+                <td style="width: 8%">
+                    <asp:TextBox ID="lblAndadorDato" runat="server" Style="width: 90%"></asp:TextBox>
+                </td>
+                <td style="width: 8%">
+                </td>
+                <td style="width: 8%">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Label ID="lblEdificio" runat="server" SkinID="Titulo2" Text="Edificio"></asp:Label>
+                </td>
+                <td>
+                    <asp:Label ID="lblEdificioDato" runat="server" Text="Trovador" Visible="false"></asp:Label>
+                    <asp:TextBox Style="width: 98%" ID="txtEdificioDato" runat="server"></asp:TextBox>
+                </td>
+                <td>
+                    <asp:Label ID="lblSeccion" runat="server" SkinID="Titulo2" Text="Sec."></asp:Label>
+                </td>
+                <td>
+                    <asp:TextBox ID="txtSeccion" runat="server" Style="width: 90%"></asp:TextBox>
+                </td>
+                <td>
+                    <asp:Label ID="lblEntrada" runat="server" SkinID="Titulo2" Text="Ent."></asp:Label>
+                </td>
+                <td>
+                    <asp:TextBox ID="txtEntrada" runat="server" Style="width: 90%"></asp:TextBox>
+                </td>
+                <td>
+                    <asp:Label ID="lblNumeroInterior" runat="server" SkinID="Titulo2" Text="Nº int"></asp:Label>
+                </td>
+                <td>
+                    <asp:TextBox ID="txtNumeroInteriorDato" runat="server" Style="width: 90%"></asp:TextBox>
+                </td>
+            </tr>
+        </table>
+    </asp:Panel>
+</div>

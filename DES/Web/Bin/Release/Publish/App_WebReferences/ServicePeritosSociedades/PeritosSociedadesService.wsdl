@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PeritosSociedadesService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IPeritosSociedades_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://psur-des-serv.promocapre.int/PRE/RegistroContribuyentes/PeritosSociedadesService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://psur-des-serv.promocapre.int/PRE/RegistroContribuyentes/PeritosSociedadesService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" />
+      <xsd:import schemaLocation="http://psur-des-serv.promocapre.int/PRE/RegistroContribuyentes/PeritosSociedadesService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://psur-des-serv.promocapre.int/PRE/RegistroContribuyentes/PeritosSociedadesService.svc?xsd=xsd2" namespace="http://tempuri.org/DsePeritosSociedades.xsd" />
+      <xsd:import schemaLocation="http://psur-des-serv.promocapre.int/PRE/RegistroContribuyentes/PeritosSociedadesService.svc?xsd=xsd3" />
+      <xsd:import schemaLocation="http://psur-des-serv.promocapre.int/PRE/RegistroContribuyentes/PeritosSociedadesService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio.Enum" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPeritosSociedades_GetPerito_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPerito" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_GetPerito_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPeritoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_GetPerito_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q1:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_GetPeritosByDatosIdentificativos_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPeritosByDatosIdentificativos" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_GetPeritosByDatosIdentificativos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPeritosByDatosIdentificativosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_GetPeritosByDatosIdentificativos_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q2:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_GetPeritosByDatosPersonales_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPeritosByDatosPersonales" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_GetPeritosByDatosPersonales_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPeritosByDatosPersonalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_GetPeritosByDatosPersonales_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q3:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_GetSociedadValuacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSociedadValuacion" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_GetSociedadValuacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSociedadValuacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_GetSociedadValuacion_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q4:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_GetSocValuacionByDatosIdentificativos_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSocValuacionByDatosIdentificativos" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_GetSocValuacionByDatosIdentificativos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSocValuacionByDatosIdentificativosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_GetSocValuacionByDatosIdentificativos_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q5:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_GetSocValuacionByDatosPersonales_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSocValuacionByDatosPersonales" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_GetSocValuacionByDatosPersonales_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSocValuacionByDatosPersonalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_GetSocValuacionByDatosPersonales_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q6:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_ActualizarPerito_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarPerito" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_ActualizarPerito_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarPeritoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_ActualizarPerito_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q7:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_ActualizarSociedad_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarSociedad" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_ActualizarSociedad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarSociedadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_ActualizarSociedad_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q8:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_ActualizarRelacionPeritoSociedad_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarRelacionPeritoSociedad" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_ActualizarRelacionPeritoSociedad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarRelacionPeritoSociedadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_ActualizarRelacionPeritoSociedad_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q9:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_GetRelacionPeritoSociedad_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRelacionPeritoSociedad" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_GetRelacionPeritoSociedad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRelacionPeritoSociedadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_GetRelacionPeritoSociedad_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q10:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_InsertarSociedad_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarSociedad" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_InsertarSociedad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarSociedadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_InsertarSociedad_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q11:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_InsertarPerito_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarPerito" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_InsertarPerito_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarPeritoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPeritosSociedades_InsertarPerito_RegistroContribuyentesExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio" name="detail" element="q12:RegistroContribuyentesException" />
+  </wsdl:message>
+  <wsdl:portType name="IPeritosSociedades">
+    <wsdl:operation name="GetPerito">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPeritosSociedades/GetPerito" message="tns:IPeritosSociedades_GetPerito_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPeritosSociedades/GetPeritoResponse" message="tns:IPeritosSociedades_GetPerito_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPeritosSociedades/GetPeritoRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IPeritosSociedades_GetPerito_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPeritosByDatosIdentificativos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPeritosSociedades/GetPeritosByDatosIdentificativos" message="tns:IPeritosSociedades_GetPeritosByDatosIdentificativos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPeritosSociedades/GetPeritosByDatosIdentificativosResponse" message="tns:IPeritosSociedades_GetPeritosByDatosIdentificativos_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPeritosSociedades/GetPeritosByDatosIdentificativosRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IPeritosSociedades_GetPeritosByDatosIdentificativos_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPeritosByDatosPersonales">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPeritosSociedades/GetPeritosByDatosPersonales" message="tns:IPeritosSociedades_GetPeritosByDatosPersonales_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPeritosSociedades/GetPeritosByDatosPersonalesResponse" message="tns:IPeritosSociedades_GetPeritosByDatosPersonales_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPeritosSociedades/GetPeritosByDatosPersonalesRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IPeritosSociedades_GetPeritosByDatosPersonales_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSociedadValuacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPeritosSociedades/GetSociedadValuacion" message="tns:IPeritosSociedades_GetSociedadValuacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPeritosSociedades/GetSociedadValuacionResponse" message="tns:IPeritosSociedades_GetSociedadValuacion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPeritosSociedades/GetSociedadValuacionRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IPeritosSociedades_GetSociedadValuacion_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSocValuacionByDatosIdentificativos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPeritosSociedades/GetSocValuacionByDatosIdentificativos" message="tns:IPeritosSociedades_GetSocValuacionByDatosIdentificativos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPeritosSociedades/GetSocValuacionByDatosIdentificativosResponse" message="tns:IPeritosSociedades_GetSocValuacionByDatosIdentificativos_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPeritosSociedades/GetSocValuacionByDatosIdentificativosRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IPeritosSociedades_GetSocValuacionByDatosIdentificativos_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSocValuacionByDatosPersonales">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPeritosSociedades/GetSocValuacionByDatosPersonales" message="tns:IPeritosSociedades_GetSocValuacionByDatosPersonales_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPeritosSociedades/GetSocValuacionByDatosPersonalesResponse" message="tns:IPeritosSociedades_GetSocValuacionByDatosPersonales_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPeritosSociedades/GetSocValuacionByDatosPersonalesRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IPeritosSociedades_GetSocValuacionByDatosPersonales_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarPerito">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPeritosSociedades/ActualizarPerito" message="tns:IPeritosSociedades_ActualizarPerito_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPeritosSociedades/ActualizarPeritoResponse" message="tns:IPeritosSociedades_ActualizarPerito_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPeritosSociedades/ActualizarPeritoRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IPeritosSociedades_ActualizarPerito_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarSociedad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPeritosSociedades/ActualizarSociedad" message="tns:IPeritosSociedades_ActualizarSociedad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPeritosSociedades/ActualizarSociedadResponse" message="tns:IPeritosSociedades_ActualizarSociedad_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPeritosSociedades/ActualizarSociedadRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IPeritosSociedades_ActualizarSociedad_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarRelacionPeritoSociedad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPeritosSociedades/ActualizarRelacionPeritoSociedad" message="tns:IPeritosSociedades_ActualizarRelacionPeritoSociedad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPeritosSociedades/ActualizarRelacionPeritoSociedadResponse" message="tns:IPeritosSociedades_ActualizarRelacionPeritoSociedad_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPeritosSociedades/ActualizarRelacionPeritoSociedadRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IPeritosSociedades_ActualizarRelacionPeritoSociedad_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRelacionPeritoSociedad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPeritosSociedades/GetRelacionPeritoSociedad" message="tns:IPeritosSociedades_GetRelacionPeritoSociedad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPeritosSociedades/GetRelacionPeritoSociedadResponse" message="tns:IPeritosSociedades_GetRelacionPeritoSociedad_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPeritosSociedades/GetRelacionPeritoSociedadRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IPeritosSociedades_GetRelacionPeritoSociedad_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarSociedad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPeritosSociedades/InsertarSociedad" message="tns:IPeritosSociedades_InsertarSociedad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPeritosSociedades/InsertarSociedadResponse" message="tns:IPeritosSociedades_InsertarSociedad_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPeritosSociedades/InsertarSociedadRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IPeritosSociedades_InsertarSociedad_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarPerito">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPeritosSociedades/InsertarPerito" message="tns:IPeritosSociedades_InsertarPerito_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPeritosSociedades/InsertarPeritoResponse" message="tns:IPeritosSociedades_InsertarPerito_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IPeritosSociedades/InsertarPeritoRegistroContribuyentesExceptionFault" name="RegistroContribuyentesExceptionFault" message="tns:IPeritosSociedades_InsertarPerito_RegistroContribuyentesExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IPeritosSociedades" type="tns:IPeritosSociedades">
+    <wsp:PolicyReference URI="#WSHttpBinding_IPeritosSociedades_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPerito">
+      <soap12:operation soapAction="http://tempuri.org/IPeritosSociedades/GetPerito" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPeritosByDatosIdentificativos">
+      <soap12:operation soapAction="http://tempuri.org/IPeritosSociedades/GetPeritosByDatosIdentificativos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPeritosByDatosPersonales">
+      <soap12:operation soapAction="http://tempuri.org/IPeritosSociedades/GetPeritosByDatosPersonales" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSociedadValuacion">
+      <soap12:operation soapAction="http://tempuri.org/IPeritosSociedades/GetSociedadValuacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSocValuacionByDatosIdentificativos">
+      <soap12:operation soapAction="http://tempuri.org/IPeritosSociedades/GetSocValuacionByDatosIdentificativos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSocValuacionByDatosPersonales">
+      <soap12:operation soapAction="http://tempuri.org/IPeritosSociedades/GetSocValuacionByDatosPersonales" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarPerito">
+      <soap12:operation soapAction="http://tempuri.org/IPeritosSociedades/ActualizarPerito" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarSociedad">
+      <soap12:operation soapAction="http://tempuri.org/IPeritosSociedades/ActualizarSociedad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarRelacionPeritoSociedad">
+      <soap12:operation soapAction="http://tempuri.org/IPeritosSociedades/ActualizarRelacionPeritoSociedad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRelacionPeritoSociedad">
+      <soap12:operation soapAction="http://tempuri.org/IPeritosSociedades/GetRelacionPeritoSociedad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarSociedad">
+      <soap12:operation soapAction="http://tempuri.org/IPeritosSociedades/InsertarSociedad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarPerito">
+      <soap12:operation soapAction="http://tempuri.org/IPeritosSociedades/InsertarPerito" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="RegistroContribuyentesExceptionFault">
+        <soap12:fault use="literal" name="RegistroContribuyentesExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PeritosSociedadesService">
+    <wsdl:port name="WSHttpBinding_IPeritosSociedades" binding="tns:WSHttpBinding_IPeritosSociedades">
+      <soap12:address location="http://psur-des-serv.promocapre.int/PRE/RegistroContribuyentes/PeritosSociedadesService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://psur-des-serv.promocapre.int/PRE/RegistroContribuyentes/PeritosSociedadesService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5fda5332-fe46-477e-8429-fed9f1a11139" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.0.8.2/PRO/Documental/ConsultasDocumentos.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ConsultasDocumentos1.xsd" MetadataType="Schema" ID="403900f9-0fcc-4c0f-8250-6ada1577d16f" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Documental/ConsultasDocumentos.svc?xsd=xsd1" />
+    <MetadataFile FileName="ConsultasDocumentos12.wsdl" MetadataType="Wsdl" ID="3df9a3e7-9dac-402b-8281-aa00fb89c962" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Documental/ConsultasDocumentos.svc?wsdl" />
+    <MetadataFile FileName="ConsultasDocumentos12.xsd" MetadataType="Schema" ID="6c7f43ea-80d8-435d-9e4b-823c8058857c" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Documental/ConsultasDocumentos.svc?xsd=xsd0" />
+    <MetadataFile FileName="ConsultasDocumentos13.xsd" MetadataType="Schema" ID="1ff50e1e-c34d-46a4-b99d-52d2e8e68578" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Documental/ConsultasDocumentos.svc?xsd=xsd6" />
+    <MetadataFile FileName="dseDocumentosDigitales12.xsd" MetadataType="Schema" ID="8f72e4e6-cae3-4f35-8a4e-02658fb1abf9" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Documental/ConsultasDocumentos.svc?xsd=xsd2" />
+    <MetadataFile FileName="ConsultasDocumentos14.xsd" MetadataType="Schema" ID="72521846-c7d5-4319-bdce-a4c13b20243e" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Documental/ConsultasDocumentos.svc?xsd=xsd7" />
+    <MetadataFile FileName="ConsultasDocumentos15.xsd" MetadataType="Schema" ID="16d254c1-0da0-4ca8-8f99-1aaf026c3101" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Documental/ConsultasDocumentos.svc?xsd=xsd3" />
+    <MetadataFile FileName="ConsultasDocumentos16.xsd" MetadataType="Schema" ID="dc7c4f28-e2f1-468d-947a-577156b5eca4" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Documental/ConsultasDocumentos.svc?xsd=xsd5" />
+    <MetadataFile FileName="ConsultasDocumentos17.xsd" MetadataType="Schema" ID="008fbfcc-c24c-4997-a5e5-c63190185fe3" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Documental/ConsultasDocumentos.svc?xsd=xsd4" />
+    <MetadataFile FileName="ConsultasDocumentos12.disco" MetadataType="Disco" ID="5957e3f2-f4f2-4d0f-bb52-3ae542646e89" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Documental/ConsultasDocumentos.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/dseDocumentosDigitales.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/dseDocumentosDigitales.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/dseDocumentosDigitales.xsd" id="dseDocumentosDigitales" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="dseDocumentosDigitales">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DOC_DOCUMENTODIGITAL">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" name="IDDOCUMENTODIGITAL" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" msdata:DateTimeMode="Unspecified" minOccurs="0" name="FECHA" type="xs:dateTime" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="DESCRIPCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="IDTIPODOCUMENTODIGITAL" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="DESCTIPODOCUMENTODIGITAL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="IDFICHERODOCUMENTO" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="IDUSUARIO" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DOC_FICHERODOCUMENTO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDFICHERODOCUMENTO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="IDDOCUMENTODIGITAL" type="xs:decimal" />
+              <xs:element name="NOMBRE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DESCRIPCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="BINARIODATOS" type="xs:base64Binary" />
+              <xs:element msdata:DateTimeMode="Unspecified" minOccurs="0" name="FECHA" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DESCRIPCIONFICHERO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DOC_DOCUMENTOJURIDICO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDDOCUMENTODIGITAL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODTIPODOCUMENTOJURIDICO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="LUGAR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" msdata:DateTimeMode="Unspecified" minOccurs="0" name="FECHA" type="xs:dateTime" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="DESCRIPCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="IDUSUARIO" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCIDINSCRIPCIONRPPC" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCESANTECEDENTE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" msdata:DateTimeMode="Unspecified" minOccurs="0" name="RPPCFECHAINSCRIPCION" type="xs:dateTime" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCFOLIOREAL" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCSECCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCVOLUMEN">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCTOMO" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCFOJA" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCPARTIDA" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCCONFRONTADO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" msdata:DateTimeMode="Unspecified" minOccurs="0" name="RPPCFECHACONFRONTA" type="xs:dateTime" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCLIBRO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DOC_DOCUMENTONOTARIAL">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDDOCUMENTODIGITAL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="IDNOTARIO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NUMPROTOCOLO" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" msdata:DateTimeMode="Unspecified" minOccurs="0" name="FECHA" type="xs:dateTime" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="DESCRIPCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="LUGAR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="NUMNOTARIO" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="NOMBRE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="APELLIDOPATERNO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="APELLIDOMATERNO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCIDINSCRIPCIONRPPC" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCESANTECEDENTE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" msdata:DateTimeMode="Unspecified" minOccurs="0" name="RPPCFECHAINSCRIPCION" type="xs:dateTime" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCFOLIOREAL" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCSECCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCVOLUMEN">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCTOMO" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCFOJA" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCPARTIDA" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCCONFRONTADO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" msdata:DateTimeMode="Unspecified" minOccurs="0" name="RPPCFECHACONFRONTA" type="xs:dateTime" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCLIBRO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="CODESTADO" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" msdata:Expression="NOMBRE + ' ' + APELLIDOPATERNO + ' ' + APELLIDOMATERNO" minOccurs="0" name="NOMBRECOMPLETO" type="xs:string" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="IDUSUARIO" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DOC_DOCUMENTOLICENCIA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDDOCUMENTODIGITAL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NUMEROFOLIO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="NUMEROLICENCIA" type="xs:decimal" />
+              <xs:element msdata:DateTimeMode="Unspecified" minOccurs="0" name="FECHAINICIO" type="xs:dateTime" />
+              <xs:element msdata:DateTimeMode="Unspecified" minOccurs="0" name="FECHAVENCIMIENTO" type="xs:dateTime" />
+              <xs:element msdata:DateTimeMode="Unspecified" minOccurs="0" name="FECHATERMINACION" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="IDDELEGACION" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="FECHA" type="xs:dateTime" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="DESCRIPCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="PRORROGAIDPRORROGA" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" msdata:DateTimeMode="Unspecified" minOccurs="0" name="PRORROGAFECHAINICIO" type="xs:dateTime" />
+              <xs:element msdata:ReadOnly="true" msdata:DateTimeMode="Unspecified" minOccurs="0" name="PRORROGAFECHAVENCIMIENTO" type="xs:dateTime" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="PRORROGANUMEROPRORROGA" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="DESCRIPCIONDELEGACION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="IDUSUARIO" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DOC_DOCUMENTOPRORROGA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDPRORROGA" type="xs:decimal" />
+              <xs:element name="IDDOCUMENTODIGITAL" type="xs:decimal" />
+              <xs:element name="NUMEROPRORROGA" type="xs:decimal" />
+              <xs:element msdata:DateTimeMode="Unspecified" name="FECHAINICIO" type="xs:dateTime" />
+              <xs:element msdata:DateTimeMode="Unspecified" name="FECHAVENCIMIENTO" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DOC_DOCUMENTOADMINISTRATIVO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDDOCUMENTODIGITAL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="ORGANISMO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="NUMERORESOLUCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="IDOFICIALIA" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" msdata:DateTimeMode="Unspecified" minOccurs="0" name="FECHA" type="xs:dateTime" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="DESCRIPCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="NUMEROFOLIO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="LUGAR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCESANTECEDENTE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" msdata:DateTimeMode="Unspecified" minOccurs="0" name="RPPCFECHAINSCRIPCION" type="xs:dateTime" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCFOLIOREAL" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCSECCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCVOLUMEN">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCTOMO" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCFOJA" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCPARTIDA" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCCONFRONTADO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" msdata:DateTimeMode="Unspecified" minOccurs="0" name="RPPCFECHACONFRONTA" type="xs:dateTime" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCLIBRO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCIDINSCRIPCIONRPPC" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="IDUSUARIO" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DOC_RESOLUCIONJUDICIAL">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDDOCUMENTODIGITAL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="AUTORIDADJUDICIAL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="NUMERORESOLUCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="IDOFICIALIA" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="NUMEROFOLIO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" msdata:DateTimeMode="Unspecified" minOccurs="0" name="FECHA" type="xs:dateTime" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="DESCRIPCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="LUGAR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="DESCRIPCIONOFICIALIA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCIDINSCRIPCIONRPPC" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCESANTECEDENTE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" msdata:DateTimeMode="Unspecified" minOccurs="0" name="RPPCFECHAINSCRIPCION" type="xs:dateTime" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCFOLIOREAL" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCSECCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCVOLUMEN">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCTOMO" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCFOJA" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCPARTIDA" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCCONFRONTADO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" msdata:DateTimeMode="Unspecified" minOccurs="0" name="RPPCFECHACONFRONTA" type="xs:dateTime" />
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="RPPCLIBRO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="IDUSUARIO" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DOC_INSCRIPCIONRPPC">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDINSCRIPCIONRPPC" type="xs:decimal" />
+              <xs:element name="ESANTECEDENTE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:DateTimeMode="Unspecified" minOccurs="0" name="FECHAINSCRIPCION" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="FOLIOREAL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="SECCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="VOLUMEN">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TOMO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FOJA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PARTIDA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CONFRONTADO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:DateTimeMode="Unspecified" minOccurs="0" name="FECHACONFRONTA" type="xs:dateTime" />
+              <xs:element name="IDDOCUMENTODIGITAL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="LIBRO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DOC_DOCUMENTOFOTOINMUEBLE">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDDOCUMENTODIGITAL" type="xs:decimal" />
+              <xs:element name="CODTIPOFOTOINMUEBLE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDFICHERODOCUMENTO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESCRIPCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:DateTimeMode="Unspecified" name="FECHA" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="TIPOFOTOINMUEBLE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="IDUSUARIO" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DOC_DOCUMENTOFOTOMANZANA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDDOCUMENTODIGITAL" type="xs:decimal" />
+              <xs:element name="CODORIENTACION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDFICHERODOCUMENTO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESCRIPCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:DateTimeMode="Unspecified" name="FECHA" type="xs:dateTime" />
+              <xs:element name="ORIENTACION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="IDUSUARIO" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FEXAVA_AVALUO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDDOCUMENTODIGITAL" type="xs:decimal" />
+              <xs:element name="IDPERSONAPERITO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VALORCOMERCIAL" type="xs:decimal" />
+              <xs:element msdata:DateTimeMode="Unspecified" name="FECHA" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="DESCRIPCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NUMEROAVALUO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="NOMBRE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="APELLIDOPATERNO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="APELLIDOMATERNO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="REGISTRO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" msdata:Expression="NOMBRE + ' ' + APELLIDOPATERNO + ' ' + APELLIDOMATERNO" minOccurs="0" name="NOMBRECOMPLETO" type="xs:string" />
+              <xs:element minOccurs="0" name="IDUSUARIO" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:DOC_DOCUMENTODIGITAL" />
+      <xs:field xpath="mstns:IDDOCUMENTODIGITAL" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DOC_FICHERODOCUMENTO_Constraint1">
+      <xs:selector xpath=".//mstns:DOC_FICHERODOCUMENTO" />
+      <xs:field xpath="mstns:IDFICHERODOCUMENTO" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DOC_DOCUMENTOJURIDICO_Constraint1">
+      <xs:selector xpath=".//mstns:DOC_DOCUMENTOJURIDICO" />
+      <xs:field xpath="mstns:IDDOCUMENTODIGITAL" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DOC_DOCUMENTONOTARIAL_Constraint1">
+      <xs:selector xpath=".//mstns:DOC_DOCUMENTONOTARIAL" />
+      <xs:field xpath="mstns:IDDOCUMENTODIGITAL" />
+    </xs:unique>
+    <xs:unique name="Constraint2">
+      <xs:selector xpath=".//mstns:DOC_DOCUMENTONOTARIAL" />
+      <xs:field xpath="mstns:IDNOTARIO" />
+    </xs:unique>
+    <xs:unique name="Constraint3">
+      <xs:selector xpath=".//mstns:DOC_DOCUMENTONOTARIAL" />
+      <xs:field xpath="mstns:NUMPROTOCOLO" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DOC_DOCUMENTOLICENCIA_Constraint1">
+      <xs:selector xpath=".//mstns:DOC_DOCUMENTOLICENCIA" />
+      <xs:field xpath="mstns:IDDOCUMENTODIGITAL" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint2" name="DOC_DOCUMENTOLICENCIA_Constraint2">
+      <xs:selector xpath=".//mstns:DOC_DOCUMENTOLICENCIA" />
+      <xs:field xpath="mstns:NUMEROLICENCIA" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DOC_DOCUMENTOPRORROGA_Constraint1">
+      <xs:selector xpath=".//mstns:DOC_DOCUMENTOPRORROGA" />
+      <xs:field xpath="mstns:IDPRORROGA" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" name="DOC_DOCUMENTOADMINISTRATIVO_Constraint1">
+      <xs:selector xpath=".//mstns:DOC_DOCUMENTOADMINISTRATIVO" />
+      <xs:field xpath="mstns:NUMERORESOLUCION" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint2" msdata:PrimaryKey="true" name="DOC_DOCUMENTOADMINISTRATIVO_Constraint2">
+      <xs:selector xpath=".//mstns:DOC_DOCUMENTOADMINISTRATIVO" />
+      <xs:field xpath="mstns:IDDOCUMENTODIGITAL" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" name="DOC_RESOLUCIONJUDICIAL_Constraint1">
+      <xs:selector xpath=".//mstns:DOC_RESOLUCIONJUDICIAL" />
+      <xs:field xpath="mstns:NUMERORESOLUCION" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint2" msdata:PrimaryKey="true" name="DOC_RESOLUCIONJUDICIAL_Constraint2">
+      <xs:selector xpath=".//mstns:DOC_RESOLUCIONJUDICIAL" />
+      <xs:field xpath="mstns:IDDOCUMENTODIGITAL" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DOC_INSCRIPCIONRPPC_Constraint1">
+      <xs:selector xpath=".//mstns:DOC_INSCRIPCIONRPPC" />
+      <xs:field xpath="mstns:IDINSCRIPCIONRPPC" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DOC_DOCUMENTOFOTOINMUEBLE_Constraint1">
+      <xs:selector xpath=".//mstns:DOC_DOCUMENTOFOTOINMUEBLE" />
+      <xs:field xpath="mstns:IDDOCUMENTODIGITAL" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="DOC_DOCUMENTOFOTOMANZANA_Constraint1">
+      <xs:selector xpath=".//mstns:DOC_DOCUMENTOFOTOMANZANA" />
+      <xs:field xpath="mstns:IDDOCUMENTODIGITAL" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="FEXAVA_AVALUO_Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_AVALUO" />
+      <xs:field xpath="mstns:IDDOCUMENTODIGITAL" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="DOC_DDIGITALDNOTARIAL_FK" msdata:parent="DOC_DOCUMENTOJURIDICO" msdata:child="DOC_DOCUMENTONOTARIAL" msdata:parentkey="IDDOCUMENTODIGITAL" msdata:childkey="IDDOCUMENTODIGITAL" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+      <msdata:Relationship name="DOC_DJURIDICODRJUDICIAL_FK" msdata:parent="DOC_DOCUMENTOJURIDICO" msdata:child="DOC_RESOLUCIONJUDICIAL" msdata:parentkey="IDDOCUMENTODIGITAL" msdata:childkey="IDDOCUMENTODIGITAL" />
+      <msdata:Relationship name="DOC_DJURIDICOINSCRIPRPPC_FK" msdata:parent="DOC_DOCUMENTOJURIDICO" msdata:child="DOC_INSCRIPCIONRPPC" msdata:parentkey="IDDOCUMENTODIGITAL" msdata:childkey="IDDOCUMENTODIGITAL" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

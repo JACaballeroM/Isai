@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterBase.master.cs" Inherits="MasterPage" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<%@ Register src="../UserControlsCommon/MenuCabeceraLogo.ascx" tagname="MenuCabeceraLogo" tagprefix="uc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-859-1" />
+    <title>Untitled Page</title>          
+    <asp:ContentPlaceHolder ID="head" runat="server">    
+    </asp:ContentPlaceHolder>
+</head>
+<body runat="server" id="Body">
+    <form id="form1" runat="server">
+    <div id="BackGround">
+        <div id="Main">
+           
+            <cc1:ToolkitScriptManager ID="ToolkitScriptManagerBase" runat="server"             
+            CombineScripts="false" EnableScriptGlobalization="True" EnableViewState="False" AsyncPostBackTimeout="99999">
+            </cc1:ToolkitScriptManager>
+            <div id="Cabecera">
+                <div id="CabeceraLogo">
+                    &nbsp;&nbsp;
+                    <asp:Image ID="Image4" runat="server" ImageUrl="~/Images/logo_gdf.png" 
+                        Height="93px" Width="100px" />
+                </div>
+                <div id="CabeceraMenu">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolderMenuCabecera" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div id="CabeceraMenuPrincipal">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolderMenuGlobal" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <div id="ContenidoBase">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderContentBase" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="Pie">
+                <div id="PieSeparador">
+                    <asp:Image ID="Image3" runat="server" ImageAlign="Top" ImageUrl="~/Images/fondo_pie_sup_home.gif" />
+                </div>
+                <div id="PieImagenIzquierda">
+                    &nbsp;</div>
+                <div id="PieContenido">
+                    <p>
+                        OVICA. Oficina de Vinculación por Internet del Catastro - SIGAPred. Sistema Integral de Gestión y <br />Actualización de Predial<br />
+                        Secretaría de Finanzas. Gobierno del Distrito Federal.
+                        <br />
+                        Dr. Lavista No. 144, Acceso 1, Primer Piso Col. Doctores, Del. Cuauhtémoc, C.P.
+                        06720</p>
+                </div>
+                <div id="PieImagenDerecha">
+                    &nbsp;<asp:Image ID="Image1" runat="server" ImageUrl="~/Images/fondo_pie_dch.gif" />
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

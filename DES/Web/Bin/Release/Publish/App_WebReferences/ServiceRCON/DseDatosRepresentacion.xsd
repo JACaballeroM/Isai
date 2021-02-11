@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DseDatosRepresentacion.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DseDatosRepresentacion.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DseDatosRepresentacion.xsd" id="DseDatosRepresentacion" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="DseDatosRepresentacion">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Representacion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDREPRESENTACION" type="xs:decimal" />
+              <xs:element name="IDPERSONAREPRESENTADO" type="xs:decimal" />
+              <xs:element name="IDPERSONAREPRESENTANTE" type="xs:decimal" />
+              <xs:element name="IDDOCUMENTOREPRESENTACION" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TEXTOREPRESENTACION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:DateTimeMode="Unspecified" minOccurs="0" name="FECHACADUCIDAD" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Representantes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="NOMBRE" type="xs:string" />
+              <xs:element minOccurs="0" name="APELLIDOPATERNO" type="xs:string" />
+              <xs:element minOccurs="0" name="APELLIDOMATERNO" type="xs:string" />
+              <xs:element minOccurs="0" name="CODTIPOPERSONA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ACTIVPRINCIP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="RFC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CURP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="18" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CLAVEIFE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="18" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" minOccurs="0" name="IDPERSONA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODSITUACIONPERSONA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="IDDOCIDENTIF" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VALDOCIDENTIF">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:DateTimeMode="Unspecified" minOccurs="0" name="FECHANACIMIENTO" type="xs:dateTime" />
+              <xs:element msdata:DateTimeMode="Unspecified" minOccurs="0" name="FECHADEFUNCION" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="CELULAR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="EMAIL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:DateTimeMode="Unspecified" minOccurs="0" name="FECHAINICIOACTIV" type="xs:dateTime" />
+              <xs:element msdata:DateTimeMode="Unspecified" minOccurs="0" name="FECHACAMBIOSITUACION" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="IDTIPOMORAL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPOSMORAL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="IDMOTIVOSMORAL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="MOTIVOSMORAL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Representados">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="NOMBRE" type="xs:string" />
+              <xs:element minOccurs="0" name="APELLIDOPATERNO" type="xs:string" />
+              <xs:element minOccurs="0" name="APELLIDOMATERNO" type="xs:string" />
+              <xs:element minOccurs="0" name="CODTIPOPERSONA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ACTIVPRINCIP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="RFC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CURP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="18" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CLAVEIFE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="18" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" minOccurs="0" name="IDPERSONA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODSITUACIONPERSONA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="IDDOCIDENTIF" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VALDOCIDENTIF">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:DateTimeMode="Unspecified" minOccurs="0" name="FECHANACIMIENTO" type="xs:dateTime" />
+              <xs:element msdata:DateTimeMode="Unspecified" minOccurs="0" name="FECHADEFUNCION" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="CELULAR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="EMAIL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:DateTimeMode="Unspecified" minOccurs="0" name="FECHAINICIOACTIV" type="xs:dateTime" />
+              <xs:element msdata:DateTimeMode="Unspecified" minOccurs="0" name="FECHACAMBIOSITUACION" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="IDTIPOMORAL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPOSMORAL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="IDMOTIVOSMORAL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="MOTIVOSMORAL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:Representacion" />
+      <xs:field xpath="mstns:IDREPRESENTACION" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" name="Representantes_Constraint1">
+      <xs:selector xpath=".//mstns:Representantes" />
+      <xs:field xpath="mstns:IDPERSONA" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" name="Representados_Constraint1">
+      <xs:selector xpath=".//mstns:Representados" />
+      <xs:field xpath="mstns:IDPERSONA" />
+    </xs:unique>
+    <xs:keyref name="FK_Representantes_Representacion" refer="mstns:Representantes_Constraint1">
+      <xs:selector xpath=".//mstns:Representacion" />
+      <xs:field xpath="mstns:IDPERSONAREPRESENTANTE" />
+    </xs:keyref>
+    <xs:keyref name="FK_Representados_Representacion" refer="mstns:Representados_Constraint1">
+      <xs:selector xpath=".//mstns:Representacion" />
+      <xs:field xpath="mstns:IDPERSONAREPRESENTADO" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

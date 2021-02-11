@@ -1,0 +1,1707 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Avaluos" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="wsHttpAvaluos_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://psur-des-serv.promocapre.int/PRE/FuentesExternas/Avaluos/Avaluos.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://psur-des-serv.promocapre.int/PRE/FuentesExternas/Avaluos/Avaluos.svc?xsd=xsd4" namespace="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" />
+      <xsd:import schemaLocation="http://psur-des-serv.promocapre.int/PRE/FuentesExternas/Avaluos/Avaluos.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://psur-des-serv.promocapre.int/PRE/FuentesExternas/Avaluos/Avaluos.svc?xsd=xsd2" namespace="http://tempuri.org/DseAvaluoConsulta.xsd" />
+      <xsd:import schemaLocation="http://psur-des-serv.promocapre.int/PRE/FuentesExternas/Avaluos/Avaluos.svc?xsd=xsd3" />
+      <xsd:import schemaLocation="http://psur-des-serv.promocapre.int/PRE/FuentesExternas/Avaluos/Avaluos.svc?xsd=xsd5" namespace="http://tempuri.org/DseAvaluosCatConsulta.xsd" />
+      <xsd:import schemaLocation="http://psur-des-serv.promocapre.int/PRE/FuentesExternas/Avaluos/Avaluos.svc?xsd=xsd6" namespace="http://tempuri.org/DseAvaluoConsultaFis.xsd" />
+      <xsd:import schemaLocation="http://psur-des-serv.promocapre.int/PRE/FuentesExternas/Avaluos/Avaluos.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" />
+      <xsd:import schemaLocation="http://psur-des-serv.promocapre.int/PRE/FuentesExternas/Avaluos/Avaluos.svc?xsd=xsd8" namespace="http://tempuri.org/DseNotarios.xsd" />
+      <xsd:import schemaLocation="http://psur-des-serv.promocapre.int/PRE/FuentesExternas/Avaluos/Avaluos.svc?xsd=xsd9" namespace="http://tempuri.org/DseAvaluoMantInf.xsd" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorNumAvaluoSoci_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorNumAvaluoSoci" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorNumAvaluoSoci_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorNumAvaluoSociResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorNumAvaluoSoci_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q1:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorNumAvaluoSoci_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q2:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorNumAvaluoSoci_EstadoVig_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorNumAvaluoSoci_EstadoVig" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorNumAvaluoSoci_EstadoVig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorNumAvaluoSoci_EstadoVigResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorNumAvaluoSoci_EstadoVig_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q3:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorNumAvaluoSoci_EstadoVig_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q4:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorNumValuoVigEstado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorNumValuoVigEstado" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorNumValuoVigEstado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorNumValuoVigEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorNumValuoVigEstado_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q5:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorNumValuoVigEstado_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q6:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorFechaSoci_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorFechaSoci" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorFechaSoci_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorFechaSociResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorFechaSoci_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q7:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorFechaSoci_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q8:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaSoci_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorCuentaSoci" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaSoci_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorCuentaSociResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaSoci_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q9:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaSoci_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q10:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaSociEstadoVig_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorCuentaSociEstadoVig" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaSociEstadoVig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorCuentaSociEstadoVigResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaSociEstadoVig_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q11:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaSociEstadoVig_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q12:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorEstadoSoci_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorEstadoSoci" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorEstadoSoci_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorEstadoSociResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorEstadoSoci_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q13:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorEstadoSoci_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q14:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerCatalogos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCatalogos" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerCatalogos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCatalogosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerCatalogos_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q15:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerCatalogos_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q16:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_GenerarAvaluo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerarAvaluo" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_GenerarAvaluo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerarAvaluoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_GenerarAvaluo_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q17:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_GenerarAvaluo_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q18:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ExisteAvaluoAsociado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExisteAvaluoAsociado" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ExisteAvaluoAsociado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExisteAvaluoAsociadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ExisteAvaluoAsociado_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q19:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ExisteAvaluoAsociado_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q20:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerDatosAvaluoCatastral_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDatosAvaluoCatastral" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerDatosAvaluoCatastral_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDatosAvaluoCatastralResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerDatosAvaluoCatastral_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q21:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerDatosAvaluoCatastral_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q22:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ValidarTamanioFichero_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarTamanioFichero" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ValidarTamanioFichero_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarTamanioFicheroResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ValidarTamanioFichero_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q23:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ValidarTamanioFichero_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q24:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_EsValidoAvaluo_InputMessage">
+    <wsdl:part name="parameters" element="tns:EsValidoAvaluo" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_EsValidoAvaluo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EsValidoAvaluoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_EsValidoAvaluo_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q25:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_EsValidoAvaluo_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q26:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ValidarXmlValorUnitarioSuelo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarXmlValorUnitarioSuelo" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ValidarXmlValorUnitarioSuelo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarXmlValorUnitarioSueloResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ValidarXmlValorUnitarioSuelo_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q27:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ValidarXmlValorUnitarioSuelo_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q28:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_BusquedaNotarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:BusquedaNotarios" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_BusquedaNotarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BusquedaNotariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_BusquedaNotarios_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q29:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_BusquedaNotarios_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q30:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_EsXml_InputMessage">
+    <wsdl:part name="parameters" element="tns:EsXml" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_EsXml_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EsXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_EsXml_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q31:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_EsXml_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q32:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerNombreDelegacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerNombreDelegacion" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerNombreDelegacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerNombreDelegacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerNombreDelegacion_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q33:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerNombreDelegacion_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q34:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerDigitoVerificadorBD_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDigitoVerificadorBD" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerDigitoVerificadorBD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDigitoVerificadorBDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerDigitoVerificadorBD_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q35:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerDigitoVerificadorBD_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q36:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_GetNotarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotarios" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_GetNotarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_GetNotarios_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q37:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_GetNotarios_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q38:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_Test_InputMessage">
+    <wsdl:part name="parameters" element="tns:Test" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_Test_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_RegistrarAvaluo_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarAvaluo" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_RegistrarAvaluo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarAvaluoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_RegistrarAvaluo_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q39="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q39:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_RegistrarAvaluo_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q40="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q40:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_RegistrarAvaluoEspecial_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarAvaluoEspecial" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_RegistrarAvaluoEspecial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarAvaluoEspecialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_RegistrarAvaluoEspecial_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q41="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q41:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_RegistrarAvaluoEspecial_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q42:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_RegistrarIntentoFallido_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarIntentoFallido" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_RegistrarIntentoFallido_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarIntentoFallidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_RegistrarIntentoFallido_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q43="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q43:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_RegistrarIntentoFallido_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q44="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q44:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_CambiarEstadoAvaluo_InputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarEstadoAvaluo" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_CambiarEstadoAvaluo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarEstadoAvaluoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_CambiarEstadoAvaluo_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q45="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q45:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_CambiarEstadoAvaluo_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q46="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q46:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_AsignarNotarioAvaluo_InputMessage">
+    <wsdl:part name="parameters" element="tns:AsignarNotarioAvaluo" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_AsignarNotarioAvaluo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AsignarNotarioAvaluoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_AsignarNotarioAvaluo_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q47="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q47:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_AsignarNotarioAvaluo_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q48="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q48:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaObtnNum_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorCuentaObtnNum" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaObtnNum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorCuentaObtnNumResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaObtnNum_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q49="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q49:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaObtnNum_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q50="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q50:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_GuardarAvaluoInformeComercial_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarAvaluoInformeComercial" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_GuardarAvaluoInformeComercial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarAvaluoInformeComercialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_GuardarAvaluoInformeComercial_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q51="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q51:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_GuardarAvaluoInformeComercial_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q52="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q52:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_GetAvaluoAntecedentes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvaluoAntecedentes" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_GetAvaluoAntecedentes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvaluoAntecedentesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_GetAvaluoAntecedentes_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q53="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q53:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_GetAvaluoAntecedentes_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q54="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q54:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_testAv_InputMessage">
+    <wsdl:part name="parameters" element="tns:testAv" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_testAv_OutputMessage">
+    <wsdl:part name="parameters" element="tns:testAvResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_testAv_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q55="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q55:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_testAv_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q56="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q56:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_GetInvestigacionMercado_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvestigacionMercado" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_GetInvestigacionMercado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInvestigacionMercadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_GetInvestigacionMercado_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q57="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q57:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_GetInvestigacionMercado_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q58="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q58:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorFechaNotario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorFechaNotario" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorFechaNotario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorFechaNotarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorFechaNotario_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q59="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q59:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorFechaNotario_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q60="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q60:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorFechaNotarioSF_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorFechaNotarioSF" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorFechaNotarioSF_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorFechaNotarioSFResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorFechaNotarioSF_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q61="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q61:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorFechaNotarioSF_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q62="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q62:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorRegistroPeritoNotario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorRegistroPeritoNotario" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorRegistroPeritoNotario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorRegistroPeritoNotarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorRegistroPeritoNotario_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q63="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q63:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorRegistroPeritoNotario_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q64="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q64:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorFechaPeritoVigenciaEstado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorFechaPeritoVigenciaEstado" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorFechaPeritoVigenciaEstado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorFechaPeritoVigenciaEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorFechaPeritoVigenciaEstado_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q65="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q65:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorFechaPeritoVigenciaEstado_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q66="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q66:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorEstadoPerito_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorEstadoPerito" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorEstadoPerito_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorEstadoPeritoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorEstadoPerito_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q67="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q67:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorEstadoPerito_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q68="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q68:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorNumValuoPerito_EstadoVig_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorNumValuoPerito_EstadoVig" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorNumValuoPerito_EstadoVig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorNumValuoPerito_EstadoVigResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorNumValuoPerito_EstadoVig_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q69="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q69:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorNumValuoPerito_EstadoVig_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q70="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q70:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorFechaEstado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorFechaEstado" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorFechaEstado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorFechaEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorFechaEstado_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q71="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q71:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorFechaEstado_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q72="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q72:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorProximidad_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorProximidad" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorProximidad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorProximidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorProximidad_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q73="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q73:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorProximidad_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q74="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q74:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluo" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluo_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q75="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q75:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluo_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q76="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q76:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluoPorIdAvaluoEstadoVigencia_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluoPorIdAvaluoEstadoVigencia" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluoPorIdAvaluoEstadoVigencia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluoPorIdAvaluoEstadoVigenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluoPorIdAvaluoEstadoVigencia_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q77="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q77:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluoPorIdAvaluoEstadoVigencia_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q78="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q78:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluoPorVigEstTodosPeritosSoci_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluoPorVigEstTodosPeritosSoci" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluoPorVigEstTodosPeritosSoci_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluoPorVigEstTodosPeritosSociResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluoPorVigEstTodosPeritosSoci_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q79="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q79:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluoPorVigEstTodosPeritosSoci_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q80="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q80:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluoPorIdAvaluos_Soci_Vigencia_Estado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluoPorIdAvaluos_Soci_Vigencia_Estado" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluoPorIdAvaluos_Soci_Vigencia_Estado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluoPorIdAvaluos_Soci_Vigencia_EstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluoPorIdAvaluos_Soci_Vigencia_Estado_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q81="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q81:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluoPorIdAvaluos_Soci_Vigencia_Estado_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q82="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q82:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorFechaSoci_EstadoVig_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorFechaSoci_EstadoVig" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorFechaSoci_EstadoVig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorFechaSoci_EstadoVigResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorFechaSoci_EstadoVig_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q83="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q83:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorFechaSoci_EstadoVig_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q84="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q84:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaCatastralNotario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorCuentaCatastralNotario" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaCatastralNotario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorCuentaCatastralNotarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaCatastralNotario_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q85="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q85:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaCatastralNotario_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q86="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q86:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaCatastralNotarioSF_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorCuentaCatastralNotarioSF" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaCatastralNotarioSF_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorCuentaCatastralNotarioSFResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaCatastralNotarioSF_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q87="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q87:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaCatastralNotarioSF_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q88="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q88:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaCatastralPerito_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorCuentaCatastralPerito" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaCatastralPerito_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorCuentaCatastralPeritoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaCatastralPerito_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q89="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q89:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaCatastralPerito_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q90="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q90:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaCatastralPeritoVigenciaEstado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorCuentaCatastralPeritoVigenciaEstado" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaCatastralPeritoVigenciaEstado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorCuentaCatastralPeritoVigenciaEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaCatastralPeritoVigenciaEstado_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q91="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q91:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaCatastralPeritoVigenciaEstado_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q92="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q92:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaCatastral_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorCuentaCatastral" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaCatastral_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorCuentaCatastralResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaCatastral_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q93="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q93:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaCatastral_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q94="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q94:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaVigenciaEstado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorCuentaVigenciaEstado" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaVigenciaEstado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorCuentaVigenciaEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaVigenciaEstado_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q95="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q95:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorCuentaVigenciaEstado_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q96="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q96:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorProximidadPerito_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorProximidadPerito" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorProximidadPerito_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorProximidadPeritoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorProximidadPerito_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q97="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q97:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorProximidadPerito_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q98="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q98:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorProximidadSociedad_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorProximidadSociedad" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorProximidadSociedad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAvaluosPorProximidadSociedadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorProximidadSociedad_AvaluosExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q99="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q99:AvaluosException" />
+  </wsdl:message>
+  <wsdl:message name="IAvaluos_ObtenerAvaluosPorProximidadSociedad_AvaluosInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q100="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" name="detail" element="q100:AvaluosInfoException" />
+  </wsdl:message>
+  <wsdl:portType name="IAvaluos">
+    <wsdl:operation name="ObtenerAvaluosPorNumAvaluoSoci">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorNumAvaluoSoci" message="tns:IAvaluos_ObtenerAvaluosPorNumAvaluoSoci_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorNumAvaluoSociResponse" message="tns:IAvaluos_ObtenerAvaluosPorNumAvaluoSoci_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorNumAvaluoSociAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorNumAvaluoSoci_AvaluosExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorNumAvaluoSociAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorNumAvaluoSoci_AvaluosInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorNumAvaluoSoci_EstadoVig">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorNumAvaluoSoci_EstadoVig" message="tns:IAvaluos_ObtenerAvaluosPorNumAvaluoSoci_EstadoVig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorNumAvaluoSoci_EstadoVigResponse" message="tns:IAvaluos_ObtenerAvaluosPorNumAvaluoSoci_EstadoVig_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorNumAvaluoSoci_EstadoVigAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorNumAvaluoSoci_EstadoVig_AvaluosExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorNumAvaluoSoci_EstadoVigAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorNumAvaluoSoci_EstadoVig_AvaluosInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorNumValuoVigEstado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorNumValuoVigEstado" message="tns:IAvaluos_ObtenerAvaluosPorNumValuoVigEstado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorNumValuoVigEstadoResponse" message="tns:IAvaluos_ObtenerAvaluosPorNumValuoVigEstado_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorNumValuoVigEstadoAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorNumValuoVigEstado_AvaluosInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorNumValuoVigEstadoAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorNumValuoVigEstado_AvaluosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorFechaSoci">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorFechaSoci" message="tns:IAvaluos_ObtenerAvaluosPorFechaSoci_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorFechaSociResponse" message="tns:IAvaluos_ObtenerAvaluosPorFechaSoci_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorFechaSociAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorFechaSoci_AvaluosInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorFechaSociAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorFechaSoci_AvaluosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorCuentaSoci">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaSoci" message="tns:IAvaluos_ObtenerAvaluosPorCuentaSoci_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaSociResponse" message="tns:IAvaluos_ObtenerAvaluosPorCuentaSoci_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaSociAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorCuentaSoci_AvaluosExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaSociAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorCuentaSoci_AvaluosInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorCuentaSociEstadoVig">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaSociEstadoVig" message="tns:IAvaluos_ObtenerAvaluosPorCuentaSociEstadoVig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaSociEstadoVigResponse" message="tns:IAvaluos_ObtenerAvaluosPorCuentaSociEstadoVig_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaSociEstadoVigAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorCuentaSociEstadoVig_AvaluosInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaSociEstadoVigAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorCuentaSociEstadoVig_AvaluosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorEstadoSoci">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorEstadoSoci" message="tns:IAvaluos_ObtenerAvaluosPorEstadoSoci_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorEstadoSociResponse" message="tns:IAvaluos_ObtenerAvaluosPorEstadoSoci_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorEstadoSociAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorEstadoSoci_AvaluosExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorEstadoSociAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorEstadoSoci_AvaluosInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCatalogos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ObtenerCatalogos" message="tns:IAvaluos_ObtenerCatalogos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ObtenerCatalogosResponse" message="tns:IAvaluos_ObtenerCatalogos_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerCatalogosAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ObtenerCatalogos_AvaluosInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerCatalogosAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ObtenerCatalogos_AvaluosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerarAvaluo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/GenerarAvaluo" message="tns:IAvaluos_GenerarAvaluo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/GenerarAvaluoResponse" message="tns:IAvaluos_GenerarAvaluo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/GenerarAvaluoAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_GenerarAvaluo_AvaluosInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/GenerarAvaluoAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_GenerarAvaluo_AvaluosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExisteAvaluoAsociado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ExisteAvaluoAsociado" message="tns:IAvaluos_ExisteAvaluoAsociado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ExisteAvaluoAsociadoResponse" message="tns:IAvaluos_ExisteAvaluoAsociado_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ExisteAvaluoAsociadoAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ExisteAvaluoAsociado_AvaluosExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ExisteAvaluoAsociadoAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ExisteAvaluoAsociado_AvaluosInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDatosAvaluoCatastral">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ObtenerDatosAvaluoCatastral" message="tns:IAvaluos_ObtenerDatosAvaluoCatastral_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ObtenerDatosAvaluoCatastralResponse" message="tns:IAvaluos_ObtenerDatosAvaluoCatastral_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerDatosAvaluoCatastralAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ObtenerDatosAvaluoCatastral_AvaluosInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerDatosAvaluoCatastralAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ObtenerDatosAvaluoCatastral_AvaluosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarTamanioFichero">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ValidarTamanioFichero" message="tns:IAvaluos_ValidarTamanioFichero_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ValidarTamanioFicheroResponse" message="tns:IAvaluos_ValidarTamanioFichero_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ValidarTamanioFicheroAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ValidarTamanioFichero_AvaluosExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ValidarTamanioFicheroAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ValidarTamanioFichero_AvaluosInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EsValidoAvaluo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/EsValidoAvaluo" message="tns:IAvaluos_EsValidoAvaluo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/EsValidoAvaluoResponse" message="tns:IAvaluos_EsValidoAvaluo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/EsValidoAvaluoAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_EsValidoAvaluo_AvaluosInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/EsValidoAvaluoAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_EsValidoAvaluo_AvaluosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarXmlValorUnitarioSuelo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ValidarXmlValorUnitarioSuelo" message="tns:IAvaluos_ValidarXmlValorUnitarioSuelo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ValidarXmlValorUnitarioSueloResponse" message="tns:IAvaluos_ValidarXmlValorUnitarioSuelo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ValidarXmlValorUnitarioSueloAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ValidarXmlValorUnitarioSuelo_AvaluosInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ValidarXmlValorUnitarioSueloAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ValidarXmlValorUnitarioSuelo_AvaluosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BusquedaNotarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/BusquedaNotarios" message="tns:IAvaluos_BusquedaNotarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/BusquedaNotariosResponse" message="tns:IAvaluos_BusquedaNotarios_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/BusquedaNotariosAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_BusquedaNotarios_AvaluosExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/BusquedaNotariosAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_BusquedaNotarios_AvaluosInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EsXml">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/EsXml" message="tns:IAvaluos_EsXml_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/EsXmlResponse" message="tns:IAvaluos_EsXml_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/EsXmlAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_EsXml_AvaluosExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/EsXmlAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_EsXml_AvaluosInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerNombreDelegacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ObtenerNombreDelegacion" message="tns:IAvaluos_ObtenerNombreDelegacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ObtenerNombreDelegacionResponse" message="tns:IAvaluos_ObtenerNombreDelegacion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerNombreDelegacionAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ObtenerNombreDelegacion_AvaluosInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerNombreDelegacionAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ObtenerNombreDelegacion_AvaluosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDigitoVerificadorBD">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ObtenerDigitoVerificadorBD" message="tns:IAvaluos_ObtenerDigitoVerificadorBD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ObtenerDigitoVerificadorBDResponse" message="tns:IAvaluos_ObtenerDigitoVerificadorBD_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerDigitoVerificadorBDAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ObtenerDigitoVerificadorBD_AvaluosInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerDigitoVerificadorBDAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ObtenerDigitoVerificadorBD_AvaluosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNotarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/GetNotarios" message="tns:IAvaluos_GetNotarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/GetNotariosResponse" message="tns:IAvaluos_GetNotarios_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/GetNotariosAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_GetNotarios_AvaluosInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/GetNotariosAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_GetNotarios_AvaluosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/Test" message="tns:IAvaluos_Test_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/TestResponse" message="tns:IAvaluos_Test_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarAvaluo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/RegistrarAvaluo" message="tns:IAvaluos_RegistrarAvaluo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/RegistrarAvaluoResponse" message="tns:IAvaluos_RegistrarAvaluo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/RegistrarAvaluoAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_RegistrarAvaluo_AvaluosInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/RegistrarAvaluoAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_RegistrarAvaluo_AvaluosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarAvaluoEspecial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/RegistrarAvaluoEspecial" message="tns:IAvaluos_RegistrarAvaluoEspecial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/RegistrarAvaluoEspecialResponse" message="tns:IAvaluos_RegistrarAvaluoEspecial_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/RegistrarAvaluoEspecialAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_RegistrarAvaluoEspecial_AvaluosExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/RegistrarAvaluoEspecialAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_RegistrarAvaluoEspecial_AvaluosInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarIntentoFallido">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/RegistrarIntentoFallido" message="tns:IAvaluos_RegistrarIntentoFallido_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/RegistrarIntentoFallidoResponse" message="tns:IAvaluos_RegistrarIntentoFallido_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/RegistrarIntentoFallidoAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_RegistrarIntentoFallido_AvaluosExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/RegistrarIntentoFallidoAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_RegistrarIntentoFallido_AvaluosInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CambiarEstadoAvaluo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/CambiarEstadoAvaluo" message="tns:IAvaluos_CambiarEstadoAvaluo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/CambiarEstadoAvaluoResponse" message="tns:IAvaluos_CambiarEstadoAvaluo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/CambiarEstadoAvaluoAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_CambiarEstadoAvaluo_AvaluosExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/CambiarEstadoAvaluoAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_CambiarEstadoAvaluo_AvaluosInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AsignarNotarioAvaluo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/AsignarNotarioAvaluo" message="tns:IAvaluos_AsignarNotarioAvaluo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/AsignarNotarioAvaluoResponse" message="tns:IAvaluos_AsignarNotarioAvaluo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/AsignarNotarioAvaluoAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_AsignarNotarioAvaluo_AvaluosExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/AsignarNotarioAvaluoAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_AsignarNotarioAvaluo_AvaluosInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorCuentaObtnNum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaObtnNum" message="tns:IAvaluos_ObtenerAvaluosPorCuentaObtnNum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaObtnNumResponse" message="tns:IAvaluos_ObtenerAvaluosPorCuentaObtnNum_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaObtnNumAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorCuentaObtnNum_AvaluosExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaObtnNumAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorCuentaObtnNum_AvaluosInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarAvaluoInformeComercial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/GuardarAvaluoInformeComercial" message="tns:IAvaluos_GuardarAvaluoInformeComercial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/GuardarAvaluoInformeComercialResponse" message="tns:IAvaluos_GuardarAvaluoInformeComercial_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/GuardarAvaluoInformeComercialAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_GuardarAvaluoInformeComercial_AvaluosExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/GuardarAvaluoInformeComercialAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_GuardarAvaluoInformeComercial_AvaluosInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAvaluoAntecedentes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/GetAvaluoAntecedentes" message="tns:IAvaluos_GetAvaluoAntecedentes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/GetAvaluoAntecedentesResponse" message="tns:IAvaluos_GetAvaluoAntecedentes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/GetAvaluoAntecedentesAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_GetAvaluoAntecedentes_AvaluosExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/GetAvaluoAntecedentesAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_GetAvaluoAntecedentes_AvaluosInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="testAv">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/testAv" message="tns:IAvaluos_testAv_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/testAvResponse" message="tns:IAvaluos_testAv_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/testAvAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_testAv_AvaluosInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/testAvAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_testAv_AvaluosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInvestigacionMercado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/GetInvestigacionMercado" message="tns:IAvaluos_GetInvestigacionMercado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/GetInvestigacionMercadoResponse" message="tns:IAvaluos_GetInvestigacionMercado_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/GetInvestigacionMercadoAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_GetInvestigacionMercado_AvaluosInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/GetInvestigacionMercadoAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_GetInvestigacionMercado_AvaluosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorFechaNotario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorFechaNotario" message="tns:IAvaluos_ObtenerAvaluosPorFechaNotario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorFechaNotarioResponse" message="tns:IAvaluos_ObtenerAvaluosPorFechaNotario_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorFechaNotarioAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorFechaNotario_AvaluosInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorFechaNotarioAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorFechaNotario_AvaluosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorFechaNotarioSF">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorFechaNotarioSF" message="tns:IAvaluos_ObtenerAvaluosPorFechaNotarioSF_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorFechaNotarioSFResponse" message="tns:IAvaluos_ObtenerAvaluosPorFechaNotarioSF_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorFechaNotarioSFAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorFechaNotarioSF_AvaluosInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorFechaNotarioSFAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorFechaNotarioSF_AvaluosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorRegistroPeritoNotario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorRegistroPeritoNotario" message="tns:IAvaluos_ObtenerAvaluosPorRegistroPeritoNotario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorRegistroPeritoNotarioResponse" message="tns:IAvaluos_ObtenerAvaluosPorRegistroPeritoNotario_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorRegistroPeritoNotarioAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorRegistroPeritoNotario_AvaluosExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorRegistroPeritoNotarioAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorRegistroPeritoNotario_AvaluosInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorFechaPeritoVigenciaEstado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorFechaPeritoVigenciaEstado" message="tns:IAvaluos_ObtenerAvaluosPorFechaPeritoVigenciaEstado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorFechaPeritoVigenciaEstadoResponse" message="tns:IAvaluos_ObtenerAvaluosPorFechaPeritoVigenciaEstado_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorFechaPeritoVigenciaEstadoAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorFechaPeritoVigenciaEstado_AvaluosExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorFechaPeritoVigenciaEstadoAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorFechaPeritoVigenciaEstado_AvaluosInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorEstadoPerito">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorEstadoPerito" message="tns:IAvaluos_ObtenerAvaluosPorEstadoPerito_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorEstadoPeritoResponse" message="tns:IAvaluos_ObtenerAvaluosPorEstadoPerito_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorEstadoPeritoAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorEstadoPerito_AvaluosInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorEstadoPeritoAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorEstadoPerito_AvaluosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorNumValuoPerito_EstadoVig">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorNumValuoPerito_EstadoVig" message="tns:IAvaluos_ObtenerAvaluosPorNumValuoPerito_EstadoVig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorNumValuoPerito_EstadoVigResponse" message="tns:IAvaluos_ObtenerAvaluosPorNumValuoPerito_EstadoVig_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorNumValuoPerito_EstadoVigAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorNumValuoPerito_EstadoVig_AvaluosInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorNumValuoPerito_EstadoVigAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorNumValuoPerito_EstadoVig_AvaluosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorFechaEstado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorFechaEstado" message="tns:IAvaluos_ObtenerAvaluosPorFechaEstado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorFechaEstadoResponse" message="tns:IAvaluos_ObtenerAvaluosPorFechaEstado_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorFechaEstadoAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorFechaEstado_AvaluosExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorFechaEstadoAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorFechaEstado_AvaluosInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorProximidad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorProximidad" message="tns:IAvaluos_ObtenerAvaluosPorProximidad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorProximidadResponse" message="tns:IAvaluos_ObtenerAvaluosPorProximidad_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorProximidadAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorProximidad_AvaluosInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorProximidadAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorProximidad_AvaluosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluo" message="tns:IAvaluos_ObtenerAvaluo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluoResponse" message="tns:IAvaluos_ObtenerAvaluo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluoAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ObtenerAvaluo_AvaluosExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluoAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ObtenerAvaluo_AvaluosInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluoPorIdAvaluoEstadoVigencia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluoPorIdAvaluoEstadoVigencia" message="tns:IAvaluos_ObtenerAvaluoPorIdAvaluoEstadoVigencia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluoPorIdAvaluoEstadoVigenciaResponse" message="tns:IAvaluos_ObtenerAvaluoPorIdAvaluoEstadoVigencia_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluoPorIdAvaluoEstadoVigenciaAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ObtenerAvaluoPorIdAvaluoEstadoVigencia_AvaluosInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluoPorIdAvaluoEstadoVigenciaAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ObtenerAvaluoPorIdAvaluoEstadoVigencia_AvaluosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluoPorVigEstTodosPeritosSoci">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluoPorVigEstTodosPeritosSoci" message="tns:IAvaluos_ObtenerAvaluoPorVigEstTodosPeritosSoci_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluoPorVigEstTodosPeritosSociResponse" message="tns:IAvaluos_ObtenerAvaluoPorVigEstTodosPeritosSoci_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluoPorVigEstTodosPeritosSociAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ObtenerAvaluoPorVigEstTodosPeritosSoci_AvaluosExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluoPorVigEstTodosPeritosSociAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ObtenerAvaluoPorVigEstTodosPeritosSoci_AvaluosInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluoPorIdAvaluos_Soci_Vigencia_Estado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluoPorIdAvaluos_Soci_Vigencia_Estado" message="tns:IAvaluos_ObtenerAvaluoPorIdAvaluos_Soci_Vigencia_Estado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluoPorIdAvaluos_Soci_Vigencia_EstadoResponse" message="tns:IAvaluos_ObtenerAvaluoPorIdAvaluos_Soci_Vigencia_Estado_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluoPorIdAvaluos_Soci_Vigencia_EstadoAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ObtenerAvaluoPorIdAvaluos_Soci_Vigencia_Estado_AvaluosExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluoPorIdAvaluos_Soci_Vigencia_EstadoAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ObtenerAvaluoPorIdAvaluos_Soci_Vigencia_Estado_AvaluosInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorFechaSoci_EstadoVig">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorFechaSoci_EstadoVig" message="tns:IAvaluos_ObtenerAvaluosPorFechaSoci_EstadoVig_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorFechaSoci_EstadoVigResponse" message="tns:IAvaluos_ObtenerAvaluosPorFechaSoci_EstadoVig_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorFechaSoci_EstadoVigAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorFechaSoci_EstadoVig_AvaluosInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorFechaSoci_EstadoVigAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorFechaSoci_EstadoVig_AvaluosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorCuentaCatastralNotario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaCatastralNotario" message="tns:IAvaluos_ObtenerAvaluosPorCuentaCatastralNotario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaCatastralNotarioResponse" message="tns:IAvaluos_ObtenerAvaluosPorCuentaCatastralNotario_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaCatastralNotarioAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorCuentaCatastralNotario_AvaluosExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaCatastralNotarioAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorCuentaCatastralNotario_AvaluosInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorCuentaCatastralNotarioSF">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaCatastralNotarioSF" message="tns:IAvaluos_ObtenerAvaluosPorCuentaCatastralNotarioSF_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaCatastralNotarioSFResponse" message="tns:IAvaluos_ObtenerAvaluosPorCuentaCatastralNotarioSF_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaCatastralNotarioSFAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorCuentaCatastralNotarioSF_AvaluosExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaCatastralNotarioSFAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorCuentaCatastralNotarioSF_AvaluosInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorCuentaCatastralPerito">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaCatastralPerito" message="tns:IAvaluos_ObtenerAvaluosPorCuentaCatastralPerito_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaCatastralPeritoResponse" message="tns:IAvaluos_ObtenerAvaluosPorCuentaCatastralPerito_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaCatastralPeritoAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorCuentaCatastralPerito_AvaluosExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaCatastralPeritoAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorCuentaCatastralPerito_AvaluosInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorCuentaCatastralPeritoVigenciaEstado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaCatastralPeritoVigenciaEstado" message="tns:IAvaluos_ObtenerAvaluosPorCuentaCatastralPeritoVigenciaEstado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaCatastralPeritoVigenciaEstadoResponse" message="tns:IAvaluos_ObtenerAvaluosPorCuentaCatastralPeritoVigenciaEstado_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaCatastralPeritoVigenciaEstadoAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorCuentaCatastralPeritoVigenciaEstado_AvaluosExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaCatastralPeritoVigenciaEstadoAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorCuentaCatastralPeritoVigenciaEstado_AvaluosInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorCuentaCatastral">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaCatastral" message="tns:IAvaluos_ObtenerAvaluosPorCuentaCatastral_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaCatastralResponse" message="tns:IAvaluos_ObtenerAvaluosPorCuentaCatastral_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaCatastralAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorCuentaCatastral_AvaluosExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaCatastralAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorCuentaCatastral_AvaluosInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorCuentaVigenciaEstado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaVigenciaEstado" message="tns:IAvaluos_ObtenerAvaluosPorCuentaVigenciaEstado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaVigenciaEstadoResponse" message="tns:IAvaluos_ObtenerAvaluosPorCuentaVigenciaEstado_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaVigenciaEstadoAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorCuentaVigenciaEstado_AvaluosExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaVigenciaEstadoAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorCuentaVigenciaEstado_AvaluosInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorProximidadPerito">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorProximidadPerito" message="tns:IAvaluos_ObtenerAvaluosPorProximidadPerito_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorProximidadPeritoResponse" message="tns:IAvaluos_ObtenerAvaluosPorProximidadPerito_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorProximidadPeritoAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorProximidadPerito_AvaluosInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorProximidadPeritoAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorProximidadPerito_AvaluosExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorProximidadSociedad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorProximidadSociedad" message="tns:IAvaluos_ObtenerAvaluosPorProximidadSociedad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorProximidadSociedadResponse" message="tns:IAvaluos_ObtenerAvaluosPorProximidadSociedad_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorProximidadSociedadAvaluosExceptionFault" name="AvaluosExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorProximidadSociedad_AvaluosExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IAvaluos/ObtenerAvaluosPorProximidadSociedadAvaluosInfoExceptionFault" name="AvaluosInfoExceptionFault" message="tns:IAvaluos_ObtenerAvaluosPorProximidadSociedad_AvaluosInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsHttpAvaluos" type="tns:IAvaluos">
+    <wsp:PolicyReference URI="#wsHttpAvaluos_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerAvaluosPorNumAvaluoSoci">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ObtenerAvaluosPorNumAvaluoSoci" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorNumAvaluoSoci_EstadoVig">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ObtenerAvaluosPorNumAvaluoSoci_EstadoVig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorNumValuoVigEstado">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ObtenerAvaluosPorNumValuoVigEstado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorFechaSoci">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ObtenerAvaluosPorFechaSoci" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorCuentaSoci">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaSoci" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorCuentaSociEstadoVig">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaSociEstadoVig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorEstadoSoci">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ObtenerAvaluosPorEstadoSoci" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCatalogos">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ObtenerCatalogos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GenerarAvaluo">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/GenerarAvaluo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ExisteAvaluoAsociado">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ExisteAvaluoAsociado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDatosAvaluoCatastral">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ObtenerDatosAvaluoCatastral" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarTamanioFichero">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ValidarTamanioFichero" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="EsValidoAvaluo">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/EsValidoAvaluo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarXmlValorUnitarioSuelo">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ValidarXmlValorUnitarioSuelo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="BusquedaNotarios">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/BusquedaNotarios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="EsXml">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/EsXml" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerNombreDelegacion">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ObtenerNombreDelegacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDigitoVerificadorBD">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ObtenerDigitoVerificadorBD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetNotarios">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/GetNotarios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/Test" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarAvaluo">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/RegistrarAvaluo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarAvaluoEspecial">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/RegistrarAvaluoEspecial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarIntentoFallido">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/RegistrarIntentoFallido" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CambiarEstadoAvaluo">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/CambiarEstadoAvaluo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AsignarNotarioAvaluo">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/AsignarNotarioAvaluo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorCuentaObtnNum">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaObtnNum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarAvaluoInformeComercial">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/GuardarAvaluoInformeComercial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAvaluoAntecedentes">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/GetAvaluoAntecedentes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="testAv">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/testAv" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvestigacionMercado">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/GetInvestigacionMercado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorFechaNotario">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ObtenerAvaluosPorFechaNotario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorFechaNotarioSF">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ObtenerAvaluosPorFechaNotarioSF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorRegistroPeritoNotario">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ObtenerAvaluosPorRegistroPeritoNotario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorFechaPeritoVigenciaEstado">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ObtenerAvaluosPorFechaPeritoVigenciaEstado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorEstadoPerito">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ObtenerAvaluosPorEstadoPerito" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorNumValuoPerito_EstadoVig">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ObtenerAvaluosPorNumValuoPerito_EstadoVig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorFechaEstado">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ObtenerAvaluosPorFechaEstado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorProximidad">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ObtenerAvaluosPorProximidad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluo">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ObtenerAvaluo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluoPorIdAvaluoEstadoVigencia">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ObtenerAvaluoPorIdAvaluoEstadoVigencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluoPorVigEstTodosPeritosSoci">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ObtenerAvaluoPorVigEstTodosPeritosSoci" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluoPorIdAvaluos_Soci_Vigencia_Estado">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ObtenerAvaluoPorIdAvaluos_Soci_Vigencia_Estado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorFechaSoci_EstadoVig">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ObtenerAvaluosPorFechaSoci_EstadoVig" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorCuentaCatastralNotario">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaCatastralNotario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorCuentaCatastralNotarioSF">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaCatastralNotarioSF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorCuentaCatastralPerito">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaCatastralPerito" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorCuentaCatastralPeritoVigenciaEstado">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaCatastralPeritoVigenciaEstado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorCuentaCatastral">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaCatastral" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorCuentaVigenciaEstado">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ObtenerAvaluosPorCuentaVigenciaEstado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorProximidadPerito">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ObtenerAvaluosPorProximidadPerito" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAvaluosPorProximidadSociedad">
+      <soap12:operation soapAction="http://tempuri.org/IAvaluos/ObtenerAvaluosPorProximidadSociedad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="AvaluosExceptionFault">
+        <soap12:fault use="literal" name="AvaluosExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AvaluosInfoExceptionFault">
+        <soap12:fault use="literal" name="AvaluosInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Avaluos">
+    <wsdl:port name="wsHttpAvaluos" binding="tns:wsHttpAvaluos">
+      <soap12:address location="http://psur-des-serv.promocapre.int/PRE/FuentesExternas/Avaluos/Avaluos.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://psur-des-serv.promocapre.int/PRE/FuentesExternas/Avaluos/Avaluos.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

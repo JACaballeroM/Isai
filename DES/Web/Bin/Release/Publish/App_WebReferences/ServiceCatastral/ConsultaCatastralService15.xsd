@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DseInmuebleFiltro" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseInmuebleFiltro" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseInmuebleFiltro.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseInmueblePredio" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseInmueblePredio" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseInmueblePredio.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseViaColonia" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseViaColonia" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseViaColonia.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseRegion" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseRegion" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseRegion.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseSitios" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseSitios" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseSitios.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseTomaAgua" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseTomaAgua" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseTomaAgua.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseInmuebleUnidad" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseInmuebleUnidad" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseInmuebleUnidad.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseCondominioPredio" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseCondominioPredio" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseCondominioPredio.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseUnidadesGrupoCondominal" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseUnidadesGrupoCondominal" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseUnidadesGrupoCondominal.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseVectores" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseVectores" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseVectores.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseViaVector" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseViaVector" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseViaVector.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseFotosExpediente" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseFotosExpediente" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseFotosExpediente.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseConjuntoCondominal" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseConjuntoCondominal" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseConjuntoCondominal.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseIndiceCartografico" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseIndiceCartografico" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseIndiceCartografico.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseHistoricoInmueblePredio" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseHistoricoInmueblePredio" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseHistoricoInmueblePredio.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseInmueble" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseInmueble" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Common" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseInmueble.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseDatosBasicos" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseDatosBasicos" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseDatosBasicos.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseCatalogos" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseCatalogos" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Common.Entidades" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseCatalogos.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseManzanaDetalle" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseManzanaDetalle" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseManzanaDetalle.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseManzanas" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseManzanas" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseManzanas.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseManzanaColonia" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseManzanaColonia" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseManzanaColonia.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseNumerosExteriores" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseNumerosExteriores" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseNumerosExteriores.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseOficinasTesoreria" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseOficinasTesoreria" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseOficinasTesoreria.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DsePredios" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DsePredios" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DsePredios.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseBienesInmueble" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseBienesInmueble" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseBienesInmueble.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseConstruccion" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseConstruccion" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseConstruccion.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseDelegacionAreaValor" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseDelegacionAreaValor" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseDelegacionAreaValor.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseAdministracionTributaria" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseAdministracionTributaria" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseAdministracionTributaria.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseTiposSitios" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseTiposSitios" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseTiposSitios.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseCondominio" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseCondominio" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseCondominio.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseDelegacionCorredorValor" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseDelegacionCorredorValor" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseDelegacionCorredorValor.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseDelegacionColonia" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseDelegacionColonia" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseDelegacionColonia.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseEnclaveValor" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseEnclaveValor" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseEnclaveValor.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseInmuebleF4BA" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseInmuebleF4BA" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Common" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseInmuebleF4BA.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseInmuebleSIIP" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseInmuebleSIIP" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseInmuebleSIIP.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseFotos" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseFotos" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Catastral.Consulta.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DSeFotos.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

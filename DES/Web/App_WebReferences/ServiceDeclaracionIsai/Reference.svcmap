@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0c18bd17-ef9b-4273-8cd5-d3d43eeb151c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.0.8.2/PRO/fuentesexternas/isai/DeclaracionIsai.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DseInfPagos.xsd" MetadataType="Schema" ID="d5a9509f-49f9-4a76-a895-d0993c71b610" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Isai/DeclaracionIsai.svc?xsd=xsd18" />
+    <MetadataFile FileName="DseInfNotarios.xsd" MetadataType="Schema" ID="15d59d12-40d4-42d6-b7c4-240d3aa154ba" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Isai/DeclaracionIsai.svc?xsd=xsd11" />
+    <MetadataFile FileName="DseDeclaracionIsai.xsd" MetadataType="Schema" ID="62617c17-091a-42ee-9f48-c53b3ae81d8d" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Isai/DeclaracionIsai.svc?xsd=xsd7" />
+    <MetadataFile FileName="DseCatalogo.xsd" MetadataType="Schema" ID="c62d627c-b0a7-4ce2-a1c3-6388b18cfa5d" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Isai/DeclaracionIsai.svc?xsd=xsd6" />
+    <MetadataFile FileName="DseInfJustificante.xsd" MetadataType="Schema" ID="d6de86b6-72da-457d-8c53-0ece11dcf133" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Isai/DeclaracionIsai.svc?xsd=xsd5" />
+    <MetadataFile FileName="DeclaracionIsai1.xsd" MetadataType="Schema" ID="253cca6d-d172-459b-a410-0cce313f79d3" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Isai/DeclaracionIsai.svc?xsd=xsd4" />
+    <MetadataFile FileName="DeclaracionIsai12.xsd" MetadataType="Schema" ID="7419d5eb-9819-4085-a1a1-b5a2ab19afb0" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Isai/DeclaracionIsai.svc?xsd=xsd3" />
+    <MetadataFile FileName="DseInfConsultaEspecifica.xsd" MetadataType="Schema" ID="56e0e138-a1b5-4f7c-990f-0260a47be1e2" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Isai/DeclaracionIsai.svc?xsd=xsd2" />
+    <MetadataFile FileName="DeclaracionIsai13.xsd" MetadataType="Schema" ID="819e2a4d-a359-45c4-8244-5b8310a867e1" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Isai/DeclaracionIsai.svc?xsd=xsd1" />
+    <MetadataFile FileName="DeclaracionIsai14.xsd" MetadataType="Schema" ID="9b1d95fd-3c8a-48b9-ae9a-8472c1df8a04" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Isai/DeclaracionIsai.svc?xsd=xsd0" />
+    <MetadataFile FileName="DsePersonas.xsd" MetadataType="Schema" ID="0596abf3-aecb-429e-8141-6dd74ec87890" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Isai/DeclaracionIsai.svc?xsd=xsd10" />
+    <MetadataFile FileName="DeclaracionIsai.wsdl" MetadataType="Wsdl" ID="431827a8-911c-4246-8638-e35a87b11fd2" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Isai/DeclaracionIsai.svc?wsdl" />
+    <MetadataFile FileName="DseInfoDetalleLineasCaptura.xsd" MetadataType="Schema" ID="62bd1018-b5c9-499d-91fc-9d39db1169c0" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Isai/DeclaracionIsai.svc?xsd=xsd15" />
+    <MetadataFile FileName="DeclaracionIsai15.xsd" MetadataType="Schema" ID="ef5434a6-66b8-4543-8e2f-09939e537aab" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Isai/DeclaracionIsai.svc?xsd=xsd20" />
+    <MetadataFile FileName="DseInfAvaluos.xsd" MetadataType="Schema" ID="8feb49fc-1395-43b6-8637-b86d097a5b38" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Isai/DeclaracionIsai.svc?xsd=xsd19" />
+    <MetadataFile FileName="DeclaracionIsai.disco" MetadataType="Disco" ID="3fc387a2-4263-4815-8c46-19d71a6103d3" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Isai/DeclaracionIsai.svc?disco" />
+    <MetadataFile FileName="DeclaracionIsai16.xsd" MetadataType="Schema" ID="d3e6ee14-ee8a-40f5-8edd-ba8b3d48c691" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Isai/DeclaracionIsai.svc?xsd=xsd8" />
+    <MetadataFile FileName="DseInfSociedadPeritos.xsd" MetadataType="Schema" ID="2979ba47-dae0-40fb-b24a-63fb92d305ba" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Isai/DeclaracionIsai.svc?xsd=xsd16" />
+    <MetadataFile FileName="DseInfDetalleNotarios.xsd" MetadataType="Schema" ID="f84b58b5-44cc-4794-9d92-58f81c83945c" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Isai/DeclaracionIsai.svc?xsd=xsd12" />
+    <MetadataFile FileName="DseInfoLineasCaptura.xsd" MetadataType="Schema" ID="ca0e8610-55ae-4126-9fe9-97bff18c9c3f" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Isai/DeclaracionIsai.svc?xsd=xsd14" />
+    <MetadataFile FileName="DeclaracionIsai17.xsd" MetadataType="Schema" ID="37a501d6-10eb-4a9c-a21e-47e160db6545" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Isai/DeclaracionIsai.svc?xsd=xsd9" />
+    <MetadataFile FileName="DseInfValores.xsd" MetadataType="Schema" ID="511fa2f5-b25a-466d-8e35-02bdade7ced0" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Isai/DeclaracionIsai.svc?xsd=xsd17" />
+    <MetadataFile FileName="DseInfEnviosTotales.xsd" MetadataType="Schema" ID="3bc568f4-0f46-4e05-9377-fd6af14fcec5" SourceId="1" SourceUrl="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Isai/DeclaracionIsai.svc?xsd=xsd13" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b12221fd-5659-449c-8791-666dbdba203a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.0.8.2/PRO/Catastral/Consulta/ConsultaCatastralService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DseManzanas.xsd" MetadataType="Schema" ID="a73978c5-c58c-411d-92b6-c53d244b6c9a" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd25" />
+    <MetadataFile FileName="DseFotos.xsd" MetadataType="Schema" ID="a971db74-e5bf-42cd-bcc9-41a2966b2c6d" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd42" />
+    <MetadataFile FileName="DseEnclaveValor.xsd" MetadataType="Schema" ID="eca6af16-dcd4-4ad2-84c6-fa5b7b7cc378" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd39" />
+    <MetadataFile FileName="ConsultaCatastralService.xsd" MetadataType="Schema" ID="395b5d05-a2d5-46b3-aa1a-fea554dd8c92" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd38" />
+    <MetadataFile FileName="ConsultaCatastralService2.xsd" MetadataType="Schema" ID="fa088bf7-5197-4c1c-9eec-e6afdcbaa255" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd1" />
+    <MetadataFile FileName="DseAdministracionTributaria.xsd" MetadataType="Schema" ID="2a061b89-804a-4409-881d-9402abc2c678" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd33" />
+    <MetadataFile FileName="DseDelegacionAreaValor.xsd" MetadataType="Schema" ID="404d2a67-c778-4e22-82d4-6ea614db2e2a" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd32" />
+    <MetadataFile FileName="DseConstruccion.xsd" MetadataType="Schema" ID="435cb0c2-dccd-416c-80aa-7fc3625ff490" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd31" />
+    <MetadataFile FileName="ConsultaCatastralService3.xsd" MetadataType="Schema" ID="acd7ce5c-ce85-4501-9437-b5a06f12743d" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd4" />
+    <MetadataFile FileName="DseDelegacionColonia.xsd" MetadataType="Schema" ID="ce163b8f-c6ed-4e67-bff5-9d44f5bceeec" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd37" />
+    <MetadataFile FileName="DseDelegacionCorredorValor.xsd" MetadataType="Schema" ID="6b659a6a-a0a5-48af-98d5-2c193cb2bf54" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd36" />
+    <MetadataFile FileName="DseCondominio.xsd" MetadataType="Schema" ID="22a666ab-1e58-4ddd-8147-e178ca6d8db3" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd35" />
+    <MetadataFile FileName="DseTiposSitios.xsd" MetadataType="Schema" ID="70cf4267-0171-4970-9549-e361aca0b7da" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd34" />
+    <MetadataFile FileName="DseInmuebleF4BA2.xsd" MetadataType="Schema" ID="5ec16be9-726f-49a8-b16b-901a0347be76" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd40" />
+    <MetadataFile FileName="DseInmuebleFiltro.xsd" MetadataType="Schema" ID="72934d72-71ff-4600-87a5-b57885d05eed" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd2" />
+    <MetadataFile FileName="DseInmueblePredio.xsd" MetadataType="Schema" ID="7b750b20-3ad0-40ce-b9b5-8e9feedf4911" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd5" />
+    <MetadataFile FileName="ConsultaCatastralService.disco" MetadataType="Disco" ID="c87a5457-43cb-4fb2-8a6f-2102edc968b1" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?disco" />
+    <MetadataFile FileName="ConsultaCatastralService4.xsd" MetadataType="Schema" ID="c7272630-d506-4c88-9569-8d248124b442" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd3" />
+    <MetadataFile FileName="DseViaColonia.xsd" MetadataType="Schema" ID="11e873c8-6706-477c-aed1-b9ec4bc3f75b" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd6" />
+    <MetadataFile FileName="DseInmuebleSIIP.xsd" MetadataType="Schema" ID="db86ac0c-394a-4c0f-933a-86108131ed35" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd41" />
+    <MetadataFile FileName="ConsultaCatastralService5.xsd" MetadataType="Schema" ID="13ade402-3d0b-457d-a1f3-c8d7a86a3b7b" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd8" />
+    <MetadataFile FileName="DseHistoricoInmueblePredio.xsd" MetadataType="Schema" ID="9e4ff92a-38f3-4a48-bd08-f5fc2a531673" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd19" />
+    <MetadataFile FileName="DseIndiceCartografico.xsd" MetadataType="Schema" ID="2332c485-3f55-4c53-a042-9270a72964bc" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd18" />
+    <MetadataFile FileName="DseBienesInmueble.xsd" MetadataType="Schema" ID="d230612f-e830-4793-ac71-95e4ae05b400" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd30" />
+    <MetadataFile FileName="DseRegion.xsd" MetadataType="Schema" ID="19594dd5-3863-4c1b-be98-f38325f4b32f" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd7" />
+    <MetadataFile FileName="DseUnidadesGrupoCondominal.xsd" MetadataType="Schema" ID="1d6e4fc3-aaad-46bf-a162-d5e6b3c2e795" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd13" />
+    <MetadataFile FileName="DseCondominioPredio.xsd" MetadataType="Schema" ID="1b3de250-2fcc-4a2d-9b64-cdbe181c7c8a" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd12" />
+    <MetadataFile FileName="DseInmuebleUnidad.xsd" MetadataType="Schema" ID="66c7fc6c-0509-4f21-ad0d-b6fe6f8634f7" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd11" />
+    <MetadataFile FileName="DseTomaAgua.xsd" MetadataType="Schema" ID="74fe5943-2107-4545-a82c-152f5d593571" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd10" />
+    <MetadataFile FileName="DseConjuntoCondominal.xsd" MetadataType="Schema" ID="4429bf5e-601c-49ee-8dad-a5fc178fb6f1" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd17" />
+    <MetadataFile FileName="DseFotosExpediente.xsd" MetadataType="Schema" ID="9335d0f0-212b-46ac-a418-1c34ed7ec442" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd16" />
+    <MetadataFile FileName="DseViaVector2.xsd" MetadataType="Schema" ID="e7b548f8-8c3b-4c81-81ee-f0677238680a" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd15" />
+    <MetadataFile FileName="DseVectores.xsd" MetadataType="Schema" ID="101b968b-d43c-43c7-9aee-9fb9b8a99783" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd14" />
+    <MetadataFile FileName="DseSitios.xsd" MetadataType="Schema" ID="97b458ea-85a5-4137-bf01-d24ce1a8e34c" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd9" />
+    <MetadataFile FileName="DsePredios.xsd" MetadataType="Schema" ID="8c5924ac-6e09-4bd4-a845-b7a95e3cf48f" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd29" />
+    <MetadataFile FileName="DseOficinasTesoreria.xsd" MetadataType="Schema" ID="812806b9-2103-4fb4-b41e-fc7909b4de4e" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd28" />
+    <MetadataFile FileName="ConsultaCatastralService6.xsd" MetadataType="Schema" ID="bb4f0023-3e95-41c8-a130-3977c6a589fb" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DseCatalogos.xsd" MetadataType="Schema" ID="7719de95-e86d-4ff7-b0cb-cebe71f64608" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd23" />
+    <MetadataFile FileName="DseDatosBasicos.xsd" MetadataType="Schema" ID="e385e95a-12fc-4a89-a406-6c79fefdfcc7" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd22" />
+    <MetadataFile FileName="DseInmueble.xsd" MetadataType="Schema" ID="d9126eeb-f2e0-4144-986e-d5ab4faf9051" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd21" />
+    <MetadataFile FileName="ConsultaCatastralService8.xsd" MetadataType="Schema" ID="db4d61bc-03fe-411f-bb48-f9f6462e707c" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd20" />
+    <MetadataFile FileName="DseNumerosExteriores.xsd" MetadataType="Schema" ID="4d3bfd72-bcc2-4097-8d7b-4e589d9cee42" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd27" />
+    <MetadataFile FileName="DseManzanaColonia.xsd" MetadataType="Schema" ID="dececbcb-77cf-4511-aef8-f1b154d241d8" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd26" />
+    <MetadataFile FileName="ConsultaCatastralService.wsdl" MetadataType="Wsdl" ID="d550cbd4-3346-44b9-95c4-4c35ac195d87" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?wsdl" />
+    <MetadataFile FileName="DseManzanaDetalle2.xsd" MetadataType="Schema" ID="e9e82e90-4d17-4c99-bc4c-8299d7d0c715" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Catastral/Consulta/ConsultaCatastralService.svc?xsd=xsd24" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

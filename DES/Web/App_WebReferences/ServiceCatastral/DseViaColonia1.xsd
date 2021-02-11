@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DseViaColonia.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DseViaColonia.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DseViaColonia.xsd" id="DseViaColonia" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="DseViaColonia">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Colonias">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDCOLONIA" type="xs:decimal" />
+              <xs:element name="COLONIA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDDELEGACION" type="xs:decimal" />
+              <xs:element name="DELEGACION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ABREVIATURA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MAPID" type="xs:decimal" />
+              <xs:element name="IDVIA" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" msdata:Expression="COLONIA + IIF(ISNULL(ABREVIATURA,'') = '', '', ' ('+TRIM(ABREVIATURA)+')')" minOccurs="0" name="ColoniaDesc" type="xs:string" />
+              <xs:element name="XMIN" type="xs:decimal" />
+              <xs:element name="XMAX" type="xs:decimal" />
+              <xs:element name="YMIN" type="xs:decimal" />
+              <xs:element name="YMAX" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Via">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="IDVIA" type="xs:decimal" />
+              <xs:element msdata:Caption="Vialidad" minOccurs="0" name="VIA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="203" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SINONIMO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CATEGORIA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TIPOVIA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ABREVIATURA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CODTIPOSVIA" type="xs:decimal" />
+              <xs:element msdata:ReadOnly="true" msdata:Expression="VIA + IIF(ISNULL(ABREVIATURA,'')= '', '', ', ' + TRIM(ABREVIATURA) )" minOccurs="0" name="ViaDesc" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="Via_Colonias" msdata:parent="Via" msdata:child="Colonias" msdata:parentkey="IDVIA" msdata:childkey="IDVIA" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

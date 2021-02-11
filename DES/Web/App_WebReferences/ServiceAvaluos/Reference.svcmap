@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7aea63f1-ddbf-46ac-b9be-c9877b7f3052" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.0.8.2/PRO/FUENTESEXTERNAS/avaluos/Avaluos.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Avaluos5.xsd" MetadataType="Schema" ID="7200ace1-da76-4bfd-9993-bcc444f2db11" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/FuentesExternas/Avaluos/Avaluos.svc?xsd=xsd4" />
+    <MetadataFile FileName="DseAvaluoConsulta1.xsd" MetadataType="Schema" ID="8bc831f7-49dd-4a5f-8244-6e2b839cac08" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/FuentesExternas/Avaluos/Avaluos.svc?xsd=xsd2" />
+    <MetadataFile FileName="Avaluos52.xsd" MetadataType="Schema" ID="37137ee1-77aa-48fd-a3ce-3a9fca809877" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/FuentesExternas/Avaluos/Avaluos.svc?xsd=xsd0" />
+    <MetadataFile FileName="DseAvaluoMantInf1.xsd" MetadataType="Schema" ID="abd441ec-3be5-45aa-8a9b-fee9b8ba47f4" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/FuentesExternas/Avaluos/Avaluos.svc?xsd=xsd10" />
+    <MetadataFile FileName="Avaluos1.disco" MetadataType="Disco" ID="f38d8c14-942b-4d41-927f-8fb3f40a8dd2" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/FuentesExternas/Avaluos/Avaluos.svc?disco" />
+    <MetadataFile FileName="Avaluos53.xsd" MetadataType="Schema" ID="adc5fd9a-c519-4afa-9908-9a2a003fa0f6" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/FuentesExternas/Avaluos/Avaluos.svc?xsd=xsd9" />
+    <MetadataFile FileName="Avaluos54.xsd" MetadataType="Schema" ID="d23394c4-7ff9-43df-8df9-23b7e5017575" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/FuentesExternas/Avaluos/Avaluos.svc?xsd=xsd7" />
+    <MetadataFile FileName="DseAvaluosCatConsulta1.xsd" MetadataType="Schema" ID="69f07771-1c3a-4077-9273-61844c124661" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/FuentesExternas/Avaluos/Avaluos.svc?xsd=xsd5" />
+    <MetadataFile FileName="Avaluos55.xsd" MetadataType="Schema" ID="694cdba7-f5b6-4702-958b-1569a0c087f6" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/FuentesExternas/Avaluos/Avaluos.svc?xsd=xsd3" />
+    <MetadataFile FileName="Avaluos56.xsd" MetadataType="Schema" ID="33c07030-28c3-4dd8-8d4d-78afcb3d3beb" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/FuentesExternas/Avaluos/Avaluos.svc?xsd=xsd1" />
+    <MetadataFile FileName="Avaluos1.wsdl" MetadataType="Wsdl" ID="0377d557-ec22-46e3-98b6-f5605db47119" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/FuentesExternas/Avaluos/Avaluos.svc?wsdl" />
+    <MetadataFile FileName="DseNotarios1.xsd" MetadataType="Schema" ID="c64b331d-469c-4b74-b874-6b7ce79cab48" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/FuentesExternas/Avaluos/Avaluos.svc?xsd=xsd8" />
+    <MetadataFile FileName="DseAvaluoConsultaFis1.xsd" MetadataType="Schema" ID="3cc2f51b-fa88-4269-8599-189595ba874d" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/FuentesExternas/Avaluos/Avaluos.svc?xsd=xsd6" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

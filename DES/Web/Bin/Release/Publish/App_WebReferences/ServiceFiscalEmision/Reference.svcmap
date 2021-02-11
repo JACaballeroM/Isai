@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bfdf200e-9a67-4b23-a783-029877d15843" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.0.8.2/PRO/Fiscal/Emision/Emision.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Emision8.xsd" MetadataType="Schema" ID="9ab772e3-c938-4fe1-9700-46ddad9fb33d" SourceId="1" SourceUrl="http://psur-des-serv.promocapre.int/PRE/Fiscal/Emision/Emision.svc?xsd=xsd8" />
+    <MetadataFile FileName="DseSilce2.xsd" MetadataType="Schema" ID="e4bc8d1b-fe03-4113-b589-a62c148f0fd1" SourceId="1" SourceUrl="http://psur-des-serv.promocapre.int/PRE/Fiscal/Emision/Emision.svc?xsd=xsd10" />
+    <MetadataFile FileName="DseAdministracion2.xsd" MetadataType="Schema" ID="f67a6b07-dbde-4c85-a766-02b279e059df" SourceId="1" SourceUrl="http://psur-des-serv.promocapre.int/PRE/Fiscal/Emision/Emision.svc?xsd=xsd11" />
+    <MetadataFile FileName="Emision9.xsd" MetadataType="Schema" ID="e60e4918-4115-4b1a-8d3c-386ef0e9ffb6" SourceId="1" SourceUrl="http://psur-des-serv.promocapre.int/PRE/Fiscal/Emision/Emision.svc?xsd=xsd3" />
+    <MetadataFile FileName="Emision10.xsd" MetadataType="Schema" ID="b8ee274d-321c-4d68-9551-f56252bd9a41" SourceId="1" SourceUrl="http://psur-des-serv.promocapre.int/PRE/Fiscal/Emision/Emision.svc?xsd=xsd5" />
+    <MetadataFile FileName="DseEmision2.xsd" MetadataType="Schema" ID="de651d9a-55e3-41cb-8408-a33e8ae987b2" SourceId="1" SourceUrl="http://psur-des-serv.promocapre.int/PRE/Fiscal/Emision/Emision.svc?xsd=xsd6" />
+    <MetadataFile FileName="DseProgramacionProceso2.xsd" MetadataType="Schema" ID="4d6f1685-131c-4448-a9d4-7af0c4535502" SourceId="1" SourceUrl="http://psur-des-serv.promocapre.int/PRE/Fiscal/Emision/Emision.svc?xsd=xsd7" />
+    <MetadataFile FileName="DseAgrupacion2.xsd" MetadataType="Schema" ID="d04c7198-e0f8-4ad3-a02b-ab598edc8eb7" SourceId="1" SourceUrl="http://psur-des-serv.promocapre.int/PRE/Fiscal/Emision/Emision.svc?xsd=xsd2" />
+    <MetadataFile FileName="Emision11.xsd" MetadataType="Schema" ID="93467c2f-bb38-4fbb-97f5-09a229717e23" SourceId="1" SourceUrl="http://psur-des-serv.promocapre.int/PRE/Fiscal/Emision/Emision.svc?xsd=xsd12" />
+    <MetadataFile FileName="Emision12.xsd" MetadataType="Schema" ID="55de629e-d710-46f0-9584-508fe954e04a" SourceId="1" SourceUrl="http://psur-des-serv.promocapre.int/PRE/Fiscal/Emision/Emision.svc?xsd=xsd0" />
+    <MetadataFile FileName="Emision13.xsd" MetadataType="Schema" ID="948da34d-08e1-4413-adb3-ca3830bd7156" SourceId="1" SourceUrl="http://psur-des-serv.promocapre.int/PRE/Fiscal/Emision/Emision.svc?xsd=xsd9" />
+    <MetadataFile FileName="Emision14.xsd" MetadataType="Schema" ID="039a81aa-1436-42ab-8fd9-f4648791fc41" SourceId="1" SourceUrl="http://psur-des-serv.promocapre.int/PRE/Fiscal/Emision/Emision.svc?xsd=xsd4" />
+    <MetadataFile FileName="Emision2.wsdl" MetadataType="Wsdl" ID="fc2244cb-1af6-4533-bfce-ee260723ac9e" SourceId="1" SourceUrl="http://psur-des-serv.promocapre.int/PRE/Fiscal/Emision/Emision.svc?wsdl" />
+    <MetadataFile FileName="Emision2.disco" MetadataType="Disco" ID="3f498bc2-9259-431b-b72e-36bddcb234cd" SourceId="1" SourceUrl="http://psur-des-serv.promocapre.int/PRE/Fiscal/Emision/Emision.svc?disco" />
+    <MetadataFile FileName="Emision15.xsd" MetadataType="Schema" ID="9d92a08f-c4a8-413b-9344-04753f01a0e4" SourceId="1" SourceUrl="http://psur-des-serv.promocapre.int/PRE/Fiscal/Emision/Emision.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

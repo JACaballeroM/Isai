@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://psur-desa-sbs01.promocapre.int/PRE/Fiscal/Emision/Emision.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Negocio.Base" />
+  <xs:complexType name="EmisionException">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Negocio.Base" base="q1:ExceptionBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Code" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EmisionException" nillable="true" type="tns:EmisionException" />
+  <xs:complexType name="EmisionInfoException">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Negocio.Base" base="q2:ExceptionBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Code" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EmisionInfoException" nillable="true" type="tns:EmisionInfoException" />
+</xs:schema>

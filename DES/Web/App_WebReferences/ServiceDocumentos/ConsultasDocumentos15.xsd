@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Gestion.DocumentosDigitales" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Gestion.DocumentosDigitales" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="dseDocumentosDigitales.FEXAVA_AVALUODataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="dseDocumentosDigitales.FEXAVA_AVALUODataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Gestion.DocumentosDigitales" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/dseDocumentosDigitales.xsd" name="namespace" />
+      <xs:attribute fixed="FEXAVA_AVALUODataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dseDocumentosDigitales.DOC_DOCUMENTOJURIDICODataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="dseDocumentosDigitales.DOC_DOCUMENTOJURIDICODataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Gestion.DocumentosDigitales" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/dseDocumentosDigitales.xsd" name="namespace" />
+      <xs:attribute fixed="DOC_DOCUMENTOJURIDICODataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dseDocumentosDigitales.DOC_DOCUMENTOADMINISTRATIVODataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="dseDocumentosDigitales.DOC_DOCUMENTOADMINISTRATIVODataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Gestion.DocumentosDigitales" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/dseDocumentosDigitales.xsd" name="namespace" />
+      <xs:attribute fixed="DOC_DOCUMENTOADMINISTRATIVODataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dseDocumentosDigitales.DOC_DOCUMENTOLICENCIADataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="dseDocumentosDigitales.DOC_DOCUMENTOLICENCIADataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Gestion.DocumentosDigitales" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/dseDocumentosDigitales.xsd" name="namespace" />
+      <xs:attribute fixed="DOC_DOCUMENTOLICENCIADataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dseDocumentosDigitales.DOC_DOCUMENTONOTARIALDataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="dseDocumentosDigitales.DOC_DOCUMENTONOTARIALDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Gestion.DocumentosDigitales" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/dseDocumentosDigitales.xsd" name="namespace" />
+      <xs:attribute fixed="DOC_DOCUMENTONOTARIALDataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dseDocumentosDigitales.DOC_DOCUMENTODIGITALDataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="dseDocumentosDigitales.DOC_DOCUMENTODIGITALDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Gestion.DocumentosDigitales" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/dseDocumentosDigitales.xsd" name="namespace" />
+      <xs:attribute fixed="DOC_DOCUMENTODIGITALDataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dseDocumentosDigitales.DOC_DOCUMENTOFOTOINMUEBLEDataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="dseDocumentosDigitales.DOC_DOCUMENTOFOTOINMUEBLEDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Gestion.DocumentosDigitales" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/dseDocumentosDigitales.xsd" name="namespace" />
+      <xs:attribute fixed="DOC_DOCUMENTOFOTOINMUEBLEDataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dseDocumentosDigitales.DOC_DOCUMENTOFOTOMANZANADataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="dseDocumentosDigitales.DOC_DOCUMENTOFOTOMANZANADataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Gestion.DocumentosDigitales" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/dseDocumentosDigitales.xsd" name="namespace" />
+      <xs:attribute fixed="DOC_DOCUMENTOFOTOMANZANADataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dseDocumentosDigitales.DOC_DOCUMENTOPRORROGADataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="dseDocumentosDigitales.DOC_DOCUMENTOPRORROGADataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Gestion.DocumentosDigitales" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/dseDocumentosDigitales.xsd" name="namespace" />
+      <xs:attribute fixed="DOC_DOCUMENTOPRORROGADataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dseDocumentosDigitales.DOC_INSCRIPCIONRPPCDataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="dseDocumentosDigitales.DOC_INSCRIPCIONRPPCDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Gestion.DocumentosDigitales" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/dseDocumentosDigitales.xsd" name="namespace" />
+      <xs:attribute fixed="DOC_INSCRIPCIONRPPCDataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dseDocumentosDigitales.DOC_RESOLUCIONJUDICIALDataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="dseDocumentosDigitales.DOC_RESOLUCIONJUDICIALDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Documental.Services.AccesoDatos.Gestion.DocumentosDigitales" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/dseDocumentosDigitales.xsd" name="namespace" />
+      <xs:attribute fixed="DOC_RESOLUCIONJUDICIALDataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

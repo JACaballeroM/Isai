@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPage/MasterBase.master" AutoEventWireup="true"
+    CodeFile="MasterDetalle.master.cs" Inherits="MasterDetalle" %>
+
+<asp:Content ID="ContentHead" ContentPlaceHolderID="head" runat="Server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderHead" runat="server">        
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="ContentBase" ContentPlaceHolderID="ContentPlaceHolderContentBase"
+    runat="Server">
+    <div id="D_ImagenCaracter">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolderDImagen" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <div id="D_RutaNavegación">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolderDRuta" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <div id="D_ContenidoDetalle">
+        <div id="D_ContenidoDetalleLateralDerecho">
+            <div id="D_ContenidoDetalleLateralDerechoPadding">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderDContenido" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div id="D_ContenidoDetalleLateralIzquierdo">
+            <div id="D_ContenidoDetalleLateralIzquierdoPadding">
+                <div id="D_AreaMenuLocal">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolderDMenuLocal" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div id="D_AreaRegistro">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolderLogin" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="D_ContenidoDetallePadding">
+    </div>
+</asp:Content>
+<asp:Content ID="Content1" runat="server" ContentPlaceHolderID="ContentPlaceHolderMenuGlobal">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderMenuGlobal" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" runat="server" ContentPlaceHolderID="ContentPlaceHolderMenuCabecera">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderMenuCabecera" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>

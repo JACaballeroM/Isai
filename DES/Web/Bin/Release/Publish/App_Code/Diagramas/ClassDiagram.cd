@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="DseDeclaracionIsaiPagger">
+    <Position X="0.5" Y="11.25" Width="12" />
+    <TypeIdentifier>
+      <HashCode>AggAACAAwAAAAABEYAoABiEAAAAIAAGAAkAAIigIAEI=</HashCode>
+      <FileName>App_Code\DseDeclaracionIsaiPagger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DseExencionesPagger">
+    <Position X="13" Y="14.75" Width="10" />
+    <InheritanceLine Type="PaggerBase" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.75" Y="5.391" />
+        <Point X="10.75" Y="10.875" />
+        <Point X="12.756" Y="10.875" />
+        <Point X="12.756" Y="14.627" />
+        <Point X="23" Y="14.627" />
+        <Point X="23" Y="14.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\DseExencionesPagger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DsePeritosPagger">
+    <Position X="13" Y="11.25" Width="9" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABgAAAAACAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\DsePeritosPagger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DseReduccionesPagger">
+    <Position X="13" Y="13.25" Width="10.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\DseReduccionesPagger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FiltroBusqueda">
+    <Position X="14.5" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>IGGIwABRhUBhAgUGQGAABgQgAQAgEAAgAKAIEAAiCBA=</HashCode>
+      <FileName>App_Code\FiltroBusqueda.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PageBase">
+    <Position X="9.25" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAADBAAAAAAAAAAAAAAAAAAgAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\PageBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PageBaseISAI">
+    <Position X="1" Y="0.5" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>ABwAQCABwABmE9AEQgIARFgQBIEIAyGASAERAlgAACA=</HashCode>
+      <FileName>App_Code\PageBaseISAI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PaggerBase">
+    <Position X="8.5" Y="3.25" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAgAAAAAAAAAAAAgAIAAAAAAAAAAAAAAABI=</HashCode>
+      <FileName>App_Code\PaggerBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

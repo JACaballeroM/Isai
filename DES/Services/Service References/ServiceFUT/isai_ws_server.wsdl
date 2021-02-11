@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://10.1.65.9/formato_lc/notarios/isai_ws_prueba/isai_ws_server.php" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://10.1.65.9/formato_lc/notarios/isai_ws_prueba/isai_ws_server.php" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://10.1.65.9/formato_lc/notarios/isai_ws_prueba/isai_ws_server.php">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+      <xsd:complexType name="tipo_pregunta">
+        <xsd:all>
+          <xsd:element name="usuario" type="xsd:string" />
+          <xsd:element name="password" type="xsd:string" />
+          <xsd:element name="usuarioisai" type="xsd:string" />
+          <xsd:element name="passwordisai" type="xsd:string" />
+          <xsd:element name="fecha" type="xsd:string" />
+          <xsd:element name="clave" type="xsd:int" />
+          <xsd:element name="reduccion" type="xsd:int" />
+          <xsd:element name="cuenta" type="xsd:string" />
+          <xsd:element name="articulo" type="xsd:string" />
+          <xsd:element name="fraccion" type="xsd:string" />
+          <xsd:element name="total" type="xsd:string" />
+          <xsd:element name="importe" type="xsd:string" />
+          <xsd:element name="operacion" type="xsd:string" />
+          <xsd:element name="nombre" type="xsd:string" />
+          <xsd:element name="calleynum" type="xsd:string" />
+          <xsd:element name="colonia" type="xsd:string" />
+          <xsd:element name="cp" type="xsd:string" />
+          <xsd:element name="derechos" type="xsd:float" />
+          <xsd:element name="actualizacion" type="xsd:float" />
+          <xsd:element name="recargos" type="xsd:float" />
+          <xsd:element name="otros" type="xsd:float" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="tipo_respuesta">
+        <xsd:all>
+          <xsd:element name="clave" type="xsd:string" />
+          <xsd:element name="recargo" type="xsd:string" />
+          <xsd:element name="cuenta" type="xsd:string" />
+          <xsd:element name="impdrec" type="xsd:string" />
+          <xsd:element name="actualizacion" type="xsd:string" />
+          <xsd:element name="numnotario" type="xsd:string" />
+          <xsd:element name="linea" type="xsd:string" />
+          <xsd:element name="importe" type="xsd:string" />
+          <xsd:element name="importe_reducido" type="xsd:string" />
+          <xsd:element name="vigencia" type="xsd:string" />
+          <xsd:element name="total" type="xsd:string" />
+          <xsd:element name="linkfut" type="xsd:string" />
+          <xsd:element name="error" type="xsd:string" />
+          <xsd:element name="error_descripcion" type="xsd:string" />
+        </xsd:all>
+      </xsd:complexType>
+      <xsd:complexType name="arreglo_pregunta">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:tipo_pregunta[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="arreglo_respuesta">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="SOAP-ENC:Array">
+            <xsd:attribute wsdl:arrayType="tns:tipo_respuesta[]" ref="SOAP-ENC:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="solicitar_LCRequest">
+    <wsdl:part name="pregunta" type="tns:tipo_pregunta" />
+  </wsdl:message>
+  <wsdl:message name="solicitar_LCResponse">
+    <wsdl:part name="respuesta" type="tns:tipo_respuesta" />
+  </wsdl:message>
+  <wsdl:portType name="ServicesPortType">
+    <wsdl:operation name="solicitar_LC">
+      <documentation>Recibe datos y regresa la LC</documentation>
+      <wsdl:input message="tns:solicitar_LCRequest" />
+      <wsdl:output message="tns:solicitar_LCResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServicesBinding" type="tns:ServicesPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="solicitar_LC">
+      <soap:operation soapAction="rpc" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Services">
+    <wsdl:port name="ServicesPort" binding="tns:ServicesBinding">
+      <soap:address location="http://10.1.65.9/formato_lc/notarios/isai_ws_prueba/isai_ws_server.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

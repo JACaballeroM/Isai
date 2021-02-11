@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bfdf200e-9a67-4b23-a783-029877d15843" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.0.8.2/PRO/Fiscal/Emision/Emision.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DseEmision2.xsd" MetadataType="Schema" ID="7dfb1a3d-8eb6-4f64-a4b4-67e0ab940247" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Fiscal/Emision/Emision.svc?xsd=xsd6" />
+    <MetadataFile FileName="Emision2.disco" MetadataType="Disco" ID="10eb0d1c-6928-47be-b3d5-ba15bc310865" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Fiscal/Emision/Emision.svc?disco" />
+    <MetadataFile FileName="DseAdministracion2.xsd" MetadataType="Schema" ID="40b03b6b-716a-4d12-b0e5-e596c0115981" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Fiscal/Emision/Emision.svc?xsd=xsd11" />
+    <MetadataFile FileName="DseSilce2.xsd" MetadataType="Schema" ID="c17bf920-ed26-4ef5-be9a-42a0501e7470" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Fiscal/Emision/Emision.svc?xsd=xsd10" />
+    <MetadataFile FileName="Emision8.xsd" MetadataType="Schema" ID="380b3cd4-adc5-4a2b-a91b-10b5e8849d6a" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Fiscal/Emision/Emision.svc?xsd=xsd4" />
+    <MetadataFile FileName="DseAgrupacion2.xsd" MetadataType="Schema" ID="7ce3a1b9-f625-4687-9776-b776c053c5a4" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Fiscal/Emision/Emision.svc?xsd=xsd2" />
+    <MetadataFile FileName="Emision9.xsd" MetadataType="Schema" ID="e346815e-66d1-43de-9ac9-32af3ac2ca17" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Fiscal/Emision/Emision.svc?xsd=xsd9" />
+    <MetadataFile FileName="DseProgramacionProceso2.xsd" MetadataType="Schema" ID="de6d528d-c329-4513-badb-4227e980c293" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Fiscal/Emision/Emision.svc?xsd=xsd7" />
+    <MetadataFile FileName="Emision10.xsd" MetadataType="Schema" ID="9744c4ef-1147-44cc-bcfb-fcf07a9fdf21" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Fiscal/Emision/Emision.svc?xsd=xsd3" />
+    <MetadataFile FileName="Emision11.xsd" MetadataType="Schema" ID="d91f3835-1043-4b88-abdf-ea2db0abe813" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Fiscal/Emision/Emision.svc?xsd=xsd0" />
+    <MetadataFile FileName="Emision2.wsdl" MetadataType="Wsdl" ID="380cfbbf-7782-4404-a35e-4d0455263874" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Fiscal/Emision/Emision.svc?wsdl" />
+    <MetadataFile FileName="Emision12.xsd" MetadataType="Schema" ID="26d7f7c3-fb45-4931-9431-e238d3e24398" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Fiscal/Emision/Emision.svc?xsd=xsd5" />
+    <MetadataFile FileName="Emision13.xsd" MetadataType="Schema" ID="e6743593-1fda-4ad3-a6cb-e47fed02660b" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Fiscal/Emision/Emision.svc?xsd=xsd12" />
+    <MetadataFile FileName="Emision14.xsd" MetadataType="Schema" ID="0120f867-297e-4958-8523-9491ee5b3fc9" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Fiscal/Emision/Emision.svc?xsd=xsd1" />
+    <MetadataFile FileName="Emision15.xsd" MetadataType="Schema" ID="f1e3920b-a572-4258-a278-1964f63b645b" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/Fiscal/Emision/Emision.svc?xsd=xsd8" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

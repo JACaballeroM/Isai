@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5fda5332-fe46-477e-8429-fed9f1a11139" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.0.8.2/PRO/Documental/ConsultasDocumentos.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ConsultasDocumentos.xsd" MetadataType="Schema" ID="a01d6d4c-56d6-41bc-b4bd-da59b4319bbb" SourceId="1" SourceUrl="http://psur-des-serv.promocapre.int/PRE/Documental/ConsultasDocumentos.svc?xsd=xsd7" />
+    <MetadataFile FileName="ConsultasDocumentos.wsdl" MetadataType="Wsdl" ID="b4f11c57-85d9-4a67-9105-06bb0a7e263f" SourceId="1" SourceUrl="http://psur-des-serv.promocapre.int/PRE/Documental/ConsultasDocumentos.svc?wsdl" />
+    <MetadataFile FileName="ConsultasDocumentos2.xsd" MetadataType="Schema" ID="60e39685-da87-44aa-8630-6a4f06986e51" SourceId="1" SourceUrl="http://psur-des-serv.promocapre.int/PRE/Documental/ConsultasDocumentos.svc?xsd=xsd4" />
+    <MetadataFile FileName="ConsultasDocumentos3.xsd" MetadataType="Schema" ID="df7bfa57-3be1-4650-b97a-3df6f41ae3b8" SourceId="1" SourceUrl="http://psur-des-serv.promocapre.int/PRE/Documental/ConsultasDocumentos.svc?xsd=xsd1" />
+    <MetadataFile FileName="ConsultasDocumentos.disco" MetadataType="Disco" ID="37ab1d14-be09-4a6a-a9de-1d4f2eec5695" SourceId="1" SourceUrl="http://psur-des-serv.promocapre.int/PRE/Documental/ConsultasDocumentos.svc?disco" />
+    <MetadataFile FileName="dseDocumentosDigitales.xsd" MetadataType="Schema" ID="acb13e9f-8d7b-447d-94ab-7815e7c7de8b" SourceId="1" SourceUrl="http://psur-des-serv.promocapre.int/PRE/Documental/ConsultasDocumentos.svc?xsd=xsd2" />
+    <MetadataFile FileName="ConsultasDocumentos4.xsd" MetadataType="Schema" ID="ff0d3997-e945-4f8c-9884-97b0ada1837f" SourceId="1" SourceUrl="http://psur-des-serv.promocapre.int/PRE/Documental/ConsultasDocumentos.svc?xsd=xsd5" />
+    <MetadataFile FileName="ConsultasDocumentos5.xsd" MetadataType="Schema" ID="e6157c4f-f5f6-47b5-8a1a-4636f6eac4bb" SourceId="1" SourceUrl="http://psur-des-serv.promocapre.int/PRE/Documental/ConsultasDocumentos.svc?xsd=xsd6" />
+    <MetadataFile FileName="ConsultasDocumentos7.xsd" MetadataType="Schema" ID="cdc8801f-80f2-4314-bb90-c0aa59aca4d8" SourceId="1" SourceUrl="http://psur-des-serv.promocapre.int/PRE/Documental/ConsultasDocumentos.svc?xsd=xsd0" />
+    <MetadataFile FileName="ConsultasDocumentos8.xsd" MetadataType="Schema" ID="15028455-91da-42c6-8366-ae868498cb15" SourceId="1" SourceUrl="http://psur-des-serv.promocapre.int/PRE/Documental/ConsultasDocumentos.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

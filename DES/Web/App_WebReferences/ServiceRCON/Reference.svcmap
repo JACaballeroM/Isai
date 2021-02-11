@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="74df12af-f43e-487b-988f-be3c9c24c14e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.0.8.2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DseColoniaAsentamiento2.xsd" MetadataType="Schema" ID="d4c9b674-4441-4ea7-8015-ca5a397306ed" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd21" />
+    <MetadataFile FileName="DseMunicipios2.xsd" MetadataType="Schema" ID="4d510068-586e-443f-859f-c9a67674fad2" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd18" />
+    <MetadataFile FileName="DseInmuebleDireccion2.xsd" MetadataType="Schema" ID="c97fa92b-47ac-4b5f-83cc-0bf12cbe5bcd" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd11" />
+    <MetadataFile FileName="DseDireccionesInmueble2.xsd" MetadataType="Schema" ID="c261ad36-61a6-4cba-b6fa-46f7e3d2ca66" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd15" />
+    <MetadataFile FileName="DseEstados2.xsd" MetadataType="Schema" ID="3e2f35bc-4123-425e-a402-c7c02da4a886" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd19" />
+    <MetadataFile FileName="RegistroContribuyentesService6.xsd" MetadataType="Schema" ID="e4ac87f4-67dc-4a4c-b544-a9a6a0e3f076" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd3" />
+    <MetadataFile FileName="DseHistorico1.xsd" MetadataType="Schema" ID="ff85cbfb-d01c-4c44-ae3e-68178e582733" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd2" />
+    <MetadataFile FileName="RegistroContribuyentesService7.xsd" MetadataType="Schema" ID="0a632c40-bb23-4764-9391-c942f7c41c1c" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd1" />
+    <MetadataFile FileName="RegistroContribuyentesService8.xsd" MetadataType="Schema" ID="12132e0e-974b-4af4-9a03-fc0bf0068681" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DseDatosRepresentacion2.xsd" MetadataType="Schema" ID="e49f30d0-e4ee-4c83-b8e9-86ea1589c63f" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd7" />
+    <MetadataFile FileName="DseInfoContribuyente2.xsd" MetadataType="Schema" ID="7eb74a47-5c35-437b-ba12-ce0a51ce01d4" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd6" />
+    <MetadataFile FileName="DseCiudades2.xsd" MetadataType="Schema" ID="8ff944c7-0e26-4095-a018-aa258fdbffcc" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd5" />
+    <MetadataFile FileName="RegistroContribuyentesService9.xsd" MetadataType="Schema" ID="e859a4b9-f526-4374-8969-9b9fb95d5ec4" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd4" />
+    <MetadataFile FileName="DseInfoNotarios2.xsd" MetadataType="Schema" ID="63456eb3-036b-4867-a00f-637d928b4392" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd10" />
+    <MetadataFile FileName="DseInfoDirecciones2.xsd" MetadataType="Schema" ID="22aaf296-f3d1-4629-836b-cee8189b034f" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd9" />
+    <MetadataFile FileName="RegistroContribuyentesService10.xsd" MetadataType="Schema" ID="248934b3-b1c5-49eb-a416-df5504c966f1" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd8" />
+    <MetadataFile FileName="DseCatalogos2.xsd" MetadataType="Schema" ID="39d963f2-4cca-4aaa-9c52-5571cdd944e2" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd20" />
+    <MetadataFile FileName="DseContribuyentes2.xsd" MetadataType="Schema" ID="0be0cfa4-a8dc-425e-b2eb-4403648ce1e7" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd13" />
+    <MetadataFile FileName="RegistroContribuyentesService11.xsd" MetadataType="Schema" ID="132cc8ee-9161-45bd-93f8-aa0465db4d2c" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd12" />
+    <MetadataFile FileName="RegistroContribuyentesService2.wsdl" MetadataType="Wsdl" ID="8831553e-4063-474a-b1e9-333926db0354" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?wsdl" />
+    <MetadataFile FileName="DsePersonasSimilares1.xsd" MetadataType="Schema" ID="80e8bae2-3637-442d-adde-123f66e02676" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd14" />
+    <MetadataFile FileName="RegistroContribuyentesService2.disco" MetadataType="Disco" ID="9f37085f-1823-445f-919e-716d63ce8ee9" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?disco" />
+    <MetadataFile FileName="DseNotarios2.xsd" MetadataType="Schema" ID="575be10b-6f05-4631-9dbb-fc5b907b525e" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd16" />
+    <MetadataFile FileName="DseAsentamientos2.xsd" MetadataType="Schema" ID="563c8f04-0aca-4e74-8f46-4dc96a4fbfe9" SourceId="1" SourceUrl="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd17" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

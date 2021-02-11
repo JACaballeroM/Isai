@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="" title="Declaracion ISAI"  description="">
+    <siteMapNode url="~/BandejaEntrada.aspx" title="Bandeja de Entrada"  description="" >
+      <siteMapNode url="~/Declaraciones.aspx" title="Declaraciones"  description="">
+      </siteMapNode>      
+    </siteMapNode>
+    <siteMapNode url="~/BandejaJornada.aspx" title="Jornada Notarial"  description="" >
+    </siteMapNode>
+    <siteMapNode url="~/BandejaEntradaSF.aspx" title="Bandeja de Entrada para SF"  description="" >
+    </siteMapNode>
+      <siteMapNode url="~/NumeroPresentacion.aspx" title="Obtener Número presentación"  description="" >
+      </siteMapNode>
+  </siteMapNode>
+</siteMap>

@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPage/MastePrincipal.master" AutoEventWireup="true" CodeFile="MasterPrincipalFE.master.cs" Inherits="MasterPageFE_MasterPrincipalFE" %>
+
+<%--<%@ Register src="../UserControlsCommon/MenuCabeceraLogo.ascx" tagname="MenuCabeceraLogo" tagprefix="uc1" %>--%>
+<%@ Register src="../UserControlsCommon/MenuGlobal.ascx" tagname="MenuGlobal" tagprefix="uc2" %>
+<%@ Register src="../UserControlsCommon/Login.ascx" tagname="Login" tagprefix="uc3" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="P_ContentPlaceHolderPImagen" Runat="Server">
+    <asp:Image ID="imgCabecera" runat="server" 
+        ImageUrl="~/Images/bannerHome.jpg" />
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="P_ContentPlaceHolderPDestacados" Runat="Server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderPDestacados" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="P_ContentPlaceHolderPActualidad" Runat="Server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderPActualidad" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolderLogin" Runat="Server">
+    <uc3:Login ID="loginToken" runat="server" />
+    </asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="ContentPlaceHolderPPromoOvica" Runat="Server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderPPromoOvica" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content6" ContentPlaceHolderID="ContentPlaceHolderPPromoInstitucional" Runat="Server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderPPromoInstitucional" 
+        runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="Content7" runat="server" 
+    contentplaceholderid="ContentPlaceHolderMenuGlobal">
+    <uc2:MenuGlobal ID="MenuGlobal1" runat="server" />
+</asp:Content>
+<%--<asp:Content ID="Content8" runat="server" 
+    contentplaceholderid="ContentPlaceHolderMenuCabecera">
+    <uc1:MenuCabeceraLogo ID="MenuCabeceraLogo1" runat="server" />
+</asp:Content>--%>
+
+

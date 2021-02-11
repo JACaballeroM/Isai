@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DseProgramacionProceso.FIS_ESTADOJOBDataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseProgramacionProceso.FIS_ESTADOJOBDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/DseProgramacionProceso.xsd" name="namespace" />
+      <xs:attribute fixed="FIS_ESTADOJOBDataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseAgrupacion.FIS_CUENTASFALTAVU_VDataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseAgrupacion.FIS_CUENTASFALTAVU_VDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/DseAgrupacion.xsd" name="namespace" />
+      <xs:attribute fixed="FIS_CUENTASFALTAVU_VDataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseProgramacionProceso.FIS_PROCESODataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseProgramacionProceso.FIS_PROCESODataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/DseProgramacionProceso.xsd" name="namespace" />
+      <xs:attribute fixed="FIS_PROCESODataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseEmision.FIS_LOTEROSINMUEBLES_VDataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseEmision.FIS_LOTEROSINMUEBLES_VDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/DseEmision.xsd" name="namespace" />
+      <xs:attribute fixed="FIS_LOTEROSINMUEBLES_VDataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseEmision.FIS_INFORMACIONLC_VDataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseEmision.FIS_INFORMACIONLC_VDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/DseEmision.xsd" name="namespace" />
+      <xs:attribute fixed="FIS_INFORMACIONLC_VDataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseSilce.FIS_AGRUPACIONLCDataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseSilce.FIS_AGRUPACIONLCDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/DseSilce.xsd" name="namespace" />
+      <xs:attribute fixed="FIS_AGRUPACIONLCDataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseEmision.FIS_EMISIONRESULTADODataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseEmision.FIS_EMISIONRESULTADODataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/DseEmision.xsd" name="namespace" />
+      <xs:attribute fixed="FIS_EMISIONRESULTADODataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseEmision.FIS_QUEJOSODataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseEmision.FIS_QUEJOSODataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/DseEmision.xsd" name="namespace" />
+      <xs:attribute fixed="FIS_QUEJOSODataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseEmision.FIS_CATMENSAJEDataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseEmision.FIS_CATMENSAJEDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/DseEmision.xsd" name="namespace" />
+      <xs:attribute fixed="FIS_CATMENSAJEDataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseEmision.FIS_CATMARCAJEMOTIVODataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseEmision.FIS_CATMARCAJEMOTIVODataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/DseEmision.xsd" name="namespace" />
+      <xs:attribute fixed="FIS_CATMARCAJEMOTIVODataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseProgramacionProceso.FIS_RUTAFICHEROSDataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseProgramacionProceso.FIS_RUTAFICHEROSDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/DseProgramacionProceso.xsd" name="namespace" />
+      <xs:attribute fixed="FIS_RUTAFICHEROSDataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseAgrupacion.FIS_AGRUPACIONCUENTAS_VDataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseAgrupacion.FIS_AGRUPACIONCUENTAS_VDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/DseAgrupacion.xsd" name="namespace" />
+      <xs:attribute fixed="FIS_AGRUPACIONCUENTAS_VDataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseEmision.FIS_EMISIONCABECERADataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseEmision.FIS_EMISIONCABECERADataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/DseEmision.xsd" name="namespace" />
+      <xs:attribute fixed="FIS_EMISIONCABECERADataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseEmision.FIS_EMISIONRESULTADO_VDataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseEmision.FIS_EMISIONRESULTADO_VDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/DseEmision.xsd" name="namespace" />
+      <xs:attribute fixed="FIS_EMISIONRESULTADO_VDataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

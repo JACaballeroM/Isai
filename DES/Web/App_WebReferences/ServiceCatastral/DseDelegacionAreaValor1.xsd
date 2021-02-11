@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/DseDelegacionAreaValor.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/DseDelegacionAreaValor.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DseDelegacionAreaValor.xsd" id="DseDelegacionAreaValor" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="DseDelegacionAreaValor">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AreaValor">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDAREAVALOR" type="xs:decimal" />
+              <xs:element name="IDDELEGACION" type="xs:decimal" />
+              <xs:element msdata:Caption="Clave área" name="CODAREAVALOR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:Caption="VUS" minOccurs="0" name="VALORUNITARIOSUELO" type="xs:decimal" />
+              <xs:element msdata:Caption="Delegación" name="NOMBREDELEGACION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="XMIN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="XMAX" type="xs:decimal" />
+              <xs:element minOccurs="0" name="YMIN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="YMAX" type="xs:decimal" />
+              <xs:element msdata:Caption="Superficie" minOccurs="0" name="SUPERFICIE" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

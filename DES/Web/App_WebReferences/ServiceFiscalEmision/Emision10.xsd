@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DseAgrupacion" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseAgrupacion" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseAgrupacion.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseEmision" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseEmision" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseEmision.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseProgramacionProceso" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseProgramacionProceso" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseProgramacionProceso.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

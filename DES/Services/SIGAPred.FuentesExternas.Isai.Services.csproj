@@ -1,0 +1,821 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{229E36AA-CEB7-4085-B524-61EF27F74892}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SIGAPred.FuentesExternas.Isai.Services</RootNamespace>
+    <AssemblyName>SIGAPred.FuentesExternas.Isai.Services</AssemblyName>
+    <ProjectTypeGuids>{3D9AD99F-2412-4246-B90B-4EAA41C64699};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <StartArguments>/client:"WcfTestClient.exe"</StartArguments>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>bin\Debug\SIGAPred.FuentesExternas.Isai.Services.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>bin\Release\SIGAPred.FuentesExternas.Isai.Services.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>..\..\References\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\References\Microsoft\Practices\EnterpriseLibrary\4.0.0.0\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\References\Microsoft\Practices\EnterpriseLibrary\4.0.0.0\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\References\Microsoft\Practices\EnterpriseLibrary\4.0.0.0\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\References\Microsoft\Practices\EnterpriseLibrary\4.0.0.0\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\References\Microsoft\Practices\EnterpriseLibrary\4.0.0.0\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging.Database">
+      <HintPath>..\..\References\Microsoft\Practices\EnterpriseLibrary\4.0.0.0\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\References\Microsoft\Practices\EnterpriseLibrary\4.0.0.0\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="MyExtentions">
+      <HintPath>..\..\References\Otras\MyExtentions.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess">
+      <HintPath>..\..\References\Oracle\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="SecurityCore">
+      <HintPath>..\..\References\Oracle\SecurityCore.dll</HintPath>
+    </Reference>
+    <Reference Include="SIGAPred.Common, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\SIGAPred\Common\1.1.0.0\SIGAPred.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="SIGAPred.Common.DataAccess, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\SIGAPred\Common\1.1.0.0\SIGAPred.Common.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="SIGAPred.Documental.Services">
+      <HintPath>..\..\References\SIGAPred\Documental\1.1.0.0\SIGAPred.Documental.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="SIGAPred.Excepciones.ClaseExcepcion, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\SIGAPred\Excepciones\4.0.0.0\SIGAPred.Excepciones.ClaseExcepcion.dll</HintPath>
+    </Reference>
+    <Reference Include="SIGAPred.RegistroContribuyentes.Services, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\SIGAPred\RegistroContribuyentes\1.1.0.0\SIGAPred.RegistroContribuyentes.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions.Design">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccesoDatos\DseCatalogo.cs">
+      <DependentUpon>DseCatalogo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\DseCatalogo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DseCatalogo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\DseDeclaracionIsai.cs">
+      <DependentUpon>DseDeclaracionIsai.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\DseDeclaracionIsai.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DseDeclaracionIsai.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\DseInfAvaluos.cs">
+      <DependentUpon>DseInfAvaluos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\DseInfAvaluos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DseInfAvaluos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\DseInfConsultaEspecifica.Designer.cs">
+      <DependentUpon>DseInfConsultaEspecifica.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="AccesoDatos\DseInfDetalleNotarios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DseInfDetalleNotarios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\DseInfEnviosTotales.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DseInfEnviosTotales.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\DseInfJustificante.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DseInfJustificante.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\DseInfNotarios.cs">
+      <DependentUpon>DseInfNotarios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\DseInfNotarios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DseInfNotarios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\DseInfoDetalleLineasCaptura.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DseInfoDetalleLineasCaptura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\DseInfoLineasCaptura.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DseInfoLineasCaptura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\DseInfPagos.Designer.cs">
+      <DependentUpon>DseInfPagos.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="AccesoDatos\DseInfSociedadPeritos.cs">
+      <DependentUpon>DseInfSociedadPeritos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\DseInfSociedadPeritos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DseInfSociedadPeritos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\DseInfValores.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DseInfValores.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\DsePersonas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsePersonas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\Settings.cs" />
+    <Compile Include="Negocio\Clases\DatosWebService.cs" />
+    <Compile Include="Negocio\Clases\Isr.cs" />
+    <Compile Include="Negocio\DeclaracionIsai.cs" />
+    <Compile Include="Negocio\Extensiones\DecimalUtils.cs" />
+    <Compile Include="Negocio\ValidacioneslUtils.cs" />
+    <Compile Include="Negocio\ExceptionBase.cs" />
+    <Compile Include="Negocio\ExceptionPolicyWrapper.cs" />
+    <Compile Include="Negocio\Exceptions\DeclaracionIsaiInfoException.cs" />
+    <Compile Include="Negocio\Exceptions\DeclaracionIsaiException.cs" />
+    <Compile Include="Negocio\Interfaces\IDeclaracionIsai.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceCatastral\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceFiscalEmision\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceFUT\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceLC1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceLC2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceLC\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceRCON\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AccesoDatos\DseCatalogo.xsc">
+      <DependentUpon>DseCatalogo.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\DseCatalogo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DseCatalogo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AccesoDatos\DseCatalogo.xss">
+      <DependentUpon>DseCatalogo.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\DseInfAvaluos.xsc">
+      <DependentUpon>DseInfAvaluos.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\DseInfAvaluos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DseInfAvaluos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AccesoDatos\DseInfAvaluos.xss">
+      <DependentUpon>DseInfAvaluos.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\DseInfConsultaEspecifica.xsc">
+      <DependentUpon>DseInfConsultaEspecifica.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\DseInfConsultaEspecifica.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DseInfConsultaEspecifica.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AccesoDatos\DseInfConsultaEspecifica.xss">
+      <DependentUpon>DseInfConsultaEspecifica.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\DseInfDetalleNotarios.xsc">
+      <DependentUpon>DseInfDetalleNotarios.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\DseInfDetalleNotarios.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DseInfDetalleNotarios.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AccesoDatos\DseInfDetalleNotarios.xss">
+      <DependentUpon>DseInfDetalleNotarios.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\DseInfEnviosTotales.xsc">
+      <DependentUpon>DseInfEnviosTotales.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\DseInfEnviosTotales.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DseInfEnviosTotales.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AccesoDatos\DseInfEnviosTotales.xss">
+      <DependentUpon>DseInfEnviosTotales.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\DseInfJustificante.xsc">
+      <DependentUpon>DseInfJustificante.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\DseInfJustificante.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DseInfJustificante.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AccesoDatos\DseInfJustificante.xss">
+      <DependentUpon>DseInfJustificante.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\DseInfNotarios.xsc">
+      <DependentUpon>DseInfNotarios.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\DseInfNotarios.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DseInfNotarios.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AccesoDatos\DseInfNotarios.xss">
+      <DependentUpon>DseInfNotarios.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\DseInfoDetalleLineasCaptura.xsc">
+      <DependentUpon>DseInfoDetalleLineasCaptura.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\DseInfoDetalleLineasCaptura.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DseInfoDetalleLineasCaptura.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AccesoDatos\DseInfoDetalleLineasCaptura.xss">
+      <DependentUpon>DseInfoDetalleLineasCaptura.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\DseInfoLineasCaptura.xsc">
+      <DependentUpon>DseInfoLineasCaptura.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\DseInfoLineasCaptura.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DseInfoLineasCaptura.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AccesoDatos\DseInfoLineasCaptura.xss">
+      <DependentUpon>DseInfoLineasCaptura.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\DseInfPagos.xsc">
+      <DependentUpon>DseInfPagos.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\DseInfPagos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DseInfPagos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AccesoDatos\DseInfPagos.xss">
+      <DependentUpon>DseInfPagos.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\DseInfSociedadPeritos.xsc">
+      <DependentUpon>DseInfSociedadPeritos.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\DseInfSociedadPeritos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DseInfSociedadPeritos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AccesoDatos\DseInfSociedadPeritos.xss">
+      <DependentUpon>DseInfSociedadPeritos.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\DseInfValores.xsc">
+      <DependentUpon>DseInfValores.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\DseInfValores.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DseInfValores.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AccesoDatos\DseInfValores.xss">
+      <DependentUpon>DseInfValores.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\DsePersonas.xsc">
+      <DependentUpon>DsePersonas.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\DsePersonas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsePersonas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AccesoDatos\DsePersonas.xss">
+      <DependentUpon>DsePersonas.xsd</DependentUpon>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AccesoDatos\DseDeclaracionIsai.xsc">
+      <DependentUpon>DseDeclaracionIsai.xsd</DependentUpon>
+    </None>
+    <None Include="AccesoDatos\DseDeclaracionIsai.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DseDeclaracionIsai.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AccesoDatos\DseDeclaracionIsai.xss">
+      <DependentUpon>DseDeclaracionIsai.xsd</DependentUpon>
+    </None>
+    <None Include="Diagramas\ISAI.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceCatastral\ConsultaCatastralService.wsdl" />
+    <None Include="Service References\ServiceCatastral\ConsultaCatastralService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceCatastral\ConsultaCatastralService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceCatastral\ConsultaCatastralService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceCatastral\ConsultaCatastralService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceCatastral\ConsultaCatastralService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceCatastral\ConsultaCatastralService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceCatastral\ConsultaCatastralService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceCatastral\DseAdministracionTributaria.xsd" />
+    <None Include="Service References\ServiceCatastral\DseBienesInmueble.xsd" />
+    <None Include="Service References\ServiceCatastral\DseCatalogos.xsd" />
+    <None Include="Service References\ServiceCatastral\DseCondominio.xsd" />
+    <None Include="Service References\ServiceCatastral\DseCondominioPredio.xsd" />
+    <None Include="Service References\ServiceCatastral\DseConjuntoCondominal.xsd" />
+    <None Include="Service References\ServiceCatastral\DseConstruccion.xsd" />
+    <None Include="Service References\ServiceCatastral\DseDatosBasicos.xsd" />
+    <None Include="Service References\ServiceCatastral\DseDelegacionAreaValor.xsd" />
+    <None Include="Service References\ServiceCatastral\DseDelegacionColonia.xsd" />
+    <None Include="Service References\ServiceCatastral\DseDelegacionCorredorValor.xsd" />
+    <None Include="Service References\ServiceCatastral\DseEnclaveValor.xsd" />
+    <None Include="Service References\ServiceCatastral\DseFotos.xsd" />
+    <None Include="Service References\ServiceCatastral\DseFotosExpediente.xsd" />
+    <None Include="Service References\ServiceCatastral\DseHistoricoInmueblePredio.xsd" />
+    <None Include="Service References\ServiceCatastral\DseIndiceCartografico.xsd" />
+    <None Include="Service References\ServiceCatastral\DseInmueble.xsd" />
+    <None Include="Service References\ServiceCatastral\DseInmuebleF4BA1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseInmuebleFiltro.xsd" />
+    <None Include="Service References\ServiceCatastral\DseInmueblePredio.xsd" />
+    <None Include="Service References\ServiceCatastral\DseInmuebleSIIP1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseInmuebleUnidad.xsd" />
+    <None Include="Service References\ServiceCatastral\DseManzanaColonia.xsd" />
+    <None Include="Service References\ServiceCatastral\DseManzanaDetalle1.xsd" />
+    <None Include="Service References\ServiceCatastral\DseManzanas.xsd" />
+    <None Include="Service References\ServiceCatastral\DseNumerosExteriores.xsd" />
+    <None Include="Service References\ServiceCatastral\DseOficinasTesoreria.xsd" />
+    <None Include="Service References\ServiceCatastral\DsePredios.xsd" />
+    <None Include="Service References\ServiceCatastral\DseRegion.xsd" />
+    <None Include="Service References\ServiceCatastral\DseSitios.xsd" />
+    <None Include="Service References\ServiceCatastral\DseTiposSitios.xsd" />
+    <None Include="Service References\ServiceCatastral\DseTomaAgua.xsd" />
+    <None Include="Service References\ServiceCatastral\DseUnidadesGrupoCondominal.xsd" />
+    <None Include="Service References\ServiceCatastral\DseVectores.xsd" />
+    <None Include="Service References\ServiceCatastral\DseViaColonia.xsd" />
+    <None Include="Service References\ServiceCatastral\DseViaVector.xsd" />
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseInmuebleSIIP1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseManzanaDetalle1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.InfoBaja1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceFiscalEmision\DseAdministracion.xsd" />
+    <None Include="Service References\ServiceFiscalEmision\DseAgrupacion.xsd" />
+    <None Include="Service References\ServiceFiscalEmision\DseEmision.xsd" />
+    <None Include="Service References\ServiceFiscalEmision\DseProgramacionProceso.xsd" />
+    <None Include="Service References\ServiceFiscalEmision\DseSilce.xsd" />
+    <None Include="Service References\ServiceFiscalEmision\Emision.wsdl" />
+    <None Include="Service References\ServiceFiscalEmision\Emision.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceFiscalEmision\Emision1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceFiscalEmision\Emision2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceFiscalEmision\Emision3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceFiscalEmision\Emision4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceFiscalEmision\Emision5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceFiscalEmision\Emision6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceFiscalEmision\Emision7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceFUT\isai_ws_server.wsdl" />
+    <None Include="Service References\ServiceFUT\SIGAPred.FuentesExternas.Isai.Services.ServiceFUT.tipo_respuesta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceLC1\lineaCapturaGenWs_secureServer.wsdl" />
+    <None Include="Service References\ServiceLC1\SIGAPred.FuentesExternas.Isai.Services.ServiceLC1.tr_lineaCapturaGeneral.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceLC2\lineaCapturaGenWs_secureServer.wsdl" />
+    <None Include="Service References\ServiceLC2\SIGAPred.FuentesExternas.Isai.Services.ServiceLC2.tr_lineaCapturaGeneral.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceLC\lineaCapturaGenWs_secureServer1.wsdl" />
+    <None Include="Service References\ServiceLC\SIGAPred.FuentesExternas.Isai.Services.ServiceLC.tr_lineaCapturaGeneral.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="SIGAPred.RegistroContribuyentes.Services.AccesoDatos.DseAsentamientos.datasource" />
+    <None Include="SIGAPred.RegistroContribuyentes.Services.AccesoDatos.DseCatalogos.datasource" />
+    <None Include="SIGAPred.RegistroContribuyentes.Services.AccesoDatos.DseCiudades.datasource" />
+    <None Include="SIGAPred.RegistroContribuyentes.Services.AccesoDatos.DseColoniaAsentamiento.datasource" />
+    <None Include="SIGAPred.RegistroContribuyentes.Services.AccesoDatos.DseContribuyentes.datasource" />
+    <None Include="SIGAPred.RegistroContribuyentes.Services.AccesoDatos.DseDatosRepresentacion.datasource" />
+    <None Include="SIGAPred.RegistroContribuyentes.Services.AccesoDatos.DseDireccionesInmueble.datasource" />
+    <None Include="SIGAPred.RegistroContribuyentes.Services.AccesoDatos.DseEstados.datasource" />
+    <None Include="SIGAPred.RegistroContribuyentes.Services.AccesoDatos.DseHistorico.datasource" />
+    <None Include="SIGAPred.RegistroContribuyentes.Services.AccesoDatos.DseInfoContribuyente.datasource" />
+    <None Include="SIGAPred.RegistroContribuyentes.Services.AccesoDatos.DseInfoDirecciones.datasource" />
+    <None Include="SIGAPred.RegistroContribuyentes.Services.AccesoDatos.DseInfoNotarios.datasource" />
+    <None Include="SIGAPred.RegistroContribuyentes.Services.AccesoDatos.DseInmuebleDireccion.datasource" />
+    <None Include="SIGAPred.RegistroContribuyentes.Services.AccesoDatos.DseMunicipios.datasource" />
+    <None Include="SIGAPred.RegistroContribuyentes.Services.AccesoDatos.DseNotarios.datasource" />
+    <None Include="SIGAPred.RegistroContribuyentes.Services.AccesoDatos.DsePersonasSimilares.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceCatastral\" />
+    <WCFMetadataStorage Include="Service References\ServiceFiscalEmision\" />
+    <WCFMetadataStorage Include="Service References\ServiceFUT\" />
+    <WCFMetadataStorage Include="Service References\ServiceLC1\" />
+    <WCFMetadataStorage Include="Service References\ServiceLC2\" />
+    <WCFMetadataStorage Include="Service References\ServiceLC\" />
+    <WCFMetadataStorage Include="Service References\ServiceRCON\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceCatastral\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceCatastral\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceCatastral\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceFiscalEmision\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceFiscalEmision\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.CartaDelegacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DelegacionManzana.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseAdministracionTributaria.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseBienesInmueble.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseCatalogos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseCondominio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseCondominioPredio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseConjuntoCondominal.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseConstruccion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseDatosBasicos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseDelegacionAreaValor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseDelegacionColonia.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseDelegacionCorredorValor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseEnclaveValor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseFotos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseFotosExpediente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseHistoricoInmueblePredio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseIndiceCartografico.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseInmueble.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseInmuebleF4BA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseInmuebleFiltro.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseInmueblePredio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseInmuebleUnidad.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseManzanaColonia.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseManzanas.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseNumerosExteriores.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseOficinasTesoreria.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DsePredios.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseRegion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseSitios.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseTiposSitios.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseTomaAgua.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseUnidadesGrupoCondominal.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseVectores.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseViaColonia.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceCatastral\SIGAPred.FuentesExternas.Isai.Services.ServiceCatastral.DseViaVector.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceFiscalEmision\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceFiscalEmision\SIGAPred.FuentesExternas.Isai.Services.ServiceFiscalEmision.DseAdministracion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceFiscalEmision\SIGAPred.FuentesExternas.Isai.Services.ServiceFiscalEmision.DseAgrupacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceFiscalEmision\SIGAPred.FuentesExternas.Isai.Services.ServiceFiscalEmision.DseEmision.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceFiscalEmision\SIGAPred.FuentesExternas.Isai.Services.ServiceFiscalEmision.DseProgramacionProceso.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceFiscalEmision\SIGAPred.FuentesExternas.Isai.Services.ServiceFiscalEmision.DseSilce.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceRCON\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceRCON\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceRCON\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceFUT\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceFUT\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceFUT\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceCatastral\ConsultaCatastralService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceFiscalEmision\Emision.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceLC\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceLC\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceLC\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceLC1\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceLC1\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceLC1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceLC2\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceLC2\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceLC2\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{3D9AD99F-2412-4246-B90B-4EAA41C64699}">
+        <WcfProjectProperties>
+          <AutoStart>False</AutoStart>
+        </WcfProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

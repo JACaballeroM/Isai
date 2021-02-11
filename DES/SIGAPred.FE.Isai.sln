@@ -1,0 +1,160 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentacion", "Presentacion", "{E1D6A3C4-28CF-429C-9135-5CA5A211F20E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WCF", "WCF", "{97465DAE-9846-4321-8557-87B05EC1AF83}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Web", "Web", "{B2484193-07E6-47A5-BD25-616DE00A479F}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		Frontpage = "false"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
+		Debug.AspNetCompiler.VirtualPath = "/Web"
+		Debug.AspNetCompiler.PhysicalPath = "Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Web\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Web"
+		Release.AspNetCompiler.PhysicalPath = "Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Web\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "4310"
+		VWDDynamicPort = "false"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{26C46266-3B1C-4155-AC2C-D9A3A04486C0} = {26C46266-3B1C-4155-AC2C-D9A3A04486C0}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIGAPred.FuentesExternas.Isai.ServicesHost", "ServicesHost\SIGAPred.FuentesExternas.Isai.ServicesHost.csproj", "{26C46266-3B1C-4155-AC2C-D9A3A04486C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIGAPred.FuentesExternas.Isai.Services", "Services\SIGAPred.FuentesExternas.Isai.Services.csproj", "{229E36AA-CEB7-4085-B524-61EF27F74892}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.1.253.114:8080/tfs/iecisa
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Services\\SIGAPred.FuentesExternas.Isai.Services.csproj
+		SccProjectTopLevelParentUniqueName1 = SIGAPred.FE.Isai.sln
+		SccProjectName1 = Services
+		SccLocalPath1 = Services
+		SccProjectUniqueName2 = ServicesHost\\SIGAPred.FuentesExternas.Isai.ServicesHost.csproj
+		SccProjectTopLevelParentUniqueName2 = SIGAPred.FE.Isai.sln
+		SccProjectName2 = ServicesHost
+		SccLocalPath2 = ServicesHost
+		SccWebProject3 = true
+		SccProjectUniqueName3 = Web
+		SccProjectTopLevelParentUniqueName3 = SIGAPred.FE.Isai.sln
+		SccProjectName3 = Web
+		SccLocalPath3 = Web
+		SccProjectEnlistmentChoice3 = 2
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2484193-07E6-47A5-BD25-616DE00A479F}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{B2484193-07E6-47A5-BD25-616DE00A479F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2484193-07E6-47A5-BD25-616DE00A479F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2484193-07E6-47A5-BD25-616DE00A479F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B2484193-07E6-47A5-BD25-616DE00A479F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B2484193-07E6-47A5-BD25-616DE00A479F}.Release|.NET.ActiveCfg = Debug|Any CPU
+		{B2484193-07E6-47A5-BD25-616DE00A479F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2484193-07E6-47A5-BD25-616DE00A479F}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{B2484193-07E6-47A5-BD25-616DE00A479F}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B2484193-07E6-47A5-BD25-616DE00A479F}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{26C46266-3B1C-4155-AC2C-D9A3A04486C0}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{26C46266-3B1C-4155-AC2C-D9A3A04486C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26C46266-3B1C-4155-AC2C-D9A3A04486C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26C46266-3B1C-4155-AC2C-D9A3A04486C0}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{26C46266-3B1C-4155-AC2C-D9A3A04486C0}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{26C46266-3B1C-4155-AC2C-D9A3A04486C0}.Release|.NET.ActiveCfg = Release|Any CPU
+		{26C46266-3B1C-4155-AC2C-D9A3A04486C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26C46266-3B1C-4155-AC2C-D9A3A04486C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26C46266-3B1C-4155-AC2C-D9A3A04486C0}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{26C46266-3B1C-4155-AC2C-D9A3A04486C0}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{229E36AA-CEB7-4085-B524-61EF27F74892}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{229E36AA-CEB7-4085-B524-61EF27F74892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{229E36AA-CEB7-4085-B524-61EF27F74892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{229E36AA-CEB7-4085-B524-61EF27F74892}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{229E36AA-CEB7-4085-B524-61EF27F74892}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{229E36AA-CEB7-4085-B524-61EF27F74892}.Release|.NET.ActiveCfg = Release|Any CPU
+		{229E36AA-CEB7-4085-B524-61EF27F74892}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{229E36AA-CEB7-4085-B524-61EF27F74892}.Release|Any CPU.Build.0 = Release|Any CPU
+		{229E36AA-CEB7-4085-B524-61EF27F74892}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{229E36AA-CEB7-4085-B524-61EF27F74892}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B2484193-07E6-47A5-BD25-616DE00A479F} = {E1D6A3C4-28CF-429C-9135-5CA5A211F20E}
+		{26C46266-3B1C-4155-AC2C-D9A3A04486C0} = {97465DAE-9846-4321-8557-87B05EC1AF83}
+		{229E36AA-CEB7-4085-B524-61EF27F74892} = {97465DAE-9846-4321-8557-87B05EC1AF83}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.1.253.114:8080/tfs/iecisa
+		SccProjectUniqueName0 = Services\\SIGAPred.FuentesExternas.Isai.Services.csproj
+		SccProjectTopLevelParentUniqueName0 = SIGAPred.FE.Isai.sln
+		SccProjectName0 = Services
+		SccAuxPath0 = http://10.1.253.114:8080/tfs/iecisa
+		SccLocalPath0 = Services
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName1 = ServicesHost\\SIGAPred.FuentesExternas.Isai.ServicesHost.csproj
+		SccProjectTopLevelParentUniqueName1 = SIGAPred.FE.Isai.sln
+		SccProjectName1 = ServicesHost
+		SccAuxPath1 = http://10.1.253.114:8080/tfs/iecisa
+		SccLocalPath1 = ServicesHost
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccWebProject2 = true
+		SccProjectUniqueName2 = Web
+		SccProjectTopLevelParentUniqueName2 = SIGAPred.FE.Isai.sln
+		SccProjectName2 = Web
+		SccAuxPath2 = http://10.1.253.114:8080/tfs/iecisa
+		SccLocalPath2 = Web
+		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectEnlistmentChoice2 = 2
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.1.253.114:8080/tfs/iecisa
+		SccProjectUniqueName0 = Services\\SIGAPred.FuentesExternas.Isai.Services.csproj
+		SccProjectTopLevelParentUniqueName0 = SIGAPred.FE.Isai.sln
+		SccProjectName0 = Services
+		SccAuxPath0 = http://10.1.253.114:8080/tfs/iecisa
+		SccLocalPath0 = Services
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName1 = ServicesHost\\SIGAPred.FuentesExternas.Isai.ServicesHost.csproj
+		SccProjectTopLevelParentUniqueName1 = SIGAPred.FE.Isai.sln
+		SccProjectName1 = ServicesHost
+		SccAuxPath1 = http://10.1.253.114:8080/tfs/iecisa
+		SccLocalPath1 = ServicesHost
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccWebProject2 = true
+		SccProjectUniqueName2 = Web
+		SccProjectTopLevelParentUniqueName2 = SIGAPred.FE.Isai.sln
+		SccProjectName2 = Web
+		SccAuxPath2 = http://10.1.253.114:8080/tfs/iecisa
+		SccLocalPath2 = Web
+		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectEnlistmentChoice2 = 2
+	EndGlobalSection
+EndGlobal

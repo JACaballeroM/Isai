@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPage/MasterBase.master" AutoEventWireup="true"
+    CodeFile="MastePrincipal.master.cs" Inherits="MastePrincipal" %>
+
+<%@ Register src="../UserControlsCommon/MenuCabeceraLogo.ascx" tagname="MenuCabeceraLogo" tagprefix="uc1" %>
+<%@ Register Src="../UserControlsCommon/MenuCabeceraLogo.ascx" TagName="MenuCabeceraLogoLinks" TagPrefix="uc3" %>
+<asp:Content ID="ContentHolderBaseHead" ContentPlaceHolderID="head" runat="Server">
+</asp:Content>
+<asp:Content ID="ContentHolderBase" ContentPlaceHolderID="ContentPlaceHolderContentBase"
+    runat="Server">
+    <div id="P_ContenidoDetalle">
+        <div id="P_ContenidoDetalleLateralIzquierdo">
+            <div id="P_ImagenCaracter">
+                <asp:ContentPlaceHolder ID="P_ContentPlaceHolderPImagen" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="P_ContenidoDetalleLateralIzquierdoPadding">
+                <div id="P_MosaicoDestacados">
+                    <asp:ContentPlaceHolder ID="P_ContentPlaceHolderPDestacados" runat="server">
+                </asp:ContentPlaceHolder>
+                </div>
+                <div id="P_Actualidad">
+                    <asp:ContentPlaceHolder ID="P_ContentPlaceHolderPActualidad" runat="server">
+                </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+        <div id="P_ContenidoDetalleLateralDerecho">
+            <div id="P_ContenidoDetalleLateralDerechoPadding">
+                <div id="P_AreaRegistro">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolderLogin" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div id="P_AreaPromocionalOvica">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolderPPromoOvica" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div id="P_AreaPromocionalInstitucional">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolderPPromoInstitucional" 
+                        runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </div>
+</asp:Content>
+<asp:Content ID="Content1" runat="server" 
+    contentplaceholderid="ContentPlaceHolderMenuGlobal">
+
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolderMenuGlobal" 
+        runat="server">
+    </asp:ContentPlaceHolder>
+
+</asp:Content>
+<asp:Content ID="Content2" runat="server" 
+    contentplaceholderid="ContentPlaceHolderMenuCabecera">
+    <uc3:MenuCabeceraLogoLinks ID="menuCabeceraLogoLinks" runat="server" />
+                    </asp:Content>
+

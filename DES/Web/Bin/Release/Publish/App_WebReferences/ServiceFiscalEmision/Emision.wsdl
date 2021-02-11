@@ -1,0 +1,1807 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Emision" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WsHttp_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Emision/Emision.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Emision/Emision.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" />
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Emision/Emision.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Emision/Emision.svc?xsd=xsd2" namespace="http://tempuri.org/DseAgrupacion.xsd" />
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Emision/Emision.svc?xsd=xsd3" />
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Emision/Emision.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Negocio.Base" />
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Emision/Emision.svc?xsd=xsd6" namespace="http://tempuri.org/DseEmision.xsd" />
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Emision/Emision.svc?xsd=xsd7" namespace="http://tempuri.org/DseProgramacionProceso.xsd" />
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Emision/Emision.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" />
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Emision/Emision.svc?xsd=xsd9" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Emision/Emision.svc?xsd=xsd10" namespace="http://tempuri.org/DseSilce.xsd" />
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Emision/Emision.svc?xsd=xsd11" namespace="http://tempuri.org/DseAdministracion.xsd" />
+      <xsd:import schemaLocation="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Emision/Emision.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.ServiceAdministracion" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IEmision_ObtenerAgrupacionPaginadoPorAnoYPeriodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAgrupacionPaginadoPorAnoYPeriodo" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerAgrupacionPaginadoPorAnoYPeriodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAgrupacionPaginadoPorAnoYPeriodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerAgrupacionPaginadoPorAnoYPeriodo_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q1:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerUsosLoterosCRPorAgrupacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerUsosLoterosCRPorAgrupacion" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerUsosLoterosCRPorAgrupacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerUsosLoterosCRPorAgrupacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerUsosLoterosCRPorAgrupacion_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q2:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerInformacionProcesos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerInformacionProcesos" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerInformacionProcesos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerInformacionProcesosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerInformacionProcesos_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q3:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerInformacionJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerInformacionJob" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerInformacionJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerInformacionJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerInformacionJob_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q4:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerEmisionPorAnoYPeriodos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEmisionPorAnoYPeriodos" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerEmisionPorAnoYPeriodos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEmisionPorAnoYPeriodosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerEmisionPorAnoYPeriodos_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q5:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerCuentasFaltaVU_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCuentasFaltaVU" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerCuentasFaltaVU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCuentasFaltaVUResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerCuentasFaltaVU_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q6:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_SolicitarGenerarCuentasFaltaVU_InputMessage">
+    <wsdl:part name="parameters" element="tns:SolicitarGenerarCuentasFaltaVU" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_SolicitarGenerarCuentasFaltaVU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SolicitarGenerarCuentasFaltaVUResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_SolicitarGenerarCuentasFaltaVU_EmisionInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q7:EmisionInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_SolicitarGenerarCuentasFaltaVU_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q8:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarOperacionCuentasFaltaVU_InputMessage">
+    <wsdl:part name="parameters" element="tns:ComprobarOperacionCuentasFaltaVU" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarOperacionCuentasFaltaVU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ComprobarOperacionCuentasFaltaVUResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarOperacionCuentasFaltaVU_EmisionInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q9:EmisionInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarOperacionCuentasFaltaVU_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q10:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerLoteros_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerLoteros" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerLoteros_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerLoterosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerLoteros_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q11:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerLoteros_EmisionInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q12:EmisionInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerInfoLCBoleta_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerInfoLCBoleta" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerInfoLCBoleta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerInfoLCBoletaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerInfoLCBoleta_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q13:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerInfoLCBoleta_EmisionInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q14:EmisionInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerAgrupacionLC_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAgrupacionLC" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerAgrupacionLC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAgrupacionLCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerAgrupacionLC_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q15:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ActualizarAgrupacionLC_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarAgrupacionLC" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ActualizarAgrupacionLC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarAgrupacionLCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ActualizarAgrupacionLC_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q16:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ActualizarLCEmision_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarLCEmision" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ActualizarLCEmision_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarLCEmisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ActualizarLCEmision_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q17:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerEmisionResultadoPorIdagrupacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEmisionResultadoPorIdagrupacion" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerEmisionResultadoPorIdagrupacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEmisionResultadoPorIdagrupacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerEmisionResultadoPorIdagrupacion_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q18:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerQuejososPorInmueble_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerQuejososPorInmueble" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerQuejososPorInmueble_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerQuejososPorInmuebleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerQuejososPorInmueble_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q19:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerQuejososPorContribuyenteDatosIdentificativos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerQuejososPorContribuyenteDatosIdentificativos" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerQuejososPorContribuyenteDatosIdentificativos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerQuejososPorContribuyenteDatosIdentificativosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerQuejososPorContribuyenteDatosIdentificativos_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q20:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerQuejososPorContribuyenteDatosPersonales_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerQuejososPorContribuyenteDatosPersonales" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerQuejososPorContribuyenteDatosPersonales_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerQuejososPorContribuyenteDatosPersonalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerQuejososPorContribuyenteDatosPersonales_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q21:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ActualizarQuejosos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarQuejosos" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ActualizarQuejosos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarQuejososResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ActualizarQuejosos_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q22:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ActualizarMensajes_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarMensajes" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ActualizarMensajes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarMensajesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ActualizarMensajes_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q23:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerMensajes_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMensajes" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerMensajes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMensajesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerMensajes_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q24:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_EstablecerIdEjercicio_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstablecerIdEjercicio" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_EstablecerIdEjercicio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstablecerIdEjercicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_EstablecerIdEjercicio_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q25:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_EstablecerPeriodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstablecerPeriodo" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_EstablecerPeriodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstablecerPeriodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_EstablecerPeriodo_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q26:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_EstablecerSimulacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstablecerSimulacion" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_EstablecerSimulacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstablecerSimulacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_EstablecerSimulacion_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q27:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerPeriodosVigencia_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPeriodosVigencia" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerPeriodosVigencia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPeriodosVigenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerPeriodosVigencia_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q28:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerBoleta_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerBoleta" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerBoleta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerBoletaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerBoleta_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q29:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerCuenta_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCuenta" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerCuenta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCuentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerCuenta_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q30:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerDescripcion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDescripcion" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerDescripcion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDescripcionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerDescripcion_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q31:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_InsertarLineaCaptura_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarLineaCaptura" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_InsertarLineaCaptura_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarLineaCapturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_InsertarLineaCaptura_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q32:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_CrearPasosSipresei_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearPasosSipresei" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_CrearPasosSipresei_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearPasosSipreseiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_CrearPasosSipresei_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q33:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarOperacionSipresei_InputMessage">
+    <wsdl:part name="parameters" element="tns:ComprobarOperacionSipresei" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarOperacionSipresei_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ComprobarOperacionSipreseiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarOperacionSipresei_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q34:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerHoraServidor_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerHoraServidor" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerHoraServidor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerHoraServidorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerHoraServidor_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q35:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerHoraServidor_EmisionInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q36:EmisionInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerPeriodoActual_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPeriodoActual" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerPeriodoActual_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPeriodoActualResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerPeriodoActual_EmisionInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q37:EmisionInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerPeriodoActual_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q38:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerIdEjercicioActual_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerIdEjercicioActual" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerIdEjercicioActual_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerIdEjercicioActualResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerIdEjercicioActual_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q39="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q39:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerIdEjercicioActual_EmisionInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q40="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q40:EmisionInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerPeriodoEmision_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPeriodoEmision" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerPeriodoEmision_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPeriodoEmisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerPeriodoEmision_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q41="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q41:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerPeriodoEmision_EmisionInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q42:EmisionInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerIdEjercicioEmision_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerIdEjercicioEmision" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerIdEjercicioEmision_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerIdEjercicioEmisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerIdEjercicioEmision_EmisionInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q43="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q43:EmisionInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerIdEjercicioEmision_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q44="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q44:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarOperacionObtenerDatosBase_InputMessage">
+    <wsdl:part name="parameters" element="tns:ComprobarOperacionObtenerDatosBase" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarOperacionObtenerDatosBase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ComprobarOperacionObtenerDatosBaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarOperacionObtenerDatosBase_EmisionInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q45="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q45:EmisionInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarOperacionObtenerDatosBase_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q46="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q46:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_SolicitarCorteCalculo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SolicitarCorteCalculo" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_SolicitarCorteCalculo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SolicitarCorteCalculoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_SolicitarCorteCalculo_EmisionInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q47="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q47:EmisionInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_SolicitarCorteCalculo_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q48="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q48:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_SolicitarBorrarSimulacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:SolicitarBorrarSimulacion" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_SolicitarBorrarSimulacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SolicitarBorrarSimulacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_SolicitarBorrarSimulacion_EmisionInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q49="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q49:EmisionInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_SolicitarBorrarSimulacion_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q50="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q50:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarEmisionEnFirme_InputMessage">
+    <wsdl:part name="parameters" element="tns:ComprobarEmisionEnFirme" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarEmisionEnFirme_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ComprobarEmisionEnFirmeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarEmisionEnFirme_EmisionInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q51="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q51:EmisionInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarEmisionEnFirme_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q52="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q52:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerCortesSimulacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCortesSimulacion" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerCortesSimulacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCortesSimulacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerCortesSimulacion_EmisionInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q53="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q53:EmisionInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerCortesSimulacion_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q54="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q54:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarProceso_InputMessage">
+    <wsdl:part name="parameters" element="tns:ComprobarProceso" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarProceso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ComprobarProcesoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarProceso_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q55="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q55:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarOperacionObtenerEstadoCuenta_InputMessage">
+    <wsdl:part name="parameters" element="tns:ComprobarOperacionObtenerEstadoCuenta" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarOperacionObtenerEstadoCuenta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ComprobarOperacionObtenerEstadoCuentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarOperacionObtenerEstadoCuenta_EmisionInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q56="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q56:EmisionInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarOperacionObtenerEstadoCuenta_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q57="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q57:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarOperacionObtenerIndicesPago_InputMessage">
+    <wsdl:part name="parameters" element="tns:ComprobarOperacionObtenerIndicesPago" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarOperacionObtenerIndicesPago_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ComprobarOperacionObtenerIndicesPagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarOperacionObtenerIndicesPago_EmisionInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q58="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q58:EmisionInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarOperacionObtenerIndicesPago_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q59="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q59:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_SolicitarObtencionIndicesPago_InputMessage">
+    <wsdl:part name="parameters" element="tns:SolicitarObtencionIndicesPago" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_SolicitarObtencionIndicesPago_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SolicitarObtencionIndicesPagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_SolicitarObtencionIndicesPago_EmisionInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q60="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q60:EmisionInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_SolicitarObtencionIndicesPago_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q61="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q61:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_SolicitarEstadoCuenta_InputMessage">
+    <wsdl:part name="parameters" element="tns:SolicitarEstadoCuenta" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_SolicitarEstadoCuenta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SolicitarEstadoCuentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_SolicitarEstadoCuenta_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q62="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q62:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_SolicitarEstadoCuenta_EmisionInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q63="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q63:EmisionInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerFechaCorteCalculo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerFechaCorteCalculo" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerFechaCorteCalculo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerFechaCorteCalculoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerFechaCorteCalculo_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q64="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q64:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarOperacionEmision_InputMessage">
+    <wsdl:part name="parameters" element="tns:ComprobarOperacionEmision" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarOperacionEmision_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ComprobarOperacionEmisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarOperacionEmision_EmisionInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q65="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q65:EmisionInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarOperacionEmision_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q66="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q66:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_SolicitarEmision_InputMessage">
+    <wsdl:part name="parameters" element="tns:SolicitarEmision" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_SolicitarEmision_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SolicitarEmisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_SolicitarEmision_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q67="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q67:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_SolicitarEmision_EmisionInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q68="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q68:EmisionInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarOperacionImpresion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ComprobarOperacionImpresion" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarOperacionImpresion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ComprobarOperacionImpresionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarOperacionImpresion_EmisionInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q69="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q69:EmisionInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ComprobarOperacionImpresion_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q70="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q70:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_SolicitarImpresion_InputMessage">
+    <wsdl:part name="parameters" element="tns:SolicitarImpresion" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_SolicitarImpresion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SolicitarImpresionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_SolicitarImpresion_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q71="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q71:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_SolicitarImpresion_EmisionInfoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q72="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q72:EmisionInfoException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_SolicitarCargarLineasDeCaptura_InputMessage">
+    <wsdl:part name="parameters" element="tns:SolicitarCargarLineasDeCaptura" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_SolicitarCargarLineasDeCaptura_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SolicitarCargarLineasDeCapturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_SolicitarCargarLineasDeCaptura_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q73="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q73:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerIDSeleccionCuentas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerIDSeleccionCuentas" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerIDSeleccionCuentas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerIDSeleccionCuentasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerIDSeleccionCuentas_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q74="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q74:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerRutaFicheros_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerRutaFicheros" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerRutaFicheros_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerRutaFicherosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerRutaFicheros_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q75="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q75:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerFiltroCuentas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerFiltroCuentas" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerFiltroCuentas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerFiltroCuentasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerFiltroCuentas_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q76="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q76:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerEmisionCabeceraActual_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEmisionCabeceraActual" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerEmisionCabeceraActual_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEmisionCabeceraActualResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerEmisionCabeceraActual_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q77="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q77:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerEmisionCabeceraEmision_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEmisionCabeceraEmision" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerEmisionCabeceraEmision_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEmisionCabeceraEmisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerEmisionCabeceraEmision_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q78="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q78:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerEmisionCabeceraById_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEmisionCabeceraById" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerEmisionCabeceraById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEmisionCabeceraByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerEmisionCabeceraById_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q79="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q79:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerEmisionCabecera_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEmisionCabecera" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerEmisionCabecera_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEmisionCabeceraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerEmisionCabecera_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q80="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q80:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerEmisionResultadoPorAnoYPeriodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEmisionResultadoPorAnoYPeriodo" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerEmisionResultadoPorAnoYPeriodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEmisionResultadoPorAnoYPeriodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerEmisionResultadoPorAnoYPeriodo_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q81="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q81:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerEmisionResultadoPorListaAnoPeriodoInmueble_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEmisionResultadoPorListaAnoPeriodoInmueble" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerEmisionResultadoPorListaAnoPeriodoInmueble_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEmisionResultadoPorListaAnoPeriodoInmuebleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerEmisionResultadoPorListaAnoPeriodoInmueble_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q82="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q82:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerAgrupacionPorAnoYPeriodo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAgrupacionPorAnoYPeriodo" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerAgrupacionPorAnoYPeriodo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAgrupacionPorAnoYPeriodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerAgrupacionPorAnoYPeriodo_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q83="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q83:EmisionException" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerAgrupacionCompletaPorIdAgrupacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAgrupacionCompletaPorIdAgrupacion" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerAgrupacionCompletaPorIdAgrupacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAgrupacionCompletaPorIdAgrupacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmision_ObtenerAgrupacionCompletaPorIdAgrupacion_EmisionExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q84="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.Negocio.Exceptions" name="detail" element="q84:EmisionException" />
+  </wsdl:message>
+  <wsdl:portType name="IEmision">
+    <wsdl:operation name="ObtenerAgrupacionPaginadoPorAnoYPeriodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerAgrupacionPaginadoPorAnoYPeriodo" message="tns:IEmision_ObtenerAgrupacionPaginadoPorAnoYPeriodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerAgrupacionPaginadoPorAnoYPeriodoResponse" message="tns:IEmision_ObtenerAgrupacionPaginadoPorAnoYPeriodo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerAgrupacionPaginadoPorAnoYPeriodoEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerAgrupacionPaginadoPorAnoYPeriodo_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerUsosLoterosCRPorAgrupacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerUsosLoterosCRPorAgrupacion" message="tns:IEmision_ObtenerUsosLoterosCRPorAgrupacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerUsosLoterosCRPorAgrupacionResponse" message="tns:IEmision_ObtenerUsosLoterosCRPorAgrupacion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerUsosLoterosCRPorAgrupacionEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerUsosLoterosCRPorAgrupacion_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerInformacionProcesos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerInformacionProcesos" message="tns:IEmision_ObtenerInformacionProcesos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerInformacionProcesosResponse" message="tns:IEmision_ObtenerInformacionProcesos_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerInformacionProcesosEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerInformacionProcesos_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerInformacionJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerInformacionJob" message="tns:IEmision_ObtenerInformacionJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerInformacionJobResponse" message="tns:IEmision_ObtenerInformacionJob_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerInformacionJobEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerInformacionJob_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmisionPorAnoYPeriodos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerEmisionPorAnoYPeriodos" message="tns:IEmision_ObtenerEmisionPorAnoYPeriodos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerEmisionPorAnoYPeriodosResponse" message="tns:IEmision_ObtenerEmisionPorAnoYPeriodos_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerEmisionPorAnoYPeriodosEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerEmisionPorAnoYPeriodos_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCuentasFaltaVU">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerCuentasFaltaVU" message="tns:IEmision_ObtenerCuentasFaltaVU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerCuentasFaltaVUResponse" message="tns:IEmision_ObtenerCuentasFaltaVU_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerCuentasFaltaVUEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerCuentasFaltaVU_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarGenerarCuentasFaltaVU">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/SolicitarGenerarCuentasFaltaVU" message="tns:IEmision_SolicitarGenerarCuentasFaltaVU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/SolicitarGenerarCuentasFaltaVUResponse" message="tns:IEmision_SolicitarGenerarCuentasFaltaVU_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/SolicitarGenerarCuentasFaltaVUEmisionInfoExceptionFault" name="EmisionInfoExceptionFault" message="tns:IEmision_SolicitarGenerarCuentasFaltaVU_EmisionInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/SolicitarGenerarCuentasFaltaVUEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_SolicitarGenerarCuentasFaltaVU_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ComprobarOperacionCuentasFaltaVU">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ComprobarOperacionCuentasFaltaVU" message="tns:IEmision_ComprobarOperacionCuentasFaltaVU_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ComprobarOperacionCuentasFaltaVUResponse" message="tns:IEmision_ComprobarOperacionCuentasFaltaVU_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ComprobarOperacionCuentasFaltaVUEmisionInfoExceptionFault" name="EmisionInfoExceptionFault" message="tns:IEmision_ComprobarOperacionCuentasFaltaVU_EmisionInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ComprobarOperacionCuentasFaltaVUEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ComprobarOperacionCuentasFaltaVU_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerLoteros">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerLoteros" message="tns:IEmision_ObtenerLoteros_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerLoterosResponse" message="tns:IEmision_ObtenerLoteros_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerLoterosEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerLoteros_EmisionExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerLoterosEmisionInfoExceptionFault" name="EmisionInfoExceptionFault" message="tns:IEmision_ObtenerLoteros_EmisionInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerInfoLCBoleta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerInfoLCBoleta" message="tns:IEmision_ObtenerInfoLCBoleta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerInfoLCBoletaResponse" message="tns:IEmision_ObtenerInfoLCBoleta_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerInfoLCBoletaEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerInfoLCBoleta_EmisionExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerInfoLCBoletaEmisionInfoExceptionFault" name="EmisionInfoExceptionFault" message="tns:IEmision_ObtenerInfoLCBoleta_EmisionInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAgrupacionLC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerAgrupacionLC" message="tns:IEmision_ObtenerAgrupacionLC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerAgrupacionLCResponse" message="tns:IEmision_ObtenerAgrupacionLC_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerAgrupacionLCEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerAgrupacionLC_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarAgrupacionLC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ActualizarAgrupacionLC" message="tns:IEmision_ActualizarAgrupacionLC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ActualizarAgrupacionLCResponse" message="tns:IEmision_ActualizarAgrupacionLC_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ActualizarAgrupacionLCEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ActualizarAgrupacionLC_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarLCEmision">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ActualizarLCEmision" message="tns:IEmision_ActualizarLCEmision_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ActualizarLCEmisionResponse" message="tns:IEmision_ActualizarLCEmision_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ActualizarLCEmisionEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ActualizarLCEmision_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmisionResultadoPorIdagrupacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerEmisionResultadoPorIdagrupacion" message="tns:IEmision_ObtenerEmisionResultadoPorIdagrupacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerEmisionResultadoPorIdagrupacionResponse" message="tns:IEmision_ObtenerEmisionResultadoPorIdagrupacion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerEmisionResultadoPorIdagrupacionEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerEmisionResultadoPorIdagrupacion_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerQuejososPorInmueble">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerQuejososPorInmueble" message="tns:IEmision_ObtenerQuejososPorInmueble_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerQuejososPorInmuebleResponse" message="tns:IEmision_ObtenerQuejososPorInmueble_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerQuejososPorInmuebleEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerQuejososPorInmueble_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerQuejososPorContribuyenteDatosIdentificativos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerQuejososPorContribuyenteDatosIdentificativos" message="tns:IEmision_ObtenerQuejososPorContribuyenteDatosIdentificativos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerQuejososPorContribuyenteDatosIdentificativosResponse" message="tns:IEmision_ObtenerQuejososPorContribuyenteDatosIdentificativos_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerQuejososPorContribuyenteDatosIdentificativosEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerQuejososPorContribuyenteDatosIdentificativos_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerQuejososPorContribuyenteDatosPersonales">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerQuejososPorContribuyenteDatosPersonales" message="tns:IEmision_ObtenerQuejososPorContribuyenteDatosPersonales_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerQuejososPorContribuyenteDatosPersonalesResponse" message="tns:IEmision_ObtenerQuejososPorContribuyenteDatosPersonales_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerQuejososPorContribuyenteDatosPersonalesEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerQuejososPorContribuyenteDatosPersonales_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarQuejosos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ActualizarQuejosos" message="tns:IEmision_ActualizarQuejosos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ActualizarQuejososResponse" message="tns:IEmision_ActualizarQuejosos_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ActualizarQuejososEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ActualizarQuejosos_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarMensajes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ActualizarMensajes" message="tns:IEmision_ActualizarMensajes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ActualizarMensajesResponse" message="tns:IEmision_ActualizarMensajes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ActualizarMensajesEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ActualizarMensajes_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMensajes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerMensajes" message="tns:IEmision_ObtenerMensajes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerMensajesResponse" message="tns:IEmision_ObtenerMensajes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerMensajesEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerMensajes_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EstablecerIdEjercicio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/EstablecerIdEjercicio" message="tns:IEmision_EstablecerIdEjercicio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/EstablecerIdEjercicioResponse" message="tns:IEmision_EstablecerIdEjercicio_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/EstablecerIdEjercicioEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_EstablecerIdEjercicio_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EstablecerPeriodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/EstablecerPeriodo" message="tns:IEmision_EstablecerPeriodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/EstablecerPeriodoResponse" message="tns:IEmision_EstablecerPeriodo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/EstablecerPeriodoEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_EstablecerPeriodo_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EstablecerSimulacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/EstablecerSimulacion" message="tns:IEmision_EstablecerSimulacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/EstablecerSimulacionResponse" message="tns:IEmision_EstablecerSimulacion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/EstablecerSimulacionEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_EstablecerSimulacion_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPeriodosVigencia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerPeriodosVigencia" message="tns:IEmision_ObtenerPeriodosVigencia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerPeriodosVigenciaResponse" message="tns:IEmision_ObtenerPeriodosVigencia_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerPeriodosVigenciaEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerPeriodosVigencia_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerBoleta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerBoleta" message="tns:IEmision_ObtenerBoleta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerBoletaResponse" message="tns:IEmision_ObtenerBoleta_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerBoletaEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerBoleta_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCuenta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerCuenta" message="tns:IEmision_ObtenerCuenta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerCuentaResponse" message="tns:IEmision_ObtenerCuenta_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerCuentaEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerCuenta_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDescripcion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerDescripcion" message="tns:IEmision_ObtenerDescripcion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerDescripcionResponse" message="tns:IEmision_ObtenerDescripcion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerDescripcionEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerDescripcion_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarLineaCaptura">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/InsertarLineaCaptura" message="tns:IEmision_InsertarLineaCaptura_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/InsertarLineaCapturaResponse" message="tns:IEmision_InsertarLineaCaptura_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/InsertarLineaCapturaEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_InsertarLineaCaptura_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearPasosSipresei">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/CrearPasosSipresei" message="tns:IEmision_CrearPasosSipresei_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/CrearPasosSipreseiResponse" message="tns:IEmision_CrearPasosSipresei_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/CrearPasosSipreseiEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_CrearPasosSipresei_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ComprobarOperacionSipresei">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ComprobarOperacionSipresei" message="tns:IEmision_ComprobarOperacionSipresei_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ComprobarOperacionSipreseiResponse" message="tns:IEmision_ComprobarOperacionSipresei_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ComprobarOperacionSipreseiEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ComprobarOperacionSipresei_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerHoraServidor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerHoraServidor" message="tns:IEmision_ObtenerHoraServidor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerHoraServidorResponse" message="tns:IEmision_ObtenerHoraServidor_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerHoraServidorEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerHoraServidor_EmisionExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerHoraServidorEmisionInfoExceptionFault" name="EmisionInfoExceptionFault" message="tns:IEmision_ObtenerHoraServidor_EmisionInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPeriodoActual">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerPeriodoActual" message="tns:IEmision_ObtenerPeriodoActual_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerPeriodoActualResponse" message="tns:IEmision_ObtenerPeriodoActual_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerPeriodoActualEmisionInfoExceptionFault" name="EmisionInfoExceptionFault" message="tns:IEmision_ObtenerPeriodoActual_EmisionInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerPeriodoActualEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerPeriodoActual_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerIdEjercicioActual">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerIdEjercicioActual" message="tns:IEmision_ObtenerIdEjercicioActual_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerIdEjercicioActualResponse" message="tns:IEmision_ObtenerIdEjercicioActual_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerIdEjercicioActualEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerIdEjercicioActual_EmisionExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerIdEjercicioActualEmisionInfoExceptionFault" name="EmisionInfoExceptionFault" message="tns:IEmision_ObtenerIdEjercicioActual_EmisionInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPeriodoEmision">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerPeriodoEmision" message="tns:IEmision_ObtenerPeriodoEmision_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerPeriodoEmisionResponse" message="tns:IEmision_ObtenerPeriodoEmision_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerPeriodoEmisionEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerPeriodoEmision_EmisionExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerPeriodoEmisionEmisionInfoExceptionFault" name="EmisionInfoExceptionFault" message="tns:IEmision_ObtenerPeriodoEmision_EmisionInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerIdEjercicioEmision">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerIdEjercicioEmision" message="tns:IEmision_ObtenerIdEjercicioEmision_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerIdEjercicioEmisionResponse" message="tns:IEmision_ObtenerIdEjercicioEmision_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerIdEjercicioEmisionEmisionInfoExceptionFault" name="EmisionInfoExceptionFault" message="tns:IEmision_ObtenerIdEjercicioEmision_EmisionInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerIdEjercicioEmisionEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerIdEjercicioEmision_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ComprobarOperacionObtenerDatosBase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ComprobarOperacionObtenerDatosBase" message="tns:IEmision_ComprobarOperacionObtenerDatosBase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ComprobarOperacionObtenerDatosBaseResponse" message="tns:IEmision_ComprobarOperacionObtenerDatosBase_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ComprobarOperacionObtenerDatosBaseEmisionInfoExceptionFault" name="EmisionInfoExceptionFault" message="tns:IEmision_ComprobarOperacionObtenerDatosBase_EmisionInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ComprobarOperacionObtenerDatosBaseEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ComprobarOperacionObtenerDatosBase_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarCorteCalculo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/SolicitarCorteCalculo" message="tns:IEmision_SolicitarCorteCalculo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/SolicitarCorteCalculoResponse" message="tns:IEmision_SolicitarCorteCalculo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/SolicitarCorteCalculoEmisionInfoExceptionFault" name="EmisionInfoExceptionFault" message="tns:IEmision_SolicitarCorteCalculo_EmisionInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/SolicitarCorteCalculoEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_SolicitarCorteCalculo_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarBorrarSimulacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/SolicitarBorrarSimulacion" message="tns:IEmision_SolicitarBorrarSimulacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/SolicitarBorrarSimulacionResponse" message="tns:IEmision_SolicitarBorrarSimulacion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/SolicitarBorrarSimulacionEmisionInfoExceptionFault" name="EmisionInfoExceptionFault" message="tns:IEmision_SolicitarBorrarSimulacion_EmisionInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/SolicitarBorrarSimulacionEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_SolicitarBorrarSimulacion_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ComprobarEmisionEnFirme">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ComprobarEmisionEnFirme" message="tns:IEmision_ComprobarEmisionEnFirme_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ComprobarEmisionEnFirmeResponse" message="tns:IEmision_ComprobarEmisionEnFirme_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ComprobarEmisionEnFirmeEmisionInfoExceptionFault" name="EmisionInfoExceptionFault" message="tns:IEmision_ComprobarEmisionEnFirme_EmisionInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ComprobarEmisionEnFirmeEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ComprobarEmisionEnFirme_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCortesSimulacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerCortesSimulacion" message="tns:IEmision_ObtenerCortesSimulacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerCortesSimulacionResponse" message="tns:IEmision_ObtenerCortesSimulacion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerCortesSimulacionEmisionInfoExceptionFault" name="EmisionInfoExceptionFault" message="tns:IEmision_ObtenerCortesSimulacion_EmisionInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerCortesSimulacionEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerCortesSimulacion_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ComprobarProceso">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ComprobarProceso" message="tns:IEmision_ComprobarProceso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ComprobarProcesoResponse" message="tns:IEmision_ComprobarProceso_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ComprobarProcesoEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ComprobarProceso_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ComprobarOperacionObtenerEstadoCuenta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ComprobarOperacionObtenerEstadoCuenta" message="tns:IEmision_ComprobarOperacionObtenerEstadoCuenta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ComprobarOperacionObtenerEstadoCuentaResponse" message="tns:IEmision_ComprobarOperacionObtenerEstadoCuenta_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ComprobarOperacionObtenerEstadoCuentaEmisionInfoExceptionFault" name="EmisionInfoExceptionFault" message="tns:IEmision_ComprobarOperacionObtenerEstadoCuenta_EmisionInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ComprobarOperacionObtenerEstadoCuentaEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ComprobarOperacionObtenerEstadoCuenta_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ComprobarOperacionObtenerIndicesPago">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ComprobarOperacionObtenerIndicesPago" message="tns:IEmision_ComprobarOperacionObtenerIndicesPago_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ComprobarOperacionObtenerIndicesPagoResponse" message="tns:IEmision_ComprobarOperacionObtenerIndicesPago_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ComprobarOperacionObtenerIndicesPagoEmisionInfoExceptionFault" name="EmisionInfoExceptionFault" message="tns:IEmision_ComprobarOperacionObtenerIndicesPago_EmisionInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ComprobarOperacionObtenerIndicesPagoEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ComprobarOperacionObtenerIndicesPago_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarObtencionIndicesPago">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/SolicitarObtencionIndicesPago" message="tns:IEmision_SolicitarObtencionIndicesPago_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/SolicitarObtencionIndicesPagoResponse" message="tns:IEmision_SolicitarObtencionIndicesPago_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/SolicitarObtencionIndicesPagoEmisionInfoExceptionFault" name="EmisionInfoExceptionFault" message="tns:IEmision_SolicitarObtencionIndicesPago_EmisionInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/SolicitarObtencionIndicesPagoEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_SolicitarObtencionIndicesPago_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarEstadoCuenta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/SolicitarEstadoCuenta" message="tns:IEmision_SolicitarEstadoCuenta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/SolicitarEstadoCuentaResponse" message="tns:IEmision_SolicitarEstadoCuenta_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/SolicitarEstadoCuentaEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_SolicitarEstadoCuenta_EmisionExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/SolicitarEstadoCuentaEmisionInfoExceptionFault" name="EmisionInfoExceptionFault" message="tns:IEmision_SolicitarEstadoCuenta_EmisionInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerFechaCorteCalculo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerFechaCorteCalculo" message="tns:IEmision_ObtenerFechaCorteCalculo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerFechaCorteCalculoResponse" message="tns:IEmision_ObtenerFechaCorteCalculo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerFechaCorteCalculoEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerFechaCorteCalculo_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ComprobarOperacionEmision">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ComprobarOperacionEmision" message="tns:IEmision_ComprobarOperacionEmision_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ComprobarOperacionEmisionResponse" message="tns:IEmision_ComprobarOperacionEmision_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ComprobarOperacionEmisionEmisionInfoExceptionFault" name="EmisionInfoExceptionFault" message="tns:IEmision_ComprobarOperacionEmision_EmisionInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ComprobarOperacionEmisionEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ComprobarOperacionEmision_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarEmision">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/SolicitarEmision" message="tns:IEmision_SolicitarEmision_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/SolicitarEmisionResponse" message="tns:IEmision_SolicitarEmision_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/SolicitarEmisionEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_SolicitarEmision_EmisionExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/SolicitarEmisionEmisionInfoExceptionFault" name="EmisionInfoExceptionFault" message="tns:IEmision_SolicitarEmision_EmisionInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ComprobarOperacionImpresion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ComprobarOperacionImpresion" message="tns:IEmision_ComprobarOperacionImpresion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ComprobarOperacionImpresionResponse" message="tns:IEmision_ComprobarOperacionImpresion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ComprobarOperacionImpresionEmisionInfoExceptionFault" name="EmisionInfoExceptionFault" message="tns:IEmision_ComprobarOperacionImpresion_EmisionInfoExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ComprobarOperacionImpresionEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ComprobarOperacionImpresion_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarImpresion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/SolicitarImpresion" message="tns:IEmision_SolicitarImpresion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/SolicitarImpresionResponse" message="tns:IEmision_SolicitarImpresion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/SolicitarImpresionEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_SolicitarImpresion_EmisionExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/SolicitarImpresionEmisionInfoExceptionFault" name="EmisionInfoExceptionFault" message="tns:IEmision_SolicitarImpresion_EmisionInfoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarCargarLineasDeCaptura">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/SolicitarCargarLineasDeCaptura" message="tns:IEmision_SolicitarCargarLineasDeCaptura_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/SolicitarCargarLineasDeCapturaResponse" message="tns:IEmision_SolicitarCargarLineasDeCaptura_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/SolicitarCargarLineasDeCapturaEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_SolicitarCargarLineasDeCaptura_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerIDSeleccionCuentas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerIDSeleccionCuentas" message="tns:IEmision_ObtenerIDSeleccionCuentas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerIDSeleccionCuentasResponse" message="tns:IEmision_ObtenerIDSeleccionCuentas_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerIDSeleccionCuentasEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerIDSeleccionCuentas_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerRutaFicheros">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerRutaFicheros" message="tns:IEmision_ObtenerRutaFicheros_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerRutaFicherosResponse" message="tns:IEmision_ObtenerRutaFicheros_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerRutaFicherosEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerRutaFicheros_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerFiltroCuentas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerFiltroCuentas" message="tns:IEmision_ObtenerFiltroCuentas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerFiltroCuentasResponse" message="tns:IEmision_ObtenerFiltroCuentas_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerFiltroCuentasEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerFiltroCuentas_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmisionCabeceraActual">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerEmisionCabeceraActual" message="tns:IEmision_ObtenerEmisionCabeceraActual_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerEmisionCabeceraActualResponse" message="tns:IEmision_ObtenerEmisionCabeceraActual_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerEmisionCabeceraActualEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerEmisionCabeceraActual_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmisionCabeceraEmision">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerEmisionCabeceraEmision" message="tns:IEmision_ObtenerEmisionCabeceraEmision_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerEmisionCabeceraEmisionResponse" message="tns:IEmision_ObtenerEmisionCabeceraEmision_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerEmisionCabeceraEmisionEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerEmisionCabeceraEmision_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmisionCabeceraById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerEmisionCabeceraById" message="tns:IEmision_ObtenerEmisionCabeceraById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerEmisionCabeceraByIdResponse" message="tns:IEmision_ObtenerEmisionCabeceraById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerEmisionCabeceraByIdEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerEmisionCabeceraById_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmisionCabecera">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerEmisionCabecera" message="tns:IEmision_ObtenerEmisionCabecera_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerEmisionCabeceraResponse" message="tns:IEmision_ObtenerEmisionCabecera_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerEmisionCabeceraEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerEmisionCabecera_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmisionResultadoPorAnoYPeriodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerEmisionResultadoPorAnoYPeriodo" message="tns:IEmision_ObtenerEmisionResultadoPorAnoYPeriodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerEmisionResultadoPorAnoYPeriodoResponse" message="tns:IEmision_ObtenerEmisionResultadoPorAnoYPeriodo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerEmisionResultadoPorAnoYPeriodoEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerEmisionResultadoPorAnoYPeriodo_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmisionResultadoPorListaAnoPeriodoInmueble">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerEmisionResultadoPorListaAnoPeriodoInmueble" message="tns:IEmision_ObtenerEmisionResultadoPorListaAnoPeriodoInmueble_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerEmisionResultadoPorListaAnoPeriodoInmuebleResponse" message="tns:IEmision_ObtenerEmisionResultadoPorListaAnoPeriodoInmueble_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerEmisionResultadoPorListaAnoPeriodoInmuebleEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerEmisionResultadoPorListaAnoPeriodoInmueble_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAgrupacionPorAnoYPeriodo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerAgrupacionPorAnoYPeriodo" message="tns:IEmision_ObtenerAgrupacionPorAnoYPeriodo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerAgrupacionPorAnoYPeriodoResponse" message="tns:IEmision_ObtenerAgrupacionPorAnoYPeriodo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerAgrupacionPorAnoYPeriodoEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerAgrupacionPorAnoYPeriodo_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAgrupacionCompletaPorIdAgrupacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmision/ObtenerAgrupacionCompletaPorIdAgrupacion" message="tns:IEmision_ObtenerAgrupacionCompletaPorIdAgrupacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmision/ObtenerAgrupacionCompletaPorIdAgrupacionResponse" message="tns:IEmision_ObtenerAgrupacionCompletaPorIdAgrupacion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IEmision/ObtenerAgrupacionCompletaPorIdAgrupacionEmisionExceptionFault" name="EmisionExceptionFault" message="tns:IEmision_ObtenerAgrupacionCompletaPorIdAgrupacion_EmisionExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WsHttp" type="tns:IEmision">
+    <wsp:PolicyReference URI="#WsHttp_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerAgrupacionPaginadoPorAnoYPeriodo">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerAgrupacionPaginadoPorAnoYPeriodo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerUsosLoterosCRPorAgrupacion">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerUsosLoterosCRPorAgrupacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerInformacionProcesos">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerInformacionProcesos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerInformacionJob">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerInformacionJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmisionPorAnoYPeriodos">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerEmisionPorAnoYPeriodos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCuentasFaltaVU">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerCuentasFaltaVU" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarGenerarCuentasFaltaVU">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/SolicitarGenerarCuentasFaltaVU" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionInfoExceptionFault">
+        <soap12:fault use="literal" name="EmisionInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ComprobarOperacionCuentasFaltaVU">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ComprobarOperacionCuentasFaltaVU" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionInfoExceptionFault">
+        <soap12:fault use="literal" name="EmisionInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerLoteros">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerLoteros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="EmisionInfoExceptionFault">
+        <soap12:fault use="literal" name="EmisionInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerInfoLCBoleta">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerInfoLCBoleta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="EmisionInfoExceptionFault">
+        <soap12:fault use="literal" name="EmisionInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAgrupacionLC">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerAgrupacionLC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarAgrupacionLC">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ActualizarAgrupacionLC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarLCEmision">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ActualizarLCEmision" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmisionResultadoPorIdagrupacion">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerEmisionResultadoPorIdagrupacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerQuejososPorInmueble">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerQuejososPorInmueble" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerQuejososPorContribuyenteDatosIdentificativos">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerQuejososPorContribuyenteDatosIdentificativos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerQuejososPorContribuyenteDatosPersonales">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerQuejososPorContribuyenteDatosPersonales" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarQuejosos">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ActualizarQuejosos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarMensajes">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ActualizarMensajes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMensajes">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerMensajes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="EstablecerIdEjercicio">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/EstablecerIdEjercicio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="EstablecerPeriodo">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/EstablecerPeriodo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="EstablecerSimulacion">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/EstablecerSimulacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPeriodosVigencia">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerPeriodosVigencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerBoleta">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerBoleta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCuenta">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerCuenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDescripcion">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerDescripcion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarLineaCaptura">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/InsertarLineaCaptura" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CrearPasosSipresei">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/CrearPasosSipresei" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ComprobarOperacionSipresei">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ComprobarOperacionSipresei" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerHoraServidor">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerHoraServidor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="EmisionInfoExceptionFault">
+        <soap12:fault use="literal" name="EmisionInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPeriodoActual">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerPeriodoActual" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionInfoExceptionFault">
+        <soap12:fault use="literal" name="EmisionInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerIdEjercicioActual">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerIdEjercicioActual" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="EmisionInfoExceptionFault">
+        <soap12:fault use="literal" name="EmisionInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPeriodoEmision">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerPeriodoEmision" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="EmisionInfoExceptionFault">
+        <soap12:fault use="literal" name="EmisionInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerIdEjercicioEmision">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerIdEjercicioEmision" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionInfoExceptionFault">
+        <soap12:fault use="literal" name="EmisionInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ComprobarOperacionObtenerDatosBase">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ComprobarOperacionObtenerDatosBase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionInfoExceptionFault">
+        <soap12:fault use="literal" name="EmisionInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarCorteCalculo">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/SolicitarCorteCalculo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionInfoExceptionFault">
+        <soap12:fault use="literal" name="EmisionInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarBorrarSimulacion">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/SolicitarBorrarSimulacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionInfoExceptionFault">
+        <soap12:fault use="literal" name="EmisionInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ComprobarEmisionEnFirme">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ComprobarEmisionEnFirme" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionInfoExceptionFault">
+        <soap12:fault use="literal" name="EmisionInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCortesSimulacion">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerCortesSimulacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionInfoExceptionFault">
+        <soap12:fault use="literal" name="EmisionInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ComprobarProceso">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ComprobarProceso" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ComprobarOperacionObtenerEstadoCuenta">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ComprobarOperacionObtenerEstadoCuenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionInfoExceptionFault">
+        <soap12:fault use="literal" name="EmisionInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ComprobarOperacionObtenerIndicesPago">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ComprobarOperacionObtenerIndicesPago" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionInfoExceptionFault">
+        <soap12:fault use="literal" name="EmisionInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarObtencionIndicesPago">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/SolicitarObtencionIndicesPago" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionInfoExceptionFault">
+        <soap12:fault use="literal" name="EmisionInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarEstadoCuenta">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/SolicitarEstadoCuenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="EmisionInfoExceptionFault">
+        <soap12:fault use="literal" name="EmisionInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerFechaCorteCalculo">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerFechaCorteCalculo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ComprobarOperacionEmision">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ComprobarOperacionEmision" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionInfoExceptionFault">
+        <soap12:fault use="literal" name="EmisionInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarEmision">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/SolicitarEmision" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="EmisionInfoExceptionFault">
+        <soap12:fault use="literal" name="EmisionInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ComprobarOperacionImpresion">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ComprobarOperacionImpresion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionInfoExceptionFault">
+        <soap12:fault use="literal" name="EmisionInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarImpresion">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/SolicitarImpresion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="EmisionInfoExceptionFault">
+        <soap12:fault use="literal" name="EmisionInfoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitarCargarLineasDeCaptura">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/SolicitarCargarLineasDeCaptura" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerIDSeleccionCuentas">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerIDSeleccionCuentas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerRutaFicheros">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerRutaFicheros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerFiltroCuentas">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerFiltroCuentas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmisionCabeceraActual">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerEmisionCabeceraActual" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmisionCabeceraEmision">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerEmisionCabeceraEmision" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmisionCabeceraById">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerEmisionCabeceraById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmisionCabecera">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerEmisionCabecera" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmisionResultadoPorAnoYPeriodo">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerEmisionResultadoPorAnoYPeriodo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmisionResultadoPorListaAnoPeriodoInmueble">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerEmisionResultadoPorListaAnoPeriodoInmueble" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAgrupacionPorAnoYPeriodo">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerAgrupacionPorAnoYPeriodo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAgrupacionCompletaPorIdAgrupacion">
+      <soap12:operation soapAction="http://tempuri.org/IEmision/ObtenerAgrupacionCompletaPorIdAgrupacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmisionExceptionFault">
+        <soap12:fault use="literal" name="EmisionExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Emision">
+    <wsdl:port name="WsHttp" binding="tns:WsHttp">
+      <soap12:address location="http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Emision/Emision.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://psur-prbs-sbs01.promocapre.int/PRE/Fiscal/Emision/Emision.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

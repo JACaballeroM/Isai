@@ -1,0 +1,1708 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://ni-prod-bpm2/PRO/RegistroContribuyentes/RegistroContribuyentesService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio.Enum" />
+  <xs:element name="GetHistoricosRepresentacionDetalle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idRepresentante" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="idRepresentado" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="idHistorico" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHistoricosRepresentacionDetalleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetHistoricosRepresentacionDetalleResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseHistorico" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseHistorico.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCiudadesByNombre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codEstado" type="xs:decimal" />
+        <xs:element minOccurs="0" name="codMunicipio" type="xs:decimal" />
+        <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCiudadesByNombreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCiudadesByNombreResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseCiudades" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseCiudades.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExisteContribuyente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="rfc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="curp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ife" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idpersona" nillable="true" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExisteContribuyenteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ExisteContribuyenteResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContribuyenteByDireccion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="v_delegacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="v_colonia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="v_calle" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="v_cp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="v_numero" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContribuyenteByDireccionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetContribuyenteByDireccionResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFolioConstCambioContribuyente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="v_UserId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="v_Area" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="v_Cuenta" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFolioConstCambioContribuyenteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFolioConstCambioContribuyenteResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFolioConstCambioContribuyente_V2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="v_UserId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="v_Area" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="v_Cuenta" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="v_Idchs" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFolioConstCambioContribuyente_V2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFolioConstCambioContribuyente_V2Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarContribuyente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dseContribuyente" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseInfoContribuyente" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseInfoContribuyente.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="idExpediente" nillable="true" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarContribuyenteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertarContribuyenteResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseInfoContribuyente" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseInfoContribuyente.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarRepresentacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dseDatosRep" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseDatosRepresentacion" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseDatosRepresentacion.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio.Enum" minOccurs="0" name="tipo" type="q1:TipoRepresentacion" />
+        <xs:element minOccurs="0" name="xml" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipoDocumento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="listaIds" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarRepresentacionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarDireccion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dseDir" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseInfoDirecciones" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseInfoDirecciones.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarDireccionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertarDireccionResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseInfoDirecciones" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseInfoDirecciones.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarNotario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dseNotarios" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseInfoNotarios" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseInfoNotarios.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarNotarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertarNotarioResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseInfoNotarios" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseInfoNotarios.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarInmuebleDomicilioFiscal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dseImnDir" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseInmuebleDireccion" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseInmuebleDireccion.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarInmuebleDomicilioFiscalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertarInmuebleDomicilioFiscalResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseInmuebleDireccion" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseInmuebleDireccion.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarRepresentacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dseDatosRep" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseDatosRepresentacion" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseDatosRepresentacion.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio.Enum" minOccurs="0" name="tipo" type="q2:TipoRepresentacion" />
+        <xs:element minOccurs="0" name="xml" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipoDocumento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="listaIds" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarRepresentacionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarContribuyente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dseContribuyente" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseInfoContribuyente" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseInfoContribuyente.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="idExpediente" nillable="true" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarContribuyenteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarContribuyente_V2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dseContribuyente" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseInfoContribuyente" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseInfoContribuyente.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="idExpediente" nillable="true" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarContribuyente_V2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ActualizarContribuyente_V2Result" nillable="true" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarDireccion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dseDir" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseInfoDirecciones" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseInfoDirecciones.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarDireccionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarNotario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dseNotario" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseInfoNotarios" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseInfoNotarios.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarNotarioResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarInmuebleDomicilioFiscal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dseImnDir" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseInmuebleDireccion" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseInmuebleDireccion.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarInmuebleDomicilioFiscalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ActualizarInmuebleDomicilioFiscalResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseInmuebleDireccion" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseInmuebleDireccion.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarContribuyenteSimple">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idPersona" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idInmueble" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarContribuyenteSimpleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ActualizarContribuyenteSimpleResult" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarCambiaTipoPersona">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dseContribuyente" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseInfoContribuyente" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseInfoContribuyente.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="idExpediente" nillable="true" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarCambiaTipoPersonaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarCambiaTipoPersona_V2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dseContribuyente" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseInfoContribuyente" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseInfoContribuyente.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="idExpediente" nillable="true" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarCambiaTipoPersona_V2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ActualizarCambiaTipoPersona_V2Result" nillable="true" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cambio_tipo_FisicoMoral">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idPersona" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cambio_tipo_FisicoMoralResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BorrarRepresentacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dseRep" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseInfoContribuyente" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseInfoContribuyente.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BorrarRepresentacionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BorrarRepresentacionNotario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dseRep" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseInfoNotarios" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseInfoNotarios.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BorrarRepresentacionNotarioResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BorrarRepresentante">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dtRep" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseInfoContribuyente.RepresentantesDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseInfoContribuyente.xsd" name="namespace" />
+            <xs:attribute fixed="RepresentantesDataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BorrarRepresentanteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BorrarDireccion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dseDir" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseInfoDirecciones" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseInfoDirecciones.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BorrarDireccionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BorrarDireccionContribuyente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dseDir" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseInfoContribuyente" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseInfoContribuyente.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BorrarDireccionContribuyenteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHistoricosDireccion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idDireccion" type="xs:decimal" />
+        <xs:element minOccurs="0" name="fechaDesde" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaHasta" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHistoricosDireccionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetHistoricosDireccionResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseHistorico" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseHistorico.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHistoricosDireccionDetalle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idDireccion" type="xs:decimal" />
+        <xs:element minOccurs="0" name="idHistorico" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHistoricosDireccionDetalleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetHistoricosDireccionDetalleResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseHistorico" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseHistorico.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHistoricosDireccionFiscal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idPersonaInmueble" type="xs:decimal" />
+        <xs:element minOccurs="0" name="fechaDesde" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaHasta" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHistoricosDireccionFiscalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetHistoricosDireccionFiscalResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseHistorico" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseHistorico.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHistoricosDireccionFiscalDetalle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idPersonaInmueble" type="xs:decimal" />
+        <xs:element minOccurs="0" name="idHistorico" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHistoricosDireccionFiscalDetalleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetHistoricosDireccionFiscalDetalleResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseHistorico" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseHistorico.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHistoricosPersona">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idPersona" type="xs:decimal" />
+        <xs:element minOccurs="0" name="fechaDesde" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaHasta" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHistoricosPersonaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetHistoricosPersonaResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseHistorico" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseHistorico.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHistoricosPersonaDetalle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idPersona" type="xs:decimal" />
+        <xs:element minOccurs="0" name="idHistorico" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHistoricosPersonaDetalleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetHistoricosPersonaDetalleResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseHistorico" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseHistorico.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHistoricosRepresentacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idPersona" type="xs:decimal" />
+        <xs:element minOccurs="0" name="fechaDesde" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaHasta" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHistoricosRepresentacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetHistoricosRepresentacionResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseHistorico" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseHistorico.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContribuyentesByDatosPersonales">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio.Enum" minOccurs="0" name="filtroNombre" type="q3:TipoFiltroLike" />
+        <xs:element minOccurs="0" name="apellidoPaterno" nillable="true" type="xs:string" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio.Enum" minOccurs="0" name="filtroApellidoPaterno" type="q4:TipoFiltroLike" />
+        <xs:element minOccurs="0" name="apellidoMaterno" nillable="true" type="xs:string" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio.Enum" minOccurs="0" name="filtroApellidoMaterno" type="q5:TipoFiltroLike" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContribuyentesByDatosPersonalesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetContribuyentesByDatosPersonalesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseContribuyentes" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseContribuyentes.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPersonaMoralByDatosPersonales">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="razonSocial" nillable="true" type="xs:string" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio.Enum" minOccurs="0" name="filtro" type="q6:TipoFiltroLike" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPersonaMoralByDatosPersonalesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPersonaMoralByDatosPersonalesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseContribuyentes" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseContribuyentes.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContribuyentesByDatosIdentificativos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="rfc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="curp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="claveIfe" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="iddocidentif" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="valdocidentif" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="coincidenTodos" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContribuyentesByDatosIdentificativosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetContribuyentesByDatosIdentificativosResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseContribuyentes" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseContribuyentes.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContribuyentesMoralByDatosIdentificativos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="rfc" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContribuyentesMoralByDatosIdentificativosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetContribuyentesMoralByDatosIdentificativosResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseContribuyentes" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseContribuyentes.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPersonaMoralByDatosIdentificativos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="rfc" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPersonaMoralByDatosIdentificativosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPersonaMoralByDatosIdentificativosResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseContribuyentes" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseContribuyentes.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContribuyentesInmuebleByDatosPersonales">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio.Enum" minOccurs="0" name="filtroNombre" type="q7:TipoFiltroLike" />
+        <xs:element minOccurs="0" name="apellidoPaterno" nillable="true" type="xs:string" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio.Enum" minOccurs="0" name="filtroApellidoPaterno" type="q8:TipoFiltroLike" />
+        <xs:element minOccurs="0" name="apellidoMaterno" nillable="true" type="xs:string" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio.Enum" minOccurs="0" name="filtroApellidoMaterno" type="q9:TipoFiltroLike" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContribuyentesInmuebleByDatosPersonalesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetContribuyentesInmuebleByDatosPersonalesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseContribuyentes" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseContribuyentes.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContribuyentesInmuebleByDatosPersonalesSIGASIIP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio.Enum" minOccurs="0" name="filtroNombre" type="q10:TipoFiltroLike" />
+        <xs:element minOccurs="0" name="apellidoPaterno" nillable="true" type="xs:string" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio.Enum" minOccurs="0" name="filtroApellidoPaterno" type="q11:TipoFiltroLike" />
+        <xs:element minOccurs="0" name="apellidoMaterno" nillable="true" type="xs:string" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio.Enum" minOccurs="0" name="filtroApellidoMaterno" type="q12:TipoFiltroLike" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContribuyentesInmuebleByDatosPersonalesSIGASIIPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetContribuyentesInmuebleByDatosPersonalesSIGASIIPResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseContribuyentes" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseContribuyentes.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContribuyentesSimilares">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="apellidoPaterno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="apellidoMaterno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rfc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="curp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="claveife" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="actividadPrincipal" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContribuyentesSimilaresResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetContribuyentesSimilaresResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DsePersonasSimilares" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DsePersonasSimilares.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContribuyentesInmuebleByDatosIdentificativos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="rfc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="curp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="claveIfe" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idDocIdentif" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="valDocIdentif" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContribuyentesInmuebleByDatosIdentificativosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetContribuyentesInmuebleByDatosIdentificativosResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseContribuyentes" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseContribuyentes.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContribuyentesInmuebleByDatosIdentificativosSIGASIIP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="rfc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="curp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="claveIfe" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idDocIdentif" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="valDocIdentif" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContribuyentesInmuebleByDatosIdentificativosSIGASIIPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetContribuyentesInmuebleByDatosIdentificativosSIGASIIPResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseContribuyentes" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseContribuyentes.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInfoContribuyente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idPersona" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInfoContribuyenteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetInfoContribuyenteResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseInfoContribuyente" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseInfoContribuyente.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDireccionesInmueble">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idInmueble" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDireccionesInmuebleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDireccionesInmuebleResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseDireccionesInmueble" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseDireccionesInmueble.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDireccionesContribuyente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idPersona" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDireccionesContribuyenteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDireccionesContribuyenteResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseInfoContribuyente.DireccionesDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseInfoContribuyente.xsd" name="namespace" />
+            <xs:attribute fixed="DireccionesDataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRepresentacionContribuyente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idPersona" type="xs:decimal" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio.Enum" minOccurs="0" name="rep" type="q13:TipoRepresentacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRepresentacionContribuyenteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRepresentacionContribuyenteResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseInfoContribuyente.RepresentantesDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseInfoContribuyente.xsd" name="namespace" />
+            <xs:attribute fixed="RepresentantesDataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRepresentacionNotario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idPersona" type="xs:decimal" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio.Enum" minOccurs="0" name="rep" type="q14:TipoRepresentacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRepresentacionNotarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRepresentacionNotarioResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseInfoNotarios.RepresentantesDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseInfoNotarios.xsd" name="namespace" />
+            <xs:attribute fixed="RepresentantesDataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNotariosByDatosPersonales">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio.Enum" minOccurs="0" name="filNombre" type="q15:TipoFiltroLike" />
+        <xs:element minOccurs="0" name="apellidoPaterno" nillable="true" type="xs:string" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio.Enum" minOccurs="0" name="filApellidoPaterno" type="q16:TipoFiltroLike" />
+        <xs:element minOccurs="0" name="apellidoMaterno" nillable="true" type="xs:string" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.Negocio.Enum" minOccurs="0" name="filApellidoMaterno" type="q17:TipoFiltroLike" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNotariosByDatosPersonalesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetNotariosByDatosPersonalesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseNotarios" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseNotarios.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNotariosByDatosIdentificativos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="numNotario" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="codEstado" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="rfc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="curp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ife" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idDocIdentif" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="valDocIdentif" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNotariosByDatosIdentificativosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetNotariosByDatosIdentificativosResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseNotarios" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseNotarios.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInfoNotario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idPersona" type="xs:decimal" />
+        <xs:element minOccurs="0" name="infoExtra" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInfoNotarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetInfoNotarioResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseInfoNotarios" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseInfoNotarios.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDatosRepresentacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idRepresentacion" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDatosRepresentacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDatosRepresentacionResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseDatosRepresentacion" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseDatosRepresentacion.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDireccionById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idDireccion" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDireccionByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDireccionByIdResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseInfoDirecciones" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseInfoDirecciones.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAsentamiento">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAsentamientoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAsentamientoResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAsentamientos" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAsentamientos.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAsentamientoByEstado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codEstado" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="codCiudad" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="codMunicipio" nillable="true" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAsentamientoByEstadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAsentamientoByEstadoResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAsentamientos" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAsentamientos.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAsentamientoByNombre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codEstado" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="codCiudad" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="codMunicipio" nillable="true" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAsentamientoByNombreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAsentamientoByNombreResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAsentamientos" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAsentamientos.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCiudad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codEstado" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCiudadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCiudadResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseCiudades" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseCiudades.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCiudadByEstado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codEstado" type="xs:decimal" />
+        <xs:element minOccurs="0" name="codMunicipio" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCiudadByEstadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCiudadByEstadoResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseCiudades" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseCiudades.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMunicipios">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMunicipiosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMunicipiosResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseMunicipios" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseMunicipios.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMunicipiosByEstado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codEstado" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMunicipiosByEstadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMunicipiosByEstadoResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseMunicipios" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseMunicipios.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMunicipiosByNombre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codEstado" type="xs:decimal" />
+        <xs:element minOccurs="0" name="municipio" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMunicipiosByNombreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMunicipiosByNombreResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseMunicipios" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseMunicipios.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEstados">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEstadosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetEstadosResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseEstados" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseEstados.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCatalogosResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseCatalogos" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseCatalogos.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetColAsentByDelegacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idDelegacion" type="xs:decimal" />
+        <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetColAsentByDelegacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetColAsentByDelegacionResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseColoniaAsentamiento" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseColoniaAsentamiento.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDomiciliosFiscales">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idPersona" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDomiciliosFiscalesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDomiciliosFiscalesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseInmuebleDireccion" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseInmuebleDireccion.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
