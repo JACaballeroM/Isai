@@ -1,0 +1,1498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Avaluos_anterior/Avaluos.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Interfaces" />
+  <xs:element name="ObtenerAvaluosPorProximidadSociedad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAvaluo" type="xs:int" />
+        <xs:element minOccurs="0" name="idSociedad" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="indice" type="xs:int" />
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+        <xs:element minOccurs="0" name="SortExpression" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorProximidadSociedadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAvaluosPorProximidadSociedadResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoConsulta" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluoConsulta.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorNumAvaluoSoci">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="numValuo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="registroPerito" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idSoci" type="xs:decimal" />
+        <xs:element minOccurs="0" name="vigente" type="xs:boolean" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="indice" type="xs:int" />
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+        <xs:element minOccurs="0" name="SortExpression" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorNumAvaluoSociResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAvaluosPorNumAvaluoSociResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoConsulta" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluoConsulta.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorNumAvaluoSoci_EstadoVig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="numValuo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="registroPerito" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idSoci" type="xs:decimal" />
+        <xs:element minOccurs="0" name="vigente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codestado" type="xs:decimal" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="indice" type="xs:int" />
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+        <xs:element minOccurs="0" name="SortExpression" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorNumAvaluoSoci_EstadoVigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAvaluosPorNumAvaluoSoci_EstadoVigResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoConsulta" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluoConsulta.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorNumValuoVigEstado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="numValuo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="registroPerito" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vigente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codestado" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="indice" type="xs:int" />
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+        <xs:element minOccurs="0" name="SortExpression" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorNumValuoVigEstadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAvaluosPorNumValuoVigEstadoResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoConsulta" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluoConsulta.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorFechaSoci">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fechaInicio" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaFin" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="idSoci" type="xs:decimal" />
+        <xs:element minOccurs="0" name="vigente" type="xs:boolean" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="indice" type="xs:int" />
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+        <xs:element minOccurs="0" name="SortExpression" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorFechaSociResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAvaluosPorFechaSociResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoConsulta" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluoConsulta.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorCuentaSoci">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cuentaCatastral" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idSoci" type="xs:decimal" />
+        <xs:element minOccurs="0" name="vigente" type="xs:boolean" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="indice" type="xs:int" />
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+        <xs:element minOccurs="0" name="SortExpression" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorCuentaSociResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAvaluosPorCuentaSociResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoConsulta" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluoConsulta.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorCuentaSociEstadoVig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cuentaCatastral" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idSoci" type="xs:decimal" />
+        <xs:element minOccurs="0" name="vigente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codestado" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="indice" type="xs:int" />
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+        <xs:element minOccurs="0" name="SortExpression" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorCuentaSociEstadoVigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAvaluosPorCuentaSociEstadoVigResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoConsulta" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluoConsulta.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorEstadoSoci">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idSoci" type="xs:decimal" />
+        <xs:element minOccurs="0" name="codEstado" type="xs:int" />
+        <xs:element minOccurs="0" name="vigente" type="xs:boolean" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="indice" type="xs:int" />
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+        <xs:element minOccurs="0" name="SortExpression" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorEstadoSociResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAvaluosPorEstadoSociResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoConsulta" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluoConsulta.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCatalogos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCatalogosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerCatalogosResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluosCatConsulta" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluosCatConsulta.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerarAvaluo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="region" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="manzana" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lote" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="unidad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipoAvaluo" type="xs:int" />
+        <xs:element minOccurs="0" name="idValuador" type="xs:decimal" />
+        <xs:element minOccurs="0" name="fun" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="digito" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerarAvaluoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GenerarAvaluoResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExisteAvaluoAsociado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="región" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="manzana" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lote" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="unidadprivativa" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExisteAvaluoAsociadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ExisteAvaluoAsociadoResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerDatosAvaluoCatastral">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idDocumentoDigital" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerDatosAvaluoCatastralResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerDatosAvaluoCatastralResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoConsultaFis" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluoConsultaFis.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidarTamanioFichero">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bytesXmlAvaluo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidarTamanioFicheroResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidarTamanioFicheroResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EsValidoAvaluo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xmlAvaluoByte" nillable="true" type="xs:base64Binary" />
+        <xs:element minOccurs="0" name="idPersona" type="xs:int" />
+        <xs:element minOccurs="0" name="esPerito" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EsValidoAvaluoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EsValidoAvaluoResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoConsulta.ERROR_VALIDACION_AVALUODataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseAvaluoConsulta.xsd" name="namespace" />
+            <xs:attribute fixed="ERROR_VALIDACION_AVALUODataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidarXmlValorUnitarioSuelo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="region" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="manzana" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lote" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="unidad" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="areaValor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="valorUnitario" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidarXmlValorUnitarioSueloResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidarXmlValorUnitarioSueloResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoConsulta.ERROR_VALIDACION_AVALUODataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseAvaluoConsulta.xsd" name="namespace" />
+            <xs:attribute fixed="ERROR_VALIDACION_AVALUODataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BusquedaNotarios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="numero" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="apellidoPaterno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="apellidoMaterno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rfc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="curp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="claveife" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:decimal" />
+        <xs:element minOccurs="0" name="indice" type="xs:decimal" />
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+        <xs:element minOccurs="0" name="SortExpression" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BusquedaNotariosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BusquedaNotariosResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseNotarios" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseNotarios.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EsXml">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xmlByte" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EsXmlResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EsXmlResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerNombreDelegacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codDelegacion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerNombreDelegacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerNombreDelegacionResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerDigitoVerificadorBD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="region" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="manzana" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lote" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="unidadPrivativa" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerDigitoVerificadorBDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerDigitoVerificadorBDResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNotarios">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNotariosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetNotariosResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseNotarios.FEXAVA_NOTARIOSDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseNotarios.xsd" name="namespace" />
+            <xs:attribute fixed="FEXAVA_NOTARIOSDataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EsFolioValido">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="folio" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cuenta" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mensaje" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EsFolioValidoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EsFolioValidoResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="mensaje" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosCedula">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fechaInicio" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaFin" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="idAvaluo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="numeroAvaluo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="registroPerito" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cuentaCatastral" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="indice" type="xs:int" />
+        <xs:element minOccurs="0" name="sortExpression" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosCedulaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAvaluosCedulaResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarCedula">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Interfaces" minOccurs="0" name="cedula" nillable="true" type="q1:Cedula" />
+        <xs:element minOccurs="0" name="idAvaluo" type="xs:decimal" />
+        <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idUsuario" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarCedulaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarCedulaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Test">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TestResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarAvaluo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xmlBytes" nillable="true" type="xs:base64Binary" />
+        <xs:element minOccurs="0" name="idPersona" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarAvaluoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RegistrarAvaluoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarAvaluoEspecial">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xmlBytes" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarAvaluoEspecialResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarIntentoFallido">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="par_intentoFallidoDT" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoConsulta.FEXAVA_INTENTOFALLIDO_PDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseAvaluoConsulta.xsd" name="namespace" />
+            <xs:attribute fixed="FEXAVA_INTENTOFALLIDO_PDataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegistrarIntentoFallidoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CambiarEstadoAvaluo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idavaluos" type="xs:decimal" />
+        <xs:element minOccurs="0" name="codEstadoAvaluoNuevo" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CambiarEstadoAvaluoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AsignarNotarioAvaluo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idavaluos" type="xs:decimal" />
+        <xs:element minOccurs="0" name="idNotario" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AsignarNotarioAvaluoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorCuentaObtnNum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cuentaCatastral" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idNotario" type="xs:int" />
+        <xs:element minOccurs="0" name="registro" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vigente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="indice" type="xs:int" />
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+        <xs:element minOccurs="0" name="SortExpression" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorCuentaObtnNumResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAvaluosPorCuentaObtnNumResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoConsulta" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluoConsulta.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCedula">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAvaluo" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCedulaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Interfaces" minOccurs="0" name="ObtenerCedulaResult" nillable="true" type="q2:Cedula" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarAvaluoInformeComercial">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAvaluo" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarAvaluoInformeComercialResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarAvaluoInformeComercialResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoMantInf" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluoMantInf.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAvaluoAntecedentes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAvaluo" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAvaluoAntecedentesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAvaluoAntecedentesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoMantInf" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluoMantInf.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="testAv">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="testAvResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="testAvResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoMantInf" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluoMantInf.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInvestigacionMercado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="region" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="manzana" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idDelegacion" type="xs:decimal" />
+        <xs:element minOccurs="0" name="idColonia" type="xs:decimal" />
+        <xs:element minOccurs="0" name="fechaInicio" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fechaFinal" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInvestigacionMercadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetInvestigacionMercadoResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorFechaNotario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fechaInicio" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaFin" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="idNotario" type="xs:int" />
+        <xs:element minOccurs="0" name="registro" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vigente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="numValuo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idAvaluo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="indice" type="xs:int" />
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+        <xs:element minOccurs="0" name="sortExpression" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorFechaNotarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAvaluosPorFechaNotarioResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoConsulta" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluoConsulta.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorFechaNotarioSF">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fechaInicio" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaFin" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="idNotario" type="xs:int" />
+        <xs:element minOccurs="0" name="registro" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vigente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="numAvaluo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idAvaluo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="indice" type="xs:int" />
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+        <xs:element minOccurs="0" name="sortExpression" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorFechaNotarioSFResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAvaluosPorFechaNotarioSFResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoConsulta" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluoConsulta.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorRegistroPeritoNotario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="registro" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idNotario" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="indice" type="xs:int" />
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+        <xs:element minOccurs="0" name="SortExpression" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorRegistroPeritoNotarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAvaluosPorRegistroPeritoNotarioResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoConsulta" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluoConsulta.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorFechaPeritoVigenciaEstado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fechaInicio" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaFin" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="idPerito" type="xs:int" />
+        <xs:element minOccurs="0" name="vigente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codestado" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="indice" type="xs:int" />
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+        <xs:element minOccurs="0" name="SortExpression" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorFechaPeritoVigenciaEstadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAvaluosPorFechaPeritoVigenciaEstadoResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoConsulta" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluoConsulta.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorEstadoPerito">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idPersona" type="xs:decimal" />
+        <xs:element minOccurs="0" name="codEstado" type="xs:int" />
+        <xs:element minOccurs="0" name="vigente" type="xs:boolean" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="indice" type="xs:int" />
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+        <xs:element minOccurs="0" name="SortExpression" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorEstadoPeritoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAvaluosPorEstadoPeritoResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoConsulta" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluoConsulta.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorNumValuoPerito_EstadoVig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="numValuo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idPersona" type="xs:decimal" />
+        <xs:element minOccurs="0" name="vigente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codestado" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="indice" type="xs:int" />
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+        <xs:element minOccurs="0" name="SortExpression" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorNumValuoPerito_EstadoVigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAvaluosPorNumValuoPerito_EstadoVigResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoConsulta" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluoConsulta.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorFechaEstado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fechaInicio" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaFin" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="vigente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codEstado" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="indice" type="xs:int" />
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+        <xs:element minOccurs="0" name="SortExpression" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorFechaEstadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAvaluosPorFechaEstadoResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoConsulta" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluoConsulta.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorProximidad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAvaluo" type="xs:int" />
+        <xs:element minOccurs="0" name="codestado" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="indice" type="xs:int" />
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+        <xs:element minOccurs="0" name="SortExpression" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorProximidadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAvaluosPorProximidadResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoConsulta" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluoConsulta.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAvaluo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAvaluoResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoConsulta" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluoConsulta.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluoPorIdAvaluoEstadoVigencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAvaluo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codestado" type="xs:int" />
+        <xs:element minOccurs="0" name="estavigente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idpersonaperito" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="indice" type="xs:int" />
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+        <xs:element minOccurs="0" name="SortExpression" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluoPorIdAvaluoEstadoVigenciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAvaluoPorIdAvaluoEstadoVigenciaResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoConsulta" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluoConsulta.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluoPorVigEstTodosPeritosSoci">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAvaluo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codestado" type="xs:int" />
+        <xs:element minOccurs="0" name="estavigente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="indice" type="xs:int" />
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+        <xs:element minOccurs="0" name="SortExpression" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluoPorVigEstTodosPeritosSociResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAvaluoPorVigEstTodosPeritosSociResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoConsulta" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluoConsulta.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluoPorIdAvaluos_Soci_Vigencia_Estado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAvaluo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codestado" type="xs:int" />
+        <xs:element minOccurs="0" name="estavigente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idpersonasoci" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="indice" type="xs:int" />
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+        <xs:element minOccurs="0" name="SortExpression" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluoPorIdAvaluos_Soci_Vigencia_EstadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAvaluoPorIdAvaluos_Soci_Vigencia_EstadoResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoConsulta" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluoConsulta.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorFechaSoci_EstadoVig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fechaInicio" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaFin" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="idSoci" type="xs:decimal" />
+        <xs:element minOccurs="0" name="vigente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codestado" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="indice" type="xs:int" />
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+        <xs:element minOccurs="0" name="SortExpression" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorFechaSoci_EstadoVigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAvaluosPorFechaSoci_EstadoVigResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoConsulta" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluoConsulta.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorCuentaCatastralNotario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cuentaCatastral" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idNotario" type="xs:int" />
+        <xs:element minOccurs="0" name="registro" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vigente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="indice" type="xs:int" />
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+        <xs:element minOccurs="0" name="SortExpression" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorCuentaCatastralNotarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAvaluosPorCuentaCatastralNotarioResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoConsulta" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluoConsulta.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorCuentaCatastralNotarioSF">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cuentaCatastral" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idNotario" type="xs:int" />
+        <xs:element minOccurs="0" name="registro" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vigente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="indice" type="xs:int" />
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+        <xs:element minOccurs="0" name="SortExpression" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorCuentaCatastralNotarioSFResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAvaluosPorCuentaCatastralNotarioSFResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoConsulta" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluoConsulta.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorCuentaCatastralPerito">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cuentaCatastral" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idPerito" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vigente" type="xs:boolean" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="indice" type="xs:int" />
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+        <xs:element minOccurs="0" name="SortExpression" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorCuentaCatastralPeritoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAvaluosPorCuentaCatastralPeritoResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoConsulta" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluoConsulta.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorCuentaCatastralPeritoVigenciaEstado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cuentaCatastral" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idPerito" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vigente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codestado" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="indice" type="xs:int" />
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+        <xs:element minOccurs="0" name="SortExpression" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorCuentaCatastralPeritoVigenciaEstadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAvaluosPorCuentaCatastralPeritoVigenciaEstadoResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoConsulta" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluoConsulta.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorCuentaCatastral">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cuentaCatastral" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vigente" type="xs:boolean" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="indice" type="xs:int" />
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+        <xs:element minOccurs="0" name="SortExpression" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorCuentaCatastralResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAvaluosPorCuentaCatastralResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoConsulta" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluoConsulta.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorCuentaVigenciaEstado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cuentaCatastral" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codestado" type="xs:int" />
+        <xs:element minOccurs="0" name="vigente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="indice" type="xs:int" />
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+        <xs:element minOccurs="0" name="SortExpression" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorCuentaVigenciaEstadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAvaluosPorCuentaVigenciaEstadoResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoConsulta" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluoConsulta.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorProximidadPerito">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAvaluo" type="xs:int" />
+        <xs:element minOccurs="0" name="idPerito" type="xs:int" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="indice" type="xs:int" />
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+        <xs:element minOccurs="0" name="SortExpression" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvaluosPorProximidadPeritoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAvaluosPorProximidadPeritoResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAvaluoConsulta" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAvaluoConsulta.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

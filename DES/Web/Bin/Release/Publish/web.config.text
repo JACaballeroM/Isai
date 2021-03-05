@@ -877,7 +877,7 @@
       <endpoint address="http://localhost:14616/DeclaracionIsai.svc"
         binding="wsHttpBinding" bindingConfiguration="DeclaracionIsai"
         contract="ServiceDeclaracionIsai.IDeclaracionIsai" name="DeclaracionIsai" />
-      <!--<endpoint address="http://10.1.253.109/pre/fuentesexternas/isai/DeclaracionIsai.svc"
+      <!--<endpoint address="http://10.0.8.2/PRO/fuentesexternas/isai/DeclaracionIsai.svc"
       binding="wsHttpBinding" bindingConfiguration="DeclaracionIsai"
       contract="ServiceDeclaracionIsai.IDeclaracionIsai" name="DeclaracionIsai" />-->
     </client>

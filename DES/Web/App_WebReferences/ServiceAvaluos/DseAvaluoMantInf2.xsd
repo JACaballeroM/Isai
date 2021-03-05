@@ -1,0 +1,1254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/DseAvaluoMantInf.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" xmlns:mstns="http://tempuri.org/DseAvaluoMantInf.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DseAvaluoMantInf.xsd" id="DseAvaluoMantInf" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="DseAvaluoMantInf">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FEXAVA_AVALUO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CONSIDERACIONESPREVIAS" type="xs:string" />
+              <xs:element minOccurs="0" name="VALORCOMERCIAL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VALORCATASTRAL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VALORREFERIDO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FECHAVALORREFERIDO" type="xs:string" />
+              <xs:element name="PROPOSITO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OBJETO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="IDAVALUO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODESTADOAVALUO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODTIPOTRAMITE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="IDDICTAMINADOR" type="xs:decimal" />
+              <xs:element name="CODREGIMENPROPIEDAD" type="xs:decimal" />
+              <xs:element name="REGION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MANZANA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LOTE" type="xs:string" />
+              <xs:element minOccurs="0" name="LOTE_CC" type="xs:string" />
+              <xs:element name="UNIDADPRIVATIVA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CUUSO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CUAREALIBREOBLIGATORIO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CUNUMMAXNIVELESACONSTRUIR" type="xs:decimal" />
+              <xs:element name="CUCOEFICIENTE" type="xs:decimal" />
+              <xs:element name="CUCODCLASESCONSTRUCCION" type="xs:decimal" />
+              <xs:element name="CUCODDENSIDADPOBLACION" type="xs:decimal" />
+              <xs:element name="CUCODCLASIFICACIONZONA" type="xs:decimal" />
+              <xs:element name="CUCODNIVELSOCIOECONOMICO" type="xs:decimal" />
+              <xs:element name="CUINDICESATURACIONZONA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CUCONTAMINACIONAMBIENTALZONA" type="xs:string" />
+              <xs:element name="CUCODVIGILANCIAZONA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CUCODSENALIZACIONVIAS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CUCODGUARNICIONES" type="xs:decimal" />
+              <xs:element name="CUCODALUMBRADOPUBLICO" type="xs:decimal" />
+              <xs:element name="CUCODSUMINISTROELECTRICO" type="xs:decimal" />
+              <xs:element name="CUCODTOPOGRAFIA" type="xs:decimal" />
+              <xs:element name="CUCODBANQUETAS" type="xs:decimal" />
+              <xs:element name="CUCODVIALIDADES" type="xs:decimal" />
+              <xs:element name="CUCODGASNATURAL" type="xs:decimal" />
+              <xs:element name="CUCODDRENAJEINMUEBLE" type="xs:decimal" />
+              <xs:element name="CUCODSUMINISTROTELEFONICA" type="xs:decimal" />
+              <xs:element name="CUCODACOMETIDAINMUEBLE" type="xs:decimal" />
+              <xs:element name="CUCODACOMETIDAINMUEBLETEL" type="xs:decimal" />
+              <xs:element name="CUCODDRENAJEPLUVIALCALLE" type="xs:decimal" />
+              <xs:element name="CUCODDRENAJEPLUVIALZONA" type="xs:decimal" />
+              <xs:element name="CUCODAGUAPOTABLERESIDUAL" type="xs:decimal" />
+              <xs:element name="CUCODAGUAPOTABLE" type="xs:decimal" />
+              <xs:element name="CUPORCENTAJEINFRAESTRUCTURA" type="xs:decimal" />
+              <xs:element name="CUEXISTEIGLESIA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CUEXISTEMERCADOS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CUEXISTEPLAZASPUBLICOS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CUEXISTEPARQUESJARDINES">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CUEXISTEESCUELAS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CUEXISTEHOSPITALES">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CUEXISTEBANCOS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CUEXISTEESTACIONTRANSPORTE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CUDISTANCIATRANSPORTEURBANO" type="xs:decimal" />
+              <xs:element name="CUFRECUENCIATRANSPORTEURBANO" type="xs:decimal" />
+              <xs:element name="CUDISTANCIATRANSPORTESUBURB" type="xs:decimal" />
+              <xs:element name="CUFRECUENCIATRANSPORTESUBURB" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TEINDIVISO" type="xs:decimal" />
+              <xs:element name="TECARACTERISTICASPARONAMICAS" type="xs:string" />
+              <xs:element name="TESERVIDUMBRESORESTRICCIONES">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DIUSOACTUAL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DIVIDAUTILPONDERADA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DIEDADPONDERADA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DIVIDAUTILREMANENTEPONDERADA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DIPORCENTAJESUPULTNIVEL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DIVALORMERCADO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TECODDENSIDADHABITACIONAL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TECODTOPOGRAFIA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="EIVACIOS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="EIIMPUESTOPREDIAL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="EISERVICIOAGUA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="EICONSERVACIONYMANTENIMIENTO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="EIENERGIAELECTRICA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="EIADMINISTRACION" type="xs:decimal" />
+              <xs:element minOccurs="0" name="EISEGUROS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="EIDEPRECIACIONFISCAL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="EIOTROS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="EIDEDUCCIONESFISCALES" type="xs:decimal" />
+              <xs:element minOccurs="0" name="EIIMPUESTORENTA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="EIDEDUCCIONESMENSUALES" type="xs:decimal" />
+              <xs:element minOccurs="0" name="EIPORCENTAJEDEDUCCIONESMENS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="EIRENTABRUTAMENSUAL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="EIPRODUCTOLIQUIDOANUAL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="EIIMPORTE" type="xs:decimal" />
+              <xs:element name="IDPERSONAPERITO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="IDPERSONANOTARIO" type="xs:decimal" />
+              <xs:element name="DIGITOVERIFICADOR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="EITASACAPITALIZACION" type="xs:decimal" />
+              <xs:element name="CUCODRECOLECCIONBASURA" type="xs:decimal" />
+              <xs:element name="NUMEROAVALUO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:DateTimeMode="Unspecified" minOccurs="0" name="FECHA_PRESENTACION" type="xs:dateTime" />
+              <xs:element minOccurs="0" name="IDPERSONASOCIEDAD" type="xs:decimal" />
+              <xs:element name="NUMEROUNICO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CALLE" type="xs:string" />
+              <xs:element minOccurs="0" name="INT" type="xs:string" />
+              <xs:element minOccurs="0" name="EXT" type="xs:string" />
+              <xs:element minOccurs="0" name="COLONIA" type="xs:string" />
+              <xs:element minOccurs="0" name="CP" type="xs:string" />
+              <xs:element minOccurs="0" name="DELEGACION" type="xs:string" />
+              <xs:element minOccurs="0" name="VIASDEACCESO" type="xs:string" />
+              <xs:element minOccurs="0" name="NIVELEQUIPAMIENTOURBANO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DTRAMOCALLES" type="xs:string" />
+              <xs:element minOccurs="0" name="DMACRO" type="xs:string" />
+              <xs:element minOccurs="0" name="DMICRO" type="xs:string" />
+              <xs:element minOccurs="0" name="FACTORCONVERSION" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VALORTOTALDELTERRENOPROP" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VALORTOTALCONSTPROINDIVISO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="IMPORTETOTALENFOQUECOSTOS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VALORTOTALIEEAOC" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESC_CLASECONST" type="xs:string" />
+              <xs:element minOccurs="0" name="DESC_CLASIFICACIONZONA" type="xs:string" />
+              <xs:element minOccurs="0" name="DESC_DENSIDAD" type="xs:string" />
+              <xs:element minOccurs="0" name="DESC_NIVELSOCIOEC" type="xs:string" />
+              <xs:element minOccurs="0" name="DESC_ACOMETIDAIM" type="xs:string" />
+              <xs:element minOccurs="0" name="DESC_ACOMETIDAIMTEL" type="xs:string" />
+              <xs:element minOccurs="0" name="DESC_ALUMBRADOPUBL" type="xs:string" />
+              <xs:element minOccurs="0" name="DESC_AGUAPOTABLE" type="xs:string" />
+              <xs:element minOccurs="0" name="DESC_SUMELECTRICO" type="xs:string" />
+              <xs:element minOccurs="0" name="DESC_GASNATURAL" type="xs:string" />
+              <xs:element minOccurs="0" name="DESC_GUARNICIONES" type="xs:string" />
+              <xs:element minOccurs="0" name="DESC_BANQUETAS" type="xs:string" />
+              <xs:element minOccurs="0" name="DESC_SENALIZACIONVIAS" type="xs:string" />
+              <xs:element minOccurs="0" name="DESCVIALIDADES" type="xs:string" />
+              <xs:element minOccurs="0" name="DESC_DRENAJEPLUVZONA" type="xs:string" />
+              <xs:element minOccurs="0" name="DESC_DRENAJEPLUVCALLE" type="xs:string" />
+              <xs:element minOccurs="0" name="DESC_SISTEMAMIXTO" type="xs:string" />
+              <xs:element minOccurs="0" name="DESC_RECOLECAGUAS" type="xs:string" />
+              <xs:element minOccurs="0" name="DESC_TOPOGRAFIA" type="xs:string" />
+              <xs:element minOccurs="0" name="DESC_DENSIDADHAB" type="xs:string" />
+              <xs:element minOccurs="0" name="DESC_REGIMENPROPIEDAD" type="xs:string" />
+              <xs:element minOccurs="0" name="DESC_RECBASURA" type="xs:string" />
+              <xs:element minOccurs="0" name="DESC_VIGILANCIA" type="xs:string" />
+              <xs:element minOccurs="0" name="DESC_SUMINISTROTEL" type="xs:string" />
+              <xs:element minOccurs="0" name="DESC_TIPOMI" type="xs:string" />
+              <xs:element minOccurs="0" name="DESC_TIPOMA" type="xs:string" />
+              <xs:element minOccurs="0" name="CUCODNOMENCLATURACALLE" type="xs:string" />
+              <xs:element minOccurs="0" name="DESC_NOMECLATURACALLES" type="xs:string" />
+              <xs:element minOccurs="0" name="REGTDF_SOCIEDAD" type="xs:string" />
+              <xs:element minOccurs="0" name="REGTDF_PERITO" type="xs:string" />
+              <xs:element minOccurs="0" name="BYTES_MICRO" type="xs:string" />
+              <xs:element minOccurs="0" name="BYTES_MACRO" type="xs:string" />
+              <xs:element minOccurs="0" name="FECHAAVALUO" type="xs:string" />
+              <xs:element minOccurs="0" name="VALTOTCONSTRUCCIONESPRIVATIVAS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VALTOTCONSTRUCCIONESCOMUNES" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CUENTAAGUA" type="xs:string" />
+              <xs:element minOccurs="0" name="EDIFICIO" type="xs:string" />
+              <xs:element minOccurs="0" name="CONSIDERACIONESPREVIASCONCLUSION" type="xs:string" />
+              <xs:element minOccurs="0" name="VALORUNITARIOTIERRAAVALUO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOMBRE_PERITO" type="xs:string" />
+              <xs:element minOccurs="0" name="NOMBRE_SOCI" type="xs:string" />
+              <xs:element minOccurs="0" name="IEYALUMBRADO" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FEXAVA_DATOSPERSONAS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="IDDATOSPERSONAS" type="xs:decimal" />
+              <xs:element name="NOMBRE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="APELLIDOMATERNO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="APELLIDOPATERNO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CALLE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NUMEROINTERIOR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NUMEROEXTERIOR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDCOLONIA" type="xs:decimal" />
+              <xs:element name="IDDELEGACION" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODTIPOFUNCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODIGOPOSTAL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="IDAVALUO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="ROL" type="xs:string" />
+              <xs:element minOccurs="0" name="DescColonia" type="xs:string" />
+              <xs:element msprop:Generator_UserColumnName="DescDeleg" msprop:Generator_ColumnVarNameInTable="columnDescDelegacion" msprop:Generator_ColumnPropNameInTable="DescDelegacionColumn" minOccurs="0" name="DescDeleg" type="xs:string" />
+              <xs:element minOccurs="0" name="TipoPersona" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FEXAVA_ELEMENTOSCONST">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="VIDRERIA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CERRAJERIA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="FACHADAS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDAVALUO" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FEXAVA_CARPINTERIA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDAVALUO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PUERTASINTERIORES">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="GUARDAROPAS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="MUEBLESEMPOTRADOSFIJOS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FEXAVA_OBRANEGRA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CIMENTACION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDAVALUO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="ESTRUCTURA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="MUROS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ENTREPISOS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TECHOS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="AZOTEAS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="BARDAS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FEXAVA_PUERTASYVENTANERIA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDAVALUO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="HERRERIA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="VENTANERIA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FEXAVA_INSTALACIONHIDSAN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDAVALUO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="MUEBLESBANO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="RAMALEOSHIDRAULICOS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="RAMALEOSSANITARIOS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FEXAVA_REVESTIMIENTOACABADO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDAVALUO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="APLANADOS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="PLAFONES">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="LAMBRINES">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="PISOS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ZOCLOS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="ESCALERAS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="PINTURA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="RECUBRIMIENTOSESPECIALES">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FEXAVA_ELEMENTOSEXTRA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODTIPO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODTIPOELEMENTO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="IDCOMPLEMENTOS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="UNIDAD">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CANTIDAD" type="xs:decimal" />
+              <xs:element minOccurs="0" name="EDAD" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VALORUNITARIO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODINSTALACIONESESPECIALES" type="xs:decimal" />
+              <xs:element minOccurs="0" name="IDAVALUO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESCRIPCION" type="xs:string" />
+              <xs:element minOccurs="0" name="VIDAUTIL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="IMPORTE" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DescInstEsp" type="xs:string" />
+              <xs:element minOccurs="0" name="ClaveInstEsp" type="xs:string" />
+              <xs:element minOccurs="0" name="TEINDIVISO" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FEXAVA_CONSTRUCCIONESMER">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="IDCONSTRUCCIONESMERCADO" type="xs:decimal" />
+              <xs:element name="VALORUNITARIOPROMEDIO" type="xs:decimal" />
+              <xs:element name="VALORUNITARIOHOMOLOGADO" type="xs:decimal" />
+              <xs:element name="VALORUNITARIOAPLICABLE" type="xs:decimal" />
+              <xs:element name="IDMODOCONSTRUCCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDAVALUO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VALORUNISINHOMMIN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VALORUNISINHOMMAX" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VALORUNITARIOHOMMIN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VALORUNITARIOHOMMAX" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FEXAVA_INVESTPRODUCTOSCOMP">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="IDINVESTPRODUCTOSCOMPARABLES" type="xs:decimal" />
+              <xs:element name="CALLE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODIGOPOSTAL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TELEFONO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INFORMANTE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DESCRIPCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SUPERFICIEVENDIBLEPORUNIDAD" type="xs:decimal" />
+              <xs:element name="PRECIOSOLICITADO" type="xs:decimal" />
+              <xs:element name="IDCONSTRUCCIONESMERCADO" type="xs:decimal" />
+              <xs:element name="IDDELEGACION" type="xs:decimal" />
+              <xs:element name="IDCOLONIA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="REGION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="MANZANA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="LOTE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="UNIDADPRIVATIVA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CODTIPOCOMPARABLE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="FACTORNEGOCIACION" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DescColonia" type="xs:string" />
+              <xs:element minOccurs="0" name="DescDeleg" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FEXAVA_TERRENOMERCADO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="IDTERRENOMERCADO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VALORUNITARIOTIERRAPROMEDIO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VALORUNITARIOTIERRAHOMOLOGADO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODTIPOTERRENO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="VALORUNITARIORESIDUAL" type="xs:decimal" />
+              <xs:element name="IDAVALUO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VALORUNITARIOSINHOMMIN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VALORUNITARIOSINHOMMAX" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VALORUNITARIOHOMMIN" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VALORUNITARIOHOMMAX" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TIPOINMPROPUESTO" type="xs:string" />
+              <xs:element minOccurs="0" name="NUMUNIDADESVENDIBLE" type="xs:decimal" />
+              <xs:element minOccurs="0" name="SUPVENDIBLEPORUNIDAD" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VALORUNITARIOAPLICADORESIDUAL" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TOTALINGRESOS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TOTALEGRESOS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="UTILIDAD" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FEXAVA_DATOSTERRENOS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="IDDATOSTERRENOS" type="xs:decimal" />
+              <xs:element name="CALLE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODIGOPOSTAL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TELEFONO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INFORMANTE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCRIPCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="USOSUELO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="CUS" type="xs:decimal" />
+              <xs:element name="SUPERFICIE" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FZO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FUB" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FFR" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FFO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FSU" type="xs:decimal" />
+              <xs:element name="PRECIOSOLICITADO" type="xs:decimal" />
+              <xs:element name="IDTERRENOMERCADO" type="xs:decimal" />
+              <xs:element name="IDCOLONIA" type="xs:decimal" />
+              <xs:element name="IDDELEGACION" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FOTVALOR" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FOTDESCRIPCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="FRE" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FACTORNEGOCIACION" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODTIPOTERRENO" type="xs:string" />
+              <xs:element minOccurs="0" name="DescColonia" type="xs:string" />
+              <xs:element minOccurs="0" name="DescDeleg" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FEXAVA_SUPERFICIE">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="IDSUPERFICIE" type="xs:decimal" />
+              <xs:element name="IDENTIFICADORFRACCION" type="xs:decimal" />
+              <xs:element name="SUPERFICIEFRACCION" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FZO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FUB" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FFR" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FFO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FSU" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FOTVALOR" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FOTDESCRIPCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="IDAVALUO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FRE" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CLAVE" type="xs:string" />
+              <xs:element minOccurs="0" name="VALORFRACCION" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VALORCATASTRALFRACCION" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FEXAVA_CONSTRUCCIONES">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="IDCONSTRUCCIONES" type="xs:decimal" />
+              <xs:element name="CODUSOSCONSTRUCCIONES" type="xs:string" />
+              <xs:element minOccurs="0" name="CODRANGONIVELES" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODCLASESCONSTRUCCION" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODESTADOCONSERVACION" type="xs:decimal" />
+              <xs:element name="CODTIPO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="VALORUNITARIOREPOSICIONNUEVO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="SUPERFICIE" type="xs:decimal" />
+              <xs:element name="IDAVALUO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="IMPORTETOTALENFCOSTOS">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DESCRIPCION" type="xs:string" />
+              <xs:element minOccurs="0" name="FED" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FCO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="FRE" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VALORFRACCION" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESC_CLASES" type="xs:string" />
+              <xs:element minOccurs="0" name="DescClaseConst" type="xs:string" />
+              <xs:element minOccurs="0" name="DEPRECIACIONEDAD" type="xs:decimal" />
+              <xs:element minOccurs="0" name="VALORUNITARIOCAT" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DescClaseVida" type="xs:string" />
+              <xs:element minOccurs="0" name="DescEstadoConserv" type="xs:string" />
+              <xs:element minOccurs="0" name="DescUso" type="xs:string" />
+              <xs:element minOccurs="0" name="DescRangoNiv" type="xs:string" />
+              <xs:element minOccurs="0" name="DataColumn1" type="xs:string" />
+              <xs:element minOccurs="0" name="VIDAUTILREMANENTE" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODCLASESVIDAS" type="xs:decimal" />
+              <xs:element minOccurs="0" name="EDAD" type="xs:decimal" />
+              <xs:element minOccurs="0" name="PUNTAJECLASIFICACION" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NUMNIVELES" type="xs:decimal" />
+              <xs:element minOccurs="0" name="TEINDIVISO" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FEXAVA_ENFOQUECOSTESCAT">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="IMPINSTALACIONESESPECIALES" type="xs:decimal" />
+              <xs:element name="IMPTOTVALORCATASTRAL" type="xs:decimal" />
+              <xs:element name="AVANCEOBRA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="IMPTOTVALCATASTRALOBRAPROCESO" type="xs:decimal" />
+              <xs:element name="IDAVALUO" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FEXAVA_FUENTEINFORMACIONLEG">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDAVALUO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="CODTIPOFUENTEINFORMACION" type="xs:decimal" />
+              <xs:element msdata:DateTimeMode="Unspecified" minOccurs="0" name="FECHA" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FEXAVA_CONTRATOPRIVADO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDAVALUO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOMBREADQUIRIENTE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="APELLIDOPATERNOADQUIRIENTE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="APELLIDOMATERNOADQUIRIENTE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="NOMBREENAJENANTE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="APELLIDOPATERNOENAJENANTE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="APELLIDOMATERNOENAJENANTE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FEXAVA_SENTENCIA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDAVALUO" type="xs:decimal" />
+              <xs:element name="NUMEXPEDIENTE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="26" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="JUZGADO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FEXAVA_ESCRITURA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDAVALUO" type="xs:decimal" />
+              <xs:element name="NUMESCRITURA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NUMVOLUMEN">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NUMNOTARIO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="NOMBRENOTARIO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="DISTRITOJUDICIALNOTARIO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FEXAVA_ALINEAMIENTONUMOFI">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDAVALUO" type="xs:decimal" />
+              <xs:element name="NUMFOLIO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FEXAVA_FOTOAVALUO">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="IDFOTOAVALUO" type="xs:decimal" />
+              <xs:element name="IDDOCUMENTOFOTO" type="xs:decimal" />
+              <xs:element name="IDAVALUO" type="xs:decimal" />
+              <xs:element minOccurs="0" name="REGION" type="xs:string" />
+              <xs:element minOccurs="0" name="LOTE" type="xs:string" />
+              <xs:element minOccurs="0" name="UNIDADPRIVATIVA" type="xs:string" />
+              <xs:element minOccurs="0" name="MANZANA" type="xs:string" />
+              <xs:element minOccurs="0" name="INTEXT" type="xs:string" />
+              <xs:element minOccurs="0" name="BINARIOS" type="xs:string" />
+              <xs:element minOccurs="0" name="ROWNUMBER" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FEXAVA_FOTOCOMPARABLE">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="IDINVESTPRODUCTOSCOMPARABLES" type="xs:decimal" />
+              <xs:element minOccurs="0" name="IDDOCUMENTOFOTO" type="xs:decimal" />
+              <xs:element msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" minOccurs="0" name="IDFOTOSCOMPARABLES" type="xs:decimal" />
+              <xs:element minOccurs="0" name="BINARIOS" type="xs:string" />
+              <xs:element minOccurs="0" name="REGION" type="xs:string" />
+              <xs:element minOccurs="0" name="MANZANA" type="xs:string" />
+              <xs:element minOccurs="0" name="LOTE" type="xs:string" />
+              <xs:element minOccurs="0" name="UNIDAD" type="xs:string" />
+              <xs:element minOccurs="0" name="INTEXT" type="xs:string" />
+              <xs:element minOccurs="0" name="TIPO" type="xs:string" />
+              <xs:element minOccurs="0" name="ROWNUMBER" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FEXAVA_COLINDANCIAS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDCOLINDANCIA" type="xs:int" />
+              <xs:element minOccurs="0" name="ELEMENTODESCRITO" type="xs:string" />
+              <xs:element minOccurs="0" name="ORIENTACION" type="xs:string" />
+              <xs:element minOccurs="0" name="MEDIDA" type="xs:decimal" />
+              <xs:element minOccurs="0" name="DESCRIPCION" type="xs:string" />
+              <xs:element minOccurs="0" name="IDAVALUO" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_AVALUO" />
+      <xs:field xpath="mstns:IDAVALUO" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="FEXAVA_DATOSPERSONAS_Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_DATOSPERSONAS" />
+      <xs:field xpath="mstns:IDDATOSPERSONAS" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" name="FEXAVA_ELEMENTOSCONST_Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_ELEMENTOSCONST" />
+      <xs:field xpath="mstns:IDAVALUO" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" name="FEXAVA_CONSTRUCCIONESMER_Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_CONSTRUCCIONESMER" />
+      <xs:field xpath="mstns:IDCONSTRUCCIONESMERCADO" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" name="FEXAVA_INVESTPRODUCTOSCOMP_Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_INVESTPRODUCTOSCOMP" />
+      <xs:field xpath="mstns:IDINVESTPRODUCTOSCOMPARABLES" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" name="FEXAVA_TERRENOMERCADO_Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_TERRENOMERCADO" />
+      <xs:field xpath="mstns:IDTERRENOMERCADO" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="FEXAVA_DATOSTERRENOS_Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_DATOSTERRENOS" />
+      <xs:field xpath="mstns:IDDATOSTERRENOS" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="FEXAVA_SUPERFICIE_Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_SUPERFICIE" />
+      <xs:field xpath="mstns:IDSUPERFICIE" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="FEXAVA_CONSTRUCCIONES_Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_CONSTRUCCIONES" />
+      <xs:field xpath="mstns:IDCONSTRUCCIONES" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" name="FEXAVA_ENFOQUECOSTESCAT_Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_ENFOQUECOSTESCAT" />
+      <xs:field xpath="mstns:IDAVALUO" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="FEXAVA_FUENTEINFORMACIONLEG_Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_FUENTEINFORMACIONLEG" />
+      <xs:field xpath="mstns:IDAVALUO" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="FEXAVA_CONTRATOPRIVADO_Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_CONTRATOPRIVADO" />
+      <xs:field xpath="mstns:IDAVALUO" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="FEXAVA_SENTENCIA_Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_SENTENCIA" />
+      <xs:field xpath="mstns:IDAVALUO" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="FEXAVA_ESCRITURA_Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_ESCRITURA" />
+      <xs:field xpath="mstns:IDAVALUO" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="FEXAVA_ALINEAMIENTONUMOFI_Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_ALINEAMIENTONUMOFI" />
+      <xs:field xpath="mstns:IDAVALUO" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="FEXAVA_FOTOAVALUO_Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_FOTOAVALUO" />
+      <xs:field xpath="mstns:IDFOTOAVALUO" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="FEXAVA_COLINDANCIAS_Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_COLINDANCIAS" />
+      <xs:field xpath="mstns:IDCOLINDANCIA" />
+    </xs:unique>
+    <xs:keyref name="FK_FEXAVA_AVALUO_FEXAVA_COLINDANCIAS" refer="mstns:Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_COLINDANCIAS" />
+      <xs:field xpath="mstns:IDAVALUO" />
+    </xs:keyref>
+    <xs:keyref name="FK_FEXAVA_INVESTPRODUCTOSCOMP_FEXAVA_FOTOCOMPARABLE" refer="mstns:FEXAVA_INVESTPRODUCTOSCOMP_Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_FOTOCOMPARABLE" />
+      <xs:field xpath="mstns:IDINVESTPRODUCTOSCOMPARABLES" />
+    </xs:keyref>
+    <xs:keyref name="FK_FEXAVA_AVALUO_FEXAVA_FOTOAVALUO" refer="mstns:Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_FOTOAVALUO" />
+      <xs:field xpath="mstns:IDAVALUO" />
+    </xs:keyref>
+    <xs:keyref name="FK_FEXAVA_FUENTEINFORMACIONLEG_FEXAVA_ALINEAMIENTONUMOFI" refer="mstns:FEXAVA_FUENTEINFORMACIONLEG_Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_ALINEAMIENTONUMOFI" />
+      <xs:field xpath="mstns:IDAVALUO" />
+    </xs:keyref>
+    <xs:keyref name="FK_FEXAVA_FUENTEINFORMACIONLEG_FEXAVA_ESCRITURA" refer="mstns:FEXAVA_FUENTEINFORMACIONLEG_Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_ESCRITURA" />
+      <xs:field xpath="mstns:IDAVALUO" />
+    </xs:keyref>
+    <xs:keyref name="FK_FEXAVA_FUENTEINFORMACIONLEG_FEXAVA_SENTENCIA" refer="mstns:FEXAVA_FUENTEINFORMACIONLEG_Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_SENTENCIA" />
+      <xs:field xpath="mstns:IDAVALUO" />
+    </xs:keyref>
+    <xs:keyref name="FK_FEXAVA_FUENTEINFORMACIONLEG_FEXAVA_CONTRATOPRIVADO" refer="mstns:FEXAVA_FUENTEINFORMACIONLEG_Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_CONTRATOPRIVADO" />
+      <xs:field xpath="mstns:IDAVALUO" />
+    </xs:keyref>
+    <xs:keyref name="FK_FEXAVA_AVALUO_FEXAVA_FUENTEINFORMACIONLEG" refer="mstns:Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_FUENTEINFORMACIONLEG" />
+      <xs:field xpath="mstns:IDAVALUO" />
+    </xs:keyref>
+    <xs:keyref name="FK_FEXAVA_AVALUO_FEXAVA_ENFOQUECOSTESCAT" refer="mstns:Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_ENFOQUECOSTESCAT" />
+      <xs:field xpath="mstns:IDAVALUO" />
+    </xs:keyref>
+    <xs:keyref name="FK_FEXAVA_AVALUO_FEXAVA_CONSTRUCCIONES" refer="mstns:Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_CONSTRUCCIONES" />
+      <xs:field xpath="mstns:IDAVALUO" />
+    </xs:keyref>
+    <xs:keyref name="FK_FEXAVA_AVALUO_FEXAVA_SUPERFICIE_P" refer="mstns:Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_SUPERFICIE" />
+      <xs:field xpath="mstns:IDAVALUO" />
+    </xs:keyref>
+    <xs:keyref name="FK_FEXAVA_TERRENOMERCADO_FEXAVA_DATOSTERRENOS" refer="mstns:FEXAVA_TERRENOMERCADO_Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_DATOSTERRENOS" />
+      <xs:field xpath="mstns:IDTERRENOMERCADO" />
+    </xs:keyref>
+    <xs:keyref name="FK_FEXAVA_AVALUO_FEXAVA_TERRENOMERCADO" refer="mstns:Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_TERRENOMERCADO" />
+      <xs:field xpath="mstns:IDAVALUO" />
+    </xs:keyref>
+    <xs:keyref name="FK_FEXAVA_CONSTRUCCIONESMER_FEXAVA_INVESTPRODUCTOSCOMP" refer="mstns:FEXAVA_CONSTRUCCIONESMER_Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_INVESTPRODUCTOSCOMP" />
+      <xs:field xpath="mstns:IDCONSTRUCCIONESMERCADO" />
+    </xs:keyref>
+    <xs:keyref name="FK_FEXAVA_AVALUO_FEXAVA_CONSTRUCCIONESMER" refer="mstns:Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_CONSTRUCCIONESMER" />
+      <xs:field xpath="mstns:IDAVALUO" />
+    </xs:keyref>
+    <xs:keyref name="FK_FEXAVA_ELEMENTOSCONST_FEXAVA_ELEMENTOSEXTRA" refer="mstns:FEXAVA_ELEMENTOSCONST_Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_ELEMENTOSEXTRA" />
+      <xs:field xpath="mstns:IDAVALUO" />
+    </xs:keyref>
+    <xs:keyref name="FK_FEXAVA_ELEMENTOSCONST_FEXAVA_REVESTIMIENTOACABADO" refer="mstns:FEXAVA_ELEMENTOSCONST_Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_REVESTIMIENTOACABADO" />
+      <xs:field xpath="mstns:IDAVALUO" />
+    </xs:keyref>
+    <xs:keyref name="FK_FEXAVA_ELEMENTOSCONST_FEXAVA_INSTALACIONHIDSAN" refer="mstns:FEXAVA_ELEMENTOSCONST_Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_INSTALACIONHIDSAN" />
+      <xs:field xpath="mstns:IDAVALUO" />
+    </xs:keyref>
+    <xs:keyref name="FK_FEXAVA_ELEMENTOSCONST_FEXAVA_PUERTASYVENTANERIA" refer="mstns:FEXAVA_ELEMENTOSCONST_Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_PUERTASYVENTANERIA" />
+      <xs:field xpath="mstns:IDAVALUO" />
+    </xs:keyref>
+    <xs:keyref name="FK_FEXAVA_ELEMENTOSCONST_FEXAVA_OBRANEGRA" refer="mstns:FEXAVA_ELEMENTOSCONST_Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_OBRANEGRA" />
+      <xs:field xpath="mstns:IDAVALUO" />
+    </xs:keyref>
+    <xs:keyref name="FK_FEXAVA_ELEMENTOSCONST_FEXAVA_CARPINTERIA" refer="mstns:FEXAVA_ELEMENTOSCONST_Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_CARPINTERIA" />
+      <xs:field xpath="mstns:IDAVALUO" />
+    </xs:keyref>
+    <xs:keyref name="FK_FEXAVA_AVALUO_FEXAVA_ELEMENTOSCONST" refer="mstns:Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_ELEMENTOSCONST" />
+      <xs:field xpath="mstns:IDAVALUO" />
+    </xs:keyref>
+    <xs:keyref name="FK_FEXAVA_AVALUO_FEXAVA_DATOSPERSONAS" refer="mstns:Constraint1">
+      <xs:selector xpath=".//mstns:FEXAVA_DATOSPERSONAS" />
+      <xs:field xpath="mstns:IDAVALUO" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

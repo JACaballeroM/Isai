@@ -233,7 +233,7 @@ public partial class InformeAcuse : PageBaseISAI
                 }
 
             }
-
+                      
             DseDeclaracionIsai.FEXNOT_DECLARACIONDataTable dtDec = ClienteDeclaracionIsai.ObtenerDeclaracionesPorIdDeclaracion(Convert.ToInt32(HiddenIdDeclaracion.Value));
             string estado = string.Empty;
             try

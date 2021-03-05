@@ -1,26 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" elementFormDefault="qualified" targetNamespace="http://SIGAPred.FuentesExternas/Avaluos/Negocio/Exceptions" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:complexType name="AvaluosInfoException">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:ExceptionBase">
-        <xs:sequence />
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="AvaluosInfoException" nillable="true" type="tns:AvaluosInfoException" />
-  <xs:complexType name="ExceptionBase">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ExceptionBase" nillable="true" type="tns:ExceptionBase" />
-  <xs:complexType name="AvaluosException">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:ExceptionBase">
-        <xs:sequence />
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="AvaluosException" nillable="true" type="tns:AvaluosException" />
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DseAvaluoConsulta" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseAvaluoConsulta" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseAvaluoConsulta.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseAvaluosCatConsulta" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseAvaluosCatConsulta" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseAvaluosCatConsulta.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseAvaluoConsultaFis" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseAvaluoConsultaFis" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseAvaluoConsultaFis.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseNotarios" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseNotarios" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseNotarios.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DataSet" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:element ref="xs:schema" />
+        <xs:any />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseAvaluoMantInf" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseAvaluoMantInf" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any namespace="http://tempuri.org/DseAvaluoMantInf.xsd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

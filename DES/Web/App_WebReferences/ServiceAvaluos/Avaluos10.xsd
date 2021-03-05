@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Interfaces" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SIGAPred.FuentesExternas.Avaluos.Services.Negocio.Interfaces" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Cedula">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NombreUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="clasificacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="clasificacionCas" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="clasificacionIncorrecta" type="xs:boolean" />
+      <xs:element minOccurs="0" name="cuenta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="edad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="edadCas" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaIngreso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="folio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="necesarioPresentar" type="xs:boolean" />
+      <xs:element minOccurs="0" name="necesitaRatificacion" type="xs:boolean" />
+      <xs:element minOccurs="0" name="noConsideraCubiertos" type="xs:boolean" />
+      <xs:element minOccurs="0" name="noConsideraDescubiertos" type="xs:boolean" />
+      <xs:element minOccurs="0" name="nombrePerito" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="numeroEscritura" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="planoaAcotados" type="xs:boolean" />
+      <xs:element minOccurs="0" name="rangoIncorrecto" type="xs:boolean" />
+      <xs:element minOccurs="0" name="registroPerito" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="registroSociedad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sinDemerito" type="xs:boolean" />
+      <xs:element minOccurs="0" name="sinSoporteConstruccion" type="xs:boolean" />
+      <xs:element minOccurs="0" name="sinSoporteTerreno" type="xs:boolean" />
+      <xs:element minOccurs="0" name="superficieConstruccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="superficieConstruccionCas" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="superficieTerreno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="superficieTerrenoCas" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tieneRequerimiento" type="xs:boolean" />
+      <xs:element minOccurs="0" name="valorCatastral" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="valorCatastralCas" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cedula" nillable="true" type="tns:Cedula" />
+</xs:schema>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="RUZAOAk6cYl9Bo65lKQRXv6MUzmXZyxzpHrHyRQ3cBc=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="em4WjTOF7bssmeT/+Vt9r+UMhJT42f2QUEmdO5UkWPI=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="wsHttpBinding" name="wsHttpAvaluos2">
       <properties>
@@ -127,10 +127,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="wsHttpAvaluos" contract="ServiceAvaluos.IAvaluos" bindingType="wsHttpBinding" address="http://ni-prod-bpm2/PRO/FuentesExternas/Avaluos/Avaluos.svc" bindingConfiguration="wsHttpAvaluos2">
+    <endpoint name="wsHttpAvaluos" contract="ServiceAvaluos.IAvaluos" bindingType="wsHttpBinding" address="http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Avaluos_anterior/Avaluos.svc" bindingConfiguration="wsHttpAvaluos2">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://ni-prod-bpm2/PRO/FuentesExternas/Avaluos/Avaluos.svc</serializedValue>
+          <serializedValue>http://ni-prod-bpm2.promoca.int/PRO/FuentesExternas/Avaluos_anterior/Avaluos.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

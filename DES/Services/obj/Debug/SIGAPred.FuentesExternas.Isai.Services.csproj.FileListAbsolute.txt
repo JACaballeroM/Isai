@@ -164,3 +164,31 @@ C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\
 C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\DES\Services\obj\Debug\SIGAPred.FuentesExternas.Isai.Services.csproj.CopyComplete
 C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\DES\Services\obj\Debug\SIGAPred.FuentesExternas.Isai.Services.dll
 C:\Users\EdgarAntunezMartinez\Documents\Isai_LC_Log_CambioDSreducciones - copia\DES\Services\obj\Debug\SIGAPred.FuentesExternas.Isai.Services.pdb
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Services\bin\Debug\SIGAPred.FuentesExternas.Isai.Services.dll.config
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Services\bin\Debug\SIGAPred.FuentesExternas.Isai.Services.XML
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Services\bin\Debug\SIGAPred.FuentesExternas.Isai.Services.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Services\bin\Debug\SIGAPred.FuentesExternas.Isai.Services.pdb
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Services\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Services\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Services\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Configuration.Design.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Services\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Services\bin\Debug\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Services\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Services\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Services\bin\Debug\Microsoft.Practices.ObjectBuilder2.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Services\bin\Debug\MyExtentions.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Services\bin\Debug\Oracle.DataAccess.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Services\bin\Debug\SecurityCore.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Services\bin\Debug\SIGAPred.Common.DataAccess.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Services\bin\Debug\SIGAPred.Common.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Services\bin\Debug\SIGAPred.Documental.Services.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Services\bin\Debug\SIGAPred.Excepciones.ClaseExcepcion.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Services\bin\Debug\SIGAPred.RegistroContribuyentes.Services.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Services\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Services\obj\Debug\SIGAPred.FuentesExternas.Isai.Services.csprojAssemblyReference.cache
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Services\obj\Debug\SIGAPred.FuentesExternas.Isai.Services.Properties.Resources.resources
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Services\obj\Debug\SIGAPred.FuentesExternas.Isai.Services.csproj.GenerateResource.cache
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Services\obj\Debug\SIGAPred.FuentesExternas.Isai.Services.csproj.CoreCompileInputs.cache
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Services\obj\Debug\SIGAPred.FuentesExternas.Isai.Services.csproj.CopyComplete
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Services\obj\Debug\SIGAPred.FuentesExternas.Isai.Services.dll
+C:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Services\obj\Debug\SIGAPred.FuentesExternas.Isai.Services.pdb
