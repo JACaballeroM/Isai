@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="DseInfoContribuyente.RepresentantesDataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseInfoContribuyente.RepresentantesDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/DseInfoContribuyente.xsd" name="namespace" />
+      <xs:attribute fixed="RepresentantesDataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseInfoContribuyente.DireccionesDataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseInfoContribuyente.DireccionesDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/DseInfoContribuyente.xsd" name="namespace" />
+      <xs:attribute fixed="DireccionesDataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DseInfoNotarios.RepresentantesDataTable" nillable="true">
+    <xs:complexType>
+      <xs:annotation>
+        <xs:appinfo>
+          <ActualType Name="DseInfoNotarios.RepresentantesDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.RegistroContribuyentes.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+        </xs:appinfo>
+      </xs:annotation>
+      <xs:sequence>
+        <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+        <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+      </xs:sequence>
+      <xs:attribute fixed="http://tempuri.org/DseInfoNotarios.xsd" name="namespace" />
+      <xs:attribute fixed="RepresentantesDataTable" name="tableTypeName" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

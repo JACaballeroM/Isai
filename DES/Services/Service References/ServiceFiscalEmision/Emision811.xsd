@@ -1,0 +1,1521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://ni-prod-bpm2.promoca.int/PRO/Fiscal/Emision/Emision.svc?xsd=xsd9" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="ObtenerAgrupacionPaginadoPorAnoYPeriodo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ano" type="xs:decimal" />
+        <xs:element minOccurs="0" name="periodo" type="xs:decimal" />
+        <xs:element minOccurs="0" name="pageSize" type="xs:int" />
+        <xs:element minOccurs="0" name="indice" type="xs:int" />
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+        <xs:element minOccurs="0" name="SortExpression" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAgrupacionPaginadoPorAnoYPeriodoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAgrupacionPaginadoPorAnoYPeriodoResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAgrupacion" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAgrupacion.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="rowsTotal" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerUsosLoterosCRPorAgrupacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="agrupacion" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerUsosLoterosCRPorAgrupacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerUsosLoterosCRPorAgrupacionResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAgrupacion" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAgrupacion.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerInformacionProcesos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEjercicio" type="xs:int" />
+        <xs:element minOccurs="0" name="periodoActual" type="xs:int" />
+        <xs:element minOccurs="0" name="codOperacion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerInformacionProcesosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="emision" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseEmision" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseEmision.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="proceso" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseProgramacionProceso" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseProgramacionProceso.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerInformacionJob">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idProceso" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerInformacionJobResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerInformacionJobResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseProgramacionProceso.FIS_ESTADOJOBDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseProgramacionProceso.xsd" name="namespace" />
+            <xs:attribute fixed="FIS_ESTADOJOBDataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmisionPorAnoYPeriodos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idInmueble" type="xs:int" />
+        <xs:element minOccurs="0" name="ano" type="xs:int" />
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="periodos" nillable="true" type="q1:ArrayOfint" />
+        <xs:element minOccurs="0" name="tipoEjercicio" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmisionPorAnoYPeriodosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerEmisionPorAnoYPeriodosResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseEmision" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseEmision.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCuentasFaltaVU">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEjercicio" type="xs:decimal" />
+        <xs:element minOccurs="0" name="periodo" type="xs:decimal" />
+        <xs:element minOccurs="0" name="idSeleccion" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCuentasFaltaVUResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerCuentasFaltaVUResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAgrupacion.FIS_CUENTASFALTAVU_VDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseAgrupacion.xsd" name="namespace" />
+            <xs:attribute fixed="FIS_CUENTASFALTAVU_VDataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SolicitarGenerarCuentasFaltaVU">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="procesoDT" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseProgramacionProceso.FIS_PROCESODataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseProgramacionProceso.xsd" name="namespace" />
+            <xs:attribute fixed="FIS_PROCESODataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="agrupacionDS" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAgrupacion" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAgrupacion.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="idSeleccion" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SolicitarGenerarCuentasFaltaVUResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SolicitarGenerarCuentasFaltaVUResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComprobarOperacionCuentasFaltaVU">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="operacion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComprobarOperacionCuentasFaltaVUResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ComprobarOperacionCuentasFaltaVUResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerLoteros">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerLoterosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerLoterosResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseEmision.FIS_LOTEROSINMUEBLES_VDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseEmision.xsd" name="namespace" />
+            <xs:attribute fixed="FIS_LOTEROSINMUEBLES_VDataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerInfoLCBoleta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="periodo" type="xs:int" />
+        <xs:element minOccurs="0" name="ano" type="xs:int" />
+        <xs:element minOccurs="0" name="idinmueble" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerInfoLCBoletaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerInfoLCBoletaResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseEmision.FIS_INFORMACIONLC_VDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseEmision.xsd" name="namespace" />
+            <xs:attribute fixed="FIS_INFORMACIONLC_VDataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAgrupacionLC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodEstadoLC" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAgrupacionLCResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAgrupacionLCResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseSilce.FIS_AGRUPACIONLCDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseSilce.xsd" name="namespace" />
+            <xs:attribute fixed="FIS_AGRUPACIONLCDataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarAgrupacionLC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="agrupacionLCDT" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseSilce.FIS_AGRUPACIONLCDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseSilce.xsd" name="namespace" />
+            <xs:attribute fixed="FIS_AGRUPACIONLCDataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarAgrupacionLCResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarLCEmision">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="emisionResultadoDT" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseEmision.FIS_EMISIONRESULTADODataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseEmision.xsd" name="namespace" />
+            <xs:attribute fixed="FIS_EMISIONRESULTADODataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="codigoOperacion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarLCEmisionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmisionResultadoPorIdagrupacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgrupacion" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmisionResultadoPorIdagrupacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerEmisionResultadoPorIdagrupacionResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseEmision.FIS_EMISIONRESULTADODataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseEmision.xsd" name="namespace" />
+            <xs:attribute fixed="FIS_EMISIONRESULTADODataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerQuejososPorInmueble">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idInmueble" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerQuejososPorInmuebleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerQuejososPorInmuebleResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseEmision.FIS_QUEJOSODataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseEmision.xsd" name="namespace" />
+            <xs:attribute fixed="FIS_QUEJOSODataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerQuejososPorContribuyenteDatosIdentificativos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="curp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rfc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="claveife" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerQuejososPorContribuyenteDatosIdentificativosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerQuejososPorContribuyenteDatosIdentificativosResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseEmision.FIS_QUEJOSODataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseEmision.xsd" name="namespace" />
+            <xs:attribute fixed="FIS_QUEJOSODataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerQuejososPorContribuyenteDatosPersonales">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="apellidopaterno" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="apellidomaterno" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerQuejososPorContribuyenteDatosPersonalesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerQuejososPorContribuyenteDatosPersonalesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseEmision.FIS_QUEJOSODataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseEmision.xsd" name="namespace" />
+            <xs:attribute fixed="FIS_QUEJOSODataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarQuejosos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="quejososDT" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseEmision.FIS_QUEJOSODataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseEmision.xsd" name="namespace" />
+            <xs:attribute fixed="FIS_QUEJOSODataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarQuejososResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarMensajes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="catMensajeDT" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseEmision.FIS_CATMENSAJEDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseEmision.xsd" name="namespace" />
+            <xs:attribute fixed="FIS_CATMENSAJEDataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarMensajesResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerMensajes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEjercicio" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="quejosos" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usomixto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codrangotarifaini" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="habitacional" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nohabitacional" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lotero" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="posicion" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="codrangotarifafin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerMensajesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerMensajesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseEmision.FIS_CATMENSAJEDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseEmision.xsd" name="namespace" />
+            <xs:attribute fixed="FIS_CATMENSAJEDataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EstablecerIdEjercicio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEjercicio" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EstablecerIdEjercicioResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EstablecerPeriodo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="periodo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EstablecerPeriodoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EstablecerSimulacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="simulacion" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EstablecerSimulacionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPeriodosVigencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ano" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPeriodosVigenciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerPeriodosVigenciaResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAdministracion.FIS_FECHASVIGENCIADataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.ServiceAdministracion" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseAdministracion.xsd" name="namespace" />
+            <xs:attribute fixed="FIS_FECHASVIGENCIADataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerBoleta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idInmueble" type="xs:int" />
+        <xs:element minOccurs="0" name="ano" type="xs:int" />
+        <xs:element minOccurs="0" name="periodo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerBoletaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerBoletaResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseEmision" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseEmision.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCuenta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ano" type="xs:int" />
+        <xs:element minOccurs="0" name="periodo" type="xs:int" />
+        <xs:element minOccurs="0" name="region" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="manzana" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lote" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="unidadPrivativa" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCuentaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerCuentaResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseEmision" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseEmision.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerDescripcion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codmarcajemotivo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerDescripcionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerDescripcionResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseEmision.FIS_CATMARCAJEMOTIVODataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseEmision.xsd" name="namespace" />
+            <xs:attribute fixed="FIS_CATMARCAJEMOTIVODataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarLineaCaptura">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdInmueble" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="ano" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="periodo" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="lineaCapturaBimestral" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lineaCapturaAnual" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fechaVencimientoLCB" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaVencimientoLCA" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="importeLCB" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="importeLCA" nillable="true" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarLineaCapturaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearPasosSipresei">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codOperacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idEjercicio" type="xs:int" />
+        <xs:element minOccurs="0" name="periodo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearPasosSipreseiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CrearPasosSipreseiResult" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComprobarOperacionSipresei">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEjercicio" type="xs:int" />
+        <xs:element minOccurs="0" name="periodoActual" type="xs:int" />
+        <xs:element minOccurs="0" name="agrupacionEmision" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComprobarOperacionSipreseiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ComprobarOperacionSipreseiResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerHoraServidor">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerHoraServidorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerHoraServidorResult" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPeriodoActual">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPeriodoActualResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerPeriodoActualResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerIdEjercicioActual">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerIdEjercicioActualResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerIdEjercicioActualResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPeriodoEmision">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPeriodoEmisionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerPeriodoEmisionResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerIdEjercicioEmision">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerIdEjercicioEmisionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerIdEjercicioEmisionResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComprobarOperacionObtenerDatosBase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="operacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="operacionEmision" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="agrupacionEmision" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComprobarOperacionObtenerDatosBaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ComprobarOperacionObtenerDatosBaseResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SolicitarCorteCalculo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="procesoDT" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseProgramacionProceso.FIS_PROCESODataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseProgramacionProceso.xsd" name="namespace" />
+            <xs:attribute fixed="FIS_PROCESODataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SolicitarCorteCalculoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SolicitarCorteCalculoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SolicitarBorrarSimulacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="procesoDT" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseProgramacionProceso.FIS_PROCESODataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseProgramacionProceso.xsd" name="namespace" />
+            <xs:attribute fixed="FIS_PROCESODataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SolicitarBorrarSimulacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SolicitarBorrarSimulacionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComprobarEmisionEnFirme">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idejercicio" type="xs:decimal" />
+        <xs:element minOccurs="0" name="periodo" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComprobarEmisionEnFirmeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ComprobarEmisionEnFirmeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCortesSimulacion">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCortesSimulacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerCortesSimulacionResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseEmision" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseEmision.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComprobarProceso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoOperacion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComprobarProcesoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ComprobarProcesoResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseProgramacionProceso.FIS_PROCESODataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseProgramacionProceso.xsd" name="namespace" />
+            <xs:attribute fixed="FIS_PROCESODataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComprobarOperacionObtenerEstadoCuenta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="operacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="operacionImpresion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="agrupacionImpresion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComprobarOperacionObtenerEstadoCuentaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ComprobarOperacionObtenerEstadoCuentaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComprobarOperacionObtenerIndicesPago">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="operacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="operacionEmision" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="agrupacionEmision" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComprobarOperacionObtenerIndicesPagoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ComprobarOperacionObtenerIndicesPagoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SolicitarObtencionIndicesPago">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="procesoDT" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseProgramacionProceso.FIS_PROCESODataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseProgramacionProceso.xsd" name="namespace" />
+            <xs:attribute fixed="FIS_PROCESODataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SolicitarObtencionIndicesPagoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SolicitarObtencionIndicesPagoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SolicitarEstadoCuenta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="procesoDT" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseProgramacionProceso.FIS_PROCESODataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseProgramacionProceso.xsd" name="namespace" />
+            <xs:attribute fixed="FIS_PROCESODataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SolicitarEstadoCuentaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SolicitarEstadoCuentaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerFechaCorteCalculo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerFechaCorteCalculoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerFechaCorteCalculoResult" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComprobarOperacionEmision">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="operacion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComprobarOperacionEmisionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ComprobarOperacionEmisionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SolicitarEmision">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="procesoDT" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseProgramacionProceso.FIS_PROCESODataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseProgramacionProceso.xsd" name="namespace" />
+            <xs:attribute fixed="FIS_PROCESODataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="agrupacionDS" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAgrupacion" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAgrupacion.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="idSeleccion" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SolicitarEmisionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SolicitarEmisionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComprobarOperacionImpresion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="operacion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComprobarOperacionImpresionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ComprobarOperacionImpresionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SolicitarImpresion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="procesoDT" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseProgramacionProceso.FIS_PROCESODataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseProgramacionProceso.xsd" name="namespace" />
+            <xs:attribute fixed="FIS_PROCESODataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="agrupacionDS" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAgrupacion" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAgrupacion.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="idSeleccion" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SolicitarImpresionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SolicitarImpresionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SolicitarCargarLineasDeCaptura">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idagrupacion" type="xs:decimal" />
+        <xs:element minOccurs="0" name="pathFichero" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigoOperacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nombreTabla" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="separador" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SolicitarCargarLineasDeCapturaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SolicitarCargarLineasDeCapturaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerIDSeleccionCuentas">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerIDSeleccionCuentasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerIDSeleccionCuentasResult" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerRutaFicheros">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerRutaFicherosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerRutaFicherosResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseProgramacionProceso.FIS_RUTAFICHEROSDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseProgramacionProceso.xsd" name="namespace" />
+            <xs:attribute fixed="FIS_RUTAFICHEROSDataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerFiltroCuentas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEjercicio" type="xs:decimal" />
+        <xs:element minOccurs="0" name="periodo" type="xs:decimal" />
+        <xs:element minOccurs="0" name="clase" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loteros" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usos" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="centros" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rangoTarifaIni" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rangoTarifaFin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="areaValor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="corredorValor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="enclaveValor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="emision" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="impresion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="aleatorio" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="limiteUsuario" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="limite" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="idSeleccion" type="xs:decimal" />
+        <xs:element minOccurs="0" name="emitir" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="impresionPruebas" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clasificadas" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idgrupoimpresion" nillable="true" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerFiltroCuentasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerFiltroCuentasResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAgrupacion.FIS_AGRUPACIONCUENTAS_VDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseAgrupacion.xsd" name="namespace" />
+            <xs:attribute fixed="FIS_AGRUPACIONCUENTAS_VDataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmisionCabeceraActual">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmisionCabeceraActualResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerEmisionCabeceraActualResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseEmision.FIS_EMISIONCABECERADataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseEmision.xsd" name="namespace" />
+            <xs:attribute fixed="FIS_EMISIONCABECERADataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmisionCabeceraEmision">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmisionCabeceraEmisionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerEmisionCabeceraEmisionResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseEmision.FIS_EMISIONCABECERADataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseEmision.xsd" name="namespace" />
+            <xs:attribute fixed="FIS_EMISIONCABECERADataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmisionCabeceraById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmisionCabecera" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmisionCabeceraByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerEmisionCabeceraByIdResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseEmision.FIS_EMISIONCABECERADataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseEmision.xsd" name="namespace" />
+            <xs:attribute fixed="FIS_EMISIONCABECERADataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmisionCabecera">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEjercicio" type="xs:int" />
+        <xs:element minOccurs="0" name="periodo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmisionCabeceraResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerEmisionCabeceraResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseEmision.FIS_EMISIONCABECERADataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseEmision.xsd" name="namespace" />
+            <xs:attribute fixed="FIS_EMISIONCABECERADataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmisionResultadoPorAnoYPeriodo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ano" type="xs:decimal" />
+        <xs:element minOccurs="0" name="periodo" type="xs:decimal" />
+        <xs:element minOccurs="0" name="inmueble" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmisionResultadoPorAnoYPeriodoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerEmisionResultadoPorAnoYPeriodoResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseEmision.FIS_EMISIONRESULTADODataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseEmision.xsd" name="namespace" />
+            <xs:attribute fixed="FIS_EMISIONRESULTADODataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmisionResultadoPorListaAnoPeriodoInmueble">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="listaAnosPeriodos" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="inmueble" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmisionResultadoPorListaAnoPeriodoInmuebleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerEmisionResultadoPorListaAnoPeriodoInmuebleResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseEmision.FIS_EMISIONRESULTADO_VDataTable" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+            <xs:attribute fixed="http://tempuri.org/DseEmision.xsd" name="namespace" />
+            <xs:attribute fixed="FIS_EMISIONRESULTADO_VDataTable" name="tableTypeName" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAgrupacionPorAnoYPeriodo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ano" type="xs:decimal" />
+        <xs:element minOccurs="0" name="periodo" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAgrupacionPorAnoYPeriodoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAgrupacionPorAnoYPeriodoResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAgrupacion" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAgrupacion.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAgrupacionCompletaPorIdAgrupacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgrupacion" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAgrupacionCompletaPorIdAgrupacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerAgrupacionCompletaPorIdAgrupacionResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DseAgrupacion" Namespace="http://schemas.datacontract.org/2004/07/SIGAPred.Fiscal.Emision.Services.AccesoDatos" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any namespace="http://tempuri.org/DseAgrupacion.xsd" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

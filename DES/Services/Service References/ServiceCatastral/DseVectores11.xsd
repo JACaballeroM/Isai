@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://tempuri.org/DseVectores.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:mstns="http://tempuri.org/DseVectores.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/DseVectores.xsd" id="DseVectores" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="DseVectores">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Servicios">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDVECTORVIASERVICIOS" type="xs:decimal" />
+              <xs:element name="IDVECTORVIARIO" type="xs:decimal" />
+              <xs:element name="DESCRIPCION">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VectorViario">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDVECTORVIARIO" type="xs:decimal" />
+              <xs:element msdata:Caption="Vialidad" name="NOMBREVIA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:Caption="Tipo vialidad" name="TIPOVIA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:Caption="Caregoría vialidad" name="CATEGORIA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDVIA" type="xs:decimal" />
+              <xs:element msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" minOccurs="0" name="Indice" type="xs:int" />
+              <xs:element msdata:ReadOnly="true" msdata:Expression="'Tramo '+Indice" minOccurs="0" name="Tramo" type="xs:string" />
+              <xs:element name="ABREVIATURATIPO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="XMIN" type="xs:decimal" />
+              <xs:element name="XMAX" type="xs:decimal" />
+              <xs:element name="YMIN" type="xs:decimal" />
+              <xs:element name="YMAX" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:VectorViario" />
+      <xs:field xpath="mstns:IDVECTORVIARIO" />
+    </xs:unique>
+    <xs:keyref name="FK_VectorViario_Servicios" refer="mstns:Constraint1">
+      <xs:selector xpath=".//mstns:Servicios" />
+      <xs:field xpath="mstns:IDVECTORVIARIO" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

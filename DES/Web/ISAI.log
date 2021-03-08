@@ -1658,4 +1658,263 @@ No hay ninguna fila en la posición 0.
 05/03/2021 04:59:26 p. m. : CancelControlID : ctl00_ctl00_ctl00_ContentPlaceHolderContentBase_ContentPlaceHolderDContenido_ContentPlaceHolderDContenido_errorTareas_btnErrorAceptar
 
 05/03/2021 04:59:26 p. m. : CancelControlID : Termina 
+
+05/03/2021 10:35:26 p. m. : Page_Load Inicia 
+
+05/03/2021 10:35:26 p. m. : Page_Load SiEsPostBack 
+
+05/03/2021 10:35:26 p. m. : Page_Load PreviousPage Inicia 
+
+05/03/2021 10:35:26 p. m. : PreviousPage NULL 
+
+05/03/2021 10:35:26 p. m. : ObtenerDatosPorGet Inicia 
+
+05/03/2021 10:35:28 p. m. : ObtenerDatosPorGet ex : Se superó la cuota de tamaño máximo para los mensajes entrantes (65536). Para aumentar la cuota, use la propiedad MaxReceivedMessageSize en el elemento de enlace correspondiente.
+
+05/03/2021 10:35:28 p. m. : ObtenerDatosPorGet ex : 
+Server stack trace: 
+   en System.ServiceModel.Channels.HttpInput.ThrowMaxReceivedMessageSizeExceeded()
+   en System.ServiceModel.Channels.HttpInput.GetMessageBuffer()
+   en System.ServiceModel.Channels.HttpInput.ReadBufferedMessage(Stream inputStream)
+   en System.ServiceModel.Channels.HttpInput.ParseIncomingMessage(Exception& requestException)
+   en System.ServiceModel.Channels.HttpChannelFactory.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en ServiceDeclaracionIsai.IDeclaracionIsai.ObtenerCatalogos(ObtenerCatalogosRequest request)
+   en ServiceDeclaracionIsai.DeclaracionIsaiClient.ServiceDeclaracionIsai.IDeclaracionIsai.ObtenerCatalogos(ObtenerCatalogosRequest request) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\26f9997a\731d0387\App_WebReferences.d7rfqwl7.5.cs:línea 37277
+   en ServiceDeclaracionIsai.DeclaracionIsaiClient.ObtenerCatalogos() en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\26f9997a\731d0387\App_WebReferences.d7rfqwl7.5.cs:línea 37282
+   en ApplicationCache.get_DseCatalogoISAI() en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Web\App_Code\ApplicationCache.cs:línea 27
+   en Declaracion.ObtenerDatosPorGet() en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Web\Declaracion.aspx.cs:línea 510
+
+05/03/2021 10:35:29 p. m. : MostrarMensajeInformacion : Se presentó un error al realizar la operación: 
+
+Se superó la cuota de tamaño máximo para los mensajes entrantes (65536). Para aumentar la cuota, use la propiedad MaxReceivedMessageSize en el elemento de enlace correspondiente.
+
+Server stack trace: 
+   en System.ServiceModel.Channels.HttpInput.ThrowMaxReceivedMessageSizeExceeded()
+   en System.ServiceModel.Channels.HttpInput.GetMessageBuffer()
+   en System.ServiceModel.Channels.HttpInput.ReadBufferedMessage(Stream inputStream)
+   en System.ServiceModel.Channels.HttpInput.ParseIncomingMessage(Exception& requestException)
+   en System.ServiceModel.Channels.HttpChannelFactory.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en ServiceDeclaracionIsai.IDeclaracionIsai.ObtenerCatalogos(ObtenerCatalogosRequest request)
+   en ServiceDeclaracionIsai.DeclaracionIsaiClient.ServiceDeclaracionIsai.IDeclaracionIsai.ObtenerCatalogos(ObtenerCatalogosRequest request) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\26f9997a\731d0387\App_WebReferences.d7rfqwl7.5.cs:línea 37277
+   en ServiceDeclaracionIsai.DeclaracionIsaiClient.ObtenerCatalogos() en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\26f9997a\731d0387\App_WebReferences.d7rfqwl7.5.cs:línea 37282
+   en ApplicationCache.get_DseCatalogoISAI() en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Web\App_Code\ApplicationCache.cs:línea 27
+   en Declaracion.ObtenerDatosPorGet() en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Web\Declaracion.aspx.cs:línea 510
+
+05/03/2021 10:35:29 p. m. : ObtenerDatosPorGet Termina 
+
+05/03/2021 10:35:29 p. m. : AccionesCuentaValida Inicia 
+
+05/03/2021 10:35:31 p. m. : MostrarMensajeInformacion : Se presentó un error al realizar la operación: 
+
+Se superó la cuota de tamaño máximo para los mensajes entrantes (65536). Para aumentar la cuota, use la propiedad MaxReceivedMessageSize en el elemento de enlace correspondiente.
+
+Server stack trace: 
+   en System.ServiceModel.Channels.HttpInput.ThrowMaxReceivedMessageSizeExceeded()
+   en System.ServiceModel.Channels.HttpInput.GetMessageBuffer()
+   en System.ServiceModel.Channels.HttpInput.ReadBufferedMessage(Stream inputStream)
+   en System.ServiceModel.Channels.HttpInput.ParseIncomingMessage(Exception& requestException)
+   en System.ServiceModel.Channels.HttpChannelFactory.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en ServiceDeclaracionIsai.IDeclaracionIsai.ObtenerCatalogos(ObtenerCatalogosRequest request)
+   en ServiceDeclaracionIsai.DeclaracionIsaiClient.ServiceDeclaracionIsai.IDeclaracionIsai.ObtenerCatalogos(ObtenerCatalogosRequest request) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\26f9997a\731d0387\App_WebReferences.d7rfqwl7.5.cs:línea 37277
+   en ServiceDeclaracionIsai.DeclaracionIsaiClient.ObtenerCatalogos() en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\26f9997a\731d0387\App_WebReferences.d7rfqwl7.5.cs:línea 37282
+   en ApplicationCache.get_DseCatalogoISAI() en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Web\App_Code\ApplicationCache.cs:línea 27
+   en Declaracion.CargarComboActoJuridicoOperacionInsertar() en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Web\Declaracion.aspx.cs:línea 734
+
+05/03/2021 10:35:33 p. m. : MostrarMensajeInformacion : Se presentó un error al realizar la operación: 
+
+Se superó la cuota de tamaño máximo para los mensajes entrantes (65536). Para aumentar la cuota, use la propiedad MaxReceivedMessageSize en el elemento de enlace correspondiente.
+
+Server stack trace: 
+   en System.ServiceModel.Channels.HttpInput.ThrowMaxReceivedMessageSizeExceeded()
+   en System.ServiceModel.Channels.HttpInput.GetMessageBuffer()
+   en System.ServiceModel.Channels.HttpInput.ReadBufferedMessage(Stream inputStream)
+   en System.ServiceModel.Channels.HttpInput.ParseIncomingMessage(Exception& requestException)
+   en System.ServiceModel.Channels.HttpChannelFactory.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en ServiceDeclaracionIsai.IDeclaracionIsai.ObtenerCatalogos(ObtenerCatalogosRequest request)
+   en ServiceDeclaracionIsai.DeclaracionIsaiClient.ServiceDeclaracionIsai.IDeclaracionIsai.ObtenerCatalogos(ObtenerCatalogosRequest request) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\26f9997a\731d0387\App_WebReferences.d7rfqwl7.5.cs:línea 37277
+   en ServiceDeclaracionIsai.DeclaracionIsaiClient.ObtenerCatalogos() en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\26f9997a\731d0387\App_WebReferences.d7rfqwl7.5.cs:línea 37282
+   en ApplicationCache.get_DseCatalogoISAI() en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Web\App_Code\ApplicationCache.cs:línea 27
+   en Declaracion.CargarComboProcedencia() en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Web\Declaracion.aspx.cs:línea 820
+
+05/03/2021 10:35:33 p. m. : MostrarMensajeInformacion : Se presentó un error al realizar la operación: 
+
+No hay ninguna fila en la posición 0.
+   en System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   en System.Data.RBTree`1.get_Item(Int32 index)
+   en System.Data.DataRowCollection.get_Item(Int32 index)
+   en ServiceDeclaracionIsai.DseDeclaracionIsai.FEXNOT_DECLARACIONDataTable.get_Item(Int32 index) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\26f9997a\731d0387\App_WebReferences.d7rfqwl7.5.cs:línea 18549
+   en Declaracion.ConfigurarFormularioOperacion() en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Web\Declaracion.aspx.cs:línea 1243
+
+05/03/2021 10:35:33 p. m. : MostrarMensajeInformacion : Se presentó un error al realizar la operación: 
+
+No hay ninguna fila en la posición 0.
+   en System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   en System.Data.RBTree`1.get_Item(Int32 index)
+   en System.Data.DataRowCollection.get_Item(Int32 index)
+   en ServiceDeclaracionIsai.DseDeclaracionIsai.FEXNOT_DECLARACIONDataTable.get_Item(Int32 index) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\26f9997a\731d0387\App_WebReferences.d7rfqwl7.5.cs:línea 18549
+   en Declaracion.CargarDatosFormulario() en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Web\Declaracion.aspx.cs:línea 1524
+
+05/03/2021 10:35:33 p. m. : MostrarMensajeInformacion : Se presentó un error al realizar la operación: 
+
+No hay ninguna fila en la posición 0.
+   en System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   en System.Data.RBTree`1.get_Item(Int32 index)
+   en System.Data.DataRowCollection.get_Item(Int32 index)
+   en ServiceDeclaracionIsai.DseDeclaracionIsai.FEXNOT_DECLARACIONDataTable.get_Item(Int32 index) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\26f9997a\731d0387\App_WebReferences.d7rfqwl7.5.cs:línea 18549
+   en Declaracion.ConfigurarFormularioTipo() en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Web\Declaracion.aspx.cs:línea 2882
+
+05/03/2021 10:35:33 p. m. : MostrarMensajeInformacion : Se presentó un error al realizar la operación: 
+
+No hay ninguna fila en la posición 0.
+   en System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   en System.Data.RBTree`1.get_Item(Int32 index)
+   en System.Data.DataRowCollection.get_Item(Int32 index)
+   en ServiceDeclaracionIsai.DseDeclaracionIsai.FEXNOT_DECLARACIONDataTable.get_Item(Int32 index) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\26f9997a\731d0387\App_WebReferences.d7rfqwl7.5.cs:línea 18549
+   en Declaracion.ConfigurarFormularioEstado() en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Web\Declaracion.aspx.cs:línea 3074
+
+05/03/2021 10:35:33 p. m. : AccionesCuentaValida ex : No hay ninguna fila en la posición 0.
+
+05/03/2021 10:35:33 p. m. : AccionesCuentaValida ex :    en System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   en System.Data.RBTree`1.get_Item(Int32 index)
+   en System.Data.DataRowCollection.get_Item(Int32 index)
+   en ServiceDeclaracionIsai.DseDeclaracionIsai.FEXNOT_DECLARACIONDataTable.get_Item(Int32 index) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\26f9997a\731d0387\App_WebReferences.d7rfqwl7.5.cs:línea 18549
+   en Declaracion.AccionesCuentaValida() en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Web\Declaracion.aspx.cs:línea 6212
+
+05/03/2021 10:35:33 p. m. : MostrarMensajeInformacion : Se presentó un error al realizar la operación: 
+
+No hay ninguna fila en la posición 0.
+   en System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   en System.Data.RBTree`1.get_Item(Int32 index)
+   en System.Data.DataRowCollection.get_Item(Int32 index)
+   en ServiceDeclaracionIsai.DseDeclaracionIsai.FEXNOT_DECLARACIONDataTable.get_Item(Int32 index) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\26f9997a\731d0387\App_WebReferences.d7rfqwl7.5.cs:línea 18549
+   en Declaracion.AccionesCuentaValida() en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Web\Declaracion.aspx.cs:línea 6212
+
+05/03/2021 10:35:33 p. m. : AccionesCuentaValida Termina 
+
+05/03/2021 10:35:33 p. m. : FechaCausacion Inicia 
+
+05/03/2021 10:35:33 p. m. : Page_Load ex : No hay ninguna fila en la posición 0.
+
+05/03/2021 10:35:33 p. m. : Page_Load ex :    en System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   en System.Data.RBTree`1.get_Item(Int32 index)
+   en System.Data.DataRowCollection.get_Item(Int32 index)
+   en ServiceDeclaracionIsai.DseDeclaracionIsai.FEXNOT_DECLARACIONDataTable.get_Item(Int32 index) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\26f9997a\731d0387\App_WebReferences.d7rfqwl7.5.cs:línea 18549
+   en Declaracion.Page_Load(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Web\Declaracion.aspx.cs:línea 415
+
+05/03/2021 10:35:33 p. m. : MostrarMensajeInformacion : Se presentó un error al realizar la operación: 
+
+No hay ninguna fila en la posición 0.
+   en System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   en System.Data.RBTree`1.get_Item(Int32 index)
+   en System.Data.DataRowCollection.get_Item(Int32 index)
+   en ServiceDeclaracionIsai.DseDeclaracionIsai.FEXNOT_DECLARACIONDataTable.get_Item(Int32 index) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\26f9997a\731d0387\App_WebReferences.d7rfqwl7.5.cs:línea 18549
+   en Declaracion.Page_Load(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Web\Declaracion.aspx.cs:línea 415
+
+05/03/2021 10:35:34 p. m. : MostrarMensajeInformacion : Se presentó un error al realizar la operación: 
+
+No hay ninguna fila en la posición 0.
+   en System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   en System.Data.RBTree`1.get_Item(Int32 index)
+   en System.Data.DataRowCollection.get_Item(Int32 index)
+   en ServiceDeclaracionIsai.DseDeclaracionIsai.FEXNOT_DECLARACIONDataTable.get_Item(Int32 index) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\26f9997a\731d0387\App_WebReferences.d7rfqwl7.5.cs:línea 18549
+   en Declaracion.participantes(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Web\Declaracion.aspx.cs:línea 3874
+
+05/03/2021 10:35:35 p. m. : CancelControlID : Inicia 
+
+05/03/2021 10:35:35 p. m. : CancelControlID : ctl00_ctl00_ctl00_ContentPlaceHolderContentBase_ContentPlaceHolderDContenido_ContentPlaceHolderDContenido_errorTareas_btnErrorAceptar
+
+05/03/2021 10:35:35 p. m. : CancelControlID : Termina 
+
+05/03/2021 10:35:50 p. m. : Page_Load Inicia 
+
+05/03/2021 10:35:52 p. m. : MostrarMensajeInformacion : Se presentó un error al realizar la operación: 
+
+Se superó la cuota de tamaño máximo para los mensajes entrantes (65536). Para aumentar la cuota, use la propiedad MaxReceivedMessageSize en el elemento de enlace correspondiente.
+
+Server stack trace: 
+   en System.ServiceModel.Channels.HttpInput.ThrowMaxReceivedMessageSizeExceeded()
+   en System.ServiceModel.Channels.HttpInput.GetMessageBuffer()
+   en System.ServiceModel.Channels.HttpInput.ReadBufferedMessage(Stream inputStream)
+   en System.ServiceModel.Channels.HttpInput.ParseIncomingMessage(Exception& requestException)
+   en System.ServiceModel.Channels.HttpChannelFactory.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs)
+   en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   en ServiceDeclaracionIsai.IDeclaracionIsai.ObtenerCatalogos(ObtenerCatalogosRequest request)
+   en ServiceDeclaracionIsai.DeclaracionIsaiClient.ServiceDeclaracionIsai.IDeclaracionIsai.ObtenerCatalogos(ObtenerCatalogosRequest request) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\26f9997a\731d0387\App_WebReferences.d7rfqwl7.5.cs:línea 37277
+   en ServiceDeclaracionIsai.DeclaracionIsaiClient.ObtenerCatalogos() en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\26f9997a\731d0387\App_WebReferences.d7rfqwl7.5.cs:línea 37282
+   en ApplicationCache.get_DseCatalogoISAI() en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Web\App_Code\ApplicationCache.cs:línea 27
+   en Declaracion.CargarComboCatBanco() en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Web\Declaracion.aspx.cs:línea 675
+
+05/03/2021 10:35:52 p. m. : Page_Load ex : No hay ninguna fila en la posición 0.
+
+05/03/2021 10:35:52 p. m. : Page_Load ex :    en System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   en System.Data.RBTree`1.get_Item(Int32 index)
+   en System.Data.DataRowCollection.get_Item(Int32 index)
+   en ServiceDeclaracionIsai.DseDeclaracionIsai.FEXNOT_DECLARACIONDataTable.get_Item(Int32 index) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\26f9997a\731d0387\App_WebReferences.d7rfqwl7.5.cs:línea 18549
+   en Declaracion.guardarDatos() en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Web\Declaracion.aspx.cs:línea 5726
+   en Declaracion.Page_Load(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Web\Declaracion.aspx.cs:línea 437
+
+05/03/2021 10:35:52 p. m. : MostrarMensajeInformacion : Se presentó un error al realizar la operación: 
+
+No hay ninguna fila en la posición 0.
+   en System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   en System.Data.RBTree`1.get_Item(Int32 index)
+   en System.Data.DataRowCollection.get_Item(Int32 index)
+   en ServiceDeclaracionIsai.DseDeclaracionIsai.FEXNOT_DECLARACIONDataTable.get_Item(Int32 index) en c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\26f9997a\731d0387\App_WebReferences.d7rfqwl7.5.cs:línea 18549
+   en Declaracion.guardarDatos() en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Web\Declaracion.aspx.cs:línea 5726
+   en Declaracion.Page_Load(Object sender, EventArgs e) en c:\Users\EdgarAntunezMartinez\OneDrive - BIDG SERVICIOS SA DE CV\Repos\Isai\DES\Web\Declaracion.aspx.cs:línea 437
+
+05/03/2021 10:35:54 p. m. : CancelControlID : Inicia 
+
+05/03/2021 10:35:54 p. m. : CancelControlID : ctl00_ctl00_ctl00_ContentPlaceHolderContentBase_ContentPlaceHolderDContenido_ContentPlaceHolderDContenido_errorTareas_btnErrorAceptar
+
+05/03/2021 10:35:54 p. m. : CancelControlID : Termina 
 
